@@ -1,0 +1,527 @@
+
+/*======================
+    Hero Section  CSS
+=======================*/
+
+/* Avatar Box */
+
+.luxivo-avatar-box{
+    & .avatar-list{
+        & ul{
+            display: inline-flex;
+            align-items: center;
+            & li{
+                flex: 0 0 auto;
+                &:not(:first-child){
+                    margin-left: -15px;
+                }
+                & img{
+                    width: 55px;
+                    height: 55px;
+                    border: 2px solid $white-color;
+                    border-radius: 50%;
+                }
+                & span{
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 50%;
+                    border: 2px solid $white-color;
+                    background-color: $primary-color;
+                    font-weight: 600;
+                    color: $white-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+/* Hero One Section */ 
+
+.luxivo-hero_one{
+    position: relative;
+    z-index: 1;
+    padding: 250px 0 330px;
+    background-color: $primary-black-color;
+    @include respond(lg){
+        padding: 180px 0 120px;
+    }
+    &:after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(22, 25, 33, 0.96);
+        z-index: -1;
+    }   
+    & .hero-image{
+        position: absolute;
+        z-index: 1;
+        @include respond(xxxl){
+            max-width: 340px;
+        }
+        @include respond(xl){
+            max-width: 230px;
+        }
+        @include respond(lg){
+            display: none;
+        }
+        & img{
+            border-radius: 30px;
+        }
+        &.hero-image_one{
+            bottom: 140px;
+            left: 120px;
+            @include respond(xxxl){
+                left: 30px;
+            }
+        }
+        &.hero-image_two{
+            top: 120px;
+            right: 120px;
+            @include respond(xxxl){
+                right: 30px;
+            }
+            @include respond(xl){
+                right: 30px;
+                top: auto;
+                bottom: 220px;
+            }
+        }
+    }
+    .luxivo-avatar-box{
+        position: absolute;
+        bottom: 80px;
+        right: 20%;
+        @include respond(xxxl){
+            bottom: 130px;
+        }
+        @include respond(lg){
+            margin-top: 60px;
+            right: auto;
+            bottom: auto;
+            position: relative;
+            text-align: center;
+        }
+        & h6{
+            font-size: $h6-font;
+            color: $white-color;
+            font-family: $body-font;
+            margin-bottom: 10px;
+            @include respond(lg){
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+        & .avatar-text-box{
+            display: flex;
+            align-items: center;
+            @include respond(lg){
+                justify-content: center;
+            }
+            @include respond(md){
+                flex-direction:column;
+            }
+            & .avatar-list{
+                @include respond(md){
+                    margin: 20px 0;
+                }
+            }
+            & .text{
+                color: $white-color;
+                max-width: 200px;
+                padding-left: 16px;
+                border-left: 2px solid $white-color;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 24px;
+                margin-left: 20px;
+                text-transform: capitalize;
+                @include respond(lg){
+                    text-align: left;
+                }
+                @include respond(md){
+                    max-width: 100%;
+                    border-left: none;
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    & .hero-content{
+        position: relative;
+        z-index: 2;
+        & h1{
+            color: $white-color;
+            font-size: 120px;
+            line-height: 1.08em;
+            @include respond(lg){
+                font-size: 60px;
+            }
+            @include respond(md){
+                font-size: 40px;
+                line-height: 1.3em;
+            }
+        }
+        @include respond(xl){
+            text-align: center;
+        }
+    }
+    & .text-box{
+        @include respond(xl){
+            text-align: center;
+        }
+        & p{
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 34px;
+            color: $white-color;
+        }
+        & .hero-button{
+            & .theme-btn{
+                &.style-one{
+                    &:hover{
+                        background-color: $white-color;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Hero Two */ 
+
+.luxivo-hero_two{
+    position: relative;
+    z-index: 1;
+    padding-top: 200px;
+    &:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 50%;
+        background-color: $primary-black-color;
+        z-index: -1;
+    }
+    &:after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 50%;
+        background-color: $gray-color;
+        z-index: -1;
+    }
+    & .single-slider{
+        padding: 220px 0 230px;
+        position: relative;
+        z-index: 1;
+        border-radius: 50px;
+        overflow: hidden;
+        @include respond(xl){
+            padding: 140px 0 150px;
+        }
+        @include respond(md){
+            padding: 110px 0 120px;
+        }
+    }
+    & .image-layer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 1.4s cubic-bezier(0.7, 0, 0.3, 1);
+        @include transform(scale(1.2));
+        z-index: -1;
+        &:after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #000 -12.38%, rgba(0, 0, 0, 0.00) 117.3%);
+            z-index: -1;
+        }
+    }
+    &.slick-current{
+        & .image-layer{
+            @include transform(scale(1));
+        }
+    }
+    & .container-fluid{
+        padding-left: 120px;
+        padding-right: 120px;
+        @include respond(xxxl){
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @include respond(xl){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    & .hero-content{
+        & span{
+            color: $white-color;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+        & h1{
+            font-weight: 400;
+            color: $white-color;
+            margin-bottom: 20px;
+            font-size: 84px;
+            & span{
+                font-weight: 700;
+            }
+            @include respond(xxxl){
+                font-size: 70px;
+            }
+            @include respond(md){
+                font-size: 36px;
+                line-height: 1.5em;
+            }
+        }
+        & p{
+            max-width: 610px;
+            color: $white-color;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+
+/* Hero Three */ 
+
+.luxivo-hero_three{
+    background-color: #FEF9F4;
+    padding: 160px 0 155px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    @include respond(xxxl){
+        padding: 100px 0 105px;
+    }
+    @include respond(xl){
+        padding: 0 0 105px;
+    }
+    & .hero-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 100%;
+        z-index: -1;
+    }
+    & .container-fluid{
+        padding-left: 120px;
+        padding-right: 120px;
+        @include respond(xxxl){
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @include respond(xl){
+            padding-left: 15px;
+            padding-right: 15px;
+        }   
+    }
+    & .hero-image-slider{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        @include respond(xl){
+            width: 100%;
+            z-index: -1;
+            &:after{
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: rgba(22, 25, 33, 0.80);
+            }
+        }
+        & .slick-list,
+        & .slick-track{
+            height: 100%;
+        }
+        & .single-image-slide{
+            height: 100%;
+            width: 100%;
+            & img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    & .hero-content{
+        @include respond(xl){
+            padding-top: 100px;
+            text-align: center;
+        }
+        & .sub-title{
+            margin-bottom: 20px;
+        }
+        & h1{
+            font-size: 74px;
+            margin-bottom: 15px;
+            @include respond(xxxl){
+                font-size: 55px;
+            }
+            @include respond(xl){
+                color: $white-color;
+            }
+            @include respond(md){
+                font-size: 33px;
+                line-height: 50px;
+            }
+        }
+        & p{
+            margin-bottom: 25px;
+            @include respond(xl){
+                color: $white-color;
+            }
+        }
+        & .luxivo-avatar-box{
+            @include respond(xl){
+                color: $white-color;
+            }
+            & .avatar-list{
+                margin-bottom: 15px;
+            }
+            & p{
+                margin-bottom: 0;
+                & span{
+                    color: $heading-color;
+                    font-weight: 600;
+                    @include respond(xl){
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    & .hero-thumb-wrapper{
+        position: absolute;
+        bottom: 20%;
+        right: 45%;
+        background-color: $white-color;
+        border-radius: 20px;
+        padding: 10px;
+        max-width: 260px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        @include respond(xl){
+            display: none;
+        }
+        & .hero-thumb-arrow{
+            & .slick-arrow{
+                width: 70px;
+                height: 80px;
+                background-color: $primary-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                color: $white-color;
+                border-radius: 0 15px 15px 0;
+                cursor: pointer;
+                &.prev{
+                    display: none!important;
+                }
+            }
+        }
+        & .hero-thumb-slider{
+            max-width: 165px;
+        }
+        & .single-thumb-image{
+            width: 165px;
+            & img{
+                border-radius: 15px 0 0 15px;
+            }
+        }
+    }
+}
+
+
+/* Page Hero */
+
+.page-hero{
+    padding: 195px 0 90px;
+    position: relative;
+    z-index: 1;
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(22, 25, 33, 0.70);
+        z-index: -1;
+    }
+    & .page-content{
+        & h1{
+            color: $white-color;
+            margin-bottom: 15px;
+            font-size: 64px;
+            text-transform: capitalize;
+            @include respond(xl){
+                font-size: 52px;
+            }
+            @include respond(md){
+                font-size: 40px;
+            }
+        }
+        & h6{
+            text-transform: uppercase;
+            color: $white-color;
+            letter-spacing: 0.8px;
+            margin-bottom: 20px;
+            &:before{
+                display: inline-block;
+                content: '';
+                width: 15px;
+                height: 2px;
+                background-color: $white-color;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
+        & ul{
+            & li{
+                display: inline-block;
+                color: $white-color;
+                font-size: 20px;
+                line-height: 28px;
+                &:not(:last-child){
+                    &:after{
+                        display: inline-block;
+                        content: '/';
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

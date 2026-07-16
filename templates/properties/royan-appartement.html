@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Appartement neuf 4 pers — 100m Grande Conche — Royan | CalmRio{% endblock %}
+{% block meta_description %}Location vacances Royan : appartement neuf 60m², 2 chambres, terrasse 20m², à 100m de la Grande Conche. Parking, wifi, espace télétravail. Réservez directement.{% endblock %}
+{% block og_title %}Royan — Appartement 100m de la Grande Conche | CalmRio{% endblock %}
+{% block og_description %}Appartement premium 4 pers à Royan, à 100m de la plage. 2 chambres, 60m², terrasse 20m². Réservez en direct.{% endblock %}
+
+{% block content %}
+            <section class="page-hero bg_cover p-r z-1" style="background-image:linear-gradient(rgba(27,58,75,0.65),rgba(27,58,75,0.65)),url({% static 'images/properties/royan-apt-new.webp' %});background-position:center 30%;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="page-content text-center" style="padding:140px 0 70px;">
+                                <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);">Appartement — 100m de la Grande Conche</h1>
+                                <p style="color:rgba(255,255,255,0.85);font-size:1.1rem;margin:15px 0 10px;">Royan, Nouvelle-Aquitaine</p>
+                                <ul style="list-style:none;padding:0;display:flex;justify-content:center;gap:10px;color:rgba(255,255,255,0.7);font-size:0.9rem;">
+                                    <li><a href="{% url 'home:index' %}" style="color:var(--accent-color,#C49A5A);">Accueil</a></li>
+                                    <li>/</li>
+                                    <li>Royan — Appartement</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pt-60 pb-20">
+                <div class="container">
+                    <div class="row g-3">
+                        <div class="col-md-8" data-aos="fade-up" data-aos-duration="800">
+                            <img src="{% static 'images/properties/royan-apt-new.webp' %}" alt="Appartement Royan vue extérieure" style="width:100%;border-radius:12px;height:100%;object-fit:cover;min-height:350px;">
+                        </div>
+                        <div class="col-md-4" data-aos="fade-up" data-aos-duration="800">
+                            <img src="{% static 'images/properties/gallery-1.jpg' %}" alt="Appartement Royan intérieur" style="width:100%;border-radius:12px;margin-bottom:12px;height:calc(50% - 6px);object-fit:cover;">
+                            <img src="{% static 'images/guide/grande-conche-beach.jpg' %}" alt="Plage de la Grande Conche" style="width:100%;border-radius:12px;height:calc(50% - 6px);object-fit:cover;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="luxivo-room-details-sec pt-80 pb-120">
+                <div class="container">
+                    <div class="room-details-wrapper">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <div class="room-content-area mb-30" data-aos="fade-up" data-aos-duration="800">
+                                    <h3 class="title">Appartement neuf bord de plage</h3>
+                                    <div class="rooms-ratings-quote d-flex align-items-center flex-wrap">
+                                        <div class="ratings" style="color:var(--accent-color,#C49A5A);">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            <a href="#" style="color:var(--text-color);font-size:0.9rem;margin-left:5px;">(12 avis)</a>
+                                        </div>
+                                        <span style="margin-left:15px;color:var(--primary-color);"><i class="fas fa-map-marker-alt"></i> Royan, Nouvelle-Aquitaine</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="share-button text-md-end mb-40" data-aos="fade-up" data-aos-duration="800">
+                                    <span style="font-size:1.5rem;font-weight:700;color:var(--primary-color,#1B3A4B);">130€<span style="font-size:0.9rem;font-weight:400;color:var(--text-color);">/nuit</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rooms-meta-info mb-25">
+                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800">
+                                <i class="fas fa-users" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i>
+                                <h5>4 voyageurs</h5>
+                            </div>
+                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800">
+                                <i class="fas fa-bed" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i>
+                                <h5>2 chambres</h5>
+                            </div>
+                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800">
+                                <i class="fas fa-arrows-alt" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i>
+                                <h5>60 m² + 20 m²</h5>
+                            </div>
+                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800">
+                                <i class="fas fa-bath" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i>
+                                <h5>1 salle de bain</h5>
+                            </div>
+                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800">
+                                <i class="fas fa-elevator" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i>
+                                <h5>Ascenseur</h5>
+                            </div>
+                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800">
+                                <i class="fas fa-paw" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i>
+                                <h5>Animaux acceptés</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="room-content-box" data-aos="fade-up" data-aos-duration="1000">
+                                    <h3>Description</h3>
+                                    <p>Appartement neuf de 60 m² avec une terrasse de 20 m² alliant un style bord de plage et contemporain, très lumineux, idéalement situé à <strong>100 m de la plage de la Grande Conche</strong> et à proximité de nombreux commerces du centre-ville.</p>
+                                    <p>Grande pièce de vie avec salon et cuisine / salle à manger. Canapé confortable, cuisine entièrement équipée avec cave à vin de service. Toutes les fenêtres donnent sur la terrasse (partie salon + partie repas, arborée).</p>
+                                    <p><strong>2 chambres :</strong> l'une avec un grand lit de 160, télé, espace de travail (écran + câble HDMI) ; l'autre avec 2 petits lits de 90. Salle de bain avec douche à l'italienne, buanderie (lave-linge, sèche-linge, fer et table à repasser). WC indépendant.</p>
+                                </div>
+                                <div class="room-content-box mb-25" data-aos="fade-up" data-aos-duration="1200">
+                                    <h3>Équipements</h3>
+                                    <div class="services-list">
+                                        <div class="row">
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-wifi" style="color:var(--accent-color);"></i> WiFi haut débit</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-parking" style="color:var(--accent-color);"></i> Parking gratuit</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-utensils" style="color:var(--accent-color);"></i> Cuisine équipée</h5></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="services-list">
+                                        <div class="row">
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-laptop" style="color:var(--accent-color);"></i> Espace télétravail</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-paw" style="color:var(--accent-color);"></i> Animaux acceptés</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-tv" style="color:var(--accent-color);"></i> Télévision</h5></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="services-list">
+                                        <div class="row">
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-elevator" style="color:var(--accent-color);"></i> Ascenseur</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-washing-machine" style="color:var(--accent-color);"></i> Lave-linge</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-umbrella-beach" style="color:var(--accent-color);"></i> Accès plage (100m)</h5></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="room-content-box mb-25" data-aos="fade-up" data-aos-duration="1400">
+                                    <h3>Règles de la maison</h3>
+                                    <ul class="check-list style-two">
+                                        <li>Arrivée à partir de 16:00</li>
+                                        <li>Départ avant 10:00</li>
+                                        <li>4 voyageurs maximum</li>
+                                        <li>Animaux acceptés</li>
+                                        <li>Équipement bébé disponible sur demande</li>
+                                    </ul>
+                                </div>
+                                <div class="room-content-box" data-aos="fade-up" data-aos-duration="2000">
+                                    <h3>Informations complémentaires</h3>
+                                    <p><strong>Hôte :</strong> Mélanie</p>
+                                    <p><strong>Numéro d'enregistrement :</strong> 173060015134Z</p>
+                                    <p><strong>Type de logement :</strong> Appartement entier</p>
+                                    <p><strong>Langues :</strong> Français</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="room-sidebar-area sticky-widget mt-5 mt-xl-0">
+                                    <div class="room-sidebar-widget room-booking-widget mb-40" data-aos="fade-up" data-aos-duration="800">
+                                        <h4 class="widget-title">Réserver ce logement</h4>
+                                        <div class="widget-content">
+                                            <p style="margin-bottom:20px;font-size:0.95rem;">Pour réserver ou pour toute demande d'information, contactez-nous directement.</p>
+                                            <div class="form-group">
+                                                <a href="{% url 'pages:contact' %}" class="theme-btn style-one" style="display:block;text-align:center;">Nous contacter <i class="far fa-arrow-right"></i></a>
+                                            </div>
+                                            <div style="margin-top:15px;padding-top:15px;border-top:1px solid var(--border-color);">
+                                                <p style="font-size:0.85rem;color:var(--text-color);margin-bottom:5px;"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> Meilleur prix garanti</p>
+                                                <p style="font-size:0.85rem;color:var(--text-color);margin-bottom:5px;"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> Réservation directe</p>
+                                                <p style="font-size:0.85rem;color:var(--text-color);"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> Paiement sécurisé Stripe</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="room-sidebar-widget room-support-widget mb-40" data-aos="fade-up" data-aos-duration="1000">
+                                        <h4 class="widget-title">Contact</h4>
+                                        <div class="widget-content">
+                                            <ul>
+                                                <li><a href="tel:+33600000000">+33 (0)6 00 00 00 00</a></li>
+                                                <li><a href="mailto:contact@calm-rio.com">contact@calm-rio.com</a></li>
+                                            </ul>
+                                            <h3 style="margin-top:20px;">Adresse</h3>
+                                            <p>Royan, Nouvelle-Aquitaine<br>À 100m de la plage de la Grande Conche</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+{% endblock %}

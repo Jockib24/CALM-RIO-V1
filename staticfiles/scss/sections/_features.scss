@@ -1,0 +1,512 @@
+
+/*======================
+    Features Section  CSS
+=======================*/
+
+
+.luxivo-feature-item{
+    &.style-one{
+        padding: 40px;
+        border-radius: 30px;
+        background-color: $primary-black-color;
+        transition: all .3s;
+        & .icon{
+            position: relative;
+            margin-bottom: 55px;
+            & img{
+                transition: filter 0.3s ease;
+            }
+        }
+        & .content{
+            & h4{
+                color: $white-color;
+                font-size: $h4-font;
+                &:after{
+                    display: block;
+                    content: '';
+                    width: 150px;
+                    height: 1px;
+                    background-color: $primary-color;
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                }
+            }
+            & p{
+                color: $white-color;
+                margin-bottom: 35px;
+            }
+            & .theme-btn{
+                &.style-two{
+                    color: $white-color;
+                }
+            }
+        }
+        &:hover{
+            background-color: $primary-color;
+            & .icon{
+                & img{
+                    filter: brightness(0) invert(1);
+                }
+            }
+            & .content{
+                & h4{
+                    &:after{
+                        background-color: $white-color;
+                    }
+                }
+                & .theme-btn{
+                    &.style-two{
+                        background-color: $white-color;
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+    }
+    &.style-two{
+        text-align: center;
+        & .icon{
+            margin-bottom: 25px;
+        }
+        & .content{
+            & h4{
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.luxivo-feature-card{
+    & .thumbnail{
+        & img{
+            width: 100%;
+            border-radius: 30px;
+        }
+    }
+    & .content{
+        padding-top: 23px;
+        & .title{
+            font-size: 30px;
+        }
+    }
+}
+
+/* Features Section CSS */
+
+.luxivo-features_one{
+    position: relative;
+    z-index: 1;
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(22, 25, 33, 0.60);
+        z-index: -1;
+    }
+    & .container-fluid{
+        padding-left: 120px;
+        padding-right: 120px;
+        @include respond(xxxl){
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        @include respond(xl){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    & .features-arrows{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        &:before,
+        &:after{
+            content: "";
+            display: inline-block;
+            width: 90%;
+            height: 1px;
+            background-color: #565656;
+        }
+        & .slick-arrow{
+            flex: 0 0 auto;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid $border-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $white-color;
+            cursor: pointer;
+            z-index: 1;
+            transition: all .3s;
+            &:hover{
+                background-color: $primary-color;
+                color: $white-color;
+                border-color: transparent;
+            }
+        }
+    }
+}
+.luxivo-features_two{
+    & .luxivo-image-box{
+        position: relative;
+        & .luxivo-image{
+            & img{
+                width: 100%;
+                border-radius: 220px 220px 0 0;
+            }
+        }
+        & .shape{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    & .features-list{
+        &.list-left{
+            padding-right: 20px;
+            text-align: right;
+            @include respond(md){
+                padding-right: 0;
+                text-align: left;
+            }
+        }
+        &.list-right{
+            padding-left: 20px;
+            @include respond(md){
+                padding-left: 0;
+            }
+        }
+        & .luxivo-iconic-box{
+            &:not(:last-child){
+                border-bottom: 1px solid $border-color;
+                padding-bottom: 30px;
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+
+.luxivo-features_three{
+    & .container-fluid{
+        padding-left: 150px;
+        padding-right: 150px;
+        @include respond(xxxl){
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        @include respond(xl){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+
+/* Features Slider */
+
+.features-slider-two,
+.features-slider{
+    margin-left: -15px;
+    margin-right: -15px;
+    @include respond(lg){
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+    & .slick-slide{
+        margin-left: 15px;
+        margin-right: 15px;
+        @include respond(lg){
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+    }
+}
+
+/* Facilities Section CSS */
+
+.luxivo-facilities_one{
+    & .luxivo-image-box{
+        position: relative;
+        z-index: 1;
+        & .luxivo-image{
+            & img{
+                border-radius: 30px;
+            }
+            &.image_one{
+                position: relative;
+                overflow: hidden;
+                max-width: 455px;
+                & .shape{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                & .overlay{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(16, 29, 34, 0.60);
+                    border-radius: 30px;
+                }
+            }
+            &.image_two{
+                position: absolute;
+                bottom: 75px;
+                right: -40px;
+                & img{
+                    border: 5px solid $white-color;
+                }
+                @include respond(xl){
+                    right: 40px;
+                }
+                @include respond(md){
+                    position: relative;
+                    bottom: auto;
+                    right: auto;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+    & .luxivo-content-box{
+        padding-left: 70px;
+        @include respond(xxxl){
+            padding-left: 40px;
+        }
+        @include respond(xl){
+            padding-left: 0;
+        }
+        & > p{
+            margin-bottom: 35px;
+        }
+        & .iconic-box-wrapper{
+            margin-bottom: 40px;
+            border: 1px solid #d8dde1;
+            border-radius: 30px;
+            padding: 30px;
+            & .item-column{
+                &:not(:last-child){
+                    border-right: 1px solid $border-color;
+                    @include respond(md){
+                        border-right: none;
+                    }
+                }
+                &:last-child{
+                    & .luxivo-iconic-left-box{
+                        &.style-two{
+                            padding-left: 60px;
+                            @include respond(xl){
+                                padding-left: 20px;
+                            }
+                            @include respond(md){
+                                padding-left: 0;
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.luxivo-facilities_two{
+    position: relative;
+    z-index: 1;
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: rgba(22, 25, 33, 0.60);
+    }
+    & .facilities-wrapper{
+        background-color: $white-color;
+        border-radius: 30px;
+        padding: 60px 60px 20px;
+        @include respond(md){
+            padding: 40px 30px;
+            & .luxivo-iconic-left-box{
+                &.style-five{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    & .content{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Why Choose Section */
+
+.luxivo-choose-sec{
+    & .luxivo-content-box{
+        padding-right: 50px;
+        @include respond(xl){
+            padding-right: 0;
+        }
+        & > p{
+            margin-bottom: 30px;
+        }
+        & .features-list{
+            margin-bottom: 35px;
+            border-bottom: 1px solid $border-color;
+        }
+        & .check-list{
+            &.style-one{
+                & li{
+                    font-size: 18px;
+                    color: $heading-color;
+                    font-weight: 600;
+                    & i{
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        font-size: 10px;
+                        background-color: $primary-color;
+                        color: $white-color;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+    & .luxivo-image{
+        position: relative;
+        & img{
+            width: 100%;
+            border-radius: 30px;
+        }
+        & .luxivo-happy-client{
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background-color: $primary-color;
+            max-width: 120px;
+            border-radius: 10px;
+            padding: 10px 20px 15px;
+            & .content{
+                & h3{
+                    font-size: 30px;
+                    color: $white-color;
+                }
+                & p{
+                    font-weight: 500;
+                    color: $white-color;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+}
+
+.luxivo-choose_two{
+    position: relative;
+    z-index: 1;
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 60%;
+        height: 100%;
+        border-radius: 30px;
+        background-color: $gray-color;
+        z-index: -1;
+        transform: perspective(1000px) rotateY(3deg) rotateX(1deg);
+        @include respond(xl){
+            width: 100%;
+        }
+    }
+    & .luxivo-image{
+        & img{
+            border-radius: 30px;
+        }
+    }
+}
+
+/* Apartment Section CSS */ 
+
+.luxivo-apartment-sec{
+    position: relative;
+    z-index: 1;
+    & .apartment-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $primary-black-color;
+        width: 100%;
+        height: 700px;
+        z-index: -1;
+        @include respond(xl){
+            height: 1000px;
+        }
+    }
+    & .luxivo-button{
+        & .theme-btn{
+            &.style-one{
+                &:hover{
+                    background-color: $white-color;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    & .luxivo-content-box{
+        & p{
+            margin-bottom: 30px;
+        }
+        & h5{
+            margin-bottom: 30px;
+            font-size: 20px;
+            display: inline-flex;
+            align-items: center;
+            &:after{
+                display: inline-flex;
+                flex: 0 0 auto;
+                background-color: $white-color;
+                content:'';
+                width: 40px;
+                height: 1px;
+                margin-left: 20px;
+            }
+        }
+        & ul{
+            & li{
+                display: inline-block;
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+                & img{
+                    @include respond(md){
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+    & .luxivo-image{
+        & img{
+            width: 100%;
+            border-radius: 30px;
+        }
+    }
+}

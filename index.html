@@ -11,13 +11,13 @@
         <meta property="og:url" content="https://calm-rio.com/">
         <meta property="og:title" content="CalmRio — Locations de vacances premium | Royan & Île d'Oléron">
         <meta property="og:description" content="Appartements et maisons soigneusement aménagés à deux pas des plages de Royan et de l'île d'Oléron. Réservez en direct.">
-        <meta property="og:image" content="https://calm-rio.com/assets/images/og-image.jpg">
+        <meta property="og:image" content="assets/images/og-image.jpg">
         <meta property="og:locale" content="fr_FR">
         <meta property="og:site_name" content="CalmRio">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="CalmRio — Locations de vacances premium | Royan & Île d'Oléron">
         <meta name="twitter:description" content="Appartements et maisons soigneusement aménagés à deux pas des plages de Royan et de l'île d'Oléron.">
-        <meta name="twitter:image" content="https://calm-rio.com/assets/images/og-image.jpg">
+        <meta name="twitter:image" content="assets/images/og-image.jpg">
         <!--====== Title ======-->
         <title>CalmRio — Locations de vacances premium | Royan & Île d'Oléron</title>
         <!--====== Favicon Icon ======-->
@@ -53,6 +53,33 @@
         <div class="offcanvas__overlay"></div>
         <!--=== Start  Header Area  ===-->
         <header class="header-area header-two">
+            <!--====  Header Top Bar  ===-->
+            <div class="header-top-bar d-none d-lg-block">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="top-left">
+                                <span><a href="tel:+33600000000"><i class="fas fa-phone-alt" style="margin-right:5px;"></i>+33 (0)6 00 00 00 00</a></span>
+                                <span><a href="mailto:contact@calm-rio.com"><i class="fas fa-envelope" style="margin-right:5px;"></i>contact@calm-rio.com</a></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="top-right">
+                                <span><a href="faq.html"><i class="far fa-comments"></i> FAQ</a></span>
+                                <span><a href="contact.html"><i class="far fa-headphones"></i> Support</a></span>
+                                <div class="luxivo-language-dropdown">
+                                    <a href="javascript:void(0)"><i class="far fa-globe"></i>🇫🇷 FR <i class="far fa-angle-down"></i></a>
+                                    <ul class="dropdown">
+                                        <li><a href="en/index.html">🇬🇧 EN</a></li>
+                                        <li><a href="javascript:void(0)">🇪🇸 ES</a></li>
+                                        <li><a href="javascript:void(0)">🇳🇱 NL</a></li>
+                                    </ul> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!--====  Header Navigation  ===-->
             <div class="header-navigation">
                 <div class="container-fluid">
@@ -101,14 +128,6 @@
                         </div>
                         <!--=== Header Nav Right ===-->
                         <div class="nav-right-item">
-                            <div class="language-switcher d-none d-md-inline-block" style="margin-right:15px;position:relative;top:-2px;">
-                                <select class="lang-select" onchange="if(this.value)window.location.href=this.value" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);border-radius:6px;padding:5px 10px;font-size:0.8rem;cursor:pointer;outline:none;">
-                                    <option value="" style="color:#333;">🇫🇷 FR</option>
-                                    <option value="en/index.html" style="color:#333;">🇬🇧 EN</option>
-                                    <option value="es/index.html" style="color:#333;">🇪🇸 ES</option>
-                                    <option value="nl/index.html" style="color:#333;">🇳🇱 NL</option>
-                                </select>
-                            </div>
                             <div class="nav-button d-none d-md-block">
                                 <a href="#nos-locations" class="theme-btn style-one">Réserver<i class="far fa-arrow-right"></i></a>
                             </div>
@@ -122,106 +141,115 @@
                 </div>
             </div>    
         </header><!--=== End  Header Area  ===-->
-        <!--======  Smooth Wrapper  ======-->
         <main>
             <!--======  Start Hero Section  ======-->
             <section class="luxivo-hero">
-                <div class="luxivo-hero_one p-r z-1 bg_cover" style="background-image: url(assets/images/home-one/hero/hero-bg.jpg);">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="hero-content text-center mb-25" data-aos="fade-up" data-aos-duration="2000">
-                                    <span class="hero-badge" style="display:inline-block;background:var(--accent-color,#C49A5A);color:#fff;padding:8px 20px;border-radius:30px;font-size:14px;font-weight:600;margin-bottom:20px;font-family:var(--body-font);">
+                <div class="luxivo-hero_three p-r z-1" style="background:var(--primary-color,#1B3A4B);">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6 col-lg-8 col-md-10">
+                                <div class="hero-content" style="padding:120px 0 80px;">
+                                    <span class="hero-badge" style="display:inline-block;background:var(--accent-color,#C49A5A);color:#fff;padding:8px 20px;border-radius:30px;font-size:14px;font-weight:600;margin-bottom:20px;">
                                         <i class="fas fa-star" style="margin-right:5px;"></i>4,95 — Favoris des voyageurs
                                     </span>
-                                    <h1 style="font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;line-height:1.1;font-weight:700;">Vacances en famille<br><span style="color:var(--accent-color,#C49A5A);">entre océan et forêt</span></h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="text-box text-center" data-aos="fade-up" data-aos-duration="2600">
-                                    <p style="color:rgba(255,255,255,0.9);font-size:1.125rem;line-height:1.7;margin-bottom:30px;">Appartements et maisons soigneusement aménagés, à deux pas des plages de Royan et de l'île d'Oléron. Réservez en direct et profitez d'un séjour authentique sur la côte atlantique.</p>
-                                    <div class="hero-button d-flex flex-wrap justify-content-center gap-3">
+                                    <h1 style="font-size:clamp(2.5rem,5vw,4rem);color:#fff;line-height:1.1;font-weight:700;">Vacances en famille<br><span style="color:var(--accent-color,#C49A5A);">entre océan et forêt</span></h1>
+                                    <p style="color:rgba(255,255,255,0.85);font-size:1.05rem;line-height:1.7;margin:25px 0 30px;max-width:540px;">Appartements et maisons soigneusement aménagés, à deux pas des plages de Royan et de l'île d'Oléron. Réservez en direct et profitez d'un séjour authentique sur la côte atlantique.</p>
+                                    <div class="luxivo-button d-flex flex-wrap gap-3">
                                         <a href="#nos-locations" class="theme-btn style-one">Découvrir nos locations<i class="far fa-arrow-right"></i></a>
                                         <a href="local-guide.html" class="theme-btn style-two" style="background:transparent;border:2px solid #fff;color:#fff;">Guide local<i class="far fa-arrow-right"></i></a>
                                     </div>
+                                    <div class="d-flex flex-wrap gap-4 mt-40" style="color:rgba(255,255,255,0.85);font-size:0.9rem;">
+                                        <span><i class="fas fa-badge-check" style="color:var(--accent-color);margin-right:6px;"></i>100% de réponse</span>
+                                        <span><i class="fas fa-badge-check" style="color:var(--accent-color);margin-right:6px;"></i>Superhost</span>
+                                        <span><i class="fas fa-badge-check" style="color:var(--accent-color);margin-right:6px;"></i>Animaux acceptés</span>
+                                        <span><i class="fas fa-badge-check" style="color:var(--accent-color);margin-right:6px;"></i>Parking gratuit</span>
+                                    </div>
+                                    <div class="luxivo-avatar-box mt-40" data-aos="fade-up" data-aos-duration="3000">
+                                        <div class="avatar-list">
+                                            <ul>
+                                                <li><img src="assets/images/home-one/hero/avatar-img1.jpg" alt="avatar" onerror="this.style.display='none'"></li>
+                                                <li><img src="assets/images/home-one/hero/avatar-img2.jpg" alt="avatar" onerror="this.style.display='none'"></li>
+                                                <li><img src="assets/images/home-one/hero/avatar-img3.jpg" alt="avatar" onerror="this.style.display='none'"></li>
+                                                <li><span>40+</span></li>
+                                            </ul>
+                                        </div>
+                                        <p style="color:rgba(255,255,255,0.8);margin-top:10px;">Plus de <strong>40 avis</strong> — Note moyenne 4,95★</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row justify-content-center mt-40">
-                            <div class="col-lg-10">
-                                <div class="d-flex flex-wrap justify-content-center gap-4" data-aos="fade-up" data-aos-duration="2000" style="color:rgba(255,255,255,0.85);font-size:0.9rem;">
-                                    <span><i class="fas fa-badge-check" style="color:var(--accent-color);margin-right:6px;"></i>100% de réponse</span>
-                                    <span><i class="fas fa-badge-check" style="color:var(--accent-color);margin-right:6px;"></i>Superhost</span>
-                                    <span><i class="fas fa-badge-check" style="color:var(--accent-color);margin-right:6px;"></i>Animaux acceptés</span>
-                                    <span><i class="fas fa-badge-check" style="color:var(--accent-color);margin-right:6px;"></i>Parking gratuit</span>
+                            <div class="col-xl-6 d-none d-xl-block">
+                                <div class="hero-image-wrapper" style="padding:80px 0;">
+                                    <div class="hero-image-slider">
+                                        <div class="single-image-slide">
+                                            <img src="assets/images/home-one/hero/hero-bg.jpg" alt="CalmRio" style="width:100%;border-radius:12px;max-height:500px;object-fit:cover;">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section><!--======  End Hero Section  ======-->
-            <!--======  Start Explore Section  ======-->
-            <section class="luxivo-about_one pt-120 pb-120" style="background:var(--gray-color,#F6F3EE);">
+            <!--======  Start Service Section  ======-->
+            <section class="luxivo-service_three pt-115 pb-80" style="background:var(--gray-color,#F6F3EE);">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-xl-8">
-                            <div class="section-title text-center mb-60">
-                                <span class="sub-title" data-aos="fade-up" data-aos-duration="1000" style="color:var(--primary-color,#1B3A4B);font-weight:600;">Explorez</span>
-                                <h2 data-aos="fade-up" data-aos-duration="1200">Vivez l'Atlantique selon vos envies</h2>
+                        <div class="col-lg-8">
+                            <div class="section-title text-center mb-45">
+                                <span class="sub-title" data-aos="fade-up" data-aos-duration="800" style="color:var(--primary-color,#1B3A4B);font-weight:600;">Explorez</span>
+                                <h2 data-aos="fade-up" data-aos-duration="1000">Vivez l'Atlantique selon vos envies</h2>
                                 <p data-aos="fade-up" data-aos-duration="1400" style="font-size:1.125rem;color:var(--text-color);margin-top:15px;">De la plage à la forêt, du télétravail au grand air — choisissez votre expérience.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800">
-                            <div class="luxivo-iconic-left-box style-two text-center" style="padding:40px 20px;background:#fff;border-radius:12px;height:100%;">
-                                <div class="icon" style="margin-bottom:20px;">
-                                    <i class="fas fa-umbrella-beach" style="font-size:2.5rem;color:var(--primary-color,#1B3A4B);"></i>
-                                </div>
-                                <div class="content">
-                                    <h5 style="margin-bottom:10px;">Bord de mer</h5>
-                                    <p style="font-size:0.95rem;">À 100m de la Grande Conche ou à 5min à vélo de la plage de Gatseau — l'océan à portée de main.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1000">
-                            <div class="luxivo-iconic-left-box style-two text-center" style="padding:40px 20px;background:#fff;border-radius:12px;height:100%;">
-                                <div class="icon" style="margin-bottom:20px;">
-                                    <i class="fas fa-tree" style="font-size:2.5rem;color:var(--primary-color,#1B3A4B);"></i>
-                                </div>
-                                <div class="content">
-                                    <h5 style="margin-bottom:10px;">Nature & Grand Air</h5>
-                                    <p style="font-size:0.95rem;">Forêt de Saint-Trojan, pistes cyclables, marais salants — la côte atlantique comme terrain de jeu.</p>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-3 col-md-6">
+                            <div class="luxivo-service-item style-one mb-40" data-aos="fade-up" data-aos-duration="800">
+                                <div class="service-content" style="background:#fff;padding:40px 25px;border-radius:12px;text-align:center;">
+                                    <div class="icon" style="margin-bottom:20px;">
+                                        <i class="fas fa-umbrella-beach" style="font-size:2.5rem;color:var(--primary-color,#1B3A4B);"></i>
+                                    </div>
+                                    <h4>Bord de mer</h4>
+                                    <p style="font-size:0.95rem;color:var(--text-color);">À 100m de la Grande Conche ou à 5min à vélo de la plage de Gatseau — l'océan à portée de main.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1200">
-                            <div class="luxivo-iconic-left-box style-two text-center" style="padding:40px 20px;background:#fff;border-radius:12px;height:100%;">
-                                <div class="icon" style="margin-bottom:20px;">
-                                    <i class="fas fa-laptop-house" style="font-size:2.5rem;color:var(--primary-color,#1B3A4B);"></i>
-                                </div>
-                                <div class="content">
-                                    <h5 style="margin-bottom:10px;">Télétravail & Confiance</h5>
-                                    <p style="font-size:0.95rem;">Bureau avec écran HDMI, WiFi haut débit et vue sur l'océan — travaillez d'où vous rêvez.</p>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="luxivo-service-item style-one mb-40" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="service-content" style="background:#fff;padding:40px 25px;border-radius:12px;text-align:center;">
+                                    <div class="icon" style="margin-bottom:20px;">
+                                        <i class="fas fa-tree" style="font-size:2.5rem;color:var(--primary-color,#1B3A4B);"></i>
+                                    </div>
+                                    <h4>Nature & Grand Air</h4>
+                                    <p style="font-size:0.95rem;color:var(--text-color);">Forêt de Saint-Trojan, pistes cyclables, marais salants — la côte atlantique comme terrain de jeu.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1400">
-                            <div class="luxivo-iconic-left-box style-two text-center" style="padding:40px 20px;background:#fff;border-radius:12px;height:100%;">
-                                <div class="icon" style="margin-bottom:20px;">
-                                    <i class="fas fa-paw" style="font-size:2.5rem;color:var(--primary-color,#1B3A4B);"></i>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="luxivo-service-item style-one mb-40" data-aos="fade-up" data-aos-duration="1200">
+                                <div class="service-content" style="background:#fff;padding:40px 25px;border-radius:12px;text-align:center;">
+                                    <div class="icon" style="margin-bottom:20px;">
+                                        <i class="fas fa-laptop-house" style="font-size:2.5rem;color:var(--primary-color,#1B3A4B);"></i>
+                                    </div>
+                                    <h4>Télétravail & Confiance</h4>
+                                    <p style="font-size:0.95rem;color:var(--text-color);">Bureau avec écran HDMI, WiFi haut débit et vue sur l'océan — travaillez d'où vous rêvez.</p>
                                 </div>
-                                <div class="content">
-                                    <h5 style="margin-bottom:10px;">Familles & Animaux</h5>
-                                    <p style="font-size:0.95rem;">Jardin clos, animaux acceptés, équipement bébé — des vacances sans compromis pour toute la tribu.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="luxivo-service-item style-one mb-40" data-aos="fade-up" data-aos-duration="1400">
+                                <div class="service-content" style="background:#fff;padding:40px 25px;border-radius:12px;text-align:center;">
+                                    <div class="icon" style="margin-bottom:20px;">
+                                        <i class="fas fa-paw" style="font-size:2.5rem;color:var(--primary-color,#1B3A4B);"></i>
+                                    </div>
+                                    <h4>Familles & Animaux</h4>
+                                    <p style="font-size:0.95rem;color:var(--text-color);">Jardin clos, animaux acceptés, équipement bébé — des vacances sans compromis pour toute la tribu.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section><!--======  End Explore Section  ======-->
+            </section><!--======  End Service Section  ======-->
             <!--======  Start Counter Section  ======-->
             <section class="luxivo-counter_one bg_cover pt-110 pb-70" style="background:var(--primary-color,#1B3A4B);">
                 <div class="container">
@@ -245,7 +273,7 @@
                             <div class="luxivo-counter-item style-one mb-40" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="content text-center">
                                     <h2 style="color:#fff;">40+</h2>
-                                    <p style="color:rgba(255,255,255,0.8);">Avis &mdash; Note moyenne 4,95★</p>
+                                    <p style="color:rgba(255,255,255,0.8);">Avis — Note moyenne 4,95★</p>
                                 </div>
                             </div>
                         </div>
@@ -269,7 +297,7 @@
                 </div>
             </section><!--======  End Counter Section  ======-->
             <!--======  Start Properties Section  ======-->
-            <section id="nos-locations" class="luxivo-room_one p-r z-1 pt-120 pb-120">
+            <section id="nos-locations" class="luxivo-room-sec pt-120">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-8">
@@ -280,77 +308,140 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="luxivo-room-wrapper">
                         <!-- Property 1: Royan Apartment -->
-                        <div class="col-lg-4 col-md-6 mb-40" data-aos="fade-up" data-aos-duration="800">
-                            <div class="luxivo-room-item style-one">
-                                <div class="room-image">
-                                    <img src="assets/images/properties/royan-apt-new.webp" alt="Appartement Royan Grande Conche" onerror="this.style.display='none';this.parentNode.style.background='var(--primary-color,#1B3A4B)';this.parentNode.style.minHeight='250px'">
-                                    <div class="rate"><i class="fas fa-star"></i> 4.8</div>
-                                </div>
-                                <div class="room-content">
-                                    <h4 class="title"><a href="royan-appartement.html">Appartement — 100m de la Grande Conche</a></h4>
-                                    <p style="color:var(--primary-color,#1B3A4B);font-size:0.9rem;margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="margin-right:5px;"></i>Royan, Nouvelle-Aquitaine</p>
-                                    <p>2 chambres · 4 personnes · 60 m² + terrasse 20 m²</p>
-                                    <div class="room-meta" style="margin-bottom:15px;">
-                                        <span><i class="fas fa-wifi"></i></span>
-                                        <span><i class="fas fa-parking"></i></span>
-                                        <span><i class="fas fa-utensils"></i></span>
-                                        <span><i class="fas fa-laptop"></i></span>
-                                        <span><i class="fas fa-paw"></i></span>
+                        <div class="luxivo-room-item style-three mb-120">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="room-image">
+                                        <img src="assets/images/properties/royan-apt-new.webp" class="image-sm" data-aos="fade-up" data-aos-duration="800" alt="Appartement Royan Grande Conche" onerror="this.style.display='none'">
                                     </div>
-                                    <div class="room-bottom">
-                                        <div class="price">À partir de 130€<span>/nuit</span></div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="room-content" data-aos="fade-up" data-aos-duration="1000">
+                                        <span class="sub-title" style="color:var(--accent-color,#C49A5A);">01. Royan</span>
+                                        <h3 class="title"><a href="royan-appartement.html">Appartement — 100m de la Grande Conche</a></h3>
+                                        <p style="color:var(--primary-color,#1B3A4B);font-size:0.9rem;margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="margin-right:5px;"></i>Royan, Nouvelle-Aquitaine</p>
+                                        <p>2 chambres · 4 personnes · 60 m² + terrasse 20 m²</p>
+                                        <div class="price"><span>À partir de</span>130€<span>/nuit</span></div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="luxivo-iconic-left-box style-six mb-30">
+                                                    <div class="icon"><i class="fas fa-wifi" style="color:var(--primary-color);"></i></div>
+                                                    <div class="content"><h4>WiFi Haut Débit</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="luxivo-iconic-left-box style-six mb-30">
+                                                    <div class="icon"><i class="fas fa-parking" style="color:var(--primary-color);"></i></div>
+                                                    <div class="content"><h4>Parking</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="luxivo-iconic-left-box style-six mb-30">
+                                                    <div class="icon"><i class="fas fa-utensils" style="color:var(--primary-color);"></i></div>
+                                                    <div class="content"><h4>Cuisine équipée</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="luxivo-iconic-left-box style-six mb-30">
+                                                    <div class="icon"><i class="fas fa-paw" style="color:var(--primary-color);"></i></div>
+                                                    <div class="content"><h4>Animaux acceptés</h4></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <a href="royan-appartement.html" class="theme-btn style-two">Voir ce logement<i class="far fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Property 2: Saint-Trojan Villa -->
-                        <div class="col-lg-4 col-md-6 mb-40" data-aos="fade-up" data-aos-duration="1000">
-                            <div class="luxivo-room-item style-one">
-                                <div class="room-image">
-                                    <img src="assets/images/properties/villa-new.webp" alt="Villa Lazure Saint-Trojan" onerror="this.style.display='none';this.parentNode.style.background='var(--primary-color,#1B3A4B)';this.parentNode.style.minHeight='250px'">
-                                    <div class="rate" style="background:var(--accent-color,#C49A5A);"><i class="fas fa-heart"></i> Coup de cœur ★4,95</div>
-                                </div>
-                                <div class="room-content">
-                                    <h4 class="title"><a href="saint-trojan-villa.html">Villa 6 pers — Jardin clos & terrasses</a></h4>
-                                    <p style="color:var(--primary-color,#1B3A4B);font-size:0.9rem;margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="margin-right:5px;"></i>Saint-Trojan-les-Bains, Île d'Oléron</p>
-                                    <p>3 chambres · 6 personnes · 110 m² + jardin</p>
-                                    <div class="room-meta" style="margin-bottom:15px;">
-                                        <span><i class="fas fa-wifi"></i></span>
-                                        <span><i class="fas fa-parking"></i></span>
-                                        <span><i class="fas fa-tree"></i></span>
-                                        <span><i class="fas fa-bicycle"></i></span>
-                                        <span><i class="fas fa-charging-station"></i></span>
-                                        <span><i class="fas fa-paw"></i></span>
+                        <div class="luxivo-room-item style-three mb-120">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="room-image">
+                                        <img src="assets/images/properties/villa-new.webp" class="image-sm" data-aos="fade-up" data-aos-duration="800" alt="Villa Lazure Saint-Trojan" onerror="this.style.display='none'">
                                     </div>
-                                    <div class="room-bottom">
-                                        <div class="price">À partir de 180€<span>/nuit</span></div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="room-content" data-aos="fade-up" data-aos-duration="1000">
+                                        <span class="sub-title" style="color:var(--accent-color,#C49A5A);">02. Saint-Trojan-les-Bains</span>
+                                        <h3 class="title"><a href="saint-trojan-villa.html">Villa 6 pers — Jardin clos & terrasses</a></h3>
+                                        <p style="color:var(--primary-color,#1B3A4B);font-size:0.9rem;margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="margin-right:5px;"></i>Saint-Trojan-les-Bains, Île d'Oléron</p>
+                                        <p>3 chambres · 6 personnes · 110 m² + jardin</p>
+                                        <div class="price"><span>À partir de</span>180€<span>/nuit</span></div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="luxivo-iconic-left-box style-six mb-30">
+                                                    <div class="icon"><i class="fas fa-wifi" style="color:var(--primary-color);"></i></div>
+                                                    <div class="content"><h4>WiFi Haut Débit</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="luxivo-iconic-left-box style-six mb-30">
+                                                    <div class="icon"><i class="fas fa-parking" style="color:var(--primary-color);"></i></div>
+                                                    <div class="content"><h4>Parking</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="luxivo-iconic-left-box style-six mb-30">
+                                                    <div class="icon"><i class="fas fa-tree" style="color:var(--primary-color);"></i></div>
+                                                    <div class="content"><h4>Jardin clos</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="luxivo-iconic-left-box style-six mb-30">
+                                                    <div class="icon"><i class="fas fa-paw" style="color:var(--primary-color);"></i></div>
+                                                    <div class="content"><h4>Animaux acceptés</h4></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <a href="saint-trojan-villa.html" class="theme-btn style-two">Voir ce logement<i class="far fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Property 3: Saint-Trojan Maison -->
-                        <div class="col-lg-4 col-md-6 mb-40" data-aos="fade-up" data-aos-duration="1200">
-                            <div class="luxivo-room-item style-one">
-                                <div class="room-image">
-                                    <img src="assets/images/properties/house-new.webp" alt="Maison familiale Saint-Trojan" onerror="this.style.display='none';this.parentNode.style.background='var(--primary-color,#1B3A4B)';this.parentNode.style.minHeight='250px'">
-                                </div>
-                                <div class="room-content">
-                                    <h4 class="title"><a href="saint-trojan-maison.html">Maison familiale 6 pers — Jardin & plage à vélo</a></h4>
-                                    <p style="color:var(--primary-color,#1B3A4B);font-size:0.9rem;margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="margin-right:5px;"></i>Saint-Trojan-les-Bains, Île d'Oléron</p>
-                                    <p>3 chambres · 6 personnes · Jardin arboré</p>
-                                    <div class="room-meta" style="margin-bottom:15px;">
-                                        <span><i class="fas fa-wifi"></i></span>
-                                        <span><i class="fas fa-parking"></i></span>
-                                        <span><i class="fas fa-tree"></i></span>
-                                        <span><i class="fas fa-utensils"></i></span>
-                                        <span><i class="fas fa-paw"></i></span>
+                        <div class="luxivo-room-item style-three mb-120">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="room-image">
+                                        <img src="assets/images/properties/house-new.webp" class="image-sm" data-aos="fade-up" data-aos-duration="800" alt="Maison familiale Saint-Trojan" onerror="this.style.display='none'">
                                     </div>
-                                    <div class="room-bottom">
-                                        <div class="price">À partir de 150€<span>/nuit</span></div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="room-content" data-aos="fade-up" data-aos-duration="1000">
+                                        <span class="sub-title" style="color:var(--accent-color,#C49A5A);">03. Saint-Trojan-les-Bains</span>
+                                        <h3 class="title"><a href="saint-trojan-maison.html">Maison familiale 6 pers — Jardin & plage à vélo</a></h3>
+                                        <p style="color:var(--primary-color,#1B3A4B);font-size:0.9rem;margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="margin-right:5px;"></i>Saint-Trojan-les-Bains, Île d'Oléron</p>
+                                        <p>3 chambres · 6 personnes · Jardin arboré</p>
+                                        <div class="price"><span>À partir de</span>150€<span>/nuit</span></div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="luxivo-iconic-left-box style-six mb-30">
+                                                    <div class="icon"><i class="fas fa-wifi" style="color:var(--primary-color);"></i></div>
+                                                    <div class="content"><h4>WiFi Haut Débit</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="luxivo-iconic-left-box style-six mb-30">
+                                                    <div class="icon"><i class="fas fa-parking" style="color:var(--primary-color);"></i></div>
+                                                    <div class="content"><h4>Parking</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="luxivo-iconic-left-box style-six mb-30">
+                                                    <div class="icon"><i class="fas fa-tree" style="color:var(--primary-color);"></i></div>
+                                                    <div class="content"><h4>Jardin arboré</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="luxivo-iconic-left-box style-six mb-30">
+                                                    <div class="icon"><i class="fas fa-paw" style="color:var(--primary-color);"></i></div>
+                                                    <div class="content"><h4>Animaux acceptés</h4></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <a href="saint-trojan-maison.html" class="theme-btn style-two">Voir ce logement<i class="far fa-arrow-right"></i></a>
                                     </div>
                                 </div>
@@ -358,7 +449,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 text-center mt-20" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="col-12 text-center mt-20 mb-80" data-aos="fade-up" data-aos-duration="1000">
                             <a href="royan-appartement.html" class="theme-btn style-one">Explorer toutes nos locations<i class="far fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -377,27 +468,21 @@
                     <div class="row">
                         <div class="col-lg-4 mb-30" data-aos="fade-up" data-aos-duration="800">
                             <div class="text-center" style="padding:40px 25px;background:#fff;border-radius:12px;height:100%;">
-                                <div class="icon mb-25">
-                                    <i class="fas fa-tags" style="font-size:2.5rem;color:var(--accent-color,#C49A5A);"></i>
-                                </div>
+                                <div class="icon mb-25"><i class="fas fa-tags" style="font-size:2.5rem;color:var(--accent-color,#C49A5A);"></i></div>
                                 <h5 style="margin-bottom:15px;">Meilleur prix garanti</h5>
                                 <p style="font-size:0.95rem;color:var(--text-color);">En réservant directement, vous bénéficiez de notre meilleur tarif, sans commission. Nous nous engageons à être moins chers que les plateformes.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 mb-30" data-aos="fade-up" data-aos-duration="1000">
                             <div class="text-center" style="padding:40px 25px;background:#fff;border-radius:12px;height:100%;">
-                                <div class="icon mb-25">
-                                    <i class="fas fa-heart" style="font-size:2.5rem;color:var(--accent-color,#C49A5A);"></i>
-                                </div>
+                                <div class="icon mb-25"><i class="fas fa-heart" style="font-size:2.5rem;color:var(--accent-color,#C49A5A);"></i></div>
                                 <h5 style="margin-bottom:15px;">Service personnalisé</h5>
                                 <p style="font-size:0.95rem;color:var(--text-color);">Nous connaissons chaque propriété sur le bout des doigts. Conseils personnalisés, flexibilité, et disponibilité avant et pendant votre séjour.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 mb-30" data-aos="fade-up" data-aos-duration="1200">
                             <div class="text-center" style="padding:40px 25px;background:#fff;border-radius:12px;height:100%;">
-                                <div class="icon mb-25">
-                                    <i class="fas fa-shield-alt" style="font-size:2.5rem;color:var(--accent-color,#C49A5A);"></i>
-                                </div>
+                                <div class="icon mb-25"><i class="fas fa-shield-alt" style="font-size:2.5rem;color:var(--accent-color,#C49A5A);"></i></div>
                                 <h5 style="margin-bottom:15px;">Paiement sécurisé</h5>
                                 <p style="font-size:0.95rem;color:var(--text-color);">Transactions sécurisées par Stripe. Vos données bancaires sont cryptées et protégées. Conditions d'annulation transparentes.</p>
                             </div>
@@ -420,36 +505,28 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800">
                             <div class="text-center" style="padding:30px 20px;">
-                                <div class="icon mb-20">
-                                    <i class="fas fa-clipboard-check" style="font-size:2.2rem;color:var(--accent-color,#C49A5A);"></i>
-                                </div>
+                                <div class="icon mb-20"><i class="fas fa-clipboard-check" style="font-size:2.2rem;color:var(--accent-color,#C49A5A);"></i></div>
                                 <h5 style="color:#fff;margin-bottom:10px;">Vérifié sur place</h5>
                                 <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Chaque propriété est inspectée personnellement. Pas de mauvaise surprise.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1000">
                             <div class="text-center" style="padding:30px 20px;">
-                                <div class="icon mb-20">
-                                    <i class="fas fa-tag" style="font-size:2.2rem;color:var(--accent-color,#C49A5A);"></i>
-                                </div>
+                                <div class="icon mb-20"><i class="fas fa-tag" style="font-size:2.2rem;color:var(--accent-color,#C49A5A);"></i></div>
                                 <h5 style="color:#fff;margin-bottom:10px;">Meilleur prix garanti</h5>
                                 <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">En réservant directement, vous bénéficiez de nos meilleurs tarifs — moins chers que sur les plateformes.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1200">
                             <div class="text-center" style="padding:30px 20px;">
-                                <div class="icon mb-20">
-                                    <i class="fas fa-smile" style="font-size:2.2rem;color:var(--accent-color,#C49A5A);"></i>
-                                </div>
+                                <div class="icon mb-20"><i class="fas fa-smile" style="font-size:2.2rem;color:var(--accent-color,#C49A5A);"></i></div>
                                 <h5 style="color:#fff;margin-bottom:10px;">Accueil personnalisé</h5>
                                 <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Réponse sous 24h, conseils sur mesure, et quelques attentions à l'arrivée.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1400">
                             <div class="text-center" style="padding:30px 20px;">
-                                <div class="icon mb-20">
-                                    <i class="fas fa-file-contract" style="font-size:2.2rem;color:var(--accent-color,#C49A5A);"></i>
-                                </div>
+                                <div class="icon mb-20"><i class="fas fa-file-contract" style="font-size:2.2rem;color:var(--accent-color,#C49A5A);"></i></div>
                                 <h5 style="color:#fff;margin-bottom:10px;">Conditions claires</h5>
                                 <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Consultez nos conditions d'annulation lors de la réservation. Nous restons à votre écoute en cas d'imprévu.</p>
                             </div>
@@ -548,7 +625,7 @@
                     </div>
                     <div class="row align-items-center mb-60">
                         <div class="col-lg-6 mb-30" data-aos="fade-right" data-aos-duration="1000">
-                            <img src="./assets/images/home-one/about/about-img1.jpg" alt="Entre mer et forêt" style="width:100%;border-radius:12px;">
+                            <img src="assets/images/home-one/about/about-img1.jpg" alt="Entre mer et forêt" style="width:100%;border-radius:12px;">
                         </div>
                         <div class="col-lg-6 mb-30" data-aos="fade-left" data-aos-duration="1000">
                             <div style="padding:0 20px;">
@@ -562,7 +639,7 @@
                     </div>
                     <div class="row align-items-center flex-lg-row-reverse">
                         <div class="col-lg-6 mb-30" data-aos="fade-left" data-aos-duration="1000">
-                            <img src="./assets/images/home-one/about/about-img2.jpg" alt="Télétravail bord de mer" style="width:100%;border-radius:12px;">
+                            <img src="assets/images/home-one/about/about-img2.jpg" alt="Télétravail bord de mer" style="width:100%;border-radius:12px;">
                         </div>
                         <div class="col-lg-6 mb-30" data-aos="fade-right" data-aos-duration="1000">
                             <div style="padding:0 20px;">
@@ -591,36 +668,28 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800">
                             <div style="padding:35px 25px;background:#fff;border-radius:12px;text-align:center;height:100%;box-shadow:0 2px 15px rgba(0,0,0,0.04);">
-                                <div class="icon mb-20">
-                                    <i class="fas fa-umbrella-beach" style="font-size:2.2rem;color:var(--primary-color,#1B3A4B);"></i>
-                                </div>
+                                <div class="icon mb-20"><i class="fas fa-umbrella-beach" style="font-size:2.2rem;color:var(--primary-color,#1B3A4B);"></i></div>
                                 <h5 style="margin-bottom:10px;">Plages</h5>
                                 <p style="font-size:0.9rem;color:var(--text-color);">Grande Conche, plage de Gatseau, plage de Maumusson… Baignade, farniente et couchers de soleil inoubliables.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1000">
                             <div style="padding:35px 25px;background:#fff;border-radius:12px;text-align:center;height:100%;box-shadow:0 2px 15px rgba(0,0,0,0.04);">
-                                <div class="icon mb-20">
-                                    <i class="fas fa-bicycle" style="font-size:2.2rem;color:var(--primary-color,#1B3A4B);"></i>
-                                </div>
+                                <div class="icon mb-20"><i class="fas fa-bicycle" style="font-size:2.2rem;color:var(--primary-color,#1B3A4B);"></i></div>
                                 <h5 style="margin-bottom:10px;">Cyclisme</h5>
                                 <p style="font-size:0.9rem;color:var(--text-color);">L'île d'Oléron, paradis du vélo avec plus de 130 km de pistes cyclables à travers forêts, marais et villages.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1200">
                             <div style="padding:35px 25px;background:#fff;border-radius:12px;text-align:center;height:100%;box-shadow:0 2px 15px rgba(0,0,0,0.04);">
-                                <div class="icon mb-20">
-                                    <i class="fas fa-utensils" style="font-size:2.2rem;color:var(--primary-color,#1B3A4B);"></i>
-                                </div>
+                                <div class="icon mb-20"><i class="fas fa-utensils" style="font-size:2.2rem;color:var(--primary-color,#1B3A4B);"></i></div>
                                 <h5 style="margin-bottom:10px;">Gastronomie</h5>
                                 <p style="font-size:0.9rem;color:var(--text-color);">Huîtres de Marennes-Oléron, poissons frais du port, pineau des Charentes, galettes charentaises… Un terroir d'exception.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="1400">
                             <div style="padding:35px 25px;background:#fff;border-radius:12px;text-align:center;height:100%;box-shadow:0 2px 15px rgba(0,0,0,0.04);">
-                                <div class="icon mb-20">
-                                    <i class="fas fa-landmark" style="font-size:2.2rem;color:var(--primary-color,#1B3A4B);"></i>
-                                </div>
+                                <div class="icon mb-20"><i class="fas fa-landmark" style="font-size:2.2rem;color:var(--primary-color,#1B3A4B);"></i></div>
                                 <h5 style="margin-bottom:10px;">Culture &amp; Patrimoine</h5>
                                 <p style="font-size:0.9rem;color:var(--text-color);">Marché central de Royan, église Notre-Dame, Fort Boyard, Le P'tit Train de Saint-Trojan, festivals.</p>
                             </div>
@@ -719,18 +788,18 @@
         <!--======  Back to Top  ======-->
         <div class="back-to-top"><i class="far fa-angle-up"></i></div>
         <!--======  JS Files  ======-->
-        <script src="./assets/js/plugins/jquery-3.7.1.min.js"></script>
-        <script src="./assets/js/plugins/popper.min.js"></script>
-        <script src="./assets/js/plugins/bootstrap.min.js"></script>
-        <script src="./assets/js/plugins/slick.min.js"></script>
-        <script src="./assets/js/plugins/jquery.magnific-popup.min.js"></script>
-        <script src="./assets/js/plugins/jquery.waypoints.js"></script>
-        <script src="./assets/js/plugins/jquery.counterup.min.js"></script>
-        <script src="./assets/js/plugins/jquery.nice-select.min.js"></script>
-        <script src="./assets/js/plugins/imagesloaded.min.js"></script>
-        <script src="./assets/js/plugins/isotope.min.js"></script>
-        <script src="./assets/js/plugins/aos.js"></script>
-        <script src="./assets/js/theme.js"></script>
+        <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
+        <script src="assets/js/plugins/popper.min.js"></script>
+        <script src="assets/js/plugins/bootstrap.min.js"></script>
+        <script src="assets/js/plugins/slick.min.js"></script>
+        <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/plugins/jquery.waypoints.js"></script>
+        <script src="assets/js/plugins/jquery.counterup.min.js"></script>
+        <script src="assets/js/plugins/jquery.nice-select.min.js"></script>
+        <script src="assets/js/plugins/imagesloaded.min.js"></script>
+        <script src="assets/js/plugins/isotope.min.js"></script>
+        <script src="assets/js/plugins/aos.js"></script>
+        <script src="assets/js/theme.js"></script>
         <script>
             AOS.init({duration:1000,once:true});
         </script>

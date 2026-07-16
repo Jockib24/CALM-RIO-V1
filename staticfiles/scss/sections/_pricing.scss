@@ -1,0 +1,95 @@
+
+/*=========================
+    Pricing Section  CSS
+==========================*/
+
+.luxivo-pricing-item{
+    &.style-one{
+        background-color: #F8F8F8;
+        border-radius: 30px;
+        padding: 20px;
+        transition: all .3s;
+        & .pricing-header{
+            padding: 30px;
+            & .plan{
+                font-size: 30px;
+                line-height: 40px;
+                font-family: $heading-font;
+                color: $heading-color;
+                margin-bottom: 12px;
+            }
+            & .price{
+                font-weight: 600;
+                & .time{
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: $body-font;
+                    color: $text-color;
+                }
+            }
+        }
+        & .pricing-body{
+            padding: 40px;
+            background-color: $white-color;
+            border-radius: 20px;
+            border: 1px solid $border-color;
+            transition: all .3s;
+            @include respond(lg){
+                padding: 20px 10px;
+            }
+            & .check-list{
+                margin-bottom: 35px;
+                padding: 0 30px;
+                @include respond(lg){
+                    padding: 0 20px;
+                }
+                &.style-one{
+                    & li{
+                        color: $heading-color;
+                        &:not(:last-child){
+                            margin-bottom: 25px;
+                        }
+                    }
+                }
+            }
+            & .theme-btn{
+                width: 100%;
+            }
+        }
+    }
+    &:hover{
+        background-color: $heading-color;
+        color: $white-color;
+        & .pricing-header{
+            & .plan{
+                color: $white-color;
+            }
+            & .price{
+                color: $white-color;
+                & .time{
+                    color: $white-color;
+                }
+            }
+            & p{
+                color: #D8D8DC;
+            }
+        }
+        & .pricing-body{
+            background-color: $heading-color;
+            border-color: $primary-color;
+            & .check-list{
+                &.style-one{
+                    & li{
+                        color: $white-color;
+                    }
+                }
+            }
+            & .theme-btn{
+                &.style-one{
+                    background-color: $white-color;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

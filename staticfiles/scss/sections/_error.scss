@@ -1,0 +1,28 @@
+
+/*======================
+    Error Section  CSS
+=======================*/
+
+.luxivo-error-sec{
+    & .luxivo-content-box{
+        & h1{
+            font-size: 48px;
+            margin-bottom: 30px;
+            & span{
+                font-weight: 300;
+                font-family: $heading-font;
+            }
+            @include respond(xl){
+                font-size: 60px;
+            }
+            @include respond(md){
+                font-size: 32px;
+            }
+        }
+        & p{
+            max-width: 510px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+}

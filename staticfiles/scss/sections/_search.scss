@@ -1,0 +1,73 @@
+
+
+.luxivo-search_one{
+    background-color: $gray-color;
+    & .luxivo-search-wrapper{
+        position: relative;
+        padding: 55px 0 60px;
+        z-index: 1;
+        & .shape{
+            position: absolute;
+            z-index: -1;
+            &.shape-one{
+                bottom: 0;
+                left: -120px;
+                @include respond(xxxl){
+                    left: -75px;
+                }
+                @include respond(xl){
+                    display: none;
+                }
+            }
+            &.shape-two{
+                top: 60px;
+                right: -120px;
+                @include respond(xxxl){
+                    right: -75px;
+                }
+                @include respond(xl){
+                    display: none;
+                }
+            }
+            &.shape-three{
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    & form{
+        & label{
+            color: $heading-color;
+            font-family: $heading-font;
+            font-size: 18px;
+            margin-bottom: 13px;
+        }
+        & .nice-select,
+        & .form_control{
+            padding: 17px 20px;
+            line-height: 1;
+            border-radius: 20px;
+            border: 1px solid $border-color;
+            color: $text-color;
+            background-color: $white-color;
+            &::placeholder{
+                color: $text-color;
+            }
+        }
+        & .nice-select{
+            padding: 19px 20px;
+            &:after{
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                font-size: 18px;
+            }
+        }
+        & .theme-btn{
+            @include respond(xl){
+                width: 80%;
+            }
+        }
+    }
+}

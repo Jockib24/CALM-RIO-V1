@@ -1,0 +1,74 @@
+
+/*----------------------------------------------------------------------------------- 
+
+Template Name: Luxivo - Hotel & Resort Booking HTML5 Template
+URI: https://nayonacademy.com/
+Description: Luxivo is a modern, elegant, and fully responsive HTML template designed specifically for hotels, resorts, villas, guest houses, and all kinds of accommodation booking websites. With a clean layout and user-friendly design, Luxivo makes it simple for your customers to explore rooms, check availability, and make reservations with ease.
+Author: Themeservices
+Author URI: https://themeforest.net/user/themeservices
+Version: 1.0 
+
+
+------------------------------------------------------
+   CSS INDEX
+-----------------------------------------------------
+
+    # Components
+        # Base CSS
+        # Common CSS
+        # Preloader CSS
+        # Offcanvas CSS
+        # Animation CSS
+        # Button CSS
+    # Sections
+       # Header CSS
+       # Hero Section CSS
+       # Search Section CSS
+       # Elements CSS
+       # About Section CSS
+       # Features Section CSS
+       # Service Section CSS
+       # Counter Section CSS
+       # Gallery Section CSS
+       # Room Section CSS
+       # Pricing Section CSS
+       # Faq Section CSS
+       # Team Section CSS
+       # Testimonial Section CSS
+       # Blog Section CSS
+       # CTA Section CSS
+       # Contact Section CSS
+       # Error Section CSS
+       # Footer CSS
+-------------------------------------------------------    */
+
+
+// Abstract
+
+@import "abstract";
+
+@import 'components/base';
+@import 'components/common';
+@import 'components/preloader';
+@import 'components/offcanvas';
+@import 'components/animations';
+@import 'components/buttons';
+@import 'sections/header';
+@import 'sections/hero';
+@import 'sections/search';
+@import 'sections/elements';
+@import 'sections/about';
+@import 'sections/features';
+@import 'sections/service';
+@import 'sections/counter';
+@import 'sections/gallery';
+@import 'sections/room';
+@import 'sections/pricing';
+@import 'sections/faq';
+@import 'sections/team';
+@import 'sections/testimonial';
+@import 'sections/blog';
+@import 'sections/cta';
+@import 'sections/contact';
+@import 'sections/error';
+@import 'sections/footer';

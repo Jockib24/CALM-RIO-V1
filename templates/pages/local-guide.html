@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Guide Local | CalmRio — Royan & Oléron{% endblock %}
+
+{% block content %}
+<section class="page-hero bg_cover p-r z-1" style="background:var(--primary-color,#1B3A4B);">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="page-content text-center" style="padding:120px 0 60px;">
+                    <span style="display:inline-block;background:var(--accent-color,#C49A5A);color:#fff;padding:6px 18px;border-radius:30px;font-size:0.85rem;font-weight:600;margin-bottom:15px;"><i class="fas fa-map-marked-alt"></i> Guide</span>
+                    <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);">Guide Local</h1>
+                    <p style="color:rgba(255,255,255,0.85);font-size:1.1rem;margin:15px 0 10px;">Nos bonnes adresses entre Royan et l'Île d'Oléron</p>
+                    <ul style="list-style:none;padding:0;display:flex;justify-content:center;gap:10px;color:rgba(255,255,255,0.7);font-size:0.9rem;">
+                        <li><a href="{% url 'home:index' %}" style="color:var(--accent-color,#C49A5A);">Accueil</a></li><li>/</li><li>Guide Local</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="padding:80px 0;">
+    <div class="container">
+        <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800">
+            <span style="color:var(--accent-color,#C49A5A);font-weight:600;text-transform:uppercase;letter-spacing:2px;font-size:0.8rem;">NOS COUPS DE CŒUR</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:var(--primary-color,#1B3A4B);margin:15px 0 0;">Découvrez la côte autrement</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+                <div style="background:#fff;border:1px solid var(--border-color);border-radius:12px;overflow:hidden;height:100%;">
+                    <div style="height:200px;background:#E8F0F5;display:flex;align-items:center;justify-content:center;font-size:3rem;color:var(--primary-color,#1B3A4B);"><i class="fas fa-umbrella-beach"></i></div>
+                    <div style="padding:25px;">
+                        <span style="color:var(--accent-color,#C49A5A);font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;">PLAGES</span>
+                        <h4 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin:8px 0 12px;">Plages d'Oléron</h4>
+                        <p style="color:var(--text-color);font-size:0.95rem;line-height:1.7;">La Grande Plage de Saint-Trojan, plage de Gatseau (surf), plage de la Rémigeasse. À vélo depuis vos locations. Eau claire, sable fin, dunes préservées.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                <div style="background:#fff;border:1px solid var(--border-color);border-radius:12px;overflow:hidden;height:100%;">
+                    <div style="height:200px;background:#F5F0E8;display:flex;align-items:center;justify-content:center;font-size:3rem;color:var(--accent-color,#C49A5A);"><i class="fas fa-utensils"></i></div>
+                    <div style="padding:25px;">
+                        <span style="color:var(--accent-color,#C49A5A);font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;">RESTAURANTS</span>
+                        <h4 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin:8px 0 12px;">Où manger</h4>
+                        <p style="color:var(--text-color);font-size:0.95rem;line-height:1.7;">Marché couvert de Saint-Trojan (huîtres, fruits de mer). Chez Laurent (poisson grillé). Crêperie La Galettière. Les cabanes de plage de Gatseau.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200">
+                <div style="background:#fff;border:1px solid var(--border-color);border-radius:12px;overflow:hidden;height:100%;">
+                    <div style="height:200px;background:#E8F0E8;display:flex;align-items:center;justify-content:center;font-size:3rem;color:#4A7C59;"><i class="fas fa-bicycle"></i></div>
+                    <div style="padding:25px;">
+                        <span style="color:var(--accent-color,#C49A5A);font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;">ACTIVITÉS</span>
+                        <h4 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin:8px 0 12px;">À faire absolument</h4>
+                        <p style="color:var(--text-color);font-size:0.95rem;line-height:1.7;">Piste cyclable Oléron — 120 km. Balade en forêt domaniale. Kayak dans les pertuis. Phare de Chassiron. Pont de l'Île d'Oléron. Visite de la citadelle du Château-d'Oléron.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="background:var(--bg-light,#F6F3EE);padding:80px 0;">
+    <div class="container">
+        <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800">
+            <span style="color:var(--accent-color,#C49A5A);font-weight:600;text-transform:uppercase;letter-spacing:2px;font-size:0.8rem;">INCONTOURNABLES</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:var(--primary-color,#1B3A4B);margin:15px 0 0;">Royan & ses alentours</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-right" data-aos-duration="800">
+                <div style="display:flex;gap:20px;background:#fff;padding:30px;border-radius:12px;height:100%;">
+                    <div style="font-size:2rem;color:var(--accent-color,#C49A5A);flex-shrink:0;"><i class="fas fa-city"></i></div>
+                    <div>
+                        <h4 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:8px;">Marché de Royan</h4>
+                        <p style="color:var(--text-color);font-size:0.95rem;line-height:1.7;">Le grand marché couvert de Royan — halles métalliques magnifiques. Produits frais, huîtres du bassin, fromages, vins de la région. Tous les matins.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="800">
+                <div style="display:flex;gap:20px;background:#fff;padding:30px;border-radius:12px;height:100%;">
+                    <div style="font-size:2rem;color:var(--accent-color,#C49A5A);flex-shrink:0;"><i class="fas fa-water"></i></div>
+                    <div>
+                        <h4 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:8px;">Port de Royan</h4>
+                        <p style="color:var(--text-color);font-size:0.95rem;line-height:1.7;">Balade sur le port de plaisance, restaurants les pieds dans l'eau, bacs pour traverser l'estuaire de la Gironde. Départ pour le Verdon-sur-Mer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                <div style="display:flex;gap:20px;background:#fff;padding:30px;border-radius:12px;height:100%;">
+                    <div style="font-size:2rem;color:var(--accent-color,#C49A5A);flex-shrink:0;"><i class="fas fa-tree"></i></div>
+                    <div>
+                        <h4 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:8px;">Forêt de la Coubre</h4>
+                        <p style="color:var(--text-color);font-size:0.95rem;line-height:1.7;">Immense forêt de pins entre Royan et la pointe de la Coubre. Randonnées, VTT, et la célèbre route des Douaniers en bord d'océan.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+                <div style="display:flex;gap:20px;background:#fff;padding:30px;border-radius:12px;height:100%;">
+                    <div style="font-size:2rem;color:var(--accent-color,#C49A5A);flex-shrink:0;"><i class="fas fa-lighthouse"></i></div>
+                    <div>
+                        <h4 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:8px;">Phare de Chassiron</h4>
+                        <p style="color:var(--text-color);font-size:0.95rem;line-height:1.7;">À la pointe nord d'Oléron. 224 marches, vue à 360° sur l'océan et le pertuis d'Antioche. Jardins remarquables au pied du phare.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="padding:80px 0;">
+    <div class="container">
+        <div class="text-center" data-aos="fade-up" data-aos-duration="800">
+            <span style="color:var(--accent-color,#C49A5A);font-weight:600;text-transform:uppercase;letter-spacing:2px;font-size:0.8rem;">CONSEILS PRATIQUES</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:var(--primary-color,#1B3A4B);margin:15px 0 30px;">Votre séjour en toute sérénité</h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="800">
+                <div style="text-align:center;padding:30px 20px;">
+                    <div style="width:60px;height:60px;background:var(--bg-light,#F6F3EE);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.5rem;color:var(--accent-color,#C49A5A);"><i class="fas fa-bicycle"></i></div>
+                    <h5 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);">Se déplacer</h5>
+                    <p style="color:var(--text-color);font-size:0.9rem;">Le vélo est le meilleur moyen de découvrir Oléron. Location de vélos à Saint-Trojan. Tout est plat !</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                <div style="text-align:center;padding:30px 20px;">
+                    <div style="width:60px;height:60px;background:var(--bg-light,#F6F3EE);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.5rem;color:var(--accent-color,#C49A5A);"><i class="fas fa-shopping-bag"></i></div>
+                    <h5 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);">Courses</h5>
+                    <p style="color:var(--text-color);font-size:0.9rem;">Marchés locaux : Saint-Trojan (mercredi, samedi), Royan (tous les jours). Supermarchés à 5 min en voiture.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                <div style="text-align:center;padding:30px 20px;">
+                    <div style="width:60px;height:60px;background:var(--bg-light,#F6F3EE);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.5rem;color:var(--accent-color,#C49A5A);"><i class="fas fa-info-circle"></i></div>
+                    <h5 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);">Office de tourisme</h5>
+                    <p style="color:var(--text-color);font-size:0.9rem;">Office de tourisme de Saint-Trojan-les-Bains et Royan. Programmes des activités, cartes, conseils.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

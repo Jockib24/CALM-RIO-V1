@@ -1,0 +1,239 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!--====== Required meta tags ======-->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="{% block meta_description %}{{ site_description }}{% endblock %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% block extra_meta %}{% endblock %}
+        <!--====== Open Graph / Social ======-->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://calm-rio.com/">
+        <meta property="og:title" content="{% block og_title %}CalmRio — Locations de vacances premium | Royan & Île d'Oléron{% endblock %}">
+        <meta property="og:description" content="{% block og_description %}Appartements et maisons soigneusement aménagés à deux pas des plages de Royan et de l'île d'Oléron. Réservez en direct.{% endblock %}">
+        <meta property="og:image" content="{% block og_image %}{% static 'images/og-image.jpg' %}{% endblock %}">
+        <meta property="og:locale" content="fr_FR">
+        <meta property="og:site_name" content="CalmRio">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{% block twitter_title %}CalmRio — Locations de vacances premium | Royan & Île d'Oléron{% endblock %}">
+        <meta name="twitter:description" content="{% block twitter_description %}Appartements et maisons soigneusement aménagés à deux pas des plages de Royan et de l'île d'Oléron.{% endblock %}">
+        <meta name="twitter:image" content="{% block twitter_image %}{% static 'images/og-image.jpg' %}{% endblock %}">
+        <!--====== Title ======-->
+        <title>{% block title %}CalmRio — Locations de vacances premium | Royan & Île d'Oléron{% endblock %}</title>
+        <!--====== Favicon Icon ======-->
+        <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
+        <!--====== Google Fonts ======-->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <!--====== FontAwesome css ======-->
+        <link rel="stylesheet" href="{% static 'fonts/fontawesome/css/all.min.css' %}">
+        <!--====== Bootstrap css ======-->
+        <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+        <!--====== Slick-popup css ======-->
+        <link rel="stylesheet" href="{% static 'css/plugins/slick.css' %}">
+        <!--====== Magnific-popup css ======-->
+        <link rel="stylesheet" href="{% static 'css/plugins/magnific-popup.css' %}">
+        <!--====== Nice Select css ======-->
+        <link rel="stylesheet" href="{% static 'css/plugins/nice-select.css' %}">
+        <!--====== Aos css ======-->
+        <link rel="stylesheet" href="{% static 'css/plugins/aos.css' %}">
+        <!--====== Default css ======-->
+        <link rel="stylesheet" href="{% static 'css/spacings.css' %}">
+        <!--====== Default css ======-->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        {% block extra_head %}{% endblock %}
+    {% if structured_data_json %}
+    <script type="application/ld+json">
+{{ structured_data_json|safe }}
+    </script>
+    {% endif %}
+    </head>
+    <body>
+        <!--====== Start Preloader ======-->
+        <div class="preloader">
+            <div class="loading-wrapper">
+                <div class="loading"></div>
+                <div id="loading-icon"><img src="{% static 'images/loader.png' %}" alt="loader"></div>
+            </div>
+        </div><!--====== End Preloader ======-->
+        <!--====== Start Overlay ======-->
+        <div class="offcanvas__overlay"></div>
+        <!--=== Start  Header Area  ===-->
+        <header class="header-area header-two">
+            <!--====  Header Top Bar  ===-->
+            <div class="header-top-bar d-none d-lg-block">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="top-left">
+                                <span><a href="tel:{{ contact_phone|cut:' ' }}"><i class="fas fa-phone-alt" style="margin-right:5px;"></i>{{ contact_phone }}</a></span>
+                                <span><a href="mailto:{{ contact_email }}"><i class="fas fa-envelope" style="margin-right:5px;"></i>{{ contact_email }}</a></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="top-right">
+                                <span><a href="{% url 'pages:faq' %}"><i class="far fa-comments"></i> FAQ</a></span>
+                                <span><a href="{% url 'pages:contact' %}"><i class="far fa-headphones"></i> Support</a></span>
+                                <div class="luxivo-language-dropdown">
+                                    <a href="javascript:void(0)"><i class="far fa-globe"></i>🇫🇷 FR <i class="far fa-angle-down"></i></a>
+                                    <ul class="dropdown">
+                                        <li><a href="/en/">🇬🇧 EN</a></li>
+                                        <li><a href="javascript:void(0)">🇪🇸 ES</a></li>
+                                        <li><a href="javascript:void(0)">🇳🇱 NL</a></li>
+                                    </ul> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--====  Header Navigation  ===-->
+            <div class="header-navigation">
+                <div class="container-fluid">
+                    <!--====  Primary Menu  ===-->
+                    <div class="primary-menu">
+                        <!--====  Site Branding  ===-->
+                        <div class="site-branding">
+                            <a href="{% url 'home:index' %}" class="brand-logo"><span class="text-logo text-logo-light">Calm<span>Rio</span></span></a>
+                        </div>
+                        <!--=== Main Menu ===-->
+                        <div class="theme-nav-menu">
+                            <!--=== Menu Top ===-->
+                            <div class="theme-menu-top d-block d-xl-none">
+                                <div class="site-branding">
+                                    <a href="{% url 'home:index' %}" class="brand-logo"><span class="text-logo text-logo-dark">Calm<span>Rio</span></span></a>
+                                </div>
+                            </div>
+                            <!--=== Main Menu ===-->
+                            <nav class="main-menu">
+                                <ul>
+                                    <li class="menu-item{% block nav_home_active %}{% endblock %}"><a href="{% url 'home:index' %}">Accueil</a></li>
+                                    <li class="menu-item has-children"><a href="#">Nos Locations</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'properties:royan_appartement' %}">Royan — Appartement</a></li>
+                                            <li><a href="{% url 'properties:saint_trojan_villa' %}">Saint-Trojan — Villa</a></li>
+                                            <li><a href="{% url 'properties:saint_trojan_maison' %}">Saint-Trojan — Maison</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item"><a href="{% url 'pages:local_guide' %}">Guide Local</a></li>
+                                    <li class="menu-item"><a href="{% url 'pages:about' %}">À Propos</a></li>
+                                    <li class="menu-item"><a href="{% url 'pages:contact' %}">Contact</a></li>
+                                </ul>
+                            </nav>
+                            <!--=== Nav Button ===-->
+                            <div class="theme-nav-button mt-20 d-block d-md-none">
+                                <a href="{% url 'home:index' %}#nos-locations" class="theme-btn style-one">Réserver<i class="far fa-arrow-right"></i></a>
+                            </div>
+                            <!--===  Menu Bottom ===-->
+                            <div class="theme-menu-bottom mt-50 d-block d-xl-none">
+                                <h5>Suivez-nous</h5>
+                                <ul class="social-link">
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--=== Header Nav Right ===-->
+                        <div class="nav-right-item">
+                            <div class="nav-button d-none d-md-block">
+                                <a href="{% url 'home:index' %}#nos-locations" class="theme-btn style-one">Réserver<i class="far fa-arrow-right"></i></a>
+                            </div>
+                            <div class="navbar-toggler">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </header><!--=== End  Header Area  ===-->
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <!--======  Start Footer  ======-->
+        <footer class="main-footer" style="background:#122A36;">
+            <div class="container">
+                <!-- Footer Top -->
+                <div class="footer-top pt-80 pb-40">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-6 col-md-12 mb-40">
+                            <div class="footer-widget">
+                                <span class="text-logo text-logo-light footer-logo">Calm<span>Rio</span></span>
+                                <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.7;margin-bottom:20px;">Locations de vacances premium à Royan et sur l'île d'Oléron. Des refuges de caractère entre océan et forêt, pensés pour le confort des familles, des couples et des télétravailleurs.</p>
+                                <ul class="social-link d-flex gap-3">
+                                    <li><a href="#" style="color:rgba(255,255,255,0.6);font-size:1.2rem;"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#" style="color:rgba(255,255,255,0.6);font-size:1.2rem;"><i class="fab fa-facebook-f"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 col-md-4 mb-40">
+                            <div class="footer-widget">
+                                <h4 style="color:#fff;margin-bottom:25px;font-size:1.1rem;">Navigation</h4>
+                                <ul style="list-style:none;padding:0;">
+                                    <li style="margin-bottom:12px;"><a href="{% url 'home:index' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Accueil</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'home:index' %}#nos-locations" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Nos Locations</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'pages:local_guide' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Guide Local</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'pages:about' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">À Propos</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'pages:contact' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-4 mb-40">
+                            <div class="footer-widget">
+                                <h4 style="color:#fff;margin-bottom:25px;font-size:1.1rem;">Hébergements</h4>
+                                <ul style="list-style:none;padding:0;">
+                                    <li style="margin-bottom:12px;"><a href="{% url 'properties:royan_appartement' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Royan — Appartement Grande Conche</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'properties:saint_trojan_villa' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Saint-Trojan — Villa</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'properties:saint_trojan_maison' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Saint-Trojan — Maison</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-4 mb-40">
+                            <div class="footer-widget">
+                                <h4 style="color:#fff;margin-bottom:25px;font-size:1.1rem;">Contact</h4>
+                                <ul style="list-style:none;padding:0;">
+                                    <li style="margin-bottom:12px;"><a href="mailto:{{ contact_email }}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">{{ contact_email }}</a></li>
+                                    <li style="margin-bottom:12px;"><a href="tel:{{ contact_phone|cut:' ' }}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">{{ contact_phone }}</a></li>
+                                    <li style="margin-bottom:12px;"><span style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Royan &amp; Saint-Trojan-les-Bains<br>Nouvelle-Aquitaine, France</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Copyright -->
+                <div class="footer-copyright pt-30 pb-30" style="border-top:1px solid rgba(255,255,255,0.1);">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;">&copy; {{ current_year }} {{ site_name }}. Tous droits réservés.</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <a href="{% url 'pages:mentions' %}" style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-right:20px;">Mentions légales</a>
+                            <a href="{% url 'pages:privacy' %}" style="color:rgba(255,255,255,0.6);font-size:0.85rem;">Politique de confidentialité</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer><!--======  End Footer  ======-->
+        <!--======  Back to Top  ======-->
+        <div class="back-to-top"><i class="far fa-angle-up"></i></div>
+        <!--======  JS Files  ======-->
+        <script src="{% static 'js/plugins/jquery-3.7.1.min.js' %}"></script>
+        <script src="{% static 'js/plugins/popper.min.js' %}"></script>
+        <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/plugins/slick.min.js' %}"></script>
+        <script src="{% static 'js/plugins/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'js/plugins/jquery.waypoints.js' %}"></script>
+        <script src="{% static 'js/plugins/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'js/plugins/jquery.nice-select.min.js' %}"></script>
+        <script src="{% static 'js/plugins/imagesloaded.min.js' %}"></script>
+        <script src="{% static 'js/plugins/isotope.min.js' %}"></script>
+        <script src="{% static 'js/plugins/aos.js' %}"></script>
+        <script src="{% static 'js/theme.js' %}"></script>
+        <script>
+            AOS.init({duration:1000,once:true});
+        </script>
+        {% block extra_scripts %}{% endblock %}
+    </body>
+</html>

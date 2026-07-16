@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}À propos | CalmRio — Locations premium Royan & Île d'Oléron{% endblock %}
+
+{% block content %}
+            <section class="page-hero bg_cover p-r z-1" style="background:var(--primary-color,#1B3A4B);">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="page-content text-center" style="padding:120px 0 60px;">
+                                <span style="display:inline-block;background:var(--accent-color,#C49A5A);color:#fff;padding:6px 18px;border-radius:30px;font-size:0.85rem;font-weight:600;margin-bottom:15px;"><i class="fas fa-heart"></i> Notre histoire</span>
+                                <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);">À propos de Calm Rio</h1>
+                                <p style="color:rgba(255,255,255,0.85);font-size:1.1rem;margin:15px 0 10px;">Des refuges de caractère entre océan et forêt</p>
+                                <ul style="list-style:none;padding:0;display:flex;justify-content:center;gap:10px;color:rgba(255,255,255,0.7);font-size:0.9rem;">
+                                    <li><a href="{% url 'home:index' %}" style="color:var(--accent-color,#C49A5A);">Accueil</a></li><li>/</li><li>À Propos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="pt-80 pb-120">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+                            <div class="about-image-wrapper">
+                                <img src="{% static 'images/properties/about-hero.jpg' %}" alt="Calm Rio — bord de mer" onerror="this.style.display='none'" style="width:100%;border-radius:12px;">
+                                <div style="height:400px;background:var(--bg-light,#F6F3EE);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--primary-color,#1B3A4B);font-size:2rem;">
+                                    <span><i class="fas fa-water" style="margin-right:10px;"></i> Calm Rio</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
+                            <div class="about-content">
+                                <span style="color:var(--accent-color,#C49A5A);font-weight:600;text-transform:uppercase;letter-spacing:2px;font-size:0.8rem;">NOTRE HISTOIRE</span>
+                                <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:var(--primary-color,#1B3A4B);margin:15px 0 25px;">L'esprit Calm Rio</h2>
+                                <p style="color:var(--text-color);line-height:1.8;margin-bottom:15px;">Calm Rio est né d'une passion pour la côte atlantique française — ses plages sauvages, ses forêts de pins, ses marchés d'huîtres et son art de vivre unique. Nous sélectionnons des logements de caractère où chaque détail compte, pour que vos vacances soient une vraie parenthèse.</p>
+                                <p style="color:var(--text-color);line-height:1.8;margin-bottom:15px;">De Royan à l'île d'Oléron, chaque propriété est choisie pour son emplacement, son charme et sa qualité d'accueil. Nous sommes hôtes nous-mêmes et connaissons chaque lieu sur le bout des doigts.</p>
+                                <p style="color:var(--text-color);line-height:1.8;">Réserver en direct avec Calm Rio, c'est la garantie du meilleur prix, d'un accueil personnalisé et de conseils d'initiés pour profiter pleinement de votre séjour.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section style="background:var(--bg-light,#F6F3EE);padding:80px 0;">
+                <div class="container">
+                    <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800">
+                        <span style="color:var(--accent-color,#C49A5A);font-weight:600;text-transform:uppercase;letter-spacing:2px;font-size:0.8rem;">POURQUOI NOUS CHOISIR</span>
+                        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:var(--primary-color,#1B3A4B);margin:15px 0 0;">Nos valeurs</h2>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-4" data-aos="fade-up" data-aos-duration="800">
+                            <div style="background:#fff;padding:40px 30px;border-radius:12px;text-align:center;height:100%;">
+                                <div style="width:70px;height:70px;background:var(--bg-light,#F6F3EE);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;font-size:1.8rem;color:var(--accent-color,#C49A5A);"><i class="fas fa-hand-holding-heart"></i></div>
+                                <h4 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);">Accueil authentique</h4>
+                                <p style="color:var(--text-color);font-size:0.95rem;line-height:1.7;">Chaque hôte est sélectionné pour sa passion de l'accueil. Nous sommes disponibles avant, pendant et après votre séjour.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                            <div style="background:#fff;padding:40px 30px;border-radius:12px;text-align:center;height:100%;">
+                                <div style="width:70px;height:70px;background:var(--bg-light,#F6F3EE);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;font-size:1.8rem;color:var(--accent-color,#C49A5A);"><i class="fas fa-tag"></i></div>
+                                <h4 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);">Meilleur prix garanti</h4>
+                                <p style="color:var(--text-color);font-size:0.95rem;line-height:1.7;">En réservant directement, vous économisez les commissions des plateformes. Prix identique ou inférieur, toujours.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                            <div style="background:#fff;padding:40px 30px;border-radius:12px;text-align:center;height:100%;">
+                                <div style="width:70px;height:70px;background:var(--bg-light,#F6F3EE);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;font-size:1.8rem;color:var(--accent-color,#C49A5A);"><i class="fas fa-map-marked-alt"></i></div>
+                                <h4 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);">Conseils d'initiés</h4>
+                                <p style="color:var(--text-color);font-size:0.95rem;line-height:1.7;">Nous connaissons chaque restaurant, chaque plage, chaque sentier. Notre guide local vous révèle les meilleures adresses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section style="padding:80px 0;">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+                            <span style="color:var(--accent-color,#C49A5A);font-weight:600;text-transform:uppercase;letter-spacing:2px;font-size:0.8rem;">NOS HÉBERGEMENTS</span>
+                            <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:var(--primary-color,#1B3A4B);margin:15px 0 20px;">3 refuges, une seule promesse</h2>
+                            <p style="color:var(--text-color);line-height:1.8;margin-bottom:15px;">Chaque logement Calm Rio est unique, mais tous partagent la même exigence de qualité : literie soignée, équipements complets, décoration pensée pour le bien-être, et emplacement privilégié pour explorer la côte.</p>
+                            <ul style="list-style:none;padding:0;">
+                                <li style="margin-bottom:10px;"><i class="fas fa-check-circle" style="color:var(--accent-color,#C49A5A);margin-right:10px;"></i>Appartement Royan — Vue port, 4 pers</li>
+                                <li style="margin-bottom:10px;"><i class="fas fa-check-circle" style="color:var(--accent-color,#C49A5A);margin-right:10px;"></i>Villa Saint-Trojan — Jardin clos, 6 pers</li>
+                                <li style="margin-bottom:10px;"><i class="fas fa-check-circle" style="color:var(--accent-color,#C49A5A);margin-right:10px;"></i>Maison Saint-Trojan — Cour privée, 6 pers</li>
+                            </ul>
+                            <a href="{% url 'home:index' %}#nos-locations" class="theme-btn style-one" style="margin-top:20px;">Découvrir nos locations <i class="far fa-arrow-right"></i></a>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:30px;">
+                                <img src="{% static 'images/properties/gallery-1.jpg' %}" alt="Calm Rio" onerror="this.style.display='none'" style="width:100%;border-radius:12px;height:250px;object-fit:cover;">
+                                <div style="height:250px;background:var(--primary-color,#1B3A4B);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',serif;font-size:1.5rem;">Calm<br>Rio</div>
+                                <div style="height:250px;background:var(--accent-color,#C49A5A);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',serif;font-size:1.5rem;">Océan<br>Forêt</div>
+                                <img src="{% static 'images/properties/gallery-2.jpg' %}" alt="Calm Rio" onerror="this.style.display='none'" style="width:100%;border-radius:12px;height:250px;object-fit:cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+{% endblock %}

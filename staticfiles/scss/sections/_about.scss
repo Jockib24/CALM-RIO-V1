@@ -1,0 +1,292 @@
+
+/*======================
+    About Section  CSS
+=======================*/
+
+.luxivo-about_one{
+    & .luxivo-image-box{
+        min-height: 575px;
+        position: relative;
+        & .luxivo-image{
+            & img{
+                border-radius: 30px;
+            }
+            &.image_one{
+                z-index: -2;
+            }
+            &.image_two{
+                position: absolute;
+                bottom: 0;
+                right: 30px;
+                z-index: 2;
+                @include respond(md){
+                    position: relative;
+                    right: auto;
+                    bottom: auto;
+                    margin-top: 40px;
+                    & img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        & .luxivo-customer-box{
+            position: absolute;
+            left: 35px;
+            bottom: 60px;
+            max-width: 190px;
+            width: 100%;
+            padding: 23px 30px;
+            border-radius: 30px;
+            display: inline-block;
+            background-color: $primary-color;
+            @include respond(md){
+                position: relative;
+                left: auto;
+                bottom: auto;
+                max-width: 100%;
+                margin: 40px 0;
+            }
+            & .content{
+                & h3{
+                    color: $white-color;
+                    font-size: 30px;
+                }
+                & p{
+                    color: $white-color;
+                }
+            }
+        }
+        & .luxivo-experience-box{
+            display: inline-block;
+            padding: 40px 30px;
+            height: 400px;
+            background-color: $primary-color;
+            border-radius: 80px 30px 30px 30px;
+            position: absolute;
+            right: -10px;
+            bottom: 0;
+            z-index: 1;
+            @include respond(md){
+                position: relative;
+                right: auto;
+                bottom: auto;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 300px;
+            }
+            & .content{
+                & h3{
+                    color: $white-color;
+                    font-size: 60px;
+                }
+                & p{
+                    color: $white-color;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    & .luxivo-content-box{
+        padding-left: 40px;
+        @include respond(xxxl){
+            padding-left: 30px;
+        }
+        @include respond(xl){
+            padding-left: 0;
+        }
+        & .section-title{
+            padding-bottom: 0;
+            border-bottom: 1px solid $border-color;
+            margin-bottom: 15px;
+        }
+        & > p{
+            margin-bottom: 25px;
+        }
+        @include respond(xl){
+            padding-left: 0;
+        }
+        & .luxivo-button-wrap{
+            display: flex;
+            align-items: center;
+            @include respond(md){
+                align-items: flex-start;
+                flex-direction: column;
+            }
+            & .author-thumb-item{
+                margin-left: 40px;
+                @include respond(md){
+                    margin-left: 0;
+                    margin-top: 30px;
+                }
+                & .author-thumb{
+                    margin-right: 15px;
+                }
+                & .author-info{
+                    & img{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.luxivo-about_two{
+    & .luxivo-image-box{
+        position: relative;
+        min-height: 580px;
+        position: relative;
+        margin-right: 30px;
+        & .luxivo-image{
+            & img{
+                border-radius: 30px;
+            }
+            &.image_two{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                & img{
+                    border: 6px solid $white-color;
+                }
+                @include respond(md){
+                    position: relative;
+                    bottom: auto;
+                    right: auto;
+                    margin-top: 40px;
+                }
+            }
+        }
+        & .luxivo-experiece-box{
+            position: absolute;
+            top: 130px;
+            right: 30px;
+            background-color: $primary-color;
+            max-width: 120px;
+            border-radius: 10px;
+            padding: 10px 20px 15px;
+            & .content{
+                & h3{
+                    font-size: 30px;
+                    color: $white-color;
+                }
+                & p{
+                    font-weight: 500;
+                    line-height: 26px;
+                    color: $white-color;
+                }
+            }
+        }
+        & .luxivo-avatar-box{
+            margin-top: 30px;
+            margin-left: 40px;
+            @include respond(md){
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+
+.luxivo-about_three{
+    background-color: $gray-color;
+    & .luxivo-content-wrapper{
+        margin-left: -150px;
+        display: flex;
+        align-items: center;
+        @include respond(xxxl){
+            margin-left: -80px;
+        }
+        @include respond(xl){
+            margin-left: 0;
+        }
+        @include respond(lg){
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        & .luxivo-image-box{
+            flex: 0 0 auto;
+            max-width: 370px;
+            margin-right: 60px;
+            @include respond(xxxl){
+                margin-right: 40px;
+            }
+            @include respond(xl){
+                margin-right: 20px;
+            }
+            @include respond(lg){
+                margin-right: 0;
+            }
+            & img{
+                border-radius: 30px;
+            }
+        }
+        & .luxivo-content-box{
+            & > p{
+                margin-bottom: 30px;
+            }
+        }
+    }
+    & .counter-wrapper{
+        & .item-column{
+            & .luxivo-counter-item{
+                padding-right: 15px;
+                padding-left: 15px;
+                @include respond(md){
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+            }
+            &:not(:last-child){
+                & .luxivo-counter-item{
+                    padding-right: 0;
+                    border-right: 1px solid $border-color;
+                }
+            }
+            &:first-child{
+                & .luxivo-counter-item{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.luxivo-about-sec{
+    & .container-fluid{
+        padding-left: 30px;
+        padding-right: 30px;
+        @include respond(xl){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    & .gallery-slider-two{
+        margin-left: -15px;
+        margin-right: -15px;
+        @include respond(lg){
+            margin-left: -12px;
+            margin-right: -12px;
+        }
+        & .slick-slide{
+            margin-left: 15px;
+            margin-right: 15px;
+            @include respond(lg){
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+        }
+    }
+}
+
+
+.luxivo-about-content-box{
+    & p{
+        margin-bottom: 25px;
+    }
+}

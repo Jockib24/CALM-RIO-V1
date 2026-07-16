@@ -1,0 +1,683 @@
+
+/*======================
+    Room Section  CSS
+=======================*/
+
+.luxivo-room_one{
+    background-color: $gray-color;
+    overflow: hidden;
+    & .room-slider{
+        margin-right: -40%;
+        @include respond(md){
+            margin-right: 0;
+            margin-left: -12px;
+            margin-right: -12px;
+            & .slick-slide{
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+        }
+    }
+    & .room-arrows{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        @include respond(lg){
+            justify-content: flex-start;
+        }
+        & .slick-arrow{
+            width: 55px;
+            height: 55px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $border-color;
+            color: $white-color;
+            z-index: 1;
+            cursor: pointer;
+            transition: all .3s;
+            @include respond(xl){
+                border-color: $primary-color;
+                color: $primary-color;
+                &:hover{
+                    color: $white-color;
+                }
+            }
+            &:hover{
+                background-color: $primary-color;
+                border-color: transparent;
+            }
+        }
+    }
+    & .room-bg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        width: 45%;
+        height: 100%;
+        @include respond(xl){
+            display: none;
+        }
+        &:after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color:rgba(22, 25, 33, 0.60);
+            z-index: -1;
+        }
+    }
+}
+
+
+.luxivo-room_two{
+    & .container-fluid{
+        padding-left: 150px;
+        padding-right: 150px;
+        @include respond(xxxl){
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @include respond(xl){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.room-slider-three,
+.room-slider-two,
+.room-slider{
+    margin-left: -15px;
+    margin-right: -15px;
+    @include respond(lg){
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+    & .slick-slide{
+        margin-left: 15px;
+        margin-right: 15px;
+        @include respond(lg){
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+    }
+}
+
+.luxivo-room-wrapper{
+    & .luxivo-room-item{
+        &.style-three{
+            &:nth-child(even){
+                & .row{
+                    flex-direction: row-reverse;
+                }
+                & .room-image{
+                    flex-direction: row-reverse;
+                }
+                & .room-content{
+                    padding-left: 0;
+                    padding-right: 30px;
+                    @include respond(xl){
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.luxivo-filter-nav{
+    & .filter-nav-items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        cursor: pointer;
+        gap: 20px;
+        & li{
+            padding: 18px 30px;
+            line-height: 1;
+            border-radius: 10px;
+            font-size: 14px;
+            color: $heading-color;
+            font-weight: 700;
+            border: 1px solid $border-color;
+            transition: all .3s;
+            &:hover,
+            &.active{
+                background-color: $primary-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+
+.luxivo-room-sec{
+    & .container-fluid{
+        padding-left: 90px;
+        padding-right: 90px;
+        @include respond(xl){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.sticky-widget {
+    position: sticky;
+    top: 150px;
+}
+
+.luxivo-room-item{
+    &.style-one{
+        background-color: $white-color;
+        padding: 20px;
+        border-radius: 30px;
+        & .room-image{
+            position: relative;
+            & img{
+                width: 100%;
+                border-radius: 20px;
+            }
+            & .rate{
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                border-radius: 20px;
+                line-height: 1;
+                padding: 8px 11px;
+                background-color: $primary-color;
+                color: $white-color;
+                & i{
+                    margin-right: 7px;
+                }
+            }
+        }
+        & .room-content{
+            padding-top: 25px;
+            & .title{
+                margin-bottom: 10px;
+                font-size: $h4-font;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+            & p{
+                margin-bottom: 15px;
+            }
+            & .room-meta{
+                padding: 10px 0;
+                border-top: 1px solid $border-color;
+                border-bottom: 1px solid $border-color;
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: space-between;
+                & span{
+                    & i{
+                        margin-right: 10px;
+                        @include respond(md){
+                            margin-right: 5px;
+                        }
+                    }
+                    &:not(:last-child){
+                        margin-right: 20px;
+                        @include respond(md){
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+            & .room-bottom{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & .price{
+                    color: $heading-color;
+                    font-size: $h4-font;
+                    font-family: $heading-font;
+                    & span{
+                        font-family: $body-font;
+                        font-size: 16px;
+                        color: $text-color;
+                    }
+                }
+                & .theme-btn{
+                    @include respond(md){
+                        font-size: 14px;
+                        padding: 15px 20px;
+                    }
+                }
+            }
+        }
+    }
+    &.style-two{
+        & .room-image{
+            & img{
+                width: 100%;
+                border-radius: 30px;
+            }
+        }
+        & .room-content{
+            position: relative;
+            border-radius: 30px;
+            background-color: $white-color;
+            padding: 30px 25px;
+            margin-top: -55px;
+            & .price-rating-wrap{
+                padding-bottom: 25px;
+                border-bottom: 1px solid $border-color;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & .ratings{
+                    & i{
+                        color: #FF9500;
+                        font-size: 14px;
+                    }
+                }
+                & .price{
+                    font-size: 24px;
+                    color: $heading-color;
+                    font-family: $heading-font;
+                    & span{
+                        font-size: 16px;
+                        color: $text-color;
+                        font-family: $body-font;
+                    }
+                }
+            }
+            & .title{
+                margin-bottom: 20px;
+                font-size: $h4-font;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+            & .check-list{
+                margin-bottom: 20px;
+                & li{
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                }
+            }
+            & p{
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &.style-three{
+        & .room-image{
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            @include respond(xl){
+                margin-bottom: 30px;
+            }
+            @include respond(md){
+                gap: 15px;
+            }
+            & img{
+                border-radius: 30px;
+                &:nth-child(1){
+                    width: 40%;
+                }
+                &:nth-child(2){
+                    width: 60%;
+                    @include respond(xxxl){
+                        width: 55%;
+                    }
+                }
+            }
+        }
+        & .room-content{
+            padding-left: 25px;
+            @include respond(xl){
+                padding-left: 0;
+            }
+            & .sub-title{
+                margin-bottom: 15px;
+            }
+            & .title{
+                font-size: 48px;
+                margin-bottom: 20px;
+                @include respond(xl){
+                    font-size: 28px;
+                    line-height: 45px;
+                }
+            }
+            & p{
+                margin-bottom: 25px;
+            }
+            & .price{
+                font-family: $heading-font;
+                color: $heading-color;
+                font-size: 36px;
+                margin-bottom: 30px;
+                & span{
+                    font-size: 16px;
+                    color: $text-color;
+                    font-family: $body-font;
+                }
+            }
+        }
+    }
+    &.style-four{
+        &:hover{
+            & .room-image{
+                & .hover-content-wrap{
+                    & .content{
+                        bottom: -100%;
+                    }
+                    & .hover-content{
+                        bottom: 20px;
+                    }
+                }
+            }
+        }
+        & .room-image{
+            position: relative;
+            overflow: hidden;
+            & img{
+                width: 100%;
+                border-radius: 30px;
+            }
+            & .hover-content-wrap{
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 20px;
+                width: 100%;
+                height: 100%;
+                & .content{
+                    position: absolute;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    width: 90%;
+                    border-radius: 20px;
+                    background-color: rgba(22, 25, 33, 0.60);
+                    backdrop-filter: blur(44px);
+                    padding: 20px;
+                    transition: all .3s;
+                    & h4{
+                        margin-bottom: 15px;
+                        color: $white-color;
+                        font-size: 20px;
+                    }
+                    & .theme-btn{
+                        &.style-two{
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+            & .hover-content{
+                position: absolute;
+                bottom: -100%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                width: 90%;
+                border-radius: 20px;
+                background-color: rgba(22, 25, 33, 0.60);
+                backdrop-filter: blur(44px);
+                padding: 20px;
+                transition: all .5s;
+                & .ratings{
+                    margin-bottom: 10px;
+                    & i{
+                        color: #FF9500;
+                    }
+                }
+                & h4{
+                    margin-bottom: 20px;
+                    color: $white-color;
+                    font-size: 20px;
+                }
+                & .price{
+                    color: $white-color;
+                    font-size: 36px;
+                    font-weight: 400;
+                    font-family: $heading-font;
+                    margin-bottom: 5px;
+                    & span{
+                        font-family: $body-font;
+                        font-size: 16px;
+                    }
+                }
+                & .room-meta{
+                    padding: 10px 0;
+                    border-top: 1px solid $border-color;
+                    border-bottom: 1px solid $border-color;
+                    margin-bottom: 30px;
+                    & span{
+                        color: $white-color;
+                        & i{
+                            margin-right: 10px;
+                        }
+                        &:not(:last-child){
+                            margin-right: 20px;
+                        }
+                    }
+                }
+                & .theme-btn{
+                    &.style-two{
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Room Details Wrapper */
+
+.room-details-wrapper{
+    & .room-content-area{
+        & .title{
+            font-size: 48px;
+        }
+        & .ratings{
+            margin-right: 25px;
+            & a{
+                margin-right: 10px;
+                color: $heading-color;
+            }
+            & i{
+                color: #FF9500;
+            }
+        }
+    }
+    & .share-button{
+        & .theme-btn{
+            &.style-two{
+                border-color: $primary-color;
+                & i{
+                    color: $primary-color;
+                }
+                &:hover{
+                    & i{
+                        color: $white-color;
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
+    & .room-image{
+        & img{
+            border-radius: 30px;
+        }
+    }
+    & .rooms-meta-info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include respond(lg){
+            flex-wrap: wrap;
+        }
+        & .meta-box{
+            & h5{
+                font-size: $h5-font;
+            }
+            @include respond(lg){
+                width: 33.33%;
+                text-align: center;
+            }
+            @include respond(md){
+                width: 50%;
+                text-align: center;
+            }
+        }
+    }
+    & .room-content-box{
+        & h3{
+            font-size: $h3-font;
+            margin-bottom: 20px;
+        }
+        & p{
+            margin-bottom: 30px;
+        }
+        & > img{
+            border-radius: 30px;
+            margin-bottom: 30px;
+        }
+        & .services-list{
+            &:not(:last-child){
+                border-bottom: 1px solid $border-color;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        & .box{
+            & h5{
+                display: inline-flex;
+                align-items: center;
+                font-size: $h5-font;
+                & i{
+                    flex: 0 0 auto;
+                    width: 20px;
+                    margin-right: 10px;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    & .spacing-gap{
+        padding-top: 35px;
+        border-top: 1px solid $border-color;
+    }
+    & .room-gallery-slider{
+        margin-left: -15px;
+        margin-right: -15px;
+        @include respond(lg){
+            margin-left: -12px;
+            margin-right: -12px;
+        }
+        & .slick-slide{
+            margin-left: 15px;
+            margin-right: 15px;
+            @include respond(lg){
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+        }
+        & .gallery-image{
+            & img{
+                border-radius: 30px;
+            }
+        }
+    }
+    & .room-sidebar-area{
+        & .room-sidebar-widget {
+            background-color: $gray-color;
+            border-radius: 30px;
+            padding: 30px 40px;
+            & .widget-title{
+                font-size: 30px;
+                &:after{
+                    display: block;
+                    content: '';
+                    margin-top: 5px;
+                    width: 100px;
+                    height: 1px;
+                    background-color: $primary-color;
+                    margin-bottom: 32px;
+                }
+            }
+        }
+        & .room-booking-widget{
+            & .form-group{
+                & label{
+                    font-size: 20px;
+                    margin-bottom: 15px;
+                    color: $heading-color;
+                    font-family: $heading-font;
+                }
+            }
+            & .nice-select,
+            & .form_control{
+                width: 100%;
+                border-radius: 20px;
+                padding: 16px 20px;
+                border: 1px solid $border-color;
+                margin-bottom: 25px;
+            }
+            & .nice-select{
+                width: 100%;
+                padding: 7px 20px;
+            }
+            & .extra-service{
+                margin-bottom: 30px;
+                & h5{
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+                & .form-check{
+                    padding-left: 0;
+                }
+                & label{
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                }
+                & input{
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 10px;
+                    border-radius: 2px;
+                    border: 1px solid $border-color;
+                }
+                & span{
+                    margin-left: auto;
+                }
+            }
+            & .theme-btn{
+                width: 100%;
+            }
+        }
+        & .room-support-widget{
+            & ul{
+                margin-bottom: 25px;
+                & li{
+                    color: $heading-color;
+                    &:not(:last-child){
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            & h3{
+                font-size: 30px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
