@@ -1,0 +1,527 @@
+
+/*======================
+    Service Section  CSS
+=======================*/
+
+
+.luxivo-service-item{
+    &.style-one{
+        background-color: $gray-color;
+        border-radius: 30px;
+        padding: 20px;
+        &:hover{
+            & .service-content{
+                & .icon{
+                    background-color: $primary-color;
+                    & img{
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+        & .service-content{
+            padding: 20px 0;
+            & .icon-title-wrap{
+                display: flex;
+                align-items: center;
+            }
+            & .icon{
+                flex: 0 0 auto;
+                position: relative;
+                width: 60px;
+                height: 60px;
+                border-radius: 20px;
+                background-color: $white-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                transition: all .3s;
+                & img{
+                    transition: filter 0.3s ease;
+                }
+            }
+        }
+        & .service-thumbnail{
+            & img{
+                width: 100%;
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+.luxivo-service-card{
+    & .service-thumbnail{
+        flex: 0 0 auto;
+        max-width: 475px;
+        margin-left: 80px;
+        & img{
+            border-radius: 30px;
+        }
+        @include respond(xl){
+            margin-left: 0;
+            max-width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+    & .service-content{
+        position: relative;
+        @include respond(lg){
+            margin-bottom: 40px;
+        }
+        & .sn-number{
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 120px;
+            line-height: 84px;
+            color: #D8DDE1;
+            font-family: $heading-font;
+            @include respond(xl){
+                top: -20px;
+                font-size: 50px;
+            }
+        }
+        & .sub-title{
+            margin-bottom: 15px;
+            &:after{
+                display: inline-block;
+                content: '';
+                width: 80px;
+                height: 1px;
+                background-color: $primary-color;
+                margin-left: 12px;
+            }
+        }
+        & .title{
+            margin-bottom: 37px;
+            font-size: 48px;
+            @include respond(md){
+                font-size: 28px;
+            }
+        }
+        & .line{
+            margin-left: 65px;
+            background-color: $primary-color;
+            width: 1px;
+            height: 50px;
+            margin-bottom: 22px;
+        }
+        & p{
+            max-width: 565px;
+            margin-bottom: 52px;
+        }
+        & .icon-btn{
+            width: 50px;
+            height: 50px;
+            border: 1px solid $border-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            &:hover{
+                background-color: $primary-color;
+                color: $white-color;
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+.service-card-wrapper{
+    & .luxivo-service-card{
+        &:nth-child(even){
+            flex-direction: row-reverse;
+            & .row{
+                flex-direction: row-reverse;
+            }
+            & .service-thumbnail{
+                margin-left: 0;
+                margin-right: 80px;
+                @include respond(xl){
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* Service Details Wrapper */ 
+
+.service-details-wrapper{
+    & .luxivo-service-item{
+        & .service-thumbnail{
+            margin-bottom: 55px;
+            & img{
+                border-radius: 30px;
+            }
+        }
+        & .service-content{
+            & p{
+                margin-bottom: 30px;
+            }
+            & figure{
+                margin-bottom: 35px;
+                & img{
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+    & h3{
+        margin-bottom: 35px;
+        font-size: $h4-font;
+    }
+}
+
+/* Luxivo Offer Section */ 
+
+
+.luxivo-offer-item{
+    &.style-one{
+        & .content{
+            position: relative;
+            padding: 55px 60px 60px;
+            border-radius: 30px;
+            background-color: $primary-black-color;
+            @include respond(xxxl){
+                padding: 35px 40px 40px;
+            }
+            & .shape{
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+            }
+            & .title{
+                font-size: 24px;
+                color: $white-color;
+                text-transform: capitalize;
+                &:after{
+                    display: block;
+                    content: '';
+                    width: 150px;
+                    height: 1px;
+                    background-color: $primary-color;
+                    margin-bottom: 10px;
+                    margin-top: 20px;
+                }
+                @include respond(md){
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+            }
+            & .ratings{
+                margin-bottom: 15px;
+                & i{
+                    color: #FF9500;
+                }
+                & span{
+                    margin-left: 10px;
+                    color: $white-color;
+                }
+            }
+            & p{
+                color: $white-color;
+                margin-bottom: 15px;
+            }
+            & .price{
+                color: $white-color;
+                font-family: $heading-font;
+                font-size: 24px;
+                margin-bottom: 20px;
+                & span{
+                    font-family: $body-font;
+                    font-size: 14px;
+                    color: #D8D8DC;
+                    margin-left: 15px;
+                }
+            }
+            & .theme-btn{
+                &.style-two{
+                    color: $white-color;
+                    &:hover{
+                        background-color: $white-color;
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+        & .thumbnail{
+            margin-left: 30px;
+            @include respond(xl){
+                margin-left: 0;
+                margin-top: 40px;
+            }
+            & img{
+                border-radius: 30px;
+                width: 100%;
+            }
+        }
+    }
+    &.style-two{
+        display: flex;
+        align-items: center;
+        border:1px solid $border-color;
+        border-radius: 30px;
+        padding: 40px;
+        @include respond(md){
+            padding: 20px;
+        }
+        @include respond(xl){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        & .thumbnail{
+            max-width: 560px;
+            flex: 0 0 auto;
+            margin-right: 40px;
+            & img{
+                width: 100%;
+                border-radius: 20px;
+            }
+            @include respond(xl){
+                max-width: 100%;
+                margin-bottom: 40px;
+                margin-right: 0;
+            }
+        }
+        & .content{
+            & .title{
+                font-size: 30px;
+                text-transform: capitalize;
+                @include respond(xxxl){
+                    font-size: 28px;
+                }
+                @include respond(md){
+                    font-size: 20px;
+                }
+                &:after{
+                    display: block;
+                    content: "";
+                    width: 85px;
+                    height: 1px;
+                    background-color: $primary-color;
+                    margin-top: 18px;
+                    margin-bottom: 14px;
+                }
+            }
+            & .ratings{
+                margin-bottom: 25px;
+                & i{
+                    color: #FF9500;
+                }
+                & span{
+                    margin-left: 10px;
+                }
+            }
+            & p{
+                margin-bottom: 25px;
+                padding-bottom: 25px;
+                border-bottom: 1px solid $border-color;
+            }
+            & .offer-footer{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & .price{
+                    color: $heading-color;
+                    font-family: $heading-font;
+                    font-size: 24px;
+                    & span{
+                        font-family: $body-font;
+                        font-size: 14px;
+                        color: $text-color;
+                        margin-left: 15px;
+                    }
+                    @include respond(md){
+                        font-size: 18px;
+                    }
+                }
+                & .theme-btn{
+                    &.style-two{
+                        @include respond(md){
+                            padding: 10px 20px;
+                            font-size: 14px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.luxivo-offer-sec{
+    & .text-box{
+        & h3{
+            text-transform: capitalize;
+            @include respond(md){
+                font-size: 22px;
+                line-height: 40px;
+            }
+        }
+        & .line{
+            position: relative;
+            display: block;
+            max-width: 600px;
+            border-top: 1px solid $border-color;
+            margin: 0 auto;
+            margin-top: 28px;
+            padding-bottom: 20px;
+            &:after{
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                content: '';
+                max-width: 540px;
+                width: 100%;
+                height: 1px;
+                margin: 0 auto;
+                background-color: $border-color;
+            }
+        }
+    }
+}
+.luxivo-offer-wrapper{
+    & .luxivo-offer-item{
+        &.style-one{
+            &:nth-child(even){
+                & .row{
+                    flex-direction: row-reverse;
+                }
+                & .thumbnail{
+                    margin-left: 0;
+                    margin-right: 30px;
+                    @include respond(xl){
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.luxivo-offer-sec{
+    & .luxivo-image{
+        & img{
+            border-radius: 250px;
+        }
+    }
+    & .luxivo-content-item{
+        border: 1px solid $border-color;
+        padding: 15px 24px;
+        border-radius: 20px;
+        & .content{
+            & h5{
+                font-size: $h5-font;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+/* Special Offer Section CSS */ 
+
+.luxivo-special-offer-sec{
+    & .luxivo-image{
+        & img{
+            border-radius: 30px;
+        }
+    }
+    & .luxivo-content-box{
+        & h4{
+            margin-bottom: 30px;
+        }
+    }
+    & .luxivo-offer-box{
+        position: relative;
+        border-radius: 30px;
+        border: 1px solid $primary-color;
+        max-width: 350px;
+        padding: 20px 30px 30px;
+        z-index: 1;
+        @include respond(lg){
+            margin: 0 auto 40px;
+        }
+        & .shape{
+            position: absolute;
+            top: 5px;
+            right: 20px;
+            z-index: -1;
+        }
+        & .offer{
+            font-size: 20px;
+            color: $primary-color;
+            font-family: $heading-font;
+            margin-bottom: 10px;
+        }
+        & h4{
+            margin-bottom: 10px;
+        }
+        & .price{
+            font-size: 24px;
+            color: $heading-color;
+            font-family: $heading-font;
+            margin-bottom: 20px;
+            & span{
+                margin-left: 10px;
+                color: $text-color;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+/* Luxivo Offer Details Section */ 
+
+.luxivo-offer-details-sec{
+    & .offer-content{
+        & .content{
+            border-bottom: 1px solid $border-color;
+            padding-bottom: 35px;
+            & .title{
+                margin-bottom: 30px;
+            }
+            & p{
+                margin-bottom: 25px;
+            }
+            & span{
+                display: block;
+                color: $heading-color;
+                font-weight: 500;
+            }
+        }
+        & .content-box{
+            &:not(:last-child){
+                border-bottom: 1px solid $border-color;
+                padding-bottom: 35px;
+            }
+            & h3{
+                margin-bottom: 30px;
+            }
+        }
+    }
+    & .offer-widget-box{
+        background-color: $gray-color;
+        padding: 30px 40px 40px;
+        border-radius: 30px;
+        color: $heading-color;
+        & h3{
+            font-size: 30px;
+            &:after{
+                display: block;
+                margin-top: 15px;
+                content: '';
+                margin-bottom: 25px;
+                background-color: $primary-color;
+                width: 90px;
+                height: 1px;
+            }
+        }
+        & .info-box{
+            margin-bottom: 75px;
+        }
+    }
+}

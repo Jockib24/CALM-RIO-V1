@@ -1,0 +1,181 @@
+
+/*======================
+    Team Section  CSS
+=======================*/
+
+.luxivo-team-item{
+    position: relative;
+    background-color: $white-color;
+    border-radius: 30px;
+    padding: 30px 30px 0;
+    & .member-inner-content{
+        padding: 30px 30px 0;
+        position: relative;
+        z-index: 1;
+        border-radius: 250px 250px 0 0;
+        background-color: #F8F8F8;
+        transition: all .3s;
+        & .hover-shape{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .06;
+            z-index: -1;
+            border-radius: 250px 250px 0 0;
+        }
+    }
+    & .member-image{
+        & img{
+            width: 290px;
+            height: 290px;
+            border-radius: 50%;
+            @include respond(xxxl){
+                height: 250px;
+            }
+            @include respond(xl){
+                height: 290px;
+            }
+            @include respond(lg){
+                height: 220px;
+            }
+            @include respond(md){
+                height: 290;
+            }
+            @include respond(sm){
+                height: 230px;
+            }
+        }
+    }
+    & .member-info{
+        padding-top: 20px;
+        padding-bottom: 30px;
+        & h4{
+            margin-bottom: 5px;
+        }
+        & .social-box{
+            margin-top: 20px;
+            & a{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 1px solid $border-color;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: $heading-color;
+                margin-left: 5px;
+                margin-right: 5px;
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.25);
+                    color: $white-color;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    &:hover{
+        & .member-inner-content{
+            background-color: $primary-color;
+        }
+        & .member-info{
+            & h4{
+                color: $white-color;
+            }
+            & .position{
+                color: #D8D8DC;
+            }
+            & .social-box{
+                & a{
+                    border-color: #D8DDE1;
+                    color: $white-color;
+                    &:hover{
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Skill Section */ 
+
+.luxivo-skill-item{
+    & .progress-title{
+        & h6{
+            font-family: $body-font;
+            font-weight: 600;
+            margin-bottom: 10px;
+            & span{
+                float: right
+            }
+        }
+    }
+    & .progress{
+        height: 10px;
+        & .progress-bar{
+            background-color: $primary-color;
+        }
+    }
+}
+
+/* Team Details Wrapper */ 
+
+.team-details-wrapper{
+    & .luxivo-team-main{
+        padding: 30px;
+        border: 1px solid $border-color;
+        border-radius: 30px;
+        & .member-image{
+            & img{
+                border-radius: 30px;
+            }
+        }
+        & .member-info{
+            padding-left: 30px;
+            @include respond(lg){
+                padding-left: 0;
+                margin-top: 40px;
+            }
+            & .position{
+                margin-bottom: 23px;
+            }
+            & p{
+                margin-bottom: 40px;
+                padding-bottom: 30px;
+                border-bottom: 1px solid $border-color;
+            }
+            & .social-box{
+                & a{
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid $border-color;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    &:not(:last-child){
+                        margin-right: 10px;
+                    }
+                    &:hover{
+                        background-color: $primary-color;
+                        color: $white-color;
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.luxivo-team-contact{
+    & .contact-form{
+        & .form_control{
+            padding: 12px 25px;
+            border: 1px solid $border-color;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}

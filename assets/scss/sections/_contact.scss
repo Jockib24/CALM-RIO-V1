@@ -1,0 +1,249 @@
+
+/*========================
+    Contact Section  CSS
+==========================*/
+
+.luxivo-contact_one{
+    position: relative;
+    background-color: $gray-color;
+    overflow: hidden;
+    & .booking-wrapper{
+        background-color: $white-color;
+        padding: 60px 70px;
+        border-radius: 30px;
+        position: relative;
+        @include respond(md){
+            padding: 30px 15px;
+        }
+        & .booking-form{
+            & label{
+                color: $heading-color;
+                margin-bottom: 10px;
+                font-weight: 500;
+            }
+            & input[type="date"]{
+                color: $text-color;
+            }
+            & .form_control{
+                padding: 12px 25px;
+                border: 1px solid $border-color;
+                border-radius: 20px;
+                margin-bottom: 30px;
+            }
+            & .theme-btn{
+                width: 100%;
+            }
+        }
+    }
+    & .contact-bg-left{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        padding: 60px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        @include respond(xl){
+            display: none;
+        }
+        & .luxivo-info-box{
+            background-color: $primary-black-color;
+            padding: 30px;
+            border-radius: 30px;
+            max-width: 335px;
+            text-align: center;
+            & span{
+                color: $white-color;
+                margin-bottom: 10px;
+            }
+            & h3{
+                color: $white-color;
+            }
+        }
+    }
+    & .contact-bg-right{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        opacity: .05;
+        @include respond(xl){
+            display: none;
+        }
+    }
+}
+
+.luxivo-contact_two{
+    position: relative;
+    z-index: 1;
+    @include respond(xl){
+        padding: 100px 0;
+    }
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(22, 25, 33, 0.89);
+        z-index: -1;
+    }
+    & .contact-wrapper{
+        padding: 115px 60px 120px;
+        background-color: rgba(255, 255, 255, 0.14);
+        backdrop-filter: blur(22px);
+        @include respond(xl){
+            border-radius: 30px;
+        }
+        @include respond(lg){
+            padding: 50px 30px 60px;
+        }
+    }
+    & .booking-form{
+        & label{
+            color: #D8D8DC;
+            display: block;
+            margin-bottom: 10px;
+        }
+        & .form_control,
+        & .nice-select{
+            background-color: transparent;
+            border: 1px solid #D8DDE1;
+            color: #D8D8DC;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        & .nice-select{
+            margin-bottom: 30px;
+            & .list{
+                & li{
+                    color: $heading-color;
+                }
+            }
+        }
+        & .form_control{
+            &::placeholder{
+                color: #D8D8DC;
+            }
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+        }
+        & .theme-btn{
+            width: 100%;
+        }
+    }
+    & .map-box{
+        margin-right: -40%;
+        padding-left: 40px;
+        @include respond(xxxl){
+            margin-right: 0;
+        }
+        @include respond(xl){
+            padding-left: 0;
+        }
+        & iframe{
+            height: 600px;
+            border-radius: 30px;
+        }
+    }
+}
+
+.luxivo-contact-sec {
+    & .text-box{
+        & h3{
+            @include respond(md){
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.contact-info-wrapper{
+    background-color: #6D7C6A;
+    border-radius: 30px;
+    padding: 40px;
+    @include respond(md){
+        padding: 30px 20px;
+    }
+    & .contact-info-box{
+        border: 1px solid $white-color;
+        border-radius: 20px;
+        padding: 35px 30px 40px;
+        & .luxivo-info-box{
+            &:not(:last-child){
+                margin-bottom: 50px;
+            }
+            &:last-child{
+                & .content{
+                    & h3{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            & .content{
+                & h3{
+                    color: $white-color;
+                    margin-bottom: 10px;
+                    @include respond(md){
+                        font-size: 24px;
+                    }
+                }
+                & p{
+                    color: $white-color;
+                }
+                & .social-box{
+                    & a{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        border: 1px solid #D8DDE1;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: $white-color;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        &:hover{
+                            background-color: $white-color;
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.contact-form-wrapper{
+    padding-left: 30px;
+    @include respond(xl){
+        padding-left: 0;
+    }
+    & h3{
+        @include respond(md){
+            font-size: 24px;
+        }
+    }
+    & .contact-form{
+        & .form_control{
+            padding: 12px 25px;
+            border: 1px solid $border-color;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.luxivo-map-sec{
+    & .map-box{
+        & iframe{
+            height: 660px;
+        }
+    }
+}
