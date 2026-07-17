@@ -1,7 +1,7 @@
 import json
+from datetime import datetime
 
 from django.conf import settings
-from django.urls import reverse
 
 from .seo import local_business_structured_data
 
@@ -16,7 +16,7 @@ def site_settings(request):
         "site_description": getattr(settings, "SITE_DESCRIPTION", ""),
         "contact_email": getattr(settings, "CONTACT_EMAIL", ""),
         "contact_phone": getattr(settings, "CONTACT_PHONE", ""),
-        "current_year": 2026,
+        "current_year": datetime.now().year,
     }
 
     # Build page-specific context

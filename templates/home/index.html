@@ -6,7 +6,7 @@
 {% block content %}
             <!--======  Start Hero Section  ======-->
             <section class="luxivo-hero">
-                <div class="luxivo-hero_three p-r z-1" style="background:var(--primary-color,#1B3A4B);">
+                <div class="luxivo-hero_three p-r z-1 bg_cover" style="background-image:url({% static 'images/home-three/hero/hero-bg.png' %});background-color:var(--primary-color,#1B3A4B);background-size:cover;background-position:center;">
                     <div class="container-fluid">
                         <div class="row align-items-center">
                             <div class="col-xl-6 col-lg-8 col-md-10">
@@ -21,31 +21,49 @@
                                         <a href="{% url 'pages:local_guide' %}" class="theme-btn style-two" style="background:transparent;border:2px solid #fff;color:#fff;">Guide local<i class="far fa-arrow-right"></i></a>
                                     </div>
                                     <div class="d-flex flex-wrap gap-4 mt-40" style="color:rgba(255,255,255,0.85);font-size:0.9rem;">
-                                        <span><i class="fas fa-badge-check" style="color:var(--accent-color);margin-right:6px;"></i>100% de réponse</span>
-                                        <span><i class="fas fa-badge-check" style="color:var(--accent-color);margin-right:6px;"></i>Superhost</span>
-                                        <span><i class="fas fa-badge-check" style="color:var(--accent-color);margin-right:6px;"></i>Animaux acceptés</span>
-                                        <span><i class="fas fa-badge-check" style="color:var(--accent-color);margin-right:6px;"></i>Parking gratuit</span>
+                                        <span><i class="fas fa-check-circle" style="color:var(--accent-color);margin-right:6px;"></i>Réservation directe</span>
+                                        <span><i class="fas fa-check-circle" style="color:var(--accent-color);margin-right:6px;"></i>Meilleur prix</span>
+                                        <span><i class="fas fa-check-circle" style="color:var(--accent-color);margin-right:6px;"></i>Animaux acceptés</span>
+                                        <span><i class="fas fa-check-circle" style="color:var(--accent-color);margin-right:6px;"></i>WiFi haut débit</span>
                                     </div>
                                     <div class="luxivo-avatar-box mt-40" data-aos="fade-up" data-aos-duration="3000">
                                         <div class="avatar-list">
                                             <ul>
-                                                <li><img src="{% static 'images/home-one/hero/avatar-img1.jpg' %}" alt="avatar" onerror="this.style.display='none'"></li>
-                                                <li><img src="{% static 'images/home-one/hero/avatar-img2.jpg' %}" alt="avatar" onerror="this.style.display='none'"></li>
-                                                <li><img src="{% static 'images/home-one/hero/avatar-img3.jpg' %}" alt="avatar" onerror="this.style.display='none'"></li>
-                                                <li><span>40+</span></li>
+                                                <li><img src="{% static 'images/home-three/hero/avatar-img1.jpg' %}" alt="Voyageur" style="width:50px;height:50px;border-radius:50%;border:3px solid #fff;object-fit:cover;"></li>
+                                                <li><img src="{% static 'images/home-three/hero/avatar-img2.jpg' %}" alt="Voyageur" style="width:50px;height:50px;border-radius:50%;border:3px solid #fff;object-fit:cover;margin-left:-15px;"></li>
+                                                <li><img src="{% static 'images/home-three/hero/avatar-img3.jpg' %}" alt="Voyageur" style="width:50px;height:50px;border-radius:50%;border:3px solid #fff;object-fit:cover;margin-left:-15px;"></li>
+                                                <li><span style="display:inline-flex;width:50px;height:50px;border-radius:50%;background:var(--accent-color,#C49A5A);color:#fff;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;margin-left:-15px;">40+</span></li>
                                             </ul>
                                         </div>
-                                        <p style="color:rgba(255,255,255,0.8);margin-top:10px;">Plus de <strong>40 avis</strong> — Note moyenne 4,95★</p>
+                                        <p style="color:rgba(255,255,255,0.8);margin-top:10px;font-size:0.95rem;">Plus de <strong>40 avis</strong> — Note moyenne 4,95★</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-6 d-none d-xl-block">
                                 <div class="hero-image-wrapper" style="padding:80px 0;">
-                                    <div class="hero-image-slider">
+                                    <div class="hero-image-slider" data-aos="fade-left" data-aos-duration="1000">
                                         <div class="single-image-slide">
-                                            <img src="{% static 'images/home-one/hero/hero-bg.jpg' %}" alt="CalmRio" style="width:100%;border-radius:12px;max-height:500px;object-fit:cover;">
+                                            <img src="{% static 'images/home-three/hero/hero-img1.jpg' %}" alt="CalmRio — Appartement Royan" style="width:100%;border-radius:12px;max-height:500px;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+                                        </div>
+                                        <div class="single-image-slide">
+                                            <img src="{% static 'images/home-three/hero/hero-img2.jpg' %}" alt="CalmRio — Villa Saint-Trojan" style="width:100%;border-radius:12px;max-height:500px;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+                                        </div>
+                                        <div class="single-image-slide">
+                                            <img src="{% static 'images/home-three/hero/hero-img3.jpg' %}" alt="CalmRio — Maison Saint-Trojan" style="width:100%;border-radius:12px;max-height:500px;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
                                         </div>
                                     </div>
+                                    <div class="hero-thumb-slider" style="margin-top:15px;">
+                                        <div class="single-image-slide">
+                                            <img src="{% static 'images/home-three/hero/hero-img-thumb.jpg' %}" alt="thumb" style="width:100%;height:80px;border-radius:8px;object-fit:cover;cursor:pointer;">
+                                        </div>
+                                        <div class="single-image-slide">
+                                            <img src="{% static 'images/home-three/hero/hero-img-thumb2.jpg' %}" alt="thumb" style="width:100%;height:80px;border-radius:8px;object-fit:cover;cursor:pointer;">
+                                        </div>
+                                        <div class="single-image-slide">
+                                            <img src="{% static 'images/home-three/hero/hero-img-thumb3.jpg' %}" alt="thumb" style="width:100%;height:80px;border-radius:8px;object-fit:cover;cursor:pointer;">
+                                        </div>
+                                    </div>
+                                    <div class="hero-thumb-arrow" style="display:flex;justify-content:center;gap:10px;margin-top:10px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -571,9 +589,15 @@
                         <div class="col-xl-6 text-center">
                             <h2 style="color:#fff;margin-bottom:15px;" data-aos="fade-up" data-aos-duration="1000">Restez inspirés</h2>
                             <p style="color:rgba(255,255,255,0.8);margin-bottom:30px;" data-aos="fade-up" data-aos-duration="1200">Recevez nos inspirations saisonnières, nos conseils de voyage et nos offres exclusives directement dans votre boîte mail.</p>
-                            <form data-aos="fade-up" data-aos-duration="1400" style="max-width:500px;margin:0 auto;">
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }}" style="padding:10px 20px;border-radius:8px;margin-bottom:15px;">{{ message }}</div>
+                                {% endfor %}
+                            {% endif %}
+                            <form method="POST" action="{% url 'pages:newsletter' %}" data-aos="fade-up" data-aos-duration="1400" style="max-width:500px;margin:0 auto;">
+                                {% csrf_token %}
                                 <div class="d-flex gap-2">
-                                    <input type="email" placeholder="Votre adresse e-mail" style="flex:1;padding:15px 20px;border:none;border-radius:8px;font-family:var(--body-font);font-size:1rem;">
+                                    <input type="email" name="email" placeholder="Votre adresse e-mail" style="flex:1;padding:15px 20px;border:none;border-radius:8px;font-family:var(--body-font);font-size:1rem;" required>
                                     <button type="submit" class="theme-btn style-one" style="background:var(--accent-color,#C49A5A);border:none;">Je m'inscris</button>
                                 </div>
                                 <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-top:10px;">Pas de spam. Désinscription à tout moment.</p>

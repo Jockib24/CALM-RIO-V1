@@ -110,3 +110,4 @@ SITE_DESCRIPTION = (
 )
 CONTACT_EMAIL = "contact@calm-rio.com"
 CONTACT_PHONE = "+33 (0)6 00 00 00 00"
+DEFAULT_FROM_EMAIL = "CalmRio <contact@calm-rio.com>"

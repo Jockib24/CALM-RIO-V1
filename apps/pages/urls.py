@@ -14,6 +14,8 @@ urlpatterns = [
         views.PrivacyView.as_view(),
         name="privacy",
     ),
+    # Newsletter
+    path("newsletter/", views.NewsletterView.as_view(), name="newsletter"),
     # SEO
     path("sitemap.xml", views.SitemapView.as_view(), name="sitemap"),
     path("robots.txt", views.RobotsView.as_view(), name="robots"),

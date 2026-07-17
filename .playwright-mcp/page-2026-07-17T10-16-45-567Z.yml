@@ -1,0 +1,550 @@
+- generic [active] [ref=e1]:
+  - img "loader" [ref=e6]
+  - banner [ref=e7]:
+    - generic [ref=e10]:
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - link " +33 (0)6 00 00 00 00" [ref=e14] [cursor=pointer]:
+            - /url: tel:+33(0)600000000
+            - generic [ref=e15]: 
+            - text: +33 (0)6 00 00 00 00
+          - text: /
+        - link " contact@calm-rio.com" [ref=e17] [cursor=pointer]:
+          - /url: mailto:contact@calm-rio.com
+          - generic [ref=e18]: 
+          - text: contact@calm-rio.com
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - link " FAQ" [ref=e22] [cursor=pointer]:
+            - /url: /faq/
+            - generic [ref=e23]: 
+            - text: FAQ
+          - text: /
+        - generic [ref=e24]:
+          - link " Support" [ref=e25] [cursor=pointer]:
+            - /url: /contact/
+            - generic [ref=e26]: 
+            - text: Support
+          - text: /
+        - link " 🇫🇷 FR " [ref=e28] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e29]: 
+          - text: 🇫🇷 FR
+          - generic [ref=e30]: 
+    - generic [ref=e33]:
+      - link "Calm Rio" [ref=e35] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e36]:
+          - text: Calm
+          - generic [ref=e37]: Rio
+      - generic [ref=e38]:
+        - navigation [ref=e39]:
+          - list [ref=e40]:
+            - listitem [ref=e41]:
+              - link "Accueil" [ref=e42] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e43]:
+              - link "Nos Locations " [ref=e44] [cursor=pointer]:
+                - /url: "#"
+                - text: Nos Locations
+                - generic [ref=e45]: 
+            - listitem [ref=e47]:
+              - link "Guide Local" [ref=e48] [cursor=pointer]:
+                - /url: /local-guide/
+            - listitem [ref=e49]:
+              - link "À Propos" [ref=e50] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e51]:
+              - link "Contact" [ref=e52] [cursor=pointer]:
+                - /url: /contact/
+        - text:   
+      - link "Réserver " [ref=e55] [cursor=pointer]:
+        - /url: /#nos-locations
+        - text: Réserver
+        - generic [ref=e56]: 
+  - main [ref=e57]:
+    - generic [ref=e61]:
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: 
+          - text: 4,95 — Favoris des voyageurs
+        - heading "Vacances en famille entre océan et forêt" [level=1] [ref=e66]:
+          - text: Vacances en famille
+          - generic [ref=e67]: entre océan et forêt
+        - paragraph [ref=e68]: Appartements et maisons soigneusement aménagés, à deux pas des plages de Royan et de l'île d'Oléron. Réservez en direct et profitez d'un séjour authentique sur la côte atlantique.
+        - generic [ref=e69]:
+          - link "Découvrir nos locations " [ref=e70] [cursor=pointer]:
+            - /url: /#nos-locations
+            - text: Découvrir nos locations
+            - generic [ref=e71]: 
+          - link "Guide local " [ref=e72] [cursor=pointer]:
+            - /url: /local-guide/
+            - text: Guide local
+            - generic [ref=e73]: 
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - generic [ref=e76]: 
+            - text: Réservation directe
+          - generic [ref=e77]:
+            - generic [ref=e78]: 
+            - text: Meilleur prix
+          - generic [ref=e79]:
+            - generic [ref=e80]: 
+            - text: Animaux acceptés
+          - generic [ref=e81]:
+            - generic [ref=e82]: 
+            - text: WiFi haut débit
+        - generic [ref=e83]:
+          - list [ref=e85]:
+            - listitem [ref=e86]:
+              - img "Voyageur" [ref=e87]
+            - listitem [ref=e88]:
+              - img "Voyageur" [ref=e89]
+            - listitem [ref=e90]:
+              - img "Voyageur" [ref=e91]
+            - listitem [ref=e92]:
+              - generic [ref=e93]: 40+
+          - paragraph [ref=e94]:
+            - text: Plus de
+            - strong [ref=e95]: 40 avis
+            - text: — Note moyenne 4,95★
+      - generic [ref=e97]:
+        - img "CalmRio — Appartement Royan" [ref=e102]
+        - generic [ref=e107]:
+          - img "thumb" [ref=e108] [cursor=pointer]
+          - img "thumb" [ref=e109] [cursor=pointer]
+          - img "thumb" [ref=e110] [cursor=pointer]
+    - generic [ref=e112]:
+      - generic [ref=e115]:
+        - generic [ref=e116]: Explorez
+        - heading "Vivez l'Atlantique selon vos envies" [level=2] [ref=e117]
+        - paragraph [ref=e118]: De la plage à la forêt, du télétravail au grand air — choisissez votre expérience.
+      - generic [ref=e119]:
+        - generic [ref=e122]:
+          - generic [ref=e123]: 
+          - heading "Bord de mer" [level=4] [ref=e125]
+          - paragraph [ref=e126]: À 100m de la Grande Conche ou à 5min à vélo de la plage de Gatseau — l'océan à portée de main.
+        - generic [ref=e129]:
+          - generic [ref=e130]: 
+          - heading "Nature & Grand Air" [level=4] [ref=e132]
+          - paragraph [ref=e133]: Forêt de Saint-Trojan, pistes cyclables, marais salants — la côte atlantique comme terrain de jeu.
+        - generic [ref=e136]:
+          - generic [ref=e137]: 
+          - heading "Télétravail & Confiance" [level=4] [ref=e139]
+          - paragraph [ref=e140]: Bureau avec écran HDMI, WiFi haut débit et vue sur l'océan — travaillez d'où vous rêvez.
+        - generic [ref=e143]:
+          - generic [ref=e144]: 
+          - heading "Familles & Animaux" [level=4] [ref=e146]
+          - paragraph [ref=e147]: Jardin clos, animaux acceptés, équipement bébé — des vacances sans compromis pour toute la tribu.
+    - generic [ref=e149]:
+      - generic [ref=e150]: CalmRio en chiffres
+      - generic [ref=e154]:
+        - generic [ref=e157]:
+          - heading "3" [level=2] [ref=e158]
+          - paragraph [ref=e160]: Locations soigneusement sélectionnées
+        - generic [ref=e163]:
+          - heading "40+" [level=2] [ref=e164]
+          - paragraph [ref=e165]: Avis — Note moyenne 4,95★
+        - generic [ref=e168]:
+          - heading "100m" [level=2] [ref=e169]
+          - paragraph [ref=e170]: De la plage — Appartement Royan
+        - generic [ref=e173]:
+          - heading "6" [level=2] [ref=e174]
+          - paragraph [ref=e175]: Voyageurs — Capacité maximale
+    - generic [ref=e177]:
+      - generic [ref=e180]:
+        - generic [ref=e181]: Nos locations
+        - heading "Des refuges de caractère sur la côte atlantique" [level=2] [ref=e182]: Des refuges de caractèresur la côte atlantique
+        - paragraph [ref=e183]: Du style contemporain bord de mer de Royan à l'atmosphère oléronaise entre forêt et océan, chaque lieu est pensé pour le confort, la lumière et la proximité avec la nature.
+      - generic [ref=e184]:
+        - generic [ref=e186]:
+          - img "Appartement Royan Grande Conche" [ref=e189]
+          - generic [ref=e191]:
+            - generic [ref=e192]: 01. Royan
+            - heading [level=3] [ref=e193]:
+              - link "Appartement — 100m de la Grande Conche" [ref=e194] [cursor=pointer]:
+                - /url: /royan-appartement/
+            - paragraph [ref=e195]:
+              - generic [ref=e196]: 
+              - text: Royan, Nouvelle-Aquitaine
+            - paragraph [ref=e197]: 2 chambres · 4 personnes · 60 m² + terrasse 20 m²
+            - generic [ref=e198]:
+              - generic [ref=e199]: À partir de
+              - text: 130€
+              - generic [ref=e200]: /nuit
+            - generic [ref=e201]:
+              - generic [ref=e203]:
+                - generic [ref=e204]: 
+                - heading "WiFi Haut Débit" [level=4] [ref=e207]
+              - generic [ref=e209]:
+                - generic [ref=e210]: 
+                - heading "Parking" [level=4] [ref=e213]
+              - generic [ref=e215]:
+                - generic [ref=e216]: 
+                - heading "Cuisine équipée" [level=4] [ref=e219]
+              - generic [ref=e221]:
+                - generic [ref=e222]: 
+                - heading "Animaux acceptés" [level=4] [ref=e225]
+            - link "Voir ce logement " [ref=e226] [cursor=pointer]:
+              - /url: /royan-appartement/
+              - text: Voir ce logement
+              - generic [ref=e227]: 
+        - generic [ref=e229]:
+          - img "Villa Lazure Saint-Trojan" [ref=e232]
+          - generic [ref=e234]:
+            - generic [ref=e235]: 02. Saint-Trojan-les-Bains
+            - heading [level=3] [ref=e236]:
+              - link "Villa 6 pers — Jardin clos & terrasses" [ref=e237] [cursor=pointer]:
+                - /url: /saint-trojan-villa/
+            - paragraph [ref=e238]:
+              - generic [ref=e239]: 
+              - text: Saint-Trojan-les-Bains, Île d'Oléron
+            - paragraph [ref=e240]: 3 chambres · 6 personnes · 110 m² + jardin
+            - generic [ref=e241]:
+              - generic [ref=e242]: À partir de
+              - text: 180€
+              - generic [ref=e243]: /nuit
+            - generic [ref=e244]:
+              - generic [ref=e246]:
+                - generic [ref=e247]: 
+                - heading "WiFi Haut Débit" [level=4] [ref=e250]
+              - generic [ref=e252]:
+                - generic [ref=e253]: 
+                - heading "Parking" [level=4] [ref=e256]
+              - generic [ref=e258]:
+                - generic [ref=e259]: 
+                - heading "Jardin clos" [level=4] [ref=e262]
+              - generic [ref=e264]:
+                - generic [ref=e265]: 
+                - heading "Animaux acceptés" [level=4] [ref=e268]
+            - link "Voir ce logement " [ref=e269] [cursor=pointer]:
+              - /url: /saint-trojan-villa/
+              - text: Voir ce logement
+              - generic [ref=e270]: 
+        - generic [ref=e272]:
+          - img "Maison familiale Saint-Trojan" [ref=e275]
+          - generic [ref=e277]:
+            - generic [ref=e278]: 03. Saint-Trojan-les-Bains
+            - heading [level=3] [ref=e279]:
+              - link "Maison familiale 6 pers — Jardin & plage à vélo" [ref=e280] [cursor=pointer]:
+                - /url: /saint-trojan-maison/
+            - paragraph [ref=e281]:
+              - generic [ref=e282]: 
+              - text: Saint-Trojan-les-Bains, Île d'Oléron
+            - paragraph [ref=e283]: 3 chambres · 6 personnes · Jardin arboré
+            - generic [ref=e284]:
+              - generic [ref=e285]: À partir de
+              - text: 150€
+              - generic [ref=e286]: /nuit
+            - generic [ref=e287]:
+              - generic [ref=e289]:
+                - generic [ref=e290]: 
+                - heading "WiFi Haut Débit" [level=4] [ref=e293]
+              - generic [ref=e295]:
+                - generic [ref=e296]: 
+                - heading "Parking" [level=4] [ref=e299]
+              - generic [ref=e301]:
+                - generic [ref=e302]: 
+                - heading "Jardin arboré" [level=4] [ref=e305]
+              - generic [ref=e307]:
+                - generic [ref=e308]: 
+                - heading "Animaux acceptés" [level=4] [ref=e311]
+            - link "Voir ce logement " [ref=e312] [cursor=pointer]:
+              - /url: /saint-trojan-maison/
+              - text: Voir ce logement
+              - generic [ref=e313]: 
+      - link "Explorer toutes nos locations " [ref=e316] [cursor=pointer]:
+        - /url: /royan-appartement/
+        - text: Explorer toutes nos locations
+        - generic [ref=e317]: 
+    - generic [ref=e319]:
+      - generic [ref=e320]: Pourquoi réserver en direct ?
+      - generic [ref=e324]:
+        - generic [ref=e326]:
+          - generic [ref=e327]: 
+          - heading "Meilleur prix garanti" [level=5] [ref=e329]
+          - paragraph [ref=e330]: En réservant directement, vous bénéficiez de notre meilleur tarif, sans commission. Nous nous engageons à être moins chers que les plateformes.
+        - generic [ref=e332]:
+          - generic [ref=e333]: 
+          - heading "Service personnalisé" [level=5] [ref=e335]
+          - paragraph [ref=e336]: Nous connaissons chaque propriété sur le bout des doigts. Conseils personnalisés, flexibilité, et disponibilité avant et pendant votre séjour.
+        - generic [ref=e338]:
+          - generic [ref=e339]: 
+          - heading "Paiement sécurisé" [level=5] [ref=e341]
+          - paragraph [ref=e342]: Transactions sécurisées par Stripe. Vos données bancaires sont cryptées et protégées. Conditions d'annulation transparentes.
+    - generic [ref=e344]:
+      - generic [ref=e347]:
+        - generic [ref=e348]: La promesse CalmRio
+        - heading "Confiance et sérénité" [level=2] [ref=e349]
+        - paragraph [ref=e350]: Chaque propriété est choisie avec soin. Chaque séjour est une promesse tenue.
+      - generic [ref=e351]:
+        - generic [ref=e353]:
+          - generic [ref=e354]: 
+          - heading "Vérifié sur place" [level=5] [ref=e356]
+          - paragraph [ref=e357]: Chaque propriété est inspectée personnellement. Pas de mauvaise surprise.
+        - generic [ref=e359]:
+          - generic [ref=e360]: 
+          - heading "Meilleur prix garanti" [level=5] [ref=e362]
+          - paragraph [ref=e363]: En réservant directement, vous bénéficiez de nos meilleurs tarifs — moins chers que sur les plateformes.
+        - generic [ref=e365]:
+          - generic [ref=e366]: 
+          - heading "Accueil personnalisé" [level=5] [ref=e368]
+          - paragraph [ref=e369]: Réponse sous 24h, conseils sur mesure, et quelques attentions à l'arrivée.
+        - generic [ref=e371]:
+          - generic [ref=e372]: 
+          - heading "Conditions claires" [level=5] [ref=e374]
+          - paragraph [ref=e375]: Consultez nos conditions d'annulation lors de la réservation. Nous restons à votre écoute en cas d'imprévu.
+      - generic [ref=e377]:
+        - paragraph [ref=e378]: « Vous ne voudrez plus jamais séjourner dans un hôtel. »
+        - paragraph [ref=e379]: — Harper's Bazaar · À propos de CalmRio
+    - generic [ref=e381]:
+      - generic [ref=e384]:
+        - generic [ref=e385]: Témoignages
+        - heading "Ce que disent nos voyageurs" [level=2] [ref=e386]
+        - paragraph [ref=e387]: Une note moyenne de 4,95 sur plus de 40 avis, recueillis sur Airbnb et Booking. Voici ce que nos hôtes ont partagé après leur séjour.
+      - generic [ref=e392]:
+        - generic [ref=e394]:
+          - generic [ref=e395]:
+            - generic [ref=e396]: 
+            - generic [ref=e397]: 
+            - generic [ref=e398]: 
+            - generic [ref=e399]: 
+            - generic [ref=e400]: 
+          - paragraph [ref=e401]: “Maison magnifique, avec un jardin paisible offrant un bel espace pour se reposer et se ressourcer. Les propriétaires sont des personnes accueillantes et chaleureuses.”
+          - heading [level=6] [ref=e402]: Anne-Laure
+          - generic [ref=e403]: Septembre 2025
+        - generic [ref=e405]:
+          - generic [ref=e406]:
+            - generic [ref=e407]: 
+            - generic [ref=e408]: 
+            - generic [ref=e409]: 
+            - generic [ref=e410]: 
+            - generic [ref=e411]: 
+          - paragraph [ref=e412]: "“Le séjour s'est très bien passé. Le logement était incroyable : très grand, très propre, très fonctionnel, moderne, cuisine très bien équipée, terrasses et jardin très agréables, proche de la mer, propriétaires très gentils.”"
+          - heading [level=6] [ref=e413]: Marc
+          - generic [ref=e414]: Juillet 2025
+        - generic [ref=e416]:
+          - generic [ref=e417]:
+            - generic [ref=e418]: 
+            - generic [ref=e419]: 
+            - generic [ref=e420]: 
+            - generic [ref=e421]: 
+            - generic [ref=e422]: 
+          - paragraph [ref=e423]: “Nous avons passé un excellent séjour dans la maison d'Agnès. Elle est située dans un très bel environnement et très proche de la mer à pieds ou en vélo. La maison est spacieuse, confortable et très bien équipée. Nous reviendrons certainement.”
+          - heading "Famille Martin" [level=6] [ref=e424]
+          - generic [ref=e425]: Juillet 2025
+        - generic [ref=e427]:
+          - generic [ref=e428]:
+            - generic [ref=e429]: 
+            - generic [ref=e430]: 
+            - generic [ref=e431]: 
+            - generic [ref=e432]: 
+            - generic [ref=e433]: 
+          - paragraph [ref=e434]: “Charmante maison et emplacement paisible. Un séjour d'une semaine où tout le confort est là, on se sent très bien dans leur belle propriété décorée avec goût, qui dispose de deux belles terrasses avec un petit jardin privatif en herbe et clôturé, idéal pour notre beagle !”
+          - heading "Sophie & Julien" [level=6] [ref=e435]
+          - generic [ref=e436]: Août 2025
+        - generic [ref=e438]:
+          - generic [ref=e439]:
+            - generic [ref=e440]: 
+            - generic [ref=e441]: 
+            - generic [ref=e442]: 
+            - generic [ref=e443]: 
+            - generic [ref=e444]: 
+          - paragraph [ref=e445]: “Nous avons passé une superbe semaine au calme dans une jolie villa bien équipée et bien placée. L'accueil était très bon et réactif. Nous reviendrons avec plaisir.”
+          - heading [level=6] [ref=e446]: Céline & Thomas
+          - generic [ref=e447]: Juin 2025
+        - generic [ref=e449]:
+          - generic [ref=e450]:
+            - generic [ref=e451]: 
+            - generic [ref=e452]: 
+            - generic [ref=e453]: 
+            - generic [ref=e454]: 
+            - generic [ref=e455]: 
+          - paragraph [ref=e456]: “Maison magnifique, avec un jardin paisible offrant un bel espace pour se reposer et se ressourcer. Les propriétaires sont des personnes accueillantes et chaleureuses.”
+          - heading [level=6] [ref=e457]: Anne-Laure
+          - generic [ref=e458]: Septembre 2025
+        - generic [ref=e460]:
+          - generic [ref=e461]:
+            - generic [ref=e462]: 
+            - generic [ref=e463]: 
+            - generic [ref=e464]: 
+            - generic [ref=e465]: 
+            - generic [ref=e466]: 
+          - paragraph [ref=e467]: "“Le séjour s'est très bien passé. Le logement était incroyable : très grand, très propre, très fonctionnel, moderne, cuisine très bien équipée, terrasses et jardin très agréables, proche de la mer, propriétaires très gentils.”"
+          - heading [level=6] [ref=e468]: Marc
+          - generic [ref=e469]: Juillet 2025
+        - generic [ref=e471]:
+          - generic [ref=e472]:
+            - generic [ref=e473]: 
+            - generic [ref=e474]: 
+            - generic [ref=e475]: 
+            - generic [ref=e476]: 
+            - generic [ref=e477]: 
+          - paragraph [ref=e478]: “Nous avons passé un excellent séjour dans la maison d'Agnès. Elle est située dans un très bel environnement et très proche de la mer à pieds ou en vélo. La maison est spacieuse, confortable et très bien équipée. Nous reviendrons certainement.”
+          - heading [level=6] [ref=e479]: Famille Martin
+          - generic [ref=e480]: Juillet 2025
+        - generic [ref=e482]:
+          - generic [ref=e483]:
+            - generic [ref=e484]: 
+            - generic [ref=e485]: 
+            - generic [ref=e486]: 
+            - generic [ref=e487]: 
+            - generic [ref=e488]: 
+          - paragraph [ref=e489]: “Charmante maison et emplacement paisible. Un séjour d'une semaine où tout le confort est là, on se sent très bien dans leur belle propriété décorée avec goût, qui dispose de deux belles terrasses avec un petit jardin privatif en herbe et clôturé, idéal pour notre beagle !”
+          - heading [level=6] [ref=e490]: Sophie & Julien
+          - generic [ref=e491]: Août 2025
+        - generic [ref=e493]:
+          - generic [ref=e494]:
+            - generic [ref=e495]: 
+            - generic [ref=e496]: 
+            - generic [ref=e497]: 
+            - generic [ref=e498]: 
+            - generic [ref=e499]: 
+          - paragraph [ref=e500]: “Nous avons passé une superbe semaine au calme dans une jolie villa bien équipée et bien placée. L'accueil était très bon et réactif. Nous reviendrons avec plaisir.”
+          - heading [level=6] [ref=e501]: Céline & Thomas
+          - generic [ref=e502]: Juin 2025
+        - generic [ref=e504]:
+          - generic [ref=e505]:
+            - generic [ref=e506]: 
+            - generic [ref=e507]: 
+            - generic [ref=e508]: 
+            - generic [ref=e509]: 
+            - generic [ref=e510]: 
+          - paragraph [ref=e511]: “Maison magnifique, avec un jardin paisible offrant un bel espace pour se reposer et se ressourcer. Les propriétaires sont des personnes accueillantes et chaleureuses.”
+          - heading [level=6] [ref=e512]: Anne-Laure
+          - generic [ref=e513]: Septembre 2025
+        - generic [ref=e515]:
+          - generic [ref=e516]:
+            - generic [ref=e517]: 
+            - generic [ref=e518]: 
+            - generic [ref=e519]: 
+            - generic [ref=e520]: 
+            - generic [ref=e521]: 
+          - paragraph [ref=e522]: "“Le séjour s'est très bien passé. Le logement était incroyable : très grand, très propre, très fonctionnel, moderne, cuisine très bien équipée, terrasses et jardin très agréables, proche de la mer, propriétaires très gentils.”"
+          - heading [level=6] [ref=e523]: Marc
+          - generic [ref=e524]: Juillet 2025
+    - generic [ref=e526]:
+      - generic [ref=e529]:
+        - generic [ref=e530]: L'expérience CalmRio
+        - heading "Vivez l'Atlantique autrement" [level=2] [ref=e531]
+        - paragraph [ref=e532]: Entre océan sauvage et forêt de pins, découvrez un art de vivre où le temps ralentit.
+      - generic [ref=e533]:
+        - img "Entre mer et forêt" [ref=e535]
+        - generic [ref=e537]:
+          - heading "Nature & Grand Air" [level=4] [ref=e538]
+          - heading "Entre mer et forêt" [level=3] [ref=e539]
+          - paragraph [ref=e540]: Imaginez-vous pédaler à travers la forêt domaniale de Saint-Trojan, l'odeur des pins maritimes mêlée aux embruns de l'Atlantique. L'île d'Oléron est un paradis pour les cyclistes, avec plus de 130 km de pistes cyclables qui serpentent entre marais salants, parcs ostréicoles et plages sauvages.
+          - paragraph [ref=e541]: À Royan, la Grande Conche déroule ses 2,6 km de sable fin à 100 mètres de notre appartement. Les célèbres huîtres de Marennes-Oléron et le pineau des Charentes n'attendent que vous au marché couvert.
+          - link "Explorer la région " [ref=e542] [cursor=pointer]:
+            - /url: /local-guide/
+            - text: Explorer la région
+            - generic [ref=e543]: 
+      - generic [ref=e544]:
+        - img "Télétravail bord de mer" [ref=e546]
+        - generic [ref=e548]:
+          - heading "Télétravail" [level=4] [ref=e549]
+          - heading "Le télétravail en bord de mer" [level=3] [ref=e550]
+          - paragraph [ref=e551]: Et si votre bureau avait vue sur l'océan ? Nos locations à Royan et Saint-Trojan-les-Bains sont équipées d'espaces de travail dédiés avec écran, câble HDMI et connexion WiFi haut débit.
+          - paragraph [ref=e552]: Loin de l'agitation urbaine, retrouvez le rythme des marées. Le matin, travaillez au calme dans un cadre inspirant. Le soir, explorez les pistes cyclables, dégustez des huîtres au port ostréicole ou profitez simplement du jardin.
+          - link "Voir les espaces de travail " [ref=e553] [cursor=pointer]:
+            - /url: /#nos-locations
+            - text: Voir les espaces de travail
+            - generic [ref=e554]: 
+    - generic [ref=e556]:
+      - generic [ref=e559]:
+        - generic [ref=e560]: À découvrir
+        - heading "Guide local — La côte de Beauté" [level=2] [ref=e561]
+        - paragraph [ref=e562]: Des plages de la Grande Conche aux forêts de l'île d'Oléron, explorez les trésors de la côte atlantique.
+      - generic [ref=e563]:
+        - generic [ref=e565]:
+          - generic [ref=e566]: 
+          - heading "Plages" [level=5] [ref=e568]
+          - paragraph [ref=e569]: Grande Conche, plage de Gatseau, plage de Maumusson… Baignade, farniente et couchers de soleil inoubliables.
+        - generic [ref=e571]:
+          - generic [ref=e572]: 
+          - heading "Cyclisme" [level=5] [ref=e574]
+          - paragraph [ref=e575]: L'île d'Oléron, paradis du vélo avec plus de 130 km de pistes cyclables à travers forêts, marais et villages.
+        - generic [ref=e577]:
+          - generic [ref=e578]: 
+          - heading "Gastronomie" [level=5] [ref=e580]
+          - paragraph [ref=e581]: Huîtres de Marennes-Oléron, poissons frais du port, pineau des Charentes, galettes charentaises… Un terroir d'exception.
+        - generic [ref=e583]:
+          - generic [ref=e584]: 
+          - heading "Culture & Patrimoine" [level=5] [ref=e586]
+          - paragraph [ref=e587]: Marché central de Royan, église Notre-Dame, Fort Boyard, Le P'tit Train de Saint-Trojan, festivals.
+      - link "Explorer le guide complet " [ref=e590] [cursor=pointer]:
+        - /url: /local-guide/
+        - text: Explorer le guide complet
+        - generic [ref=e591]: 
+    - generic [ref=e595]:
+      - heading "Restez inspirés" [level=2] [ref=e596]
+      - paragraph [ref=e597]: Recevez nos inspirations saisonnières, nos conseils de voyage et nos offres exclusives directement dans votre boîte mail.
+      - generic [ref=e598]:
+        - generic [ref=e599]:
+          - textbox "Votre adresse e-mail" [ref=e600]
+          - button "Je m'inscris" [ref=e601] [cursor=pointer]
+        - paragraph [ref=e602]: Pas de spam. Désinscription à tout moment.
+  - contentinfo [ref=e603]:
+    - generic [ref=e604]:
+      - generic [ref=e606]:
+        - generic [ref=e608]:
+          - generic [ref=e609]:
+            - text: Calm
+            - generic [ref=e610]: Rio
+          - paragraph [ref=e611]: Locations de vacances premium à Royan et sur l'île d'Oléron. Des refuges de caractère entre océan et forêt, pensés pour le confort des familles, des couples et des télétravailleurs.
+          - list [ref=e612]:
+            - listitem [ref=e613]:
+              - link "" [ref=e614] [cursor=pointer]:
+                - /url: https://www.instagram.com/calm.rio/
+            - listitem [ref=e616]:
+              - link "" [ref=e617] [cursor=pointer]:
+                - /url: https://www.facebook.com/people/CalmRio/
+        - generic [ref=e620]:
+          - heading "Navigation" [level=4] [ref=e621]
+          - list [ref=e622]:
+            - listitem [ref=e623]:
+              - link "Accueil" [ref=e624] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e625]:
+              - link "Nos Locations" [ref=e626] [cursor=pointer]:
+                - /url: /#nos-locations
+            - listitem [ref=e627]:
+              - link "Guide Local" [ref=e628] [cursor=pointer]:
+                - /url: /local-guide/
+            - listitem [ref=e629]:
+              - link "À Propos" [ref=e630] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e631]:
+              - link "Contact" [ref=e632] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=e634]:
+          - heading "Hébergements" [level=4] [ref=e635]
+          - list [ref=e636]:
+            - listitem [ref=e637]:
+              - link "Royan — Appartement Grande Conche" [ref=e638] [cursor=pointer]:
+                - /url: /royan-appartement/
+            - listitem [ref=e639]:
+              - link "Saint-Trojan — Villa" [ref=e640] [cursor=pointer]:
+                - /url: /saint-trojan-villa/
+            - listitem [ref=e641]:
+              - link "Saint-Trojan — Maison" [ref=e642] [cursor=pointer]:
+                - /url: /saint-trojan-maison/
+        - generic [ref=e644]:
+          - heading "Contact" [level=4] [ref=e645]
+          - list [ref=e646]:
+            - listitem [ref=e647]:
+              - link "contact@calm-rio.com" [ref=e648] [cursor=pointer]:
+                - /url: mailto:contact@calm-rio.com
+            - listitem [ref=e649]:
+              - link "+33 (0)6 00 00 00 00" [ref=e650] [cursor=pointer]:
+                - /url: tel:+33(0)600000000
+            - listitem [ref=e651]:
+              - generic [ref=e652]: Royan & Saint-Trojan-les-BainsNouvelle-Aquitaine, France
+      - generic [ref=e654]:
+        - paragraph [ref=e656]: © 2026 CalmRio. Tous droits réservés.
+        - generic [ref=e657]:
+          - link "Mentions légales" [ref=e658] [cursor=pointer]:
+            - /url: /mentions-legales/
+          - link "Politique de confidentialité" [ref=e659] [cursor=pointer]:
+            - /url: /politique-de-confidentialite/
+  - text: 

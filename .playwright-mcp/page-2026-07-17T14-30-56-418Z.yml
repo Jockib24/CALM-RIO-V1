@@ -1,0 +1,576 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e7]:
+    - generic [ref=f4e10]:
+      - generic [ref=f4e12]:
+        - generic [ref=f4e13]:
+          - link " +33 (0)6 00 00 00 00" [ref=f4e14] [cursor=pointer]:
+            - /url: tel:+33(0)600000000
+            - generic [ref=f4e15]: 
+            - text: +33 (0)6 00 00 00 00
+          - text: /
+        - link " contact@calm-rio.com" [ref=f4e17] [cursor=pointer]:
+          - /url: mailto:contact@calm-rio.com
+          - generic [ref=f4e18]: 
+          - text: contact@calm-rio.com
+      - generic [ref=f4e20]:
+        - generic [ref=f4e21]:
+          - link " FAQ" [ref=f4e22] [cursor=pointer]:
+            - /url: /faq/
+            - generic [ref=f4e23]: 
+            - text: FAQ
+          - text: /
+        - generic [ref=f4e24]:
+          - link " Support" [ref=f4e25] [cursor=pointer]:
+            - /url: /contact/
+            - generic [ref=f4e26]: 
+            - text: Support
+          - text: /
+        - link " 🇫🇷 FR " [ref=f4e28] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=f4e29]: 
+          - text: 🇫🇷 FR
+          - generic [ref=f4e30]: 
+    - generic [ref=f4e33]:
+      - link "Calm Rio" [ref=f4e35] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f4e36]:
+          - text: Calm
+          - generic [ref=f4e37]: Rio
+      - generic [ref=f4e38]:
+        - navigation [ref=f4e39]:
+          - list [ref=f4e40]:
+            - listitem [ref=f4e41]:
+              - link "Accueil" [ref=f4e42] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f4e43]:
+              - link "Nos Locations " [ref=f4e44] [cursor=pointer]:
+                - /url: "#"
+                - text: Nos Locations
+                - generic [ref=f4e45]: 
+            - listitem [ref=f4e47]:
+              - link "Guide Local" [ref=f4e48] [cursor=pointer]:
+                - /url: /local-guide/
+            - listitem [ref=f4e49]:
+              - link "À Propos" [ref=f4e50] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f4e51]:
+              - link "Contact" [ref=f4e52] [cursor=pointer]:
+                - /url: /contact/
+        - text:   
+      - link "Réserver " [ref=f4e55] [cursor=pointer]:
+        - /url: /#nos-locations
+        - text: Réserver
+        - generic [ref=f4e56]: 
+  - main [ref=f4e57]:
+    - generic [ref=f4e62]:
+      - generic [ref=f4e63]:
+        - generic [ref=f4e64]: 
+        - text: Coup de cœur ★ 4,95
+      - heading "Villa 6 pers — Jardin clos & terrasses" [level=1] [ref=f4e65]
+      - paragraph [ref=f4e66]: Saint-Trojan-les-Bains, Île d'Oléron
+      - list [ref=f4e67]:
+        - listitem [ref=f4e68]:
+          - link "Accueil" [ref=f4e69] [cursor=pointer]:
+            - /url: /
+          - text: /
+        - listitem [ref=f4e70]: / /
+        - listitem [ref=f4e71]: Saint-Trojan — Villa
+    - generic [ref=f4e74]:
+      - img "Villa Saint-Trojan extérieur" [ref=f4e76]
+      - generic [ref=f4e77]:
+        - img "Villa Saint-Trojan salon" [ref=f4e78]
+        - img "Villa Saint-Trojan jardin" [ref=f4e79]
+    - generic [ref=f4e81]:
+      - heading " Galerie photos" [level=3] [ref=f4e82]:
+        - generic [ref=f4e83]: 
+        - text: Galerie photos
+      - generic [ref=f4e84]:
+        - link [ref=f4e86] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bathroom-coral-wallpaper-01.webp
+          - img "Bathroom Coral Wallpaper" [ref=f4e87]
+        - link [ref=f4e89] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bathroom-double-02.webp
+          - img "Bathroom Double" [ref=f4e90]
+        - link [ref=f4e92] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bathroom-double-vanity-01.webp
+          - img "Bathroom Double Vanity" [ref=f4e93]
+        - link [ref=f4e95] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bathroom-fern-wallpaper-01.webp
+          - img "Bathroom Fern Wallpaper" [ref=f4e96]
+        - link [ref=f4e98] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bathroom-glass-shower-01.webp
+          - img "Bathroom Glass Shower" [ref=f4e99]
+        - link [ref=f4e101] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-blue-cream-01.webp
+          - img "Bedroom Blue Cream" [ref=f4e102]
+        - link [ref=f4e104] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-blue-cream-02.webp
+          - img "Bedroom Blue Cream" [ref=f4e105]
+        - link [ref=f4e107] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-botanical-01.webp
+          - img "Bedroom Botanical" [ref=f4e108]
+        - link [ref=f4e110] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-botanical-02.webp
+          - img "Bedroom Botanical" [ref=f4e111]
+        - link [ref=f4e113] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-botanical-03.webp
+          - img "Bedroom Botanical" [ref=f4e114]
+        - link [ref=f4e116] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-botanical-04.webp
+          - img "Bedroom Botanical" [ref=f4e117]
+        - link [ref=f4e119] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-floral-01.webp
+          - img "Bedroom Floral" [ref=f4e120]
+        - link [ref=f4e122] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-grey-headboard-01.webp
+          - img "Bedroom Grey Headboard" [ref=f4e123]
+        - link [ref=f4e125] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-loft-02.webp
+          - img "Bedroom" [ref=f4e126]
+        - link [ref=f4e128] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-terracotta-01.webp
+          - img "Bedroom Terracotta" [ref=f4e129]
+        - link [ref=f4e131] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-terracotta-02.webp
+          - img "Bedroom Terracotta" [ref=f4e132]
+        - link [ref=f4e134] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-white-02.webp
+          - img "Bedroom White" [ref=f4e135]
+        - link [ref=f4e137] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-bedroom-white-bedding-01.webp
+          - img "Bedroom White Bedding" [ref=f4e138]
+        - link [ref=f4e140] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-decorative-fish-01.webp
+          - img "Decorative Fish" [ref=f4e141]
+        - link [ref=f4e143] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-dining-area-01.webp
+          - img "Dining Area" [ref=f4e144]
+        - link [ref=f4e146] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-dining-pass-through-01.webp
+          - img "Dining Pass Through" [ref=f4e147]
+        - link [ref=f4e149] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-dining-wood-table-01.webp
+          - img "Dining Wood Table" [ref=f4e150]
+        - link [ref=f4e152] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-exterior-brown-shutters-01.webp
+          - img "Exterior Brown Shutters" [ref=f4e153]
+        - link [ref=f4e155] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-exterior-night-patio-01.webp
+          - img "Exterior Night Patio" [ref=f4e156]
+        - link [ref=f4e158] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-exterior-night-wide-01.webp
+          - img "Exterior Night Wide" [ref=f4e159]
+        - link [ref=f4e161] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-exterior-stone-path-01.webp
+          - img "Exterior Stone Path" [ref=f4e162]
+        - link [ref=f4e164] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-exterior-terracotta-02.webp
+          - img "Exterior Terracotta" [ref=f4e165]
+        - link [ref=f4e167] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-exterior-terracotta-roof-01.webp
+          - img "Exterior Terracotta Roof" [ref=f4e168]
+        - link [ref=f4e170] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp
+          - img "Exterior White Brown" [ref=f4e171]
+        - link [ref=f4e173] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-exterior-white-brown-02.webp
+          - img "Exterior White Brown" [ref=f4e174]
+        - link [ref=f4e176] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-exterior-white-stucco-01.webp
+          - img "Exterior White Stucco" [ref=f4e177]
+        - link [ref=f4e179] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-adirondack-01.webp
+          - img "Garden Adirondack" [ref=f4e180]
+        - link [ref=f4e182] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-adirondack-02.webp
+          - img "Garden Adirondack" [ref=f4e183]
+        - link [ref=f4e185] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-awning-led-01.webp
+          - img "Garden Awning Led" [ref=f4e186]
+        - link [ref=f4e188] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-bbq-01.webp
+          - img "Garden Bbq" [ref=f4e189]
+        - link [ref=f4e191] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-canopy-night-01.webp
+          - img "Garden Canopy Night" [ref=f4e192]
+        - link [ref=f4e194] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-curtains-01.webp
+          - img "Garden Curtains" [ref=f4e195]
+        - link [ref=f4e197] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-daybed-02.webp
+          - img "Garden Daybed" [ref=f4e198]
+        - link [ref=f4e200] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-daybed-purple-01.webp
+          - img "Garden Daybed Purple" [ref=f4e201]
+        - link [ref=f4e203] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-daybed-purple-02.webp
+          - img "Garden Daybed Purple" [ref=f4e204]
+        - link [ref=f4e206] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-deck-night-01.webp
+          - img "Garden Deck Night" [ref=f4e207]
+        - link [ref=f4e209] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-dining-night-01.webp
+          - img "Garden Dining Night" [ref=f4e210]
+        - link [ref=f4e212] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-01.webp
+          - img "Garden Pergola Curtains" [ref=f4e213]
+        - link [ref=f4e215] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-02.webp
+          - img "Garden Pergola Curtains" [ref=f4e216]
+        - link [ref=f4e218] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-pergola-night-01.webp
+          - img "Garden Pergola Night" [ref=f4e219]
+        - link [ref=f4e221] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-pergola-night-02.webp
+          - img "Garden Pergola Night" [ref=f4e222]
+        - link [ref=f4e224] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-pergola-night-03.webp
+          - img "Garden Pergola Night" [ref=f4e225]
+        - link [ref=f4e227] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-garden-wood-deck-01.webp
+          - img "Garden Wood Deck" [ref=f4e228]
+        - link [ref=f4e230] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-hallway-01.webp
+          - img "Hallway" [ref=f4e231]
+        - link [ref=f4e233] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-hallway-02.webp
+          - img "Hallway" [ref=f4e234]
+        - link [ref=f4e236] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-hallway-coat-rack-01.webp
+          - img "Hallway Coat Rack" [ref=f4e237]
+        - link [ref=f4e239] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-kids-room-babar-01.webp
+          - img "Kids Room Babar" [ref=f4e240]
+        - link [ref=f4e242] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-kids-room-colorful-01.webp
+          - img "Kids Room Colorful" [ref=f4e243]
+        - link [ref=f4e245] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-kids-room-colorful-02.webp
+          - img "Kids Room Colorful" [ref=f4e246]
+        - link [ref=f4e248] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-kids-room-teddy-01.webp
+          - img "Kids Room Teddy" [ref=f4e249]
+        - link [ref=f4e251] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-kitchen-black-counter-01.webp
+          - img "Kitchen Black Counter" [ref=f4e252]
+        - link [ref=f4e254] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-kitchen-light-wood-01.webp
+          - img "Kitchen Light Wood" [ref=f4e255]
+        - link [ref=f4e257] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-kitchen-open-shelf-01.webp
+          - img "Kitchen Open Shelf" [ref=f4e258]
+        - link [ref=f4e260] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-kitchen-pass-through-01.webp
+          - img "Kitchen Pass Through" [ref=f4e261]
+        - link [ref=f4e263] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-kitchen-teal-cabinets-01.webp
+          - img "Kitchen Teal Cabinets" [ref=f4e264]
+        - link [ref=f4e266] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-kitchen-teal-cabinets-02.webp
+          - img "Kitchen Teal Cabinets" [ref=f4e267]
+        - link [ref=f4e269] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-kitchen-teal-detail-01.webp
+          - img "Kitchen Teal Detail" [ref=f4e270]
+        - link [ref=f4e272] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-kitchen-teal-detail-02.webp
+          - img "Kitchen Teal Detail" [ref=f4e273]
+        - link [ref=f4e275] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-beams-01.webp
+          - img "Living Beams" [ref=f4e276]
+        - link [ref=f4e278] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp
+          - img "Living Blue Sofa" [ref=f4e279]
+        - link [ref=f4e281] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-blue-sofa-02.webp
+          - img "Living Blue Sofa" [ref=f4e282]
+        - link [ref=f4e284] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-blue-sofa-03.webp
+          - img "Living Blue Sofa" [ref=f4e285]
+        - link [ref=f4e287] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-cream-01.webp
+          - img "Living Cream" [ref=f4e288]
+        - link [ref=f4e290] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-cream-armchair-01.webp
+          - img "Living Cream Armchair" [ref=f4e291]
+        - link [ref=f4e293] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-grey-beams-01.webp
+          - img "Living Grey Beams" [ref=f4e294]
+        - link [ref=f4e296] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-navy-sofa-01.webp
+          - img "Living Navy Sofa" [ref=f4e297]
+        - link [ref=f4e299] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-open-plan-01.webp
+          - img "Living Open Plan" [ref=f4e300]
+        - link [ref=f4e302] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-open-plan-02.webp
+          - img "Living Open Plan" [ref=f4e303]
+        - link [ref=f4e305] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-pass-through-01.webp
+          - img "Living Pass Through" [ref=f4e306]
+        - link [ref=f4e308] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-wood-stove-01.webp
+          - img "Living Wood Stove" [ref=f4e309]
+        - link [ref=f4e311] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-living-wood-stove-02.webp
+          - img "Living Wood Stove" [ref=f4e312]
+        - link [ref=f4e314] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-loft-mezzanine-01.webp
+          - img "Mezzanine" [ref=f4e315]
+        - link [ref=f4e317] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-loft-railing-01.webp
+          - img "Railing" [ref=f4e318]
+        - link [ref=f4e320] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-nameplate-01.webp
+          - img "Nameplate" [ref=f4e321]
+        - link [ref=f4e323] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/latelier-nameplate-02.webp
+          - img "Nameplate" [ref=f4e324]
+        - link [ref=f4e326] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-bathroom-geometric-tile-01.webp
+          - img "Bathroom Geometric Tile" [ref=f4e327]
+        - link [ref=f4e329] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-bathroom-shower-01.webp
+          - img "Bathroom Shower" [ref=f4e330]
+        - link [ref=f4e332] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-bathroom-vanity-01.webp
+          - img "Bathroom Vanity" [ref=f4e333]
+        - link [ref=f4e335] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-bathroom-wide-01.webp
+          - img "Bathroom Wide" [ref=f4e336]
+        - link [ref=f4e338] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-exterior-door-closeup-01.webp
+          - img "Exterior Door Closeup" [ref=f4e339]
+        - link [ref=f4e341] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-exterior-front-01.webp
+          - img "Exterior Front" [ref=f4e342]
+        - link [ref=f4e344] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-exterior-front-02.webp
+          - img "Exterior Front" [ref=f4e345]
+        - link [ref=f4e347] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-exterior-mailbox-01.webp
+          - img "Exterior Mailbox" [ref=f4e348]
+        - link [ref=f4e350] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-exterior-wide-01.webp
+          - img "Exterior Wide" [ref=f4e351]
+        - link [ref=f4e353] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-garden-grasses-01.webp
+          - img "Garden Grasses" [ref=f4e354]
+        - link [ref=f4e356] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-lifestyle-sofa-phone-01.webp
+          - img "Lifestyle Sofa Phone" [ref=f4e357]
+        - link [ref=f4e359] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-twin-room-front-01.webp
+          - img "Twin Room Front" [ref=f4e360]
+        - link [ref=f4e362] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-twin-room-honeycomb-01.webp
+          - img "Twin Room Honeycomb" [ref=f4e363]
+        - link [ref=f4e365] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-twin-room-honeycomb-02.webp
+          - img "Twin Room Honeycomb" [ref=f4e366]
+        - link [ref=f4e368] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-twin-room-wardrobe-01.webp
+          - img "Twin Room Wardrobe" [ref=f4e369]
+        - link [ref=f4e371] [cursor=pointer]:
+          - /url: /static/images/properties/saint-trojan-villa/loft-twin-room-wide-01.webp
+          - img "Twin Room Wide" [ref=f4e372]
+    - generic [ref=f4e375]:
+      - generic [ref=f4e376]:
+        - generic [ref=f4e378]:
+          - heading "Belle villa neuve de bord de mer pour 6 pers" [level=3] [ref=f4e379]
+          - generic [ref=f4e380]:
+            - generic [ref=f4e381]:
+              - generic [ref=f4e382]: 
+              - generic [ref=f4e383]: 
+              - generic [ref=f4e384]: 
+              - generic [ref=f4e385]: 
+              - generic [ref=f4e386]: 
+              - link "(40+ avis)" [ref=f4e387] [cursor=pointer]:
+                - /url: "#"
+            - generic [ref=f4e388]:
+              - generic [ref=f4e389]: 
+              - text: Saint-Trojan-les-Bains, Oléron
+            - generic [ref=f4e390]:
+              - generic [ref=f4e391]: 
+              - text: Superhost · 100% réponse
+        - generic [ref=f4e394]:
+          - text: 180€
+          - generic [ref=f4e395]: /nuit
+      - generic [ref=f4e396]:
+        - generic [ref=f4e397]:
+          - generic [ref=f4e398]: 
+          - heading "6 voyageurs" [level=5] [ref=f4e399]
+        - generic [ref=f4e400]:
+          - generic [ref=f4e401]: 
+          - heading "3 chambres" [level=5] [ref=f4e402]
+        - generic [ref=f4e403]:
+          - generic [ref=f4e404]: 
+          - heading "110 m²" [level=5] [ref=f4e405]
+        - generic [ref=f4e406]:
+          - generic [ref=f4e407]: 
+          - heading "Jardin clos" [level=5] [ref=f4e408]
+        - generic [ref=f4e409]:
+          - generic [ref=f4e410]: 
+          - heading "Parking + VE" [level=5] [ref=f4e411]
+        - generic [ref=f4e412]:
+          - generic [ref=f4e413]: 
+          - heading "Animaux acceptés" [level=5] [ref=f4e414]
+      - generic [ref=f4e415]:
+        - generic [ref=f4e416]:
+          - generic [ref=f4e417]:
+            - heading "Description" [level=3] [ref=f4e418]
+            - paragraph [ref=f4e419]:
+              - text: Maison neuve au style Oléronais, alliant le style insulaire charentais et contemporain, très lumineuse, avec de beaux volumes, idéalement située
+              - strong [ref=f4e420]: entre mer et forêt
+              - text: .
+            - paragraph [ref=f4e421]: "110 m² sur un jardin arboré et clos, avec terrasse en bois 50 m² plein sud (salon de jardin, parasol) et terrasse couverte 17 m² (table en teck). Barbecue. Vaste salon/salle à manger avec grande hauteur sous plafond, baies vitrées sur terrasses. Cuisine ouverte équipée : lave-vaisselle, réfrigérateur, four, micro-ondes, plaque à induction. Cellier avec lave-linge, sèche-linge et congélateur."
+            - paragraph [ref=f4e422]:
+              - strong [ref=f4e423]: 3 chambres
+              - text: "de 12 m² : 2 avec lit de 160, 1 avec 2 lits de 80. Salle de bain avec douche à l'italienne, WC suspendu indépendant. Draps et serviettes fournis. Prise recharge voiture électrique/hybride (supplément selon relevé de compteur). Bureau et écran HDMI pour télétravail."
+          - generic [ref=f4e424]:
+            - heading "Équipements" [level=3] [ref=f4e425]
+            - generic [ref=f4e427]:
+              - heading " WiFi haut débit" [level=5] [ref=f4e430]:
+                - generic [ref=f4e431]: 
+                - text: WiFi haut débit
+              - heading " Parking gratuit" [level=5] [ref=f4e434]:
+                - generic [ref=f4e435]: 
+                - text: Parking gratuit
+              - heading " Jardin clos" [level=5] [ref=f4e438]:
+                - generic [ref=f4e439]: 
+                - text: Jardin clos
+            - generic [ref=f4e441]:
+              - heading " Espace télétravail" [level=5] [ref=f4e444]:
+                - generic [ref=f4e445]: 
+                - text: Espace télétravail
+              - heading " Recharge VE" [level=5] [ref=f4e448]:
+                - generic [ref=f4e449]: 
+                - text: Recharge VE
+              - heading " Proche pistes cyclables" [level=5] [ref=f4e452]:
+                - generic [ref=f4e453]: 
+                - text: Proche pistes cyclables
+            - generic [ref=f4e455]:
+              - heading " Animaux acceptés" [level=5] [ref=f4e458]:
+                - generic [ref=f4e459]: 
+                - text: Animaux acceptés
+              - heading " Barbecue" [level=5] [ref=f4e462]:
+                - generic [ref=f4e463]: 
+                - text: Barbecue
+              - heading "Lave-linge / Sèche-linge" [level=5] [ref=f4e466]
+          - generic [ref=f4e467]:
+            - heading "Règles de la maison" [level=3] [ref=f4e468]
+            - list [ref=f4e469]:
+              - listitem [ref=f4e470]: Arrivée entre 16:00 et 20:00
+              - listitem [ref=f4e471]: Départ avant 10:00
+              - listitem [ref=f4e472]: 6 voyageurs maximum
+              - listitem [ref=f4e473]: Animaux acceptés
+              - listitem [ref=f4e474]: Recharge voiture électrique avec supplément selon relevé de compteur
+              - listitem [ref=f4e475]: Équipement bébé disponible sur demande
+          - generic [ref=f4e476]:
+            - heading "Informations complémentaires" [level=3] [ref=f4e477]
+            - paragraph [ref=f4e478]:
+              - strong [ref=f4e479]: "Hôte :"
+              - text: Agnès (Superhost · 5 ans d'expérience)
+            - paragraph [ref=f4e480]:
+              - strong [ref=f4e481]: "Numéro d'enregistrement :"
+              - text: 17411000371D4
+            - paragraph [ref=f4e482]:
+              - strong [ref=f4e483]: "Type de logement :"
+              - text: Maison / Villa entière
+            - paragraph [ref=f4e484]:
+              - strong [ref=f4e485]: "Note moyenne :"
+              - text: 4,95 ★ sur 40+ avis
+        - generic [ref=f4e487]:
+          - generic [ref=f4e488]:
+            - heading "Réserver ce logement" [level=4] [ref=f4e489]
+            - generic [ref=f4e490]:
+              - paragraph [ref=f4e491]: Pour réserver ou pour toute demande d'information, contactez-nous directement.
+              - link "Nous contacter " [ref=f4e493] [cursor=pointer]:
+                - /url: /contact/
+                - text: Nous contacter
+                - generic [ref=f4e494]: 
+              - generic [ref=f4e495]:
+                - paragraph [ref=f4e496]:
+                  - generic [ref=f4e497]: 
+                  - text: Meilleur prix garanti
+                - paragraph [ref=f4e498]:
+                  - generic [ref=f4e499]: 
+                  - text: Réservation directe
+                - paragraph [ref=f4e500]:
+                  - generic [ref=f4e501]: 
+                  - text: Paiement sécurisé Stripe
+          - generic [ref=f4e502]:
+            - heading "Contact" [level=4] [ref=f4e503]
+            - generic [ref=f4e504]:
+              - list [ref=f4e505]:
+                - listitem [ref=f4e506]:
+                  - link "+33 (0)6 00 00 00 00" [ref=f4e507] [cursor=pointer]:
+                    - /url: tel:+33600000000
+                - listitem [ref=f4e508]:
+                  - link "contact@calm-rio.com" [ref=f4e509] [cursor=pointer]:
+                    - /url: mailto:contact@calm-rio.com
+              - heading "Adresse" [level=3] [ref=f4e510]
+              - paragraph [ref=f4e511]: Saint-Trojan-les-Bains, Île d'OléronEntre mer et forêt
+  - contentinfo [ref=f4e512]:
+    - generic [ref=f4e513]:
+      - generic [ref=f4e515]:
+        - generic [ref=f4e517]:
+          - generic [ref=f4e518]:
+            - text: Calm
+            - generic [ref=f4e519]: Rio
+          - paragraph [ref=f4e520]: Locations de vacances premium à Royan et sur l'île d'Oléron. Des refuges de caractère entre océan et forêt, pensés pour le confort des familles, des couples et des télétravailleurs.
+          - list [ref=f4e521]:
+            - listitem [ref=f4e522]:
+              - link "" [ref=f4e523] [cursor=pointer]:
+                - /url: https://www.instagram.com/calm.rio/
+            - listitem [ref=f4e525]:
+              - link "" [ref=f4e526] [cursor=pointer]:
+                - /url: https://www.facebook.com/people/CalmRio/
+        - generic [ref=f4e529]:
+          - heading "Navigation" [level=4] [ref=f4e530]
+          - list [ref=f4e531]:
+            - listitem [ref=f4e532]:
+              - link "Accueil" [ref=f4e533] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f4e534]:
+              - link "Nos Locations" [ref=f4e535] [cursor=pointer]:
+                - /url: /#nos-locations
+            - listitem [ref=f4e536]:
+              - link "Guide Local" [ref=f4e537] [cursor=pointer]:
+                - /url: /local-guide/
+            - listitem [ref=f4e538]:
+              - link "À Propos" [ref=f4e539] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f4e540]:
+              - link "Contact" [ref=f4e541] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=f4e543]:
+          - heading "Hébergements" [level=4] [ref=f4e544]
+          - list [ref=f4e545]:
+            - listitem [ref=f4e546]:
+              - link "Royan — Appartement Grande Conche" [ref=f4e547] [cursor=pointer]:
+                - /url: /royan-appartement/
+            - listitem [ref=f4e548]:
+              - link "Saint-Trojan — Villa" [ref=f4e549] [cursor=pointer]:
+                - /url: /saint-trojan-villa/
+            - listitem [ref=f4e550]:
+              - link "Saint-Trojan — Maison" [ref=f4e551] [cursor=pointer]:
+                - /url: /saint-trojan-maison/
+        - generic [ref=f4e553]:
+          - heading "Contact" [level=4] [ref=f4e554]
+          - list [ref=f4e555]:
+            - listitem [ref=f4e556]:
+              - link "contact@calm-rio.com" [ref=f4e557] [cursor=pointer]:
+                - /url: mailto:contact@calm-rio.com
+            - listitem [ref=f4e558]:
+              - link "+33 (0)6 00 00 00 00" [ref=f4e559] [cursor=pointer]:
+                - /url: tel:+33(0)600000000
+            - listitem [ref=f4e560]:
+              - generic [ref=f4e561]: Royan & Saint-Trojan-les-BainsNouvelle-Aquitaine, France
+      - generic [ref=f4e563]:
+        - paragraph [ref=f4e565]: © 2026 CalmRio. Tous droits réservés.
+        - generic [ref=f4e566]:
+          - link "Mentions légales" [ref=f4e567] [cursor=pointer]:
+            - /url: /mentions-legales/
+          - link "Politique de confidentialité" [ref=f4e568] [cursor=pointer]:
+            - /url: /politique-de-confidentialite/
+  - text: 

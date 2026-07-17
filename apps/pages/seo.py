@@ -27,7 +27,7 @@ def local_business_structured_data(request):
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.95",
-            "reviewCount": "40+",
+            "reviewCount": 42,
             "bestRating": "5",
         },
         "image": request.build_absolute_uri(

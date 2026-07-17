@@ -1,10 +1,16 @@
+import logging
+
+from django.conf import settings
 from django.contrib import messages
+from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.urls import reverse, reverse_lazy
 from django.views.generic import FormView, TemplateView
 from django.views.generic.base import View
 
-from .forms import ContactForm
+logger = logging.getLogger(__name__)
+
+from .forms import ContactForm, NewsletterForm
 
 
 class AboutView(TemplateView):
@@ -20,7 +26,7 @@ class ContactView(FormView):
         # Save the message to the database
         from .models import ContactMessage
 
-        ContactMessage.objects.create(
+        contact = ContactMessage.objects.create(
             first_name=form.cleaned_data["first_name"],
             last_name=form.cleaned_data.get("last_name", ""),
             email=form.cleaned_data["email"],
@@ -28,7 +34,28 @@ class ContactView(FormView):
             subject=form.cleaned_data["subject"],
             property_interest=form.cleaned_data.get("property_interest", ""),
             message=form.cleaned_data["message"],
+            terms_accepted=form.cleaned_data.get("accept_terms", False),
         )
+
+        # Send email notification to site admin
+        try:
+            send_mail(
+                subject=f"CalmRio — Nouveau message: {contact.get_subject_display()}",
+                message=(
+                    f"De: {contact.first_name} {contact.last_name}\n"
+                    f"Email: {contact.email}\n"
+                    f"Téléphone: {contact.phone}\n"
+                    f"Sujet: {contact.get_subject_display()}\n"
+                    f"Logement: {contact.property_interest}\n\n"
+                    f"Message:\n{contact.message}"
+                ),
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[settings.CONTACT_EMAIL],
+                fail_silently=True,
+            )
+        except Exception as e:
+            logger.warning("Failed to send contact notification email: %s", e)
+
         messages.success(
             self.request,
             "Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.",
@@ -57,6 +84,32 @@ class MentionsView(TemplateView):
 
 class PrivacyView(TemplateView):
     template_name = "pages/politique-de-confidentialite.html"
+
+
+class NewsletterView(FormView):
+    """Handle newsletter subscription."""
+
+    form_class = NewsletterForm
+    success_url = reverse_lazy("home:index")
+
+    def form_valid(self, form):
+        from .models import NewsletterSubscription
+
+        NewsletterSubscription.objects.get_or_create(
+            email=form.cleaned_data["email"]
+        )
+        messages.success(
+            self.request,
+            "Merci pour votre inscription à la newsletter !",
+        )
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(
+            self.request,
+            "Email invalide. Veuillez réessayer.",
+        )
+        return super().form_invalid(form)
 
 
 class RobotsView(View):
@@ -100,8 +153,8 @@ class SitemapView(View):
     <changefreq>{changefreq}</changefreq>
     <priority>{priority}</priority>
   </url>"""
-            except Exception:
-                pass
+            except Exception as e:
+                logger.warning("Sitemap URL skipped for %%s: %%s", view_name, e)
 
         xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

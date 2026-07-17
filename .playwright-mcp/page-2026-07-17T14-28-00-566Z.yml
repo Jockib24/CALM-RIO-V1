@@ -1,0 +1,386 @@
+- generic [active] [ref=f3e1]:
+  - img "loader" [ref=f3e6]
+  - banner [ref=f3e7]:
+    - generic [ref=f3e10]:
+      - generic [ref=f3e12]:
+        - generic [ref=f3e13]:
+          - link " +33 (0)6 00 00 00 00" [ref=f3e14] [cursor=pointer]:
+            - /url: tel:+33(0)600000000
+            - generic [ref=f3e15]: 
+            - text: +33 (0)6 00 00 00 00
+          - text: /
+        - link " contact@calm-rio.com" [ref=f3e17] [cursor=pointer]:
+          - /url: mailto:contact@calm-rio.com
+          - generic [ref=f3e18]: 
+          - text: contact@calm-rio.com
+      - generic [ref=f3e20]:
+        - generic [ref=f3e21]:
+          - link " FAQ" [ref=f3e22] [cursor=pointer]:
+            - /url: /faq/
+            - generic [ref=f3e23]: 
+            - text: FAQ
+          - text: /
+        - generic [ref=f3e24]:
+          - link " Support" [ref=f3e25] [cursor=pointer]:
+            - /url: /contact/
+            - generic [ref=f3e26]: 
+            - text: Support
+          - text: /
+        - link " 🇫🇷 FR " [ref=f3e28] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=f3e29]: 
+          - text: 🇫🇷 FR
+          - generic [ref=f3e30]: 
+    - generic [ref=f3e33]:
+      - link "Calm Rio" [ref=f3e35] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f3e36]:
+          - text: Calm
+          - generic [ref=f3e37]: Rio
+      - generic [ref=f3e38]:
+        - navigation [ref=f3e39]:
+          - list [ref=f3e40]:
+            - listitem [ref=f3e41]:
+              - link "Accueil" [ref=f3e42] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f3e43]:
+              - link "Nos Locations " [ref=f3e44] [cursor=pointer]:
+                - /url: "#"
+                - text: Nos Locations
+                - generic [ref=f3e45]: 
+            - listitem [ref=f3e47]:
+              - link "Guide Local" [ref=f3e48] [cursor=pointer]:
+                - /url: /local-guide/
+            - listitem [ref=f3e49]:
+              - link "À Propos" [ref=f3e50] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f3e51]:
+              - link "Contact" [ref=f3e52] [cursor=pointer]:
+                - /url: /contact/
+        - text:   
+      - link "Réserver " [ref=f3e55] [cursor=pointer]:
+        - /url: /#nos-locations
+        - text: Réserver
+        - generic [ref=f3e56]: 
+  - main [ref=f3e57]:
+    - generic [ref=f3e62]:
+      - heading "Appartement — 100m de la Grande Conche" [level=1] [ref=f3e63]
+      - paragraph [ref=f3e64]: Royan, Nouvelle-Aquitaine
+      - list [ref=f3e65]:
+        - listitem [ref=f3e66]:
+          - link "Accueil" [ref=f3e67] [cursor=pointer]:
+            - /url: /
+          - text: /
+        - listitem [ref=f3e68]: / /
+        - listitem [ref=f3e69]: Royan — Appartement
+    - generic [ref=f3e72]:
+      - img "Appartement Royan vue extérieure" [ref=f3e74]
+      - generic [ref=f3e75]:
+        - img "Appartement Royan intérieur" [ref=f3e76]
+        - img "Plage de la Grande Conche" [ref=f3e77]
+    - generic [ref=f3e79]:
+      - heading " Galerie photos" [level=3] [ref=f3e80]:
+        - generic [ref=f3e81]: 
+        - text: Galerie photos
+      - generic [ref=f3e82]:
+        - link [ref=f3e84] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bathroom-glass-shower-01.webp
+          - img "Bathroom Glass Shower" [ref=f3e85]
+        - link [ref=f3e87] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bathroom-stone-01.webp
+          - img "Bathroom Stone" [ref=f3e88]
+        - link [ref=f3e90] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bathroom-stone-02.webp
+          - img "Bathroom Stone" [ref=f3e91]
+        - link [ref=f3e93] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-beach-buoys-01.webp
+          - img "Beach Buoys" [ref=f3e94]
+        - link [ref=f3e96] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-beach-people-01.webp
+          - img "Beach People" [ref=f3e97]
+        - link [ref=f3e99] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-beach-view-01.webp
+          - img "Beach View" [ref=f3e100]
+        - link [ref=f3e102] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bedroom-anchor-pillow-01.webp
+          - img "Bedroom Anchor Pillow" [ref=f3e103]
+        - link [ref=f3e105] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bedroom-blue-striped-01.webp
+          - img "Bedroom Blue Striped" [ref=f3e106]
+        - link [ref=f3e108] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bedroom-blue-white-01.webp
+          - img "Bedroom Blue White" [ref=f3e109]
+        - link [ref=f3e111] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bedroom-blue-white-02.webp
+          - img "Bedroom Blue White" [ref=f3e112]
+        - link [ref=f3e114] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bedroom-blue-white-03.webp
+          - img "Bedroom Blue White" [ref=f3e115]
+        - link [ref=f3e117] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bedroom-lighthouse-art-01.webp
+          - img "Bedroom Lighthouse Art" [ref=f3e118]
+        - link [ref=f3e120] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bedroom-nautical-01.webp
+          - img "Bedroom Nautical" [ref=f3e121]
+        - link [ref=f3e123] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bedroom-nautical-02.webp
+          - img "Bedroom Nautical" [ref=f3e124]
+        - link [ref=f3e126] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bedroom-nautical-03.webp
+          - img "Bedroom Nautical" [ref=f3e127]
+        - link [ref=f3e129] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bedroom-twin-01.webp
+          - img "Bedroom Twin" [ref=f3e130]
+        - link [ref=f3e132] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-bedroom-white-01.webp
+          - img "Bedroom White" [ref=f3e133]
+        - link [ref=f3e135] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-exterior-blue-shutters-01.webp
+          - img "Exterior Blue Shutters" [ref=f3e136]
+        - link [ref=f3e138] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-exterior-garden-01.webp
+          - img "Exterior Garden" [ref=f3e139]
+        - link [ref=f3e141] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-exterior-red-roof-01.webp
+          - img "Exterior Red Roof" [ref=f3e142]
+        - link [ref=f3e144] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-exterior-yellow-01.webp
+          - img "Exterior Yellow" [ref=f3e145]
+        - link [ref=f3e147] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-exterior-yellow-02.webp
+          - img "Exterior Yellow" [ref=f3e148]
+        - link [ref=f3e150] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-garden-deckchairs-01.webp
+          - img "Garden Deckchairs" [ref=f3e151]
+        - link [ref=f3e153] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-garden-palm-01.webp
+          - img "Garden Palm" [ref=f3e154]
+        - link [ref=f3e156] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-garden-palm-02.webp
+          - img "Garden Palm" [ref=f3e157]
+        - link [ref=f3e159] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-garden-path-01.webp
+          - img "Garden Path" [ref=f3e160]
+        - link [ref=f3e162] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-harbor-ferris-wheel-01.webp
+          - img "Harbor Ferris Wheel" [ref=f3e163]
+        - link [ref=f3e165] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-ice-cream-cart-01.webp
+          - img "Ice Cream Cart" [ref=f3e166]
+        - link [ref=f3e168] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-living-accents-01.webp
+          - img "Living Accents" [ref=f3e169]
+        - link [ref=f3e171] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-living-blue-white-01.webp
+          - img "Living Blue White" [ref=f3e172]
+        - link [ref=f3e174] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-living-fireplace-01.webp
+          - img "Living Fireplace" [ref=f3e175]
+        - link [ref=f3e177] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-living-french-doors-01.webp
+          - img "Living French Doors" [ref=f3e178]
+        - link [ref=f3e180] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-living-white-brick-01.webp
+          - img "Living White Brick" [ref=f3e181]
+        - link [ref=f3e183] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-sign-01.webp
+          - img "Sign" [ref=f3e184]
+        - link [ref=f3e186] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-street-sea-view-01.webp
+          - img "Street Sea View" [ref=f3e187]
+        - link [ref=f3e189] [cursor=pointer]:
+          - /url: /static/images/properties/royan-appartement/face-vacances-pillow-01.webp
+          - img "Vacances Pillow" [ref=f3e190]
+    - generic [ref=f3e193]:
+      - generic [ref=f3e194]:
+        - generic [ref=f3e196]:
+          - heading "Appartement neuf bord de plage" [level=3] [ref=f3e197]
+          - generic [ref=f3e198]:
+            - generic [ref=f3e199]:
+              - generic [ref=f3e200]: 
+              - generic [ref=f3e201]: 
+              - generic [ref=f3e202]: 
+              - generic [ref=f3e203]: 
+              - generic [ref=f3e204]: 
+              - link "(12 avis)" [ref=f3e205] [cursor=pointer]:
+                - /url: "#"
+            - generic [ref=f3e206]:
+              - generic [ref=f3e207]: 
+              - text: Royan, Nouvelle-Aquitaine
+        - generic [ref=f3e210]:
+          - text: 130€
+          - generic [ref=f3e211]: /nuit
+      - generic [ref=f3e212]:
+        - generic [ref=f3e213]:
+          - generic [ref=f3e214]: 
+          - heading "4 voyageurs" [level=5] [ref=f3e215]
+        - generic [ref=f3e216]:
+          - generic [ref=f3e217]: 
+          - heading "2 chambres" [level=5] [ref=f3e218]
+        - generic [ref=f3e219]:
+          - generic [ref=f3e220]: 
+          - heading "60 m² + 20 m²" [level=5] [ref=f3e221]
+        - generic [ref=f3e222]:
+          - generic [ref=f3e223]: 
+          - heading "1 salle de bain" [level=5] [ref=f3e224]
+        - heading "Ascenseur" [level=5] [ref=f3e226]
+        - generic [ref=f3e227]:
+          - generic [ref=f3e228]: 
+          - heading "Animaux acceptés" [level=5] [ref=f3e229]
+      - generic [ref=f3e230]:
+        - generic [ref=f3e231]:
+          - generic [ref=f3e232]:
+            - heading "Description" [level=3] [ref=f3e233]
+            - paragraph [ref=f3e234]:
+              - text: Appartement neuf de 60 m² avec une terrasse de 20 m² alliant un style bord de plage et contemporain, très lumineux, idéalement situé à
+              - strong [ref=f3e235]: 100 m de la plage de la Grande Conche
+              - text: et à proximité de nombreux commerces du centre-ville.
+            - paragraph [ref=f3e236]: Grande pièce de vie avec salon et cuisine / salle à manger. Canapé confortable, cuisine entièrement équipée avec cave à vin de service. Toutes les fenêtres donnent sur la terrasse (partie salon + partie repas, arborée).
+            - paragraph [ref=f3e237]:
+              - strong [ref=f3e238]: "2 chambres :"
+              - text: l'une avec un grand lit de 160, télé, espace de travail (écran + câble HDMI) ; l'autre avec 2 petits lits de 90. Salle de bain avec douche à l'italienne, buanderie (lave-linge, sèche-linge, fer et table à repasser). WC indépendant.
+          - generic [ref=f3e239]:
+            - heading "Équipements" [level=3] [ref=f3e240]
+            - generic [ref=f3e242]:
+              - heading " WiFi haut débit" [level=5] [ref=f3e245]:
+                - generic [ref=f3e246]: 
+                - text: WiFi haut débit
+              - heading " Parking gratuit" [level=5] [ref=f3e249]:
+                - generic [ref=f3e250]: 
+                - text: Parking gratuit
+              - heading " Cuisine équipée" [level=5] [ref=f3e253]:
+                - generic [ref=f3e254]: 
+                - text: Cuisine équipée
+            - generic [ref=f3e256]:
+              - heading " Espace télétravail" [level=5] [ref=f3e259]:
+                - generic [ref=f3e260]: 
+                - text: Espace télétravail
+              - heading " Animaux acceptés" [level=5] [ref=f3e263]:
+                - generic [ref=f3e264]: 
+                - text: Animaux acceptés
+              - heading " Télévision" [level=5] [ref=f3e267]:
+                - generic [ref=f3e268]: 
+                - text: Télévision
+            - generic [ref=f3e270]:
+              - heading "Ascenseur" [level=5] [ref=f3e273]
+              - heading "Lave-linge" [level=5] [ref=f3e276]
+              - heading " Accès plage (100m)" [level=5] [ref=f3e279]:
+                - generic [ref=f3e280]: 
+                - text: Accès plage (100m)
+          - generic [ref=f3e281]:
+            - heading "Règles de la maison" [level=3] [ref=f3e282]
+            - list [ref=f3e283]:
+              - listitem [ref=f3e284]: Arrivée à partir de 16:00
+              - listitem [ref=f3e285]: Départ avant 10:00
+              - listitem [ref=f3e286]: 4 voyageurs maximum
+              - listitem [ref=f3e287]: Animaux acceptés
+              - listitem [ref=f3e288]: Équipement bébé disponible sur demande
+          - generic [ref=f3e289]:
+            - heading "Informations complémentaires" [level=3] [ref=f3e290]
+            - paragraph [ref=f3e291]:
+              - strong [ref=f3e292]: "Hôte :"
+              - text: Mélanie
+            - paragraph [ref=f3e293]:
+              - strong [ref=f3e294]: "Numéro d'enregistrement :"
+              - text: 173060015134Z
+            - paragraph [ref=f3e295]:
+              - strong [ref=f3e296]: "Type de logement :"
+              - text: Appartement entier
+            - paragraph [ref=f3e297]:
+              - strong [ref=f3e298]: "Langues :"
+              - text: Français
+        - generic [ref=f3e300]:
+          - generic [ref=f3e301]:
+            - heading "Réserver ce logement" [level=4] [ref=f3e302]
+            - generic [ref=f3e303]:
+              - paragraph [ref=f3e304]: Pour réserver ou pour toute demande d'information, contactez-nous directement.
+              - link "Nous contacter " [ref=f3e306] [cursor=pointer]:
+                - /url: /contact/
+                - text: Nous contacter
+                - generic [ref=f3e307]: 
+              - generic [ref=f3e308]:
+                - paragraph [ref=f3e309]:
+                  - generic [ref=f3e310]: 
+                  - text: Meilleur prix garanti
+                - paragraph [ref=f3e311]:
+                  - generic [ref=f3e312]: 
+                  - text: Réservation directe
+                - paragraph [ref=f3e313]:
+                  - generic [ref=f3e314]: 
+                  - text: Paiement sécurisé Stripe
+          - generic [ref=f3e315]:
+            - heading "Contact" [level=4] [ref=f3e316]
+            - generic [ref=f3e317]:
+              - list [ref=f3e318]:
+                - listitem [ref=f3e319]:
+                  - link "+33 (0)6 00 00 00 00" [ref=f3e320] [cursor=pointer]:
+                    - /url: tel:+33600000000
+                - listitem [ref=f3e321]:
+                  - link "contact@calm-rio.com" [ref=f3e322] [cursor=pointer]:
+                    - /url: mailto:contact@calm-rio.com
+              - heading "Adresse" [level=3] [ref=f3e323]
+              - paragraph [ref=f3e324]: Royan, Nouvelle-AquitaineÀ 100m de la plage de la Grande Conche
+  - contentinfo [ref=f3e325]:
+    - generic [ref=f3e326]:
+      - generic [ref=f3e328]:
+        - generic [ref=f3e330]:
+          - generic [ref=f3e331]:
+            - text: Calm
+            - generic [ref=f3e332]: Rio
+          - paragraph [ref=f3e333]: Locations de vacances premium à Royan et sur l'île d'Oléron. Des refuges de caractère entre océan et forêt, pensés pour le confort des familles, des couples et des télétravailleurs.
+          - list [ref=f3e334]:
+            - listitem [ref=f3e335]:
+              - link "" [ref=f3e336] [cursor=pointer]:
+                - /url: https://www.instagram.com/calm.rio/
+            - listitem [ref=f3e338]:
+              - link "" [ref=f3e339] [cursor=pointer]:
+                - /url: https://www.facebook.com/people/CalmRio/
+        - generic [ref=f3e342]:
+          - heading "Navigation" [level=4] [ref=f3e343]
+          - list [ref=f3e344]:
+            - listitem [ref=f3e345]:
+              - link "Accueil" [ref=f3e346] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f3e347]:
+              - link "Nos Locations" [ref=f3e348] [cursor=pointer]:
+                - /url: /#nos-locations
+            - listitem [ref=f3e349]:
+              - link "Guide Local" [ref=f3e350] [cursor=pointer]:
+                - /url: /local-guide/
+            - listitem [ref=f3e351]:
+              - link "À Propos" [ref=f3e352] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f3e353]:
+              - link "Contact" [ref=f3e354] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=f3e356]:
+          - heading "Hébergements" [level=4] [ref=f3e357]
+          - list [ref=f3e358]:
+            - listitem [ref=f3e359]:
+              - link "Royan — Appartement Grande Conche" [ref=f3e360] [cursor=pointer]:
+                - /url: /royan-appartement/
+            - listitem [ref=f3e361]:
+              - link "Saint-Trojan — Villa" [ref=f3e362] [cursor=pointer]:
+                - /url: /saint-trojan-villa/
+            - listitem [ref=f3e363]:
+              - link "Saint-Trojan — Maison" [ref=f3e364] [cursor=pointer]:
+                - /url: /saint-trojan-maison/
+        - generic [ref=f3e366]:
+          - heading "Contact" [level=4] [ref=f3e367]
+          - list [ref=f3e368]:
+            - listitem [ref=f3e369]:
+              - link "contact@calm-rio.com" [ref=f3e370] [cursor=pointer]:
+                - /url: mailto:contact@calm-rio.com
+            - listitem [ref=f3e371]:
+              - link "+33 (0)6 00 00 00 00" [ref=f3e372] [cursor=pointer]:
+                - /url: tel:+33(0)600000000
+            - listitem [ref=f3e373]:
+              - generic [ref=f3e374]: Royan & Saint-Trojan-les-BainsNouvelle-Aquitaine, France
+      - generic [ref=f3e376]:
+        - paragraph [ref=f3e378]: © 2026 CalmRio. Tous droits réservés.
+        - generic [ref=f3e379]:
+          - link "Mentions légales" [ref=f3e380] [cursor=pointer]:
+            - /url: /mentions-legales/
+          - link "Politique de confidentialité" [ref=f3e381] [cursor=pointer]:
+            - /url: /politique-de-confidentialite/
+  - text: 

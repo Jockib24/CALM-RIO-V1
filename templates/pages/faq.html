@@ -1,17 +1,8 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 
 {% block title %}FAQ | CalmRio — Questions fréquentes{% endblock %}
-
-{% block extra_head %}
-<style>
-    .faq-accordion .accordion-item{border:1px solid var(--border-color);border-radius:10px;margin-bottom:15px;overflow:hidden;background:#fff;}
-    .faq-accordion .accordion-header button{background:transparent;border:none;padding:20px 25px;width:100%;text-align:left;font-weight:600;font-size:1.05rem;color:var(--primary-color,#1B3A4B);position:relative;display:flex;justify-content:space-between;align-items:center;}
-    .faq-accordion .accordion-header button::after{content:'\f107';font-family:'Font Awesome 5 Free';font-weight:900;font-size:1.2rem;color:var(--accent-color,#C49A5A);transition:transform 0.3s;}
-    .faq-accordion .accordion-header button[aria-expanded="true"]::after{transform:rotate(180deg);}
-    .faq-accordion .accordion-body{padding:0 25px 20px;color:var(--text-color);line-height:1.7;font-size:0.95rem;}
-</style>
-{% endblock %}
+{% block meta_description %}FAQ Calm Rio — réponses à vos questions sur la réservation, le paiement, les arrivées/départs et nos locations.{% endblock %}
 
 {% block content %}
 <section class="page-hero bg_cover p-r z-1" style="background:var(--primary-color,#1B3A4B);">
@@ -38,7 +29,7 @@
                     <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:30px;">Réservation & Paiement</h3>
                     <div class="accordion-item">
                         <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq1">Comment réserver un logement ?</button></div>
-                        <div id="faq1" class="collapse"><div class="accordion-body">Vous pouvez nous contacter via le formulaire de contact, par email à contact@calm-rio.com ou par téléphone. Nous vous répondons sous 24h pour confirmer la disponibilité et vous envoyer le lien de paiement sécurisé Stripe. La réservation est ferme après réception de l'acompte (30%).</div></div>
+                        <div id="faq1" class="collapse"><div class="accordion-body">Vous pouvez nous contacter via le formulaire de contact, par email à <a href="mailto:contact@calm-rio.com">contact@calm-rio.com</a> ou par téléphone. Nous vous répondons sous 24h pour confirmer la disponibilité et vous envoyer le lien de paiement sécurisé Stripe. La réservation est ferme après réception de l'acompte (30%).</div></div>
                     </div>
                     <div class="accordion-item">
                         <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq2">Quels sont les moyens de paiement acceptés ?</button></div>

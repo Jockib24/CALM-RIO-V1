@@ -1,0 +1,4 @@
+[    3721ms] TypeError: Cannot read properties of undefined (reading 'slidesToShow')
+    at e.slideHandler (http://127.0.0.1:8000/static/js/plugins/slick.min.js:1:36525)
+    at e.autoPlayIterator (http://127.0.0.1:8000/static/js/plugins/slick.min.js:1:5963)
+    at i (http://127.0.0.1:8000/static/js/plugins/jquery-3.7.1.min.js:2:86755)

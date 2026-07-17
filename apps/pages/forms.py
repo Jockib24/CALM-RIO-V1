@@ -53,7 +53,7 @@ class ContactForm(forms.Form):
             ("information", "Demande d'information"),
             ("disponibilite", "Vérification de disponibilité"),
             ("tarif", "Demande de tarif"),
-            ("rec lamation", "Réclamation"),
+            ("reclamation", "Réclamation"),
             ("autre", "Autre"),
         ],
         widget=forms.Select(attrs={"class": "form-control nice-select"}),

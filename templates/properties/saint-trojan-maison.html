@@ -27,11 +27,368 @@
                 <div class="container">
                     <div class="row g-3">
                         <div class="col-md-8" data-aos="fade-up" data-aos-duration="800">
-                            <img src="{% static 'images/properties/house-new.webp' %}" alt="Maison Saint-Trojan extérieur" style="width:100%;border-radius:12px;height:100%;object-fit:cover;min-height:350px;">
+                            <img src="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-01.webp' %}" alt="Maison Saint-Trojan extérieur" style="width:100%;border-radius:12px;height:100%;object-fit:cover;min-height:350px;">
                         </div>
                         <div class="col-md-4" data-aos="fade-up" data-aos-duration="800">
-                            <img src="{% static 'images/properties/gallery-1.jpg' %}" alt="Maison Saint-Trojan intérieur" style="width:100%;border-radius:12px;margin-bottom:12px;height:calc(50% - 6px);object-fit:cover;">
-                            <img src="{% static 'images/properties/about-hero.jpg' %}" alt="Maison Saint-Trojan cour" style="width:100%;border-radius:12px;height:calc(50% - 6px);object-fit:cover;">
+                            <img src="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-01.webp' %}" alt="Maison Saint-Trojan chambre" style="width:100%;border-radius:12px;margin-bottom:12px;height:calc(50% - 6px);object-fit:cover;">
+                            <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-deckchairs-01.webp' %}" alt="Maison Saint-Trojan jardin" style="width:100%;border-radius:12px;height:calc(50% - 6px);object-fit:cover;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pt-40 pb-60">
+                <div class="container">
+                    <h3 class="mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-images" style="color:var(--accent-color);margin-right:10px;"></i>Galerie photos</h3>
+                    <div class="row g-3" id="gallery-maison">
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-01.webp' %}" alt="Blue Shutters Exterior" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-02.webp' %}" alt="Blue Shutters Exterior" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-04.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-04.webp' %}" alt="Blue Shutters Exterior" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-07.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-07.webp' %}" alt="Blue Shutters Exterior" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-night-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-night-01.webp' %}" alt="Blue Shutters Exterior Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-exterior-05.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-exterior-05.webp' %}" alt="Exterior" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-exterior-06.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-exterior-06.webp' %}" alt="Exterior" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-exterior-blue-shutters-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-exterior-blue-shutters-03.webp' %}" alt="Exterior Blue Shutters" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-exterior-day-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-exterior-day-01.webp' %}" alt="Exterior Day" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-exterior-day-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-exterior-day-02.webp' %}" alt="Exterior Day" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-exterior-day-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-exterior-day-03.webp' %}" alt="Exterior Day" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-exterior-day-04.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-exterior-day-04.webp' %}" alt="Exterior Day" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-exterior-day-05.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-exterior-day-05.webp' %}" alt="Exterior Day" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-exterior-night-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-exterior-night-02.webp' %}" alt="Exterior Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-exterior-night-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-exterior-night-03.webp' %}" alt="Exterior Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-exterior-night-04.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-exterior-night-04.webp' %}" alt="Exterior Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-exterior-night-05.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-exterior-night-05.webp' %}" alt="Exterior Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-floral-wallpaper-bedroom-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-floral-wallpaper-bedroom-01.webp' %}" alt="Floral Wallpaper Bedroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-floral-wallpaper-bedroom-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-floral-wallpaper-bedroom-02.webp' %}" alt="Floral Wallpaper Bedroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-floral-wallpaper-bedroom-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-floral-wallpaper-bedroom-03.webp' %}" alt="Floral Wallpaper Bedroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-garden-bbq-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-bbq-01.webp' %}" alt="Garden Bbq" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-garden-deckchairs-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-deckchairs-01.webp' %}" alt="Garden Deckchairs" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-garden-deckchairs-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-deckchairs-02.webp' %}" alt="Garden Deckchairs" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-garden-deckchairs-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-deckchairs-03.webp' %}" alt="Garden Deckchairs" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-garden-deckchairs-04.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-deckchairs-04.webp' %}" alt="Garden Deckchairs" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-garden-deckchairs-05.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-deckchairs-05.webp' %}" alt="Garden Deckchairs" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-garden-path-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-path-01.webp' %}" alt="Garden Path" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-garden-path-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-path-02.webp' %}" alt="Garden Path" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-garden-path-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-path-03.webp' %}" alt="Garden Path" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-garden-path-04.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-path-04.webp' %}" alt="Garden Path" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-garden-pergola-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-pergola-02.webp' %}" alt="Garden Pergola" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-garden-pergola-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-garden-pergola-03.webp' %}" alt="Garden Pergola" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-01.webp' %}" alt="Grey Wallpaper Bedroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-02.webp' %}" alt="Grey Wallpaper Bedroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-03.webp' %}" alt="Grey Wallpaper Bedroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-04.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-04.webp' %}" alt="Grey Wallpaper Bedroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-05.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-05.webp' %}" alt="Grey Wallpaper Bedroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-harbor-view-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-harbor-view-01.webp' %}" alt="Harbor View" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-harbor-view-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-harbor-view-02.webp' %}" alt="Harbor View" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-harbor-view-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-harbor-view-03.webp' %}" alt="Harbor View" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-harbor-view-04.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-harbor-view-04.webp' %}" alt="Harbor View" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-outdoor-dining-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-outdoor-dining-01.webp' %}" alt="Outdoor Dining" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-outdoor-dining-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-outdoor-dining-02.webp' %}" alt="Outdoor Dining" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-pergola-deckchairs-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-pergola-deckchairs-01.webp' %}" alt="Pergola Deckchairs" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/cottage-pergola-green-sails-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/cottage-pergola-green-sails-01.webp' %}" alt="Pergola Green Sails" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-bathroom-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-bathroom-01.webp' %}" alt="Bathroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-bathroom-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-bathroom-02.webp' %}" alt="Bathroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-bathroom-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-bathroom-03.webp' %}" alt="Bathroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-bedroom-botanical-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-bedroom-botanical-01.webp' %}" alt="Bedroom Botanical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-bedroom-botanical-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-bedroom-botanical-02.webp' %}" alt="Bedroom Botanical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-bedroom-botanical-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-bedroom-botanical-03.webp' %}" alt="Bedroom Botanical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-bedroom-wallpaper-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-bedroom-wallpaper-01.webp' %}" alt="Bedroom Wallpaper" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-bedroom-wallpaper-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-bedroom-wallpaper-02.webp' %}" alt="Bedroom Wallpaper" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-bedroom-wallpaper-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-bedroom-wallpaper-03.webp' %}" alt="Bedroom Wallpaper" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-bedroom-white-bedding-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-bedroom-white-bedding-01.webp' %}" alt="Bedroom White Bedding" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-kitchen-bar-stools-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-kitchen-bar-stools-01.webp' %}" alt="Kitchen Bar Stools" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-kitchen-black-countertop-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-kitchen-black-countertop-01.webp' %}" alt="Kitchen Black Countertop" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-kitchen-black-countertop-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-kitchen-black-countertop-02.webp' %}" alt="Kitchen Black Countertop" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-kitchen-black-rangehood-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-kitchen-black-rangehood-01.webp' %}" alt="Kitchen Black Rangehood" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-kitchen-counter-detail-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-kitchen-counter-detail-01.webp' %}" alt="Kitchen Counter Detail" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-kitchen-double-oven-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-kitchen-double-oven-01.webp' %}" alt="Kitchen Double Oven" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-kitchen-light-wood-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-kitchen-light-wood-01.webp' %}" alt="Kitchen Light Wood" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-kitchen-open-plan-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-kitchen-open-plan-01.webp' %}" alt="Kitchen Open Plan" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-living-blue-accent-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-living-blue-accent-01.webp' %}" alt="Living Blue Accent" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-living-blue-accent-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-living-blue-accent-02.webp' %}" alt="Living Blue Accent" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-living-grey-tiles-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-living-grey-tiles-01.webp' %}" alt="Living Grey Tiles" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-living-grey-tiles-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-living-grey-tiles-02.webp' %}" alt="Living Grey Tiles" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-living-grey-tiles-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-living-grey-tiles-03.webp' %}" alt="Living Grey Tiles" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-living-open-plan-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-living-open-plan-01.webp' %}" alt="Living Open Plan" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-maison/modern-living-open-plan-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-maison/modern-living-open-plan-02.webp' %}" alt="Living Open Plan" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
                         </div>
                     </div>
                 </div>

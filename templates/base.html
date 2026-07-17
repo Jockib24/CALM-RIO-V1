@@ -43,6 +43,17 @@
         <!--====== Default css ======-->
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         {% block extra_head %}{% endblock %}
+        <!-- Gallery Popup Custom Styles -->
+        <style>
+            .mfp-arrow-left::before, .mfp-arrow-left .mfp-b { border:none; }
+            .mfp-arrow-right::before, .mfp-arrow-right .mfp-b { border:none; }
+            .mfp-arrow-left::before { border-right:27px solid rgba(255,255,255,0.9); }
+            .mfp-arrow-right::before { border-left:27px solid rgba(255,255,255,0.9); }
+            .mfp-arrow-left::after, .mfp-arrow-right::after { border:none; }
+            .mfp-arrow .mfp-b { display:none; }
+            .mfp-counter { color:#fff; font-size:0.9rem; }
+            .mfp-title { color:#fff; font-size:0.95rem; }
+        </style>
     {% if structured_data_json %}
     <script type="application/ld+json">
 {{ structured_data_json|safe }}
@@ -129,8 +140,8 @@
                             <div class="theme-menu-bottom mt-50 d-block d-xl-none">
                                 <h5>Suivez-nous</h5>
                                 <ul class="social-link">
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.instagram.com/calm.rio/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/people/CalmRio/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -163,8 +174,8 @@
                                 <span class="text-logo text-logo-light footer-logo">Calm<span>Rio</span></span>
                                 <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.7;margin-bottom:20px;">Locations de vacances premium à Royan et sur l'île d'Oléron. Des refuges de caractère entre océan et forêt, pensés pour le confort des familles, des couples et des télétravailleurs.</p>
                                 <ul class="social-link d-flex gap-3">
-                                    <li><a href="#" style="color:rgba(255,255,255,0.6);font-size:1.2rem;"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#" style="color:rgba(255,255,255,0.6);font-size:1.2rem;"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.instagram.com/calm.rio/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.6);font-size:1.2rem;"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/people/CalmRio/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.6);font-size:1.2rem;"><i class="fab fa-facebook-f"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -233,6 +244,28 @@
         <script src="{% static 'js/theme.js' %}"></script>
         <script>
             AOS.init({duration:1000,once:true});
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('.gallery-popup').magnificPopup({
+                    type: 'image',
+                    gallery: {
+                        enabled: true,
+                        navigateByImgClick: true,
+                        preload: [0, 1]
+                    },
+                    image: {
+                        titleSrc: function(item) {
+                            return item.el.find('img').attr('alt');
+                        }
+                    },
+                    zoom: {
+                        enabled: true,
+                        duration: 300
+                    },
+                    mainClass: 'mfp-fade'
+                });
+            });
         </script>
         {% block extra_scripts %}{% endblock %}
     </body>

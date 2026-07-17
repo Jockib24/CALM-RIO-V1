@@ -1,0 +1,43 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - heading "Page not found (404)" [level=1] [ref=f2e3]
+    - table [ref=f2e4]:
+      - rowgroup [ref=f2e5]:
+        - row [ref=f2e6]:
+          - rowheader "Request Method:" [ref=f2e7]
+          - cell "GET" [ref=f2e8]
+        - row [ref=f2e9]:
+          - rowheader "Request URL:" [ref=f2e10]
+          - cell "http://localhost:8000/locations/royan-appartement/" [ref=f2e11]
+  - generic [ref=f2e12]:
+    - paragraph [ref=f2e13]:
+      - text: Using the URLconf defined in
+      - code [ref=f2e14]: config.urls
+      - text: ", Django tried these URL patterns, in this order:"
+    - list [ref=f2e15]:
+      - listitem [ref=f2e16]: admin/
+      - listitem [ref=f2e17]: "[name='index']"
+      - listitem [ref=f2e18]: about/ [name='about']
+      - listitem [ref=f2e19]: contact/ [name='contact']
+      - listitem [ref=f2e20]: faq/ [name='faq']
+      - listitem [ref=f2e21]: local-guide/ [name='local_guide']
+      - listitem [ref=f2e22]: mentions-legales/ [name='mentions']
+      - listitem [ref=f2e23]: politique-de-confidentialite/ [name='privacy']
+      - listitem [ref=f2e24]: newsletter/ [name='newsletter']
+      - listitem [ref=f2e25]: sitemap.xml [name='sitemap']
+      - listitem [ref=f2e26]: robots.txt [name='robots']
+      - listitem [ref=f2e27]: royan-appartement/ [name='royan_appartement']
+      - listitem [ref=f2e28]: saint-trojan-villa/ [name='saint_trojan_villa']
+      - listitem [ref=f2e29]: saint-trojan-maison/ [name='saint_trojan_maison']
+      - listitem [ref=f2e30]: ^media/(?P<path>.*)$
+      - listitem [ref=f2e31]: ^static/(?P<path>.*)$
+    - paragraph [ref=f2e32]:
+      - text: The current path,
+      - code [ref=f2e33]: locations/royan-appartement/
+      - text: ", didn’t match any of these."
+  - paragraph [ref=f2e35]:
+    - text: You’re seeing this error because you have
+    - code [ref=f2e36]: DEBUG = True
+    - text: in your Django settings file. Change that to
+    - code [ref=f2e37]: "False"
+    - text: ", and Django will display a standard 404 page."

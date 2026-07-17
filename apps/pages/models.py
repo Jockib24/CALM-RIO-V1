@@ -22,6 +22,7 @@ class ContactMessage(models.Model):
         "Logement concerné", max_length=50, blank=True
     )
     message = models.TextField("Message")
+    terms_accepted = models.BooleanField("CGV acceptées", default=False)
     is_read = models.BooleanField("Lu", default=False)
     created_at = models.DateTimeField("Reçu le", auto_now_add=True)
 
