@@ -1,0 +1,58 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+{% with section='calendar' %}
+
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
+  <h2 style="font-size:1.5rem;font-weight:600;">Calendrier des réservations</h2>
+  <div style="display:flex;gap:8px;">
+    <a href="?year={{ prev_year }}&month={{ prev_month }}" class="btn-filter" style="text-decoration:none;background:transparent;color:var(--db-primary);border:1px solid #d1d5db;">
+      <i class="fas fa-chevron-left"></i>
+    </a>
+    <span style="padding:8px 16px;font-weight:600;">{{ month_name }} {{ current_year }}</span>
+    <a href="?year={{ next_year }}&month={{ next_month }}" class="btn-filter" style="text-decoration:none;background:transparent;color:var(--db-primary);border:1px solid #d1d5db;">
+      <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
+</div>
+
+<div class="cal-grid">
+  <div class="cal-header">Lun</div>
+  <div class="cal-header">Mar</div>
+  <div class="cal-header">Mer</div>
+  <div class="cal-header">Jeu</div>
+  <div class="cal-header">Ven</div>
+  <div class="cal-header">Sam</div>
+  <div class="cal-header">Dim</div>
+
+  {% for week in weeks %}
+  {% for day in week %}
+  <div class="cal-cell {% if day.is_today %}today{% endif %} {% if not day.day %}other-month{% endif %}">
+    {% if day.day %}
+    <div class="day-num">{{ day.day }}</div>
+    {% for b in day.bookings %}
+    <div class="cal-booking {% if b.status == 'pending' %}pending{% endif %}" title="{{ b.first_name }} {{ b.last_name }} — {{ b.unit.name }}">
+      <i class="fas fa-user" style="font-size:0.6rem;margin-right:2px;"></i> {{ b.first_name|first }}. {{ b.unit.name|truncatechars:12 }}
+    </div>
+    {% endfor %}
+    {% for bl in day.blocked %}
+    <div class="cal-booking" style="background:#fce4ec;color:#991b1b;" title="Bloqué ({{ bl.source.name }}) — {{ bl.summary }}">
+      <i class="fas fa-lock" style="font-size:0.6rem;margin-right:2px;"></i> {{ bl.source.name|truncatechars:10 }}
+    </div>
+    {% endfor %}
+    {% if not day.bookings and not day.blocked %}
+    <div style="font-size:0.65rem;color:#cbd5e1;">—</div>
+    {% endif %}
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% endfor %}
+</div>
+
+<div style="margin-top:24px;display:flex;gap:16px;font-size:0.85rem;flex-wrap:wrap;">
+  <span><span style="display:inline-block;width:12px;height:12px;background:#d1fae5;border-radius:3px;margin-right:4px;"></span> Réservation confirmée</span>
+  <span><span style="display:inline-block;width:12px;height:12px;background:#fef3c7;border-radius:3px;margin-right:4px;"></span> En attente</span>
+  <span><span style="display:inline-block;width:12px;height:12px;background:#fce4ec;border-radius:3px;margin-right:4px;"></span> Bloqué (iCal)</span>
+</div>
+
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+{% with section='properties' %}
+
+<div style="margin-bottom:24px;">
+  <a href="{% url 'dashboard:properties' %}" style="color:var(--db-text-light);text-decoration:none;font-size:0.9rem;">
+    <i class="fas fa-arrow-left"></i> Retour aux propriétés
+  </a>
+</div>
+
+<form method="post" class="db-form">
+  {% csrf_token %}
+  <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:24px;">{{ title }}</h2>
+
+  <p style="color:var(--db-text-light);font-size:0.9rem;margin-bottom:24px;line-height:1.6;">
+    Ajoutez le lien iCal de votre annonce pour synchroniser automatiquement les dates bloquées.
+    Récupérez ce lien depuis votre plateforme :
+  </p>
+
+  <ul style="margin-bottom:24px;font-size:0.85rem;color:var(--db-text);line-height:1.8;">
+    <li><strong>Airbnb</strong> : Tableau de bord → Calendrier → Exporter → Lien iCal</li>
+    <li><strong>Booking.com</strong> : Calendrier → Synchronisation iCal</li>
+    <li><strong>Abritel / HomeAway</strong> : Calendrier → Exporter → iCal</li>
+  </ul>
+
+  <div style="margin-bottom:16px;">
+    <label for="id_unit">Propriété</label>
+    <select name="unit" id="id_unit" required>
+      {% for prop in form.unit.field.queryset %}
+      <option value="{{ prop.pk }}">{{ prop.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div style="margin-bottom:16px;">
+    <label for="id_name">Nom</label>
+    <input type="text" name="name" id="id_name" placeholder="ex: Airbnb, Booking.com" value="{{ form.name.value|default:'' }}" required>
+  </div>
+
+  <div style="margin-bottom:16px;">
+    <label for="id_url">Lien iCal</label>
+    <input type="url" name="url" id="id_url" placeholder="https://..." value="{{ form.url.value|default:'' }}" required>
+  </div>
+
+  <div style="margin-bottom:24px;">
+    <label>
+      <input type="checkbox" name="is_active" id="id_is_active" {% if form.is_active.value or not form.is_active.value == False %}checked{% endif %}>
+      Actif
+    </label>
+  </div>
+
+  <button type="submit" class="btn-submit">
+    Ajouter la source
+  </button>
+</form>
+
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+{% with section='messages' %}
+
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
+  <h2 style="font-size:1.5rem;font-weight:600;">Messages</h2>
+  <span style="font-size:0.9rem;color:var(--db-text-light);">{{ unread_count }} non lu{% if unread_count > 1 %}s{% endif %}</span>
+</div>
+
+<!-- Filters -->
+<form method="get" class="filter-bar">
+  <select name="status">
+    <option value="">Tous les statuts</option>
+    <option value="unread" {% if current_status == 'unread' %}selected{% endif %}>Non lus</option>
+    <option value="read" {% if current_status == 'read' %}selected{% endif %}>Lus</option>
+  </select>
+  <select name="subject">
+    <option value="">Tous les sujets</option>
+    {% for val, label in subject_choices %}
+    <option value="{{ val }}" {% if current_subject == val %}selected{% endif %}>{{ label }}</option>
+    {% endfor %}
+  </select>
+  <button type="submit" class="btn-filter">Filtrer</button>
+</form>
+
+<div class="db-table">
+  {% for msg in messages %}
+  <a href="{% url 'dashboard:message_detail' msg.pk %}" class="msg-list-item {% if not msg.is_read %}unread{% endif %}">
+    <div style="flex:1;">
+      <div style="display:flex;gap:12px;align-items:center;">
+        <span class="msg-subject">{{ msg.get_subject_display }}</span>
+        {% if not msg.is_read %}<span class="badge-status badge-unread">Nouveau</span>{% endif %}
+      </div>
+      <div class="msg-preview" style="margin-top:2px;">
+        <strong>{{ msg.name }}</strong> — {{ msg.created_at|date:"d/m/Y H:i" }}
+        {% if msg.message %}<span style="margin-left:8px;color:#94a3b8;">{{ msg.message|truncatechars:80 }}</span>{% endif %}
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span style="font-size:0.75rem;color:var(--db-text-light);">{{ msg.email }}</span>
+      <i class="fas fa-chevron-right" style="color:var(--db-text-light);font-size:0.8rem;"></i>
+    </div>
+  </a>
+  {% empty %}
+  <p style="padding:32px;color:var(--db-text-light);text-align:center;">Aucun message trouvé.</p>
+  {% endfor %}
+</div>
+
+{% if page_obj.paginator.num_pages > 1 %}
+<div class="pagination">
+  {% if page_obj.has_previous %}
+  <a href="?page=1{% if current_status %}&status={{ current_status }}{% endif %}{% if current_subject %}&subject={{ current_subject }}{% endif %}">&laquo;</a>
+  <a href="?page={{ page_obj.previous_page_number }}{% if current_status %}&status={{ current_status }}{% endif %}{% if current_subject %}&subject={{ current_subject }}{% endif %}">‹</a>
+  {% endif %}
+  <span class="current">{{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+  {% if page_obj.has_next %}
+  <a href="?page={{ page_obj.next_page_number }}{% if current_status %}&status={{ current_status }}{% endif %}{% if current_subject %}&subject={{ current_subject }}{% endif %}">›</a>
+  <a href="?page={{ page_obj.paginator.num_pages }}{% if current_status %}&status={{ current_status }}{% endif %}{% if current_subject %}&subject={{ current_subject }}{% endif %}">&raquo;</a>
+  {% endif %}
+</div>
+{% endif %}
+
+{% endwith %}
+{% endblock %}

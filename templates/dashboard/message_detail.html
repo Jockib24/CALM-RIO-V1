@@ -1,0 +1,54 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+{% with section='messages' %}
+
+<div style="margin-bottom:24px;">
+  <a href="{% url 'dashboard:messages' %}" style="color:var(--db-text-light);text-decoration:none;font-size:0.9rem;">
+    <i class="fas fa-arrow-left"></i> Retour aux messages
+  </a>
+</div>
+
+<div class="db-table" style="padding:32px;">
+  <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:24px;">
+    <div>
+      <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:4px;">{{ msg.get_subject_display }}</h2>
+      <div style="color:var(--db-text-light);font-size:0.9rem;">
+        {{ msg.created_at|date:"d/m/Y H:i" }}
+        {% if not msg.is_read %}<span class="badge-status badge-unread" style="margin-left:8px;">Non lu</span>{% endif %}
+      </div>
+    </div>
+    <form method="post" action="{% url 'dashboard:message_toggle_read' msg.pk %}">
+      {% csrf_token %}
+      <button type="submit" class="btn-filter" style="background:transparent;color:var(--db-primary);border:1px solid var(--db-primary);">
+        {% if msg.is_read %}<i class="fas fa-envelope"></i> Marquer non lu{% else %}<i class="fas fa-envelope-open"></i> Marquer lu{% endif %}
+      </button>
+    </form>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid #e2e8f0;">
+    <div>
+      <div style="font-size:0.8rem;color:var(--db-text-light);font-weight:600;">Nom</div>
+      <div>{{ msg.name }}</div>
+    </div>
+    <div>
+      <div style="font-size:0.8rem;color:var(--db-text-light);font-weight:600;">Email</div>
+      <div><a href="mailto:{{ msg.email }}" style="color:var(--db-primary);">{{ msg.email }}</a></div>
+    </div>
+    <div>
+      <div style="font-size:0.8rem;color:var(--db-text-light);font-weight:600;">Téléphone</div>
+      <div>{% if msg.phone %}{{ msg.phone }}{% else %}—{% endif %}</div>
+    </div>
+    <div>
+      <div style="font-size:0.8rem;color:var(--db-text-light);font-weight:600;">Propriété</div>
+      <div>{% if msg.property %}{{ msg.property }}{% else %}—{% endif %}</div>
+    </div>
+  </div>
+
+  <div>
+    <div style="font-size:0.8rem;color:var(--db-text-light);font-weight:600;margin-bottom:8px;">Message</div>
+    <div style="line-height:1.7;white-space:pre-wrap;">{{ msg.message }}</div>
+  </div>
+</div>
+
+{% endwith %}
+{% endblock %}

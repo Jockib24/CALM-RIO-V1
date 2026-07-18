@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import Amenity, Property, PropertyImage
+from .models import Amenity, BlockedPeriod, Booking, ICalSource, Property, PropertyImage
 
 
 class PropertyImageInline(admin.TabularInline):
@@ -147,3 +147,37 @@ class PropertyImageAdmin(admin.ModelAdmin):
         return "—"
 
     image_preview.short_description = "Aperçu"
+
+
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
+    list_display = [
+        "__str__",
+        "unit",
+        "check_in",
+        "check_out",
+        "guests",
+        "total_price",
+        "status",
+        "payment_status",
+        "source",
+        "created_at",
+    ]
+    list_editable = ["status", "payment_status"]
+    list_filter = ["status", "payment_status", "source", "unit"]
+    search_fields = ["first_name", "last_name", "email"]
+    date_hierarchy = "check_in"
+
+
+@admin.register(ICalSource)
+class ICalSourceAdmin(admin.ModelAdmin):
+    list_display = ["name", "unit", "is_active", "last_synced", "created_at"]
+    list_filter = ["is_active", "unit"]
+    search_fields = ["name", "unit__name"]
+
+
+@admin.register(BlockedPeriod)
+class BlockedPeriodAdmin(admin.ModelAdmin):
+    list_display = ["unit", "start_date", "end_date", "source", "summary"]
+    list_filter = ["unit", "source"]
+    date_hierarchy = "start_date"

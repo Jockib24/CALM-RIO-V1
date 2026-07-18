@@ -1,0 +1,400 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard — CalmRio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'fonts/fontawesome/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+  <style>
+    :root {
+      --db-bg: #f4f6f9;
+      --db-sidebar: #1a2a36;
+      --db-primary: #1B3A4B;
+      --db-accent: #C49A5A;
+      --db-text: #2d3748;
+      --db-text-light: #718096;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--db-bg);
+      color: var(--db-text);
+      display: flex;
+      min-height: 100vh;
+    }
+    /* ── Sidebar ── */
+    .db-sidebar {
+      width: 250px;
+      background: var(--db-sidebar);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    .db-sidebar .brand {
+      padding: 20px 24px;
+      font-size: 1.35rem;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .db-sidebar .brand span { color: var(--db-accent); }
+    .db-sidebar .brand a { color: #fff; text-decoration: none; }
+    .db-sidebar nav { padding: 16px 0; flex: 1; }
+    .db-sidebar nav a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 24px;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .db-sidebar nav a:hover,
+    .db-sidebar nav a.active {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+    }
+    .db-sidebar nav a i { width: 20px; text-align: center; font-size: 1rem; }
+    .db-sidebar .sidebar-footer {
+      padding: 16px 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .db-sidebar .sidebar-footer a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .db-sidebar .sidebar-footer a:hover { color: #fff; }
+
+    /* ── Main Content ── */
+    .db-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .db-topbar {
+      background: #fff;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .db-topbar h1 { font-size: 1.25rem; font-weight: 600; }
+    .db-topbar .user-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: var(--db-text-light);
+    }
+    .db-content {
+      padding: 32px;
+      flex: 1;
+    }
+
+    /* ── Cards ── */
+    .stat-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      transition: box-shadow 0.2s;
+    }
+    .stat-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .stat-card .stat-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+    }
+    .stat-card .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .stat-card .stat-label {
+      color: var(--db-text-light);
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+
+    /* ── Tables ── */
+    .db-table {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+    .db-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .db-table th {
+      background: #f8fafc;
+      text-align: left;
+      padding: 12px 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--db-text-light);
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .db-table td {
+      padding: 12px 16px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .db-table tr:last-child td { border-bottom: none; }
+    .db-table tr:hover td { background: #f8fafc; }
+
+    /* ── Status badges ── */
+    .badge-status {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-pending { background: #fef3c7; color: #92400e; }
+    .badge-confirmed { background: #d1fae5; color: #065f46; }
+    .badge-cancelled { background: #fee2e2; color: #991b1b; }
+    .badge-completed { background: #dbeafe; color: #1e40af; }
+    .badge-unread { background: #fef3c7; color: #92400e; }
+    .badge-read { background: #e2e8f0; color: #475569; }
+    .badge-active { background: #d1fae5; color: #065f46; }
+    .badge-inactive { background: #fee2e2; color: #991b1b; }
+
+    /* ── Filters ── */
+    .filter-bar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .filter-bar select,
+    .filter-bar input {
+      padding: 8px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      background: #fff;
+    }
+    .filter-bar .btn-filter {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: none;
+      background: var(--db-primary);
+      color: #fff;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .filter-bar .btn-filter:hover { opacity: 0.9; }
+
+    /* ── Forms ── */
+    .db-form {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      max-width: 720px;
+    }
+    .db-form label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 4px;
+      color: var(--db-text);
+    }
+    .db-form input,
+    .db-form select,
+    .db-form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+    .db-form .btn-submit {
+      padding: 10px 24px;
+      border-radius: 8px;
+      border: none;
+      background: var(--db-primary);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .db-form .btn-submit:hover { opacity: 0.9; }
+
+    /* ── Calendar ── */
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 2px;
+      background: #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .cal-header {
+      background: var(--db-primary);
+      color: #fff;
+      text-align: center;
+      padding: 10px 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .cal-cell {
+      background: #fff;
+      min-height: 90px;
+      padding: 6px;
+      font-size: 0.8rem;
+    }
+    .cal-cell .day-num {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .cal-cell.today { background: #fef9e7; }
+    .cal-cell.other-month { background: #f8fafc; }
+    .cal-cell.other-month .day-num { color: #cbd5e1; }
+    .cal-booking {
+      background: #d1fae5;
+      color: #065f46;
+      border-radius: 4px;
+      padding: 2px 4px;
+      margin-bottom: 2px;
+      font-size: 0.7rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: default;
+    }
+    .cal-booking.pending { background: #fef3c7; color: #92400e; }
+
+    /* ── Messages ── */
+    .msg-list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      border-bottom: 1px solid #f1f5f9;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s;
+    }
+    .msg-list-item:hover { background: #f8fafc; }
+    .msg-list-item.unread { background: #fffbeb; border-left: 3px solid var(--db-accent); }
+    .msg-list-item .msg-subject { font-weight: 600; }
+    .msg-list-item .msg-preview { color: var(--db-text-light); font-size: 0.85rem; }
+
+    /* ── Pagination ── */
+    .pagination {
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      margin-top: 24px;
+    }
+    .pagination a, .pagination span {
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: var(--db-primary);
+      background: #fff;
+      border: 1px solid #e2e8f0;
+    }
+    .pagination .current {
+      background: var(--db-primary);
+      color: #fff;
+      border-color: var(--db-primary);
+    }
+    .pagination a:hover { background: #f1f5f9; }
+
+    /* ── Alerts ── */
+    .alert {
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+    .alert-success { background: #d1fae5; color: #065f46; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .db-sidebar { width: 60px; overflow: hidden; }
+      .db-sidebar .brand { padding: 20px 12px; font-size: 1rem; }
+      .db-sidebar nav a { padding: 10px 12px; justify-content: center; }
+      .db-sidebar nav a span { display: none; }
+      .db-content { padding: 16px; }
+      .db-topbar { padding: 12px 16px; }
+      .db-form { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="db-sidebar">
+    <div class="brand">
+      <a href="{% url 'dashboard:home' %}">Calm<span>Rio</span></a>
+    </div>
+    <nav>
+      <a href="{% url 'dashboard:home' %}" {% if section == 'home' %}class="active"{% endif %}>
+        <i class="fas fa-chart-pie"></i><span>Tableau de bord</span>
+      </a>
+      <a href="{% url 'dashboard:bookings' %}" {% if section == 'bookings' %}class="active"{% endif %}>
+        <i class="fas fa-calendar-check"></i><span>Réservations</span>
+      </a>
+      <a href="{% url 'dashboard:booking_calendar' %}" {% if section == 'calendar' %}class="active"{% endif %}>
+        <i class="fas fa-calendar-alt"></i><span>Calendrier</span>
+      </a>
+      <a href="{% url 'dashboard:messages' %}" {% if section == 'messages' %}class="active"{% endif %}>
+        <i class="fas fa-envelope"></i><span>Messages</span>
+      </a>
+      <a href="{% url 'dashboard:newsletter' %}" {% if section == 'newsletter' %}class="active"{% endif %}>
+        <i class="fas fa-newspaper"></i><span>Newsletter</span>
+      </a>
+      <a href="{% url 'dashboard:properties' %}" {% if section == 'properties' %}class="active"{% endif %}>
+        <i class="fas fa-building"></i><span>Propriétés</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="/"><i class="fas fa-external-link-alt"></i> Voir le site</a>
+      <a href="{% url 'dashboard:logout' %}" style="margin-top:8px;"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="db-main">
+    {% if messages %}
+    <div style="padding: 16px 32px 0;">
+      {% for message in messages %}
+      <div class="alert alert-success">{{ message }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="db-content">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+
+</body>
+</html>

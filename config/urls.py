@@ -7,6 +7,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     # Admin
     path("admin/", admin.site.urls),
+    # Dashboard (outside i18n_patterns — language-independent)
+    path("dashboard/", include("apps.dashboard.urls")),
     # Language switcher (outside i18n_patterns)
     path("i18n/", include("django.conf.urls.i18n")),
 ]

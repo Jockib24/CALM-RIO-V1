@@ -1,0 +1,111 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+{% with section='bookings' %}
+
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
+  <h2 style="font-size:1.5rem;font-weight:600;">Réservations</h2>
+  <a href="{% url 'dashboard:booking_create' %}" class="btn-filter" style="text-decoration:none;">
+    <i class="fas fa-plus"></i> Nouvelle réservation
+  </a>
+</div>
+
+<!-- Status counts -->
+<div style="display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap;">
+  {% for val, label in status_choices %}
+  <a href="?status={{ val }}" style="text-decoration:none;color:inherit;">
+    <div class="stat-card" style="padding:12px 20px;{% if current_status == val %}border:2px solid var(--db-primary);{% endif %}">
+      <div style="font-size:1.25rem;font-weight:700;">{{ status_counts|dictsort:val }}</div>
+      <div style="font-size:0.75rem;color:var(--db-text-light);">{{ label }}</div>
+    </div>
+  </a>
+  {% endfor %}
+  <a href="." style="text-decoration:none;color:inherit;">
+    <div class="stat-card" style="padding:12px 20px;{% if not current_status %}border:2px solid var(--db-primary);{% endif %}">
+      <div style="font-size:1.25rem;font-weight:700;">{{ bookings.paginator.count }}</div>
+      <div style="font-size:0.75rem;color:var(--db-text-light);">Toutes</div>
+    </div>
+  </a>
+</div>
+
+<form method="get" class="filter-bar">
+  <select name="status">
+    <option value="">Tous les statuts</option>
+    {% for val, label in status_choices %}
+    <option value="{{ val }}" {% if current_status == val %}selected{% endif %}>{{ label }}</option>
+    {% endfor %}
+  </select>
+  <button type="submit" class="btn-filter">Filtrer</button>
+</form>
+
+<div class="db-table">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Client</th>
+        <th>Propriété</th>
+        <th>Arrivée</th>
+        <th>Départ</th>
+        <th>Nuits</th>
+        <th>Voyageurs</th>
+        <th>Total</th>
+        <th>Statut</th>
+        <th>Paiement</th>
+        <th style="width:120px;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for b in bookings %}
+      <tr>
+        <td>{{ b.pk }}</td>
+        <td>
+          <div style="font-weight:600;">{{ b.first_name }} {{ b.last_name }}</div>
+          <div style="font-size:0.8rem;color:var(--db-text-light);">{{ b.email }}</div>
+        </td>
+        <td><span style="font-size:0.85rem;">{{ b.unit.name|truncatechars:25 }}</span></td>
+        <td>{{ b.check_in|date:"d/m/Y" }}</td>
+        <td>{{ b.check_out|date:"d/m/Y" }}</td>
+        <td>{{ b.nights }}</td>
+        <td>{{ b.guests }}</td>
+        <td><strong>{{ b.total_price }} €</strong></td>
+        <td><span class="badge-status badge-{{ b.status }}">{{ b.get_status_display }}</span></td>
+        <td><span style="font-size:0.8rem;color:var(--db-text-light);">{{ b.get_payment_status_display }}</span></td>
+        <td>
+          <div style="display:flex;gap:4px;">
+            <a href="{% url 'dashboard:booking_edit' b.pk %}" style="padding:4px 8px;border-radius:6px;border:1px solid #d1d5db;background:#fff;font-size:0.8rem;text-decoration:none;color:inherit;">
+              <i class="fas fa-edit"></i>
+            </a>
+            <form method="post" action="{% url 'dashboard:booking_status' b.pk %}" style="display:inline;">
+              {% csrf_token %}
+              <select name="status" onchange="this.form.submit()" style="padding:4px 8px;border-radius:6px;border:1px solid #d1d5db;font-size:0.8rem;">
+                {% for val, label in status_choices %}
+                <option value="{{ val }}" {% if b.status == val %}selected{% endif %}>{{ label }}</option>
+                {% endfor %}
+              </select>
+            </form>
+          </div>
+        </td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="11" style="text-align:center;color:var(--db-text-light);padding:32px;">Aucune réservation trouvée.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% if page_obj.paginator.num_pages > 1 %}
+<div class="pagination">
+  {% if page_obj.has_previous %}
+  <a href="?page=1{% if current_status %}&status={{ current_status }}{% endif %}">&laquo;</a>
+  <a href="?page={{ page_obj.previous_page_number }}{% if current_status %}&status={{ current_status }}{% endif %}">‹</a>
+  {% endif %}
+  <span class="current">{{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+  {% if page_obj.has_next %}
+  <a href="?page={{ page_obj.next_page_number }}{% if current_status %}&status={{ current_status }}{% endif %}">›</a>
+  <a href="?page={{ page_obj.paginator.num_pages }}{% if current_status %}&status={{ current_status }}{% endif %}">&raquo;</a>
+  {% endif %}
+</div>
+{% endif %}
+
+{% endwith %}
+{% endblock %}

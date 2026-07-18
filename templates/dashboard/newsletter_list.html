@@ -1,0 +1,75 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+{% with section='newsletter' %}
+
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
+  <h2 style="font-size:1.5rem;font-weight:600;">Newsletter — Abonnés</h2>
+  <div style="display:flex;gap:12px;align-items:center;">
+    <span style="font-size:0.9rem;color:var(--db-text-light);">{{ active_count }} actifs</span>
+    <a href="{% url 'dashboard:newsletter_export' %}" class="btn-filter" style="text-decoration:none;background:#059669;">
+      <i class="fas fa-download"></i> Export CSV
+    </a>
+  </div>
+</div>
+
+<form method="get" class="filter-bar">
+  <select name="status">
+    <option value="">Tous</option>
+    <option value="active" {% if current_status == 'active' %}selected{% endif %}>Actifs</option>
+    <option value="inactive" {% if current_status == 'inactive' %}selected{% endif %}>Inactifs</option>
+  </select>
+  <button type="submit" class="btn-filter">Filtrer</button>
+</form>
+
+<div class="db-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Date d'inscription</th>
+        <th>Statut</th>
+        <th style="width:100px;">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for sub in subscribers %}
+      <tr>
+        <td>{{ sub.email }}</td>
+        <td>{{ sub.created_at|date:"d/m/Y H:i" }}</td>
+        <td>
+          <span class="badge-status {% if sub.is_active %}badge-active{% else %}badge-inactive{% endif %}">
+            {% if sub.is_active %}Actif{% else %}Inactif{% endif %}
+          </span>
+        </td>
+        <td>
+          <form method="post" action="{% url 'dashboard:newsletter_toggle' sub.pk %}">
+            {% csrf_token %}
+            <button type="submit" style="padding:4px 10px;border-radius:6px;border:1px solid #d1d5db;background:#fff;font-size:0.8rem;cursor:pointer;">
+              {% if sub.is_active %}Désactiver{% else %}Activer{% endif %}
+            </button>
+          </form>
+        </td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="4" style="text-align:center;color:var(--db-text-light);padding:32px;">Aucun abonné trouvé.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% if page_obj.paginator.num_pages > 1 %}
+<div class="pagination">
+  {% if page_obj.has_previous %}
+  <a href="?page=1{% if current_status %}&status={{ current_status }}{% endif %}">&laquo;</a>
+  <a href="?page={{ page_obj.previous_page_number }}{% if current_status %}&status={{ current_status }}{% endif %}">‹</a>
+  {% endif %}
+  <span class="current">{{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+  {% if page_obj.has_next %}
+  <a href="?page={{ page_obj.next_page_number }}{% if current_status %}&status={{ current_status }}{% endif %}">›</a>
+  <a href="?page={{ page_obj.paginator.num_pages }}{% if current_status %}&status={{ current_status }}{% endif %}">&raquo;</a>
+  {% endif %}
+</div>
+{% endif %}
+
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+{% with section='bookings' %}
+
+<div style="margin-bottom:24px;">
+  <a href="{% url 'dashboard:bookings' %}" style="color:var(--db-text-light);text-decoration:none;font-size:0.9rem;">
+    <i class="fas fa-arrow-left"></i> Retour aux réservations
+  </a>
+</div>
+
+<form method="post" class="db-form">
+  {% csrf_token %}
+  <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:24px;">{{ title }}</h2>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 20px;">
+    <div>
+      <label for="id_first_name">Prénom</label>
+      <input type="text" name="first_name" id="id_first_name" value="{{ form.first_name.value|default:'' }}" required>
+    </div>
+    <div>
+      <label for="id_last_name">Nom</label>
+      <input type="text" name="last_name" id="id_last_name" value="{{ form.last_name.value|default:'' }}">
+    </div>
+    <div>
+      <label for="id_email">Email</label>
+      <input type="email" name="email" id="id_email" value="{{ form.email.value|default:'' }}" required>
+    </div>
+    <div>
+      <label for="id_phone">Téléphone</label>
+      <input type="text" name="phone" id="id_phone" value="{{ form.phone.value|default:'' }}">
+    </div>
+    <div>
+      <label for="id_check_in">Date d'arrivée</label>
+      <input type="date" name="check_in" id="id_check_in" value="{{ form.check_in.value|date:'Y-m-d'|default:'' }}" required>
+    </div>
+    <div>
+      <label for="id_check_out">Date de départ</label>
+      <input type="date" name="check_out" id="id_check_out" value="{{ form.check_out.value|date:'Y-m-d'|default:'' }}" required>
+    </div>
+    <div>
+      <label for="id_guests">Voyageurs</label>
+      <input type="number" name="guests" id="id_guests" value="{{ form.guests.value|default:'1' }}" min="1">
+    </div>
+    <div>
+      <label for="id_total_price">Prix total (€)</label>
+      <input type="number" step="0.01" name="total_price" id="id_total_price" value="{{ form.total_price.value|default:'0' }}">
+    </div>
+    <div>
+      <label for="id_unit">Propriété</label>
+      <select name="unit" id="id_unit" required>
+        {% for prop in form.unit.field.queryset %}
+        <option value="{{ prop.pk }}" {% if form.unit.value|stringformat:'s' == prop.pk|stringformat:'s' %}selected{% endif %}>{{ prop.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <label for="id_status">Statut</label>
+      <select name="status" id="id_status">
+        {% for val, label in form.status.field.choices %}
+        <option value="{{ val }}" {% if form.status.value == val %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <label for="id_source">Source</label>
+      <select name="source" id="id_source">
+        {% for val, label in form.source.field.choices %}
+        <option value="{{ val }}" {% if form.source.value == val %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <label for="id_payment_status">Paiement</label>
+      <select name="payment_status" id="id_payment_status">
+        {% for val, label in form.payment_status.field.choices %}
+        <option value="{{ val }}" {% if form.payment_status.value == val %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+
+  <div>
+    <label for="id_notes">Notes</label>
+    <textarea name="notes" id="id_notes" rows="3">{{ form.notes.value|default:'' }}</textarea>
+  </div>
+
+  <button type="submit" class="btn-submit">
+    {% if object %}Enregistrer les modifications{% else %}Créer la réservation{% endif %}
+  </button>
+</form>
+
+{% endwith %}
+{% endblock %}

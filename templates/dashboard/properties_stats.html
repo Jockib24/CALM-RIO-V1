@@ -1,0 +1,115 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+{% with section='properties' %}
+
+<h2 style="font-size:1.5rem;font-weight:600;margin-bottom:24px;">Propriétés — Statistiques</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-bottom:40px;">
+  <div class="stat-card">
+    <div class="stat-icon" style="background:#dbeafe;color:#1e40af;"><i class="fas fa-calendar-check"></i></div>
+    <div class="stat-number">{{ totals.total_bookings|default:"0" }}</div>
+    <div class="stat-label">Réservations confirmées + terminées</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon" style="background:#d1fae5;color:#065f46;"><i class="fas fa-euro-sign"></i></div>
+    <div class="stat-number">{{ totals.total_revenue|default:"0" }} €</div>
+    <div class="stat-label">Revenu total</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon" style="background:#fef3c7;color:#92400e;"><i class="fas fa-clock"></i></div>
+    <div class="stat-number">{{ total_pending }}</div>
+    <div class="stat-label">Réservations en attente</div>
+  </div>
+</div>
+
+<div class="db-table" style="margin-bottom:32px;">
+  <table>
+    <thead>
+      <tr>
+        <th>Propriété</th>
+        <th>Statut</th>
+        <th>Réservations totales</th>
+        <th>Confirmées</th>
+        <th>Revenu</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in properties %}
+      <tr>
+        <td><strong>{{ p.name }}</strong></td>
+        <td>
+          <span class="badge-status {% if p.status == 'published' %}badge-active{% else %}badge-inactive{% endif %}">
+            {% if p.status == 'published' %}Publiée{% else %}Brouillon{% endif %}
+          </span>
+        </td>
+        <td>{{ p.total_bookings }}</td>
+        <td>{{ p.confirmed_bookings }}</td>
+        <td><strong>{{ p.total_revenue|default:"0" }} €</strong></td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="5" style="text-align:center;color:var(--db-text-light);padding:32px;">Aucune propriété trouvée.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- iCal Sources -->
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+  <h3 style="font-size:1.15rem;font-weight:600;">Sources iCal</h3>
+  <a href="{% url 'dashboard:ical_add' %}" class="btn-filter" style="text-decoration:none;">
+    <i class="fas fa-plus"></i> Ajouter une source
+  </a>
+</div>
+
+{% if ical_sources %}
+<div class="db-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Propriété</th>
+        <th>Nom</th>
+        <th>Actif</th>
+        <th>Dernière synchro</th>
+        <th style="width:160px;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in ical_sources %}
+      <tr>
+        <td>{{ s.unit.name|truncatechars:25 }}</td>
+        <td>{{ s.name }}</td>
+        <td>
+          <span class="badge-status {% if s.is_active %}badge-active{% else %}badge-inactive{% endif %}">
+            {% if s.is_active %}Oui{% else %}Non{% endif %}
+          </span>
+        </td>
+        <td>{% if s.last_synced %}{{ s.last_synced|date:"d/m/Y H:i" }}{% else %}Jamais{% endif %}</td>
+        <td>
+          <div style="display:flex;gap:4px;">
+            <form method="post" action="{% url 'dashboard:ical_sync' s.pk %}">
+              {% csrf_token %}
+              <button type="submit" class="btn-filter" style="background:#059669;font-size:0.8rem;padding:6px 12px;">
+                <i class="fas fa-sync"></i> Sync
+              </button>
+            </form>
+            <form method="post" action="{% url 'dashboard:ical_delete' s.pk %}" onsubmit="return confirm('Supprimer cette source iCal ?')">
+              {% csrf_token %}
+              <button type="submit" style="padding:6px 12px;border-radius:6px;border:1px solid #d1d5db;background:#fff;font-size:0.8rem;cursor:pointer;color:#991b1b;">
+                <i class="fas fa-trash"></i>
+              </button>
+            </form>
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<p style="color:var(--db-text-light);margin-bottom:24px;">
+  Aucune source iCal configurée. Ajoutez le lien iCal de vos annonces Airbnb / Booking.com pour synchroniser les dates bloquées.
+</p>
+{% endif %}
+
+{% endwith %}
+{% endblock %}
