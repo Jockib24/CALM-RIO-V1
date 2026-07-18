@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}Politique de confidentialité | CalmRio{% endblock %}
-{% block meta_description %}Politique de confidentialité Calm Rio — comment nous collectons, utilisons et protégeons vos données personnelles.{% endblock %}
+{% block title %}{% trans "Politique de confidentialité" %} | CalmRio{% endblock %}
+{% block meta_description %}{% blocktranslate %}Politique de confidentialité Calm Rio — comment nous collectons, utilisons et protégeons vos données personnelles.{% endblocktranslate %}{% endblock %}
 
 {% block content %}
 <section class="page-hero bg_cover p-r z-1" style="background:var(--primary-color,#1B3A4B);">
@@ -10,9 +11,9 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="page-content text-center" style="padding:120px 0 60px;">
-                    <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);">Politique de confidentialité</h1>
+                    <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);">{% trans "Politique de confidentialité" %}</h1>
                     <ul style="list-style:none;padding:0;display:flex;justify-content:center;gap:10px;color:rgba(255,255,255,0.7);font-size:0.9rem;margin-top:15px;">
-                        <li><a href="{% url 'home:index' %}" style="color:var(--accent-color,#C49A5A);">Accueil</a></li><li>/</li><li>Confidentialité</li>
+                        <li><a href="{% url 'home:index' %}" style="color:var(--accent-color,#C49A5A);">{% trans "Accueil" %}</a></li><li>/</li><li>{% trans "Confidentialité" %}</li>
                     </ul>
                 </div>
             </div>
@@ -24,85 +25,85 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="legal-content" data-aos="fade-up" data-aos-duration="800">
-                    <p style="color:var(--text-color);line-height:1.8;margin-bottom:30px;">Dernière mise à jour : juillet 2026</p>
+                    <p style="color:var(--text-color);line-height:1.8;margin-bottom:30px;">{% blocktranslate %}Dernière mise à jour : juillet 2026{% endblocktranslate %}</p>
 
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">1. Introduction</h3>
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">1. {% trans "Introduction" %}</h3>
                     <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
-                        Calm Rio accorde une grande importance à la protection de vos données personnelles. La présente politique vous informe de la manière dont nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre site web <strong>calm-rio.com</strong>.
+                        {% blocktranslate %}Calm Rio accorde une grande importance à la protection de vos données personnelles. La présente politique vous informe de la manière dont nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre site web{% endblocktranslate %} <strong>calm-rio.com</strong>.
                     </p>
 
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">2. Données collectées</h3>
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">2. {% trans "Données collectées" %}</h3>
                     <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
-                        Nous collectons les données suivantes lorsque vous utilisez notre formulaire de contact ou effectuez une réservation :
-                    </p>
-                    <ul style="color:var(--text-color);line-height:1.8;margin-bottom:25px;padding-left:20px;">
-                        <li>Nom et prénom</li>
-                        <li>Adresse email</li>
-                        <li>Numéro de téléphone</li>
-                        <li>Informations de réservation (dates, nombre de voyageurs, logement concerné)</li>
-                        <li>Données de navigation (cookies analytics)</li>
-                    </ul>
-
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">3. Finalités du traitement</h3>
-                    <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
-                        Vos données sont utilisées pour :
+                        {% blocktranslate %}Nous collectons les données suivantes lorsque vous utilisez notre formulaire de contact ou effectuez une réservation :{% endblocktranslate %}
                     </p>
                     <ul style="color:var(--text-color);line-height:1.8;margin-bottom:25px;padding-left:20px;">
-                        <li>Répondre à vos demandes de réservation et vous contacter</li>
-                        <li>Gérer votre séjour (envoi des informations pratiques, factures)</li>
-                        <li>Améliorer notre site et nos services (analytics anonymisés)</li>
-                        <li>Respecter nos obligations légales et fiscales</li>
+                        <li>{% trans "Nom et prénom" %}</li>
+                        <li>{% trans "Adresse email" %}</li>
+                        <li>{% trans "Numéro de téléphone" %}</li>
+                        <li>{% blocktranslate %}Informations de réservation (dates, nombre de voyageurs, logement concerné){% endblocktranslate %}</li>
+                        <li>{% trans "Données de navigation (cookies analytics)" %}</li>
                     </ul>
 
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">4. Base légale</h3>
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">3. {% trans "Finalités du traitement" %}</h3>
                     <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
-                        Le traitement de vos données repose sur votre consentement (formulaire de contact) et sur l'exécution d'un contrat (gestion des réservations), conformément au Règlement Général sur la Protection des Données (RGPD).
-                    </p>
-
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">5. Durée de conservation</h3>
-                    <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
-                        Vos données sont conservées pendant la durée nécessaire à la gestion de votre réservation, puis archivées conformément aux obligations légales (5 ans pour les données fiscales et comptables). Les données de contact non associées à une réservation sont conservées 3 ans.
-                    </p>
-
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">6. Cookies</h3>
-                    <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
-                        Ce site utilise uniquement des cookies techniques essentiels au fonctionnement du site et des cookies analytics anonymisés (via GitHub Pages). Aucun cookie publicitaire ou de traçage tiers n'est utilisé. Vous pouvez paramétrer vos préférences de cookies dans votre navigateur.
-                    </p>
-
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">7. Vos droits</h3>
-                    <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
-                        Conformément au RGPD, vous disposez des droits suivants :
+                        {% trans "Vos données sont utilisées pour :" %}
                     </p>
                     <ul style="color:var(--text-color);line-height:1.8;margin-bottom:25px;padding-left:20px;">
-                        <li>Droit d'accès, de rectification et d'effacement de vos données</li>
-                        <li>Droit à la limitation et à l'opposition du traitement</li>
-                        <li>Droit à la portabilité de vos données</li>
-                        <li>Droit de retirer votre consentement à tout moment</li>
+                        <li>{% trans "Répondre à vos demandes de réservation et vous contacter" %}</li>
+                        <li>{% trans "Gérer votre séjour (envoi des informations pratiques, factures)" %}</li>
+                        <li>{% trans "Améliorer notre site et nos services (analytics anonymisés)" %}</li>
+                        <li>{% trans "Respecter nos obligations légales et fiscales" %}</li>
+                    </ul>
+
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">4. {% trans "Base légale" %}</h3>
+                    <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
+                        {% blocktranslate %}Le traitement de vos données repose sur votre consentement (formulaire de contact) et sur l'exécution d'un contrat (gestion des réservations), conformément au Règlement Général sur la Protection des Données{% endblocktranslate %} (RGPD).
+                    </p>
+
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">5. {% trans "Durée de conservation" %}</h3>
+                    <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
+                        {% blocktranslate %}Vos données sont conservées pendant la durée nécessaire à la gestion de votre réservation, puis archivées conformément aux obligations légales{% endblocktranslate %} (5 {% trans "ans pour les données fiscales et comptables" %}). {% blocktranslate %}Les données de contact non associées à une réservation sont conservées{% endblocktranslate %} 3 {% trans "ans" %}.
+                    </p>
+
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">6. {% trans "Cookies" %}</h3>
+                    <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
+                        {% blocktranslate %}Ce site utilise uniquement des cookies techniques essentiels au fonctionnement du site et des cookies analytics anonymisés (via GitHub Pages). Aucun cookie publicitaire ou de traçage tiers n'est utilisé. Vous pouvez paramétrer vos préférences de cookies dans votre navigateur.{% endblocktranslate %}
+                    </p>
+
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">7. {% trans "Vos droits" %}</h3>
+                    <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
+                        {% blocktranslate %}Conformément au RGPD, vous disposez des droits suivants :{% endblocktranslate %}
+                    </p>
+                    <ul style="color:var(--text-color);line-height:1.8;margin-bottom:25px;padding-left:20px;">
+                        <li>{% trans "Droit d'accès, de rectification et d'effacement de vos données" %}</li>
+                        <li>{% trans "Droit à la limitation et à l'opposition du traitement" %}</li>
+                        <li>{% trans "Droit à la portabilité de vos données" %}</li>
+                        <li>{% trans "Droit de retirer votre consentement à tout moment" %}</li>
                     </ul>
                     <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
-                        Pour exercer vos droits, contactez-nous à : <a href="mailto:contact@calm-rio.com" style="color:var(--accent-color,#C49A5A);">contact@calm-rio.com</a>. Nous répondons sous 30 jours.
+                        {% blocktranslate %}Pour exercer vos droits, contactez-nous à :{% endblocktranslate %} <a href="mailto:contact@calm-rio.com" style="color:var(--accent-color,#C49A5A);">contact@calm-rio.com</a>. {% trans "Nous répondons sous 30 jours" %}.
                     </p>
 
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">8. Sécurité</h3>
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">8. {% trans "Sécurité" %}</h3>
                     <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
-                        Nous mettons en œuvre toutes les mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, modification, divulgation ou destruction. Les paiements sont traités via Stripe, plateforme certifiée PCI DSS niveau 1.
+                        {% blocktranslate %}Nous mettons en œuvre toutes les mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, modification, divulgation ou destruction. Les paiements sont traités via Stripe, plateforme certifiée PCI DSS niveau{% endblocktranslate %} 1.
                     </p>
 
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">9. Transfert des données</h3>
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">9. {% trans "Transfert des données" %}</h3>
                     <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
-                        Vos données sont hébergées en France et dans l'Union Européenne. Aucun transfert hors UE n'est effectué.
+                        {% blocktranslate %}Vos données sont hébergées en France et dans l'Union Européenne. Aucun transfert hors UE n'est effectué.{% endblocktranslate %}
                     </p>
 
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">10. Contact</h3>
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">10. {% trans "Contact" %}</h3>
                     <p style="color:var(--text-color);line-height:1.8;margin-bottom:25px;">
-                        Pour toute question relative à cette politique ou à la protection de vos données :<br>
+                        {% blocktranslate %}Pour toute question relative à cette politique ou à la protection de vos données :{% endblocktranslate %}<br>
                         Email : <a href="mailto:contact@calm-rio.com" style="color:var(--accent-color,#C49A5A);">contact@calm-rio.com</a><br>
-                        Vous pouvez également contacter la CNIL : <a href="https://www.cnil.fr" target="_blank" style="color:var(--accent-color,#C49A5A);">www.cnil.fr</a>
+                        {% blocktranslate %}Vous pouvez également contacter la CNIL :{% endblocktranslate %} <a href="https://www.cnil.fr" target="_blank" style="color:var(--accent-color,#C49A5A);">www.cnil.fr</a>
                     </p>
 
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">11. Modification de la politique</h3>
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:15px;">11. {% trans "Modification de la politique" %}</h3>
                     <p style="color:var(--text-color);line-height:1.8;">
-                        Cette politique peut être mise à jour à tout moment. La date de dernière mise à jour est indiquée en haut de cette page. Nous vous encourageons à la consulter régulièrement.
+                        {% blocktranslate %}Cette politique peut être mise à jour à tout moment. La date de dernière mise à jour est indiquée en haut de cette page. Nous vous encourageons à la consulter régulièrement.{% endblocktranslate %}
                     </p>
                 </div>
             </div>

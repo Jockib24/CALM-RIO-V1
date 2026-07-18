@@ -1,6 +1,6 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ html_lang }}">
     <head>
         <!--====== Required meta tags ======-->
         <meta charset="utf-8">
@@ -13,13 +13,13 @@
         <meta property="og:url" content="https://calm-rio.com/">
         <meta property="og:title" content="{% block og_title %}CalmRio — Locations de vacances premium | Royan & Île d'Oléron{% endblock %}">
         <meta property="og:description" content="{% block og_description %}Appartements et maisons soigneusement aménagés à deux pas des plages de Royan et de l'île d'Oléron. Réservez en direct.{% endblock %}">
-        <meta property="og:image" content="{% block og_image %}{% static 'images/og-image.jpg' %}{% endblock %}">
-        <meta property="og:locale" content="fr_FR">
+        <meta property="og:image" content="{% block og_image %}{% static 'images/properties/royan-appartement/face-beach-view-01.webp' %}{% endblock %}">
+        <meta property="og:locale" content="{{ og_locale }}">
         <meta property="og:site_name" content="CalmRio">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="{% block twitter_title %}CalmRio — Locations de vacances premium | Royan & Île d'Oléron{% endblock %}">
         <meta name="twitter:description" content="{% block twitter_description %}Appartements et maisons soigneusement aménagés à deux pas des plages de Royan et de l'île d'Oléron.{% endblock %}">
-        <meta name="twitter:image" content="{% block twitter_image %}{% static 'images/og-image.jpg' %}{% endblock %}">
+        <meta name="twitter:image" content="{% block twitter_image %}{% static 'images/properties/royan-appartement/face-beach-view-01.webp' %}{% endblock %}">
         <!--====== Title ======-->
         <title>{% block title %}CalmRio — Locations de vacances premium | Royan & Île d'Oléron{% endblock %}</title>
         <!--====== Favicon Icon ======-->
@@ -41,7 +41,7 @@
         <!--====== Default css ======-->
         <link rel="stylesheet" href="{% static 'css/spacings.css' %}">
         <!--====== Default css ======-->
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
         {% block extra_head %}{% endblock %}
         <!-- Gallery Popup Custom Styles -->
         <style>
@@ -53,6 +53,46 @@
             .mfp-arrow .mfp-b { display:none; }
             .mfp-counter { color:#fff; font-size:0.9rem; }
             .mfp-title { color:#fff; font-size:0.95rem; }
+            /* Hero image — match original template styling */
+            .luxivo-hero_three .hero-image-wrapper img {
+                border-radius: 30px;
+            }
+            /* Modern property gallery */
+            .property-gallery-item {
+                position:relative; overflow:hidden; border-radius:10px;
+            }
+            .property-gallery-item img {
+                width:100%; height:260px !important; object-fit:cover !important;
+                transition:transform 0.5s ease, filter 0.5s ease;
+            }
+            .property-gallery-item:hover img {
+                transform:scale(1.08);
+                filter:brightness(0.75);
+            }
+            .property-gallery-item .gallery-overlay {
+                position:absolute; bottom:0; left:0; right:0;
+                padding:16px 14px;
+                background:linear-gradient(transparent, rgba(0,0,0,0.6));
+                opacity:0; transition:opacity 0.3s ease;
+                color:#fff; font-size:0.85rem; font-weight:500;
+            }
+            .property-gallery-item:hover .gallery-overlay { opacity:1; }
+            .property-gallery-item .gallery-overlay i {
+                margin-right:5px; font-size:0.75rem;
+            }
+            .gallery-hidden { display:none; }
+            .gallery-toggle-btn {
+                display:inline-flex; align-items:center; gap:8px;
+                margin:30px auto 0; padding:14px 32px;
+                background:var(--primary-color,#1B3A4B); color:#fff;
+                border:none; border-radius:8px; font-size:0.95rem;
+                cursor:pointer; transition:background 0.3s ease;
+                font-family:var(--body-font);
+            }
+            .gallery-toggle-btn:hover { background:var(--accent-color,#C49A5A); }
+            .gallery-toggle-btn i { transition:transform 0.3s ease; }
+            .gallery-toggle-btn.expanded i { transform:rotate(180deg); }
+            /* Property card images on homepage — uses original template CSS (.room-image flex gap) */
         </style>
     {% if structured_data_json %}
     <script type="application/ld+json">
@@ -84,15 +124,22 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="top-right">
-                                <span><a href="{% url 'pages:faq' %}"><i class="far fa-comments"></i> FAQ</a></span>
-                                <span><a href="{% url 'pages:contact' %}"><i class="far fa-headphones"></i> Support</a></span>
+                                <span><a href="{% url 'pages:faq' %}"><i class="far fa-comments"></i> {% trans "FAQ" %}</a></span>
+                                <span><a href="{% url 'pages:contact' %}"><i class="far fa-headphones"></i> {% trans "Support" %}</a></span>
                                 <div class="luxivo-language-dropdown">
-                                    <a href="javascript:void(0)"><i class="far fa-globe"></i>🇫🇷 FR <i class="far fa-angle-down"></i></a>
+                                    <a href="javascript:void(0)"><i class="far fa-globe"></i>
+                                        {{ current_language_flag }} {{ current_language_code|upper }}
+                                        <i class="far fa-angle-down"></i>
+                                    </a>
                                     <ul class="dropdown">
-                                        <li><a href="/en/">🇬🇧 EN</a></li>
-                                        <li><a href="javascript:void(0)">🇪🇸 ES</a></li>
-                                        <li><a href="javascript:void(0)">🇳🇱 NL</a></li>
-                                    </ul> 
+                                        {% for lang in language_switcher %}
+                                        {% if not lang.current %}
+                                        <li>
+                                            <a href="{{ lang.url }}">{{ lang.flag }} {{ lang.name }}</a>
+                                        </li>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -119,26 +166,26 @@
                             <!--=== Main Menu ===-->
                             <nav class="main-menu">
                                 <ul>
-                                    <li class="menu-item{% block nav_home_active %}{% endblock %}"><a href="{% url 'home:index' %}">Accueil</a></li>
-                                    <li class="menu-item has-children"><a href="#">Nos Locations</a>
+                                    <li class="menu-item{% block nav_home_active %}{% endblock %}"><a href="{% url 'home:index' %}">{% trans "Accueil" %}</a></li>
+                                    <li class="menu-item has-children"><a href="#">{% trans "Nos Locations" %}</a>
                                         <ul class="sub-menu">
-                                            <li><a href="{% url 'properties:royan_appartement' %}">Royan — Appartement</a></li>
-                                            <li><a href="{% url 'properties:saint_trojan_villa' %}">Saint-Trojan — Villa</a></li>
-                                            <li><a href="{% url 'properties:saint_trojan_maison' %}">Saint-Trojan — Maison</a></li>
+                                            <li><a href="{% url 'properties:royan_appartement' %}">{% trans "Royan — Appartement" %}</a></li>
+                                            <li><a href="{% url 'properties:saint_trojan_villa' %}">{% trans "Saint-Trojan — Villa" %}</a></li>
+                                            <li><a href="{% url 'properties:saint_trojan_maison' %}">{% trans "Saint-Trojan — Maison" %}</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item"><a href="{% url 'pages:local_guide' %}">Guide Local</a></li>
-                                    <li class="menu-item"><a href="{% url 'pages:about' %}">À Propos</a></li>
-                                    <li class="menu-item"><a href="{% url 'pages:contact' %}">Contact</a></li>
+                                    <li class="menu-item"><a href="{% url 'pages:local_guide' %}">{% trans "Guide Local" %}</a></li>
+                                    <li class="menu-item"><a href="{% url 'pages:about' %}">{% trans "À Propos" %}</a></li>
+                                    <li class="menu-item"><a href="{% url 'pages:contact' %}">{% trans "Contact" %}</a></li>
                                 </ul>
                             </nav>
                             <!--=== Nav Button ===-->
                             <div class="theme-nav-button mt-20 d-block d-md-none">
-                                <a href="{% url 'home:index' %}#nos-locations" class="theme-btn style-one">Réserver<i class="far fa-arrow-right"></i></a>
+                                <a href="{% url 'home:index' %}#nos-locations" class="theme-btn style-one">{% trans "Réserver" %}<i class="far fa-arrow-right"></i></a>
                             </div>
                             <!--===  Menu Bottom ===-->
                             <div class="theme-menu-bottom mt-50 d-block d-xl-none">
-                                <h5>Suivez-nous</h5>
+                                <h5>{% trans "Suivez-nous" %}</h5>
                                 <ul class="social-link">
                                     <li><a href="https://www.instagram.com/calm.rio/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
                                     <li><a href="https://www.facebook.com/people/CalmRio/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
@@ -148,7 +195,7 @@
                         <!--=== Header Nav Right ===-->
                         <div class="nav-right-item">
                             <div class="nav-button d-none d-md-block">
-                                <a href="{% url 'home:index' %}#nos-locations" class="theme-btn style-one">Réserver<i class="far fa-arrow-right"></i></a>
+                                <a href="{% url 'home:index' %}#nos-locations" class="theme-btn style-one">{% trans "Réserver" %}<i class="far fa-arrow-right"></i></a>
                             </div>
                             <div class="navbar-toggler">
                                 <span></span>
@@ -172,7 +219,7 @@
                         <div class="col-xl-4 col-lg-6 col-md-12 mb-40">
                             <div class="footer-widget">
                                 <span class="text-logo text-logo-light footer-logo">Calm<span>Rio</span></span>
-                                <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.7;margin-bottom:20px;">Locations de vacances premium à Royan et sur l'île d'Oléron. Des refuges de caractère entre océan et forêt, pensés pour le confort des familles, des couples et des télétravailleurs.</p>
+                                <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.7;margin-bottom:20px;">{% blocktranslate %}Locations de vacances premium à Royan et sur l'île d'Oléron. Des refuges de caractère entre océan et forêt, pensés pour le confort des familles, des couples et des télétravailleurs.{% endblocktranslate %}</p>
                                 <ul class="social-link d-flex gap-3">
                                     <li><a href="https://www.instagram.com/calm.rio/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.6);font-size:1.2rem;"><i class="fab fa-instagram"></i></a></li>
                                     <li><a href="https://www.facebook.com/people/CalmRio/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.6);font-size:1.2rem;"><i class="fab fa-facebook-f"></i></a></li>
@@ -181,29 +228,29 @@
                         </div>
                         <div class="col-xl-2 col-lg-6 col-md-4 mb-40">
                             <div class="footer-widget">
-                                <h4 style="color:#fff;margin-bottom:25px;font-size:1.1rem;">Navigation</h4>
+                                <h4 style="color:#fff;margin-bottom:25px;font-size:1.1rem;">{% trans "Navigation" %}</h4>
                                 <ul style="list-style:none;padding:0;">
-                                    <li style="margin-bottom:12px;"><a href="{% url 'home:index' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Accueil</a></li>
-                                    <li style="margin-bottom:12px;"><a href="{% url 'home:index' %}#nos-locations" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Nos Locations</a></li>
-                                    <li style="margin-bottom:12px;"><a href="{% url 'pages:local_guide' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Guide Local</a></li>
-                                    <li style="margin-bottom:12px;"><a href="{% url 'pages:about' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">À Propos</a></li>
-                                    <li style="margin-bottom:12px;"><a href="{% url 'pages:contact' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Contact</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'home:index' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">{% trans "Accueil" %}</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'home:index' %}#nos-locations" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">{% trans "Nos Locations" %}</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'pages:local_guide' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">{% trans "Guide Local" %}</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'pages:about' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">{% trans "À Propos" %}</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'pages:contact' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">{% trans "Contact" %}</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-6 col-md-4 mb-40">
                             <div class="footer-widget">
-                                <h4 style="color:#fff;margin-bottom:25px;font-size:1.1rem;">Hébergements</h4>
+                                <h4 style="color:#fff;margin-bottom:25px;font-size:1.1rem;">{% trans "Hébergements" %}</h4>
                                 <ul style="list-style:none;padding:0;">
-                                    <li style="margin-bottom:12px;"><a href="{% url 'properties:royan_appartement' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Royan — Appartement Grande Conche</a></li>
-                                    <li style="margin-bottom:12px;"><a href="{% url 'properties:saint_trojan_villa' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Saint-Trojan — Villa</a></li>
-                                    <li style="margin-bottom:12px;"><a href="{% url 'properties:saint_trojan_maison' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">Saint-Trojan — Maison</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'properties:royan_appartement' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">{% trans "Royan — Appartement Grande Conche" %}</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'properties:saint_trojan_villa' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">{% trans "Saint-Trojan — Villa" %}</a></li>
+                                    <li style="margin-bottom:12px;"><a href="{% url 'properties:saint_trojan_maison' %}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">{% trans "Saint-Trojan — Maison" %}</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-6 col-md-4 mb-40">
                             <div class="footer-widget">
-                                <h4 style="color:#fff;margin-bottom:25px;font-size:1.1rem;">Contact</h4>
+                                <h4 style="color:#fff;margin-bottom:25px;font-size:1.1rem;">{% trans "Contact" %}</h4>
                                 <ul style="list-style:none;padding:0;">
                                     <li style="margin-bottom:12px;"><a href="mailto:{{ contact_email }}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">{{ contact_email }}</a></li>
                                     <li style="margin-bottom:12px;"><a href="tel:{{ contact_phone|cut:' ' }}" style="color:rgba(255,255,255,0.7);font-size:0.95rem;">{{ contact_phone }}</a></li>
@@ -217,7 +264,7 @@
                 <div class="footer-copyright pt-30 pb-30" style="border-top:1px solid rgba(255,255,255,0.1);">
                     <div class="row align-items-center">
                         <div class="col-md-6">
-                            <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;">&copy; {{ current_year }} {{ site_name }}. Tous droits réservés.</p>
+                            <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;">&copy; {{ current_year }} {{ site_name }}. {% trans "All rights reserved." %}</p>
                         </div>
                         <div class="col-md-6 text-md-end">
                             <a href="{% url 'pages:mentions' %}" style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-right:20px;">Mentions légales</a>
@@ -241,12 +288,13 @@
         <script src="{% static 'js/plugins/imagesloaded.min.js' %}"></script>
         <script src="{% static 'js/plugins/isotope.min.js' %}"></script>
         <script src="{% static 'js/plugins/aos.js' %}"></script>
-        <script src="{% static 'js/theme.js' %}"></script>
+        <script src="{% static 'js/theme.js' %}?v=2"></script>
         <script>
             AOS.init({duration:1000,once:true});
         </script>
         <script>
             $(document).ready(function() {
+                // Magnific popup for galleries
                 $('.gallery-popup').magnificPopup({
                     type: 'image',
                     gallery: {
@@ -264,6 +312,56 @@
                         duration: 300
                     },
                     mainClass: 'mfp-fade'
+                });
+
+                // Modern gallery: add overlays from alt text
+                $('.property-gallery-item .gallery-popup img').each(function() {
+                    var alt = $(this).attr('alt');
+                    var overlay = $('<span class="gallery-overlay"><i class="fas fa-expand"></i>' + alt + '</span>');
+                    $(this).parent().append(overlay);
+                });
+
+                {% trans "Show less" as t_show_less %}
+                {% trans "more photos" as t_more_photos %}
+                // Modern gallery: show more / show less toggle
+                $('[id^="gallery-"]').each(function() {
+                    var $gallery = $(this);
+                    var items = $gallery.find('.property-gallery-item');
+                    if (items.length > 12) {
+                        items.each(function(idx) {
+                            if (idx >= 12) $(this).addClass('gallery-hidden');
+                        });
+                        var btnText = '{% trans "Show" %} ' + (items.length - 12) + ' ' + t_more_photos;
+                        var $btn = $('<div class="text-center"><button class="gallery-toggle-btn"><i class="fas fa-chevron-down"></i> ' + btnText + '</button></div>');
+                        $gallery.after($btn);
+                        $btn.find('button').on('click', function() {
+                            var $this = $(this);
+                            $gallery.find('.gallery-hidden').slideToggle(400, function() {
+                                $this.toggleClass('expanded');
+                                if ($this.hasClass('expanded')) {
+                                    $this.html('<i class="fas fa-chevron-up"></i> ' + t_show_less);
+                                } else {
+                                    $this.html('<i class="fas fa-chevron-down"></i> {% trans "Show" %} ' + (items.length - 12) + ' ' + t_more_photos);
+                                }
+                            });
+                        });
+                    }
+                    // Also init magnificPopup on newly visible items after toggle
+                    $(document).on('click', '.gallery-toggle-btn', function() {
+                        setTimeout(function() {
+                            $gallery.find('.gallery-hidden .gallery-popup').each(function() {
+                                if (!$(this).data('magnificPopup')) {
+                                    $(this).magnificPopup({
+                                        type: 'image',
+                                        gallery: { enabled: true, navigateByImgClick: true, preload: [0,1] },
+                                        image: { titleSrc: function(item) { return item.el.find('img').attr('alt'); } },
+                                        zoom: { enabled: true, duration: 300 },
+                                        mainClass: 'mfp-fade'
+                                    });
+                                }
+                            });
+                        }, 50);
+                    });
                 });
             });
         </script>

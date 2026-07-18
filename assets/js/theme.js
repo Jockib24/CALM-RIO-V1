@@ -179,15 +179,23 @@
             dots: false,
             arrows: true,
             infinite: true,
-            speed: 800,
-            fade: true,
+            speed: 400,
+            fade: false,
             asNavFor: '.hero-image-slider',
             appendArrows: sliderArrows,
-            autoplay: true,
-            slidesToShow: 1,
+            autoplay: false,
+            slidesToShow: 3,
             slidesToScroll: 1,
+            focusOnSelect: true,
+            centerMode: true,
+            centerPadding: '0',
             prevArrow: '<div class="prev"><i class="far fa-arrow-left"></i></div>',
             nextArrow: '<div class="next"><i class="far fa-arrow-right"></i></div>'
+        });
+        // Highlight active thumbnail
+        $('.hero-image-slider').on('afterChange', function(event, slick, currentSlide) {
+            $('.hero-thumb-slider .single-image-slide').removeClass('slick-current-thumb');
+            $('.hero-thumb-slider .slick-slide[data-slick-index="' + currentSlide + '"]').addClass('slick-current-thumb');
         });
     }
     if ($('.room-slider').length) {

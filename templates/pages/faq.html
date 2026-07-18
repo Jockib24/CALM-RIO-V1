@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}FAQ | CalmRio — Questions fréquentes{% endblock %}
-{% block meta_description %}FAQ Calm Rio — réponses à vos questions sur la réservation, le paiement, les arrivées/départs et nos locations.{% endblock %}
+{% block title %}{% trans "FAQ" %} | CalmRio — {% trans "Questions fréquentes" %}{% endblock %}
+{% block meta_description %}{% blocktranslate %}FAQ Calm Rio — réponses à vos questions sur la réservation, le paiement, les arrivées/départs et nos locations.{% endblocktranslate %}{% endblock %}
 
 {% block content %}
 <section class="page-hero bg_cover p-r z-1" style="background:var(--primary-color,#1B3A4B);">
@@ -10,11 +11,11 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="page-content text-center" style="padding:120px 0 60px;">
-                    <span style="display:inline-block;background:var(--accent-color,#C49A5A);color:#fff;padding:6px 18px;border-radius:30px;font-size:0.85rem;font-weight:600;margin-bottom:15px;"><i class="fas fa-question-circle"></i> FAQ</span>
-                    <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);">Questions fréquentes</h1>
-                    <p style="color:rgba(255,255,255,0.85);font-size:1.1rem;margin:15px 0 10px;">Tout ce que vous devez savoir avant de réserver</p>
+                    <span style="display:inline-block;background:var(--accent-color,#C49A5A);color:#fff;padding:6px 18px;border-radius:30px;font-size:0.85rem;font-weight:600;margin-bottom:15px;"><i class="fas fa-question-circle"></i> {% trans "FAQ" %}</span>
+                    <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);">{% trans "Questions fréquentes" %}</h1>
+                    <p style="color:rgba(255,255,255,0.85);font-size:1.1rem;margin:15px 0 10px;">{% trans "Tout ce que vous devez savoir avant de réserver" %}</p>
                     <ul style="list-style:none;padding:0;display:flex;justify-content:center;gap:10px;color:rgba(255,255,255,0.7);font-size:0.9rem;">
-                        <li><a href="{% url 'home:index' %}" style="color:var(--accent-color,#C49A5A);">Accueil</a></li><li>/</li><li>FAQ</li>
+                        <li><a href="{% url 'home:index' %}" style="color:var(--accent-color,#C49A5A);">{% trans "Accueil" %}</a></li><li>/</li><li>{% trans "FAQ" %}</li>
                     </ul>
                 </div>
             </div>
@@ -26,60 +27,60 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="faq-accordion" data-aos="fade-up" data-aos-duration="800">
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:30px;">Réservation & Paiement</h3>
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:30px;">{% trans "Réservation & Paiement" %}</h3>
                     <div class="accordion-item">
-                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq1">Comment réserver un logement ?</button></div>
-                        <div id="faq1" class="collapse"><div class="accordion-body">Vous pouvez nous contacter via le formulaire de contact, par email à <a href="mailto:contact@calm-rio.com">contact@calm-rio.com</a> ou par téléphone. Nous vous répondons sous 24h pour confirmer la disponibilité et vous envoyer le lien de paiement sécurisé Stripe. La réservation est ferme après réception de l'acompte (30%).</div></div>
+                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq1">{% trans "Comment réserver un logement ?" %}</button></div>
+                        <div id="faq1" class="collapse"><div class="accordion-body">{% blocktranslate %}Vous pouvez nous contacter via le formulaire de contact, par email à{% endblocktranslate %} <a href="mailto:contact@calm-rio.com">contact@calm-rio.com</a> {% blocktranslate %}ou par téléphone. Nous vous répondons sous 24h pour confirmer la disponibilité et vous envoyer le lien de paiement sécurisé Stripe. La réservation est ferme après réception de l'acompte{% endblocktranslate %} (30%).</div></div>
                     </div>
                     <div class="accordion-item">
-                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq2">Quels sont les moyens de paiement acceptés ?</button></div>
-                        <div id="faq2" class="collapse"><div class="accordion-body">Nous acceptons les paiements par carte bancaire (Visa, Mastercard) via Stripe, ainsi que les virements bancaires. Le paiement est sécurisé et vos données bancaires ne sont jamais stockées.</div></div>
+                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq2">{% trans "Quels sont les moyens de paiement acceptés ?" %}</button></div>
+                        <div id="faq2" class="collapse"><div class="accordion-body">{% blocktranslate %}Nous acceptons les paiements par carte bancaire (Visa, Mastercard) via Stripe, ainsi que les virements bancaires. Le paiement est sécurisé et vos données bancaires ne sont jamais stockées.{% endblocktranslate %}</div></div>
                     </div>
                     <div class="accordion-item">
-                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq3">Puis-je annuler ma réservation ?</button></div>
-                        <div id="faq3" class="collapse"><div class="accordion-body">Les conditions d'annulation sont les suivantes : annulation gratuite jusqu'à 30 jours avant l'arrivée. Entre 30 et 14 jours : 50% remboursé. Moins de 14 jours : aucun remboursement. En cas de force majeure, nous étudions chaque situation.</div></div>
+                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq3">{% trans "Puis-je annuler ma réservation ?" %}</button></div>
+                        <div id="faq3" class="collapse"><div class="accordion-body">{% blocktranslate %}Les conditions d'annulation sont les suivantes : annulation gratuite jusqu'à 30 jours avant l'arrivée. Entre 30 et 14 jours{% endblocktranslate %} : 50% {% trans "remboursé" %}. {% trans "Moins de 14 jours" %} : {% trans "aucun remboursement" %}. {% blocktranslate %}En cas de force majeure, nous étudions chaque situation.{% endblocktranslate %}</div></div>
                     </div>
                     <div class="accordion-item">
-                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq4">Le prix affiché est-il le prix total ?</button></div>
-                        <div id="faq4" class="collapse"><div class="accordion-body">Oui, le prix affiché par nuit inclut le logement et les charges (eau, électricité, WiFi). Les taxes de séjour (taxe de séjour communale, environ 1€/pers/nuit) et la caution sont en sus. Le ménage de fin de séjour peut être inclus ou optionnel selon le logement — nous vous confirmons au moment de la réservation.</div></div>
-                    </div>
-                </div>
-                <div class="faq-accordion mt-50" data-aos="fade-up" data-aos-duration="800">
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:30px;">Arrivée & Séjour</h3>
-                    <div class="accordion-item">
-                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq5">Quelles sont les heures d'arrivée et de départ ?</button></div>
-                        <div id="faq5" class="collapse"><div class="accordion-body">Les arrivées sont généralement entre 16h et 20h. Les départs avant 10h ou 11h selon le logement (indiqué sur la page de chaque propriété). En cas d'arrivée tardive ou matinale, contactez-nous pour organiser un accueil adapté.</div></div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq6">Les animaux sont-ils acceptés ?</button></div>
-                        <div id="faq6" class="collapse"><div class="accordion-body">Cela dépend du logement. La Villa Saint-Trojan accepte les animaux (consultez-nous pour les conditions). L'appartement Royan et la Maison Saint-Trojan n'acceptent pas les animaux. Merci de nous contacter avant de réserver si vous voyagez avec un animal.</div></div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq7">Les logements sont-ils adaptés aux enfants ?</button></div>
-                        <div id="faq7" class="collapse"><div class="accordion-body">Oui, tous nos logements accueillent les enfants. Pour la Villa Saint-Trojan, un équipement bébé (lit, chaise haute) peut être mis à disposition sur demande. Les enfants sont comptés dans le nombre total de voyageurs.</div></div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq8">Y a-t-il du WiFi ?</button></div>
-                        <div id="faq8" class="collapse"><div class="accordion-body">Oui, tous nos logements disposent d'une connexion WiFi haut débit gratuite, adaptée au télétravail (visioconférence, streaming).</div></div>
+                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq4">{% trans "Le prix affiché est-il le prix total ?" %}</button></div>
+                        <div id="faq4" class="collapse"><div class="accordion-body">{% blocktranslate %}Oui, le prix affiché par nuit inclut le logement et les charges (eau, électricité, WiFi). Les taxes de séjour (taxe de séjour communale, environ{% endblocktranslate %} 1€/pers/nuit) {% trans "et la caution sont en sus" %}. {% blocktranslate %}Le ménage de fin de séjour peut être inclus ou optionnel selon le logement — nous vous confirmons au moment de la réservation.{% endblocktranslate %}</div></div>
                     </div>
                 </div>
                 <div class="faq-accordion mt-50" data-aos="fade-up" data-aos-duration="800">
-                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:30px;">Sur place</h3>
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:30px;">{% trans "Arrivée & Séjour" %}</h3>
                     <div class="accordion-item">
-                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq9">Y a-t-il un parking ?</button></div>
-                        <div id="faq9" class="collapse"><div class="accordion-body">Oui. La Villa Saint-Trojan dispose d'un parking privé gratuit avec prise de recharge pour voiture électrique/hybride. L'appartement Royan et la Maison Saint-Trojan bénéficient d'un parking public gratuit à proximité.</div></div>
+                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq5">{% trans "Quelles sont les heures d'arrivée et de départ ?" %}</button></div>
+                        <div id="faq5" class="collapse"><div class="accordion-body">{% blocktranslate %}Les arrivées sont généralement entre{% endblocktranslate %} 16h {% trans "et" %} 20h. {% blocktranslate %}Les départs avant{% endblocktranslate %} 10h {% trans "ou" %} 11h {% trans "selon le logement" %} ({% trans "indiqué sur la page de chaque propriété" %}). {% blocktranslate %}En cas d'arrivée tardive ou matinale, contactez-nous pour organiser un accueil adapté.{% endblocktranslate %}</div></div>
                     </div>
                     <div class="accordion-item">
-                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq10">Peut-on louer des vélos ?</button></div>
-                        <div id="faq10" class="collapse"><div class="accordion-body">Oui ! Plusieurs loueurs de vélos se trouvent à Saint-Trojan-les-Bains (à 5 min à pied de la Maison et en vélo de la Villa). Nous pouvons vous recommander les meilleures adresses. L'île d'Oléron est plate et idéale pour le vélo.</div></div>
+                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq6">{% trans "Les animaux sont-ils acceptés ?" %}</button></div>
+                        <div id="faq6" class="collapse"><div class="accordion-body">{% blocktranslate %}Cela dépend du logement. La Villa Saint-Trojan accepte les animaux (consultez-nous pour les conditions). L'appartement Royan et la Maison Saint-Trojan n'acceptent pas les animaux. Merci de nous contacter avant de réserver si vous voyagez avec un animal.{% endblocktranslate %}</div></div>
                     </div>
                     <div class="accordion-item">
-                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq11">Où faire les courses ?</button></div>
-                        <div id="faq11" class="collapse"><div class="accordion-body">Le marché couvert de Saint-Trojan (mercredi et samedi matin) est incontournable pour les produits frais. Des supermarchés (Super U, Intermarché) sont accessibles en voiture à 5 min. À Royan, le grand marché couvert est ouvert tous les jours.</div></div>
+                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq7">{% trans "Les logements sont-ils adaptés aux enfants ?" %}</button></div>
+                        <div id="faq7" class="collapse"><div class="accordion-body">{% blocktranslate %}Oui, tous nos logements accueillent les enfants. Pour la Villa Saint-Trojan, un équipement bébé (lit, chaise haute) peut être mis à disposition sur demande. Les enfants sont comptés dans le nombre total de voyageurs.{% endblocktranslate %}</div></div>
                     </div>
                     <div class="accordion-item">
-                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq12">Quelles plages recommandez-vous ?</button></div>
-                        <div id="faq12" class="collapse"><div class="accordion-body">La Grande Plage de Saint-Trojan (baignade surveillée), la plage de Gatseau (surf et longe-côte), et la plage de la Rémigeasse (sauvage et préservée). Toutes accessibles à vélo depuis nos logements.</div></div>
+                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq8">{% trans "Y a-t-il du WiFi ?" %}</button></div>
+                        <div id="faq8" class="collapse"><div class="accordion-body">{% blocktranslate %}Oui, tous nos logements disposent d'une connexion WiFi haut débit gratuite, adaptée au télétravail (visioconférence, streaming).{% endblocktranslate %}</div></div>
+                    </div>
+                </div>
+                <div class="faq-accordion mt-50" data-aos="fade-up" data-aos-duration="800">
+                    <h3 style="font-family:'Playfair Display',serif;color:var(--primary-color,#1B3A4B);margin-bottom:30px;">{% trans "Sur place" %}</h3>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq9">{% trans "Y a-t-il un parking ?" %}</button></div>
+                        <div id="faq9" class="collapse"><div class="accordion-body">{% blocktranslate %}Oui. La Villa Saint-Trojan dispose d'un parking privé gratuit avec prise de recharge pour voiture électrique/hybride. L'appartement Royan et la Maison Saint-Trojan bénéficient d'un parking public gratuit à proximité.{% endblocktranslate %}</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq10">{% trans "Peut-on louer des vélos ?" %}</button></div>
+                        <div id="faq10" class="collapse"><div class="accordion-body">{% blocktranslate %}Oui ! Plusieurs loueurs de vélos se trouvent à Saint-Trojan-les-Bains (à 5 min à pied de la Maison et en vélo de la Villa). Nous pouvons vous recommander les meilleures adresses. L'île d'Oléron est plate et idéale pour le vélo.{% endblocktranslate %}</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq11">{% trans "Où faire les courses ?" %}</button></div>
+                        <div id="faq11" class="collapse"><div class="accordion-body">{% blocktranslate %}Le marché couvert de Saint-Trojan (mercredi et samedi matin) est incontournable pour les produits frais. Des supermarchés (Super U, Intermarché) sont accessibles en voiture à{% endblocktranslate %} 5 min. {% blocktranslate %}À Royan, le grand marché couvert est ouvert tous les jours.{% endblocktranslate %}</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><button aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#faq12">{% trans "Quelles plages recommandez-vous ?" %}</button></div>
+                        <div id="faq12" class="collapse"><div class="accordion-body">{% blocktranslate %}La Grande Plage de Saint-Trojan (baignade surveillée), la plage de Gatseau (surf et longe-côte), et la plage de la Rémigeasse (sauvage et préservée). Toutes accessibles à vélo depuis nos logements.{% endblocktranslate %}</div></div>
                     </div>
                 </div>
             </div>

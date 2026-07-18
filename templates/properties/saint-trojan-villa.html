@@ -1,22 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}Villa neuve 6 pers Oléron — jardin clos & terrasses | Saint-Trojan | CalmRio{% endblock %}
-{% block meta_description %}Villa neuve 110m² à Saint-Trojan-les-Bains pour 6 personnes. Jardin clos, 2 terrasses, plage à vélo, télétravail, animaux acceptés. Réservez en direct.{% endblock %}
-{% block og_title %}Villa 6 pers Saint-Trojan — Jardin clos & terrasses | CalmRio{% endblock %}
-{% block og_description %}Villa neuve 110m² à Saint-Trojan-les-Bains pour 6 pers. Jardin clos, 2 terrasses, animaux acceptés. Superhost 4,95★.{% endblock %}
+{% block title %}{% trans "Villa neuve 6 pers Oléron — jardin clos & terrasses | Saint-Trojan" %} | CalmRio{% endblock %}
+{% block meta_description %}{% blocktranslate %}Villa neuve 110m² à Saint-Trojan-les-Bains pour 6 personnes. Jardin clos, 2 terrasses, plage à vélo, télétravail, animaux acceptés. Réservez en direct.{% endblocktranslate %}{% endblock %}
+{% block og_title %}{% trans "Villa 6 pers Saint-Trojan — Jardin clos & terrasses" %} | CalmRio{% endblock %}
+{% block og_description %}{% blocktranslate %}Villa neuve 110m² à Saint-Trojan-les-Bains pour 6 pers. Jardin clos, 2 terrasses, animaux acceptés. Superhost 4,95★.{% endblocktranslate %}{% endblock %}
 
 {% block content %}
-            <section class="page-hero bg_cover p-r z-1" style="background-image:linear-gradient(rgba(27,58,75,0.65),rgba(27,58,75,0.65)),url({% static 'images/properties/villa-new.webp' %});background-position:center 30%;">
+            <section class="page-hero bg_cover p-r z-1" style="background-image:linear-gradient(rgba(27,58,75,0.65),rgba(27,58,75,0.65)),url({% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp' %});background-position:center 30%;">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="page-content text-center" style="padding:140px 0 70px;">
-                                <span style="display:inline-block;background:var(--accent-color,#C49A5A);color:#fff;padding:6px 18px;border-radius:30px;font-size:0.85rem;font-weight:600;margin-bottom:15px;"><i class="fas fa-heart"></i> Coup de cœur ★ 4,95</span>
-                                <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);">Villa 6 pers — Jardin clos & terrasses</h1>
-                                <p style="color:rgba(255,255,255,0.85);font-size:1.1rem;margin:15px 0 10px;">Saint-Trojan-les-Bains, Île d'Oléron</p>
+                                <span style="display:inline-block;background:var(--accent-color,#C49A5A);color:#fff;padding:6px 18px;border-radius:30px;font-size:0.85rem;font-weight:600;margin-bottom:15px;"><i class="fas fa-heart"></i> {% trans "Coup de cœur ★ 4,95" %}</span>
+                                <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);">{% trans "Villa 6 pers — Jardin clos & terrasses" %}</h1>
+                                <p style="color:rgba(255,255,255,0.85);font-size:1.1rem;margin:15px 0 10px;">{% trans "Saint-Trojan-les-Bains, Île d'Oléron" %}</p>
                                 <ul style="list-style:none;padding:0;display:flex;justify-content:center;gap:10px;color:rgba(255,255,255,0.7);font-size:0.9rem;">
-                                    <li><a href="{% url 'home:index' %}" style="color:var(--accent-color,#C49A5A);">Accueil</a></li><li>/</li><li>Saint-Trojan — Villa</li>
+                                    <li><a href="{% url 'home:index' %}" style="color:var(--accent-color,#C49A5A);">{% trans "Accueil" %}</a></li><li>/</li><li>{% trans "Saint-Trojan — Villa" %}</li>
                                 </ul>
                             </div>
                         </div>
@@ -27,611 +28,613 @@
                 <div class="container">
                     <div class="row g-3">
                         <div class="col-md-8" data-aos="fade-up" data-aos-duration="800">
-                            <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp' %}" alt="Villa Saint-Trojan extérieur" style="width:100%;border-radius:12px;height:100%;object-fit:cover;min-height:350px;">
+                            <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp' %}" alt="{% trans 'Villa Saint-Trojan extérieur' %}" style="width:100%;border-radius:12px;height:100%;object-fit:cover;min-height:350px;">
                         </div>
                         <div class="col-md-4" data-aos="fade-up" data-aos-duration="800">
-                            <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp' %}" alt="Villa Saint-Trojan salon" style="width:100%;border-radius:12px;margin-bottom:12px;height:calc(50% - 6px);object-fit:cover;">
-                            <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-01.webp' %}" alt="Villa Saint-Trojan jardin" style="width:100%;border-radius:12px;height:calc(50% - 6px);object-fit:cover;">
+                            <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp' %}" alt="{% trans 'Villa Saint-Trojan salon' %}" style="width:100%;border-radius:12px;margin-bottom:12px;height:calc(50% - 6px);object-fit:cover;">
+                            <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-01.webp' %}" alt="{% trans 'Villa Saint-Trojan jardin' %}" style="width:100%;border-radius:12px;height:calc(50% - 6px);object-fit:cover;">
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="pt-40 pb-60">
-                <div class="container">
-                    <h3 class="mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-images" style="color:var(--accent-color);margin-right:10px;"></i>Galerie photos</h3>
-                    <div class="row g-3" id="gallery-villa">
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-coral-wallpaper-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-coral-wallpaper-01.webp' %}" alt="Bathroom Coral Wallpaper" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-double-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-double-02.webp' %}" alt="Bathroom Double" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-double-vanity-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-double-vanity-01.webp' %}" alt="Bathroom Double Vanity" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-fern-wallpaper-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-fern-wallpaper-01.webp' %}" alt="Bathroom Fern Wallpaper" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-glass-shower-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-glass-shower-01.webp' %}" alt="Bathroom Glass Shower" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-blue-cream-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-blue-cream-01.webp' %}" alt="Bedroom Blue Cream" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-blue-cream-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-blue-cream-02.webp' %}" alt="Bedroom Blue Cream" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-01.webp' %}" alt="Bedroom Botanical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-02.webp' %}" alt="Bedroom Botanical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-03.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-03.webp' %}" alt="Bedroom Botanical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-04.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-04.webp' %}" alt="Bedroom Botanical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-floral-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-floral-01.webp' %}" alt="Bedroom Floral" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-grey-headboard-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-grey-headboard-01.webp' %}" alt="Bedroom Grey Headboard" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-loft-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-loft-02.webp' %}" alt="Bedroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-terracotta-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-terracotta-01.webp' %}" alt="Bedroom Terracotta" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-terracotta-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-terracotta-02.webp' %}" alt="Bedroom Terracotta" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-white-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-white-02.webp' %}" alt="Bedroom White" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-white-bedding-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-white-bedding-01.webp' %}" alt="Bedroom White Bedding" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-decorative-fish-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-decorative-fish-01.webp' %}" alt="Decorative Fish" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-dining-area-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-dining-area-01.webp' %}" alt="Dining Area" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-dining-pass-through-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-dining-pass-through-01.webp' %}" alt="Dining Pass Through" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-dining-wood-table-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-dining-wood-table-01.webp' %}" alt="Dining Wood Table" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-brown-shutters-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-brown-shutters-01.webp' %}" alt="Exterior Brown Shutters" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-night-patio-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-night-patio-01.webp' %}" alt="Exterior Night Patio" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-night-wide-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-night-wide-01.webp' %}" alt="Exterior Night Wide" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-stone-path-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-stone-path-01.webp' %}" alt="Exterior Stone Path" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-terracotta-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-terracotta-02.webp' %}" alt="Exterior Terracotta" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-terracotta-roof-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-terracotta-roof-01.webp' %}" alt="Exterior Terracotta Roof" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp' %}" alt="Exterior White Brown" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-02.webp' %}" alt="Exterior White Brown" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-stucco-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-stucco-01.webp' %}" alt="Exterior White Stucco" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-adirondack-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-adirondack-01.webp' %}" alt="Garden Adirondack" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-adirondack-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-adirondack-02.webp' %}" alt="Garden Adirondack" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-awning-led-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-awning-led-01.webp' %}" alt="Garden Awning Led" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-bbq-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-bbq-01.webp' %}" alt="Garden Bbq" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-canopy-night-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-canopy-night-01.webp' %}" alt="Garden Canopy Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-curtains-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-curtains-01.webp' %}" alt="Garden Curtains" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-daybed-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-daybed-02.webp' %}" alt="Garden Daybed" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-daybed-purple-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-daybed-purple-01.webp' %}" alt="Garden Daybed Purple" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-daybed-purple-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-daybed-purple-02.webp' %}" alt="Garden Daybed Purple" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-deck-night-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-deck-night-01.webp' %}" alt="Garden Deck Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-dining-night-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-dining-night-01.webp' %}" alt="Garden Dining Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-01.webp' %}" alt="Garden Pergola Curtains" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-02.webp' %}" alt="Garden Pergola Curtains" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-night-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-night-01.webp' %}" alt="Garden Pergola Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-night-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-night-02.webp' %}" alt="Garden Pergola Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-night-03.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-night-03.webp' %}" alt="Garden Pergola Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-wood-deck-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-wood-deck-01.webp' %}" alt="Garden Wood Deck" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-hallway-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-hallway-01.webp' %}" alt="Hallway" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-hallway-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-hallway-02.webp' %}" alt="Hallway" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-hallway-coat-rack-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-hallway-coat-rack-01.webp' %}" alt="Hallway Coat Rack" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-babar-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-babar-01.webp' %}" alt="Kids Room Babar" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-colorful-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-colorful-01.webp' %}" alt="Kids Room Colorful" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-colorful-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-colorful-02.webp' %}" alt="Kids Room Colorful" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-teddy-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-teddy-01.webp' %}" alt="Kids Room Teddy" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-black-counter-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-black-counter-01.webp' %}" alt="Kitchen Black Counter" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-light-wood-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-light-wood-01.webp' %}" alt="Kitchen Light Wood" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-open-shelf-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-open-shelf-01.webp' %}" alt="Kitchen Open Shelf" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-pass-through-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-pass-through-01.webp' %}" alt="Kitchen Pass Through" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-cabinets-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-cabinets-01.webp' %}" alt="Kitchen Teal Cabinets" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-cabinets-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-cabinets-02.webp' %}" alt="Kitchen Teal Cabinets" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-detail-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-detail-01.webp' %}" alt="Kitchen Teal Detail" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-detail-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-detail-02.webp' %}" alt="Kitchen Teal Detail" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-beams-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-beams-01.webp' %}" alt="Living Beams" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp' %}" alt="Living Blue Sofa" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-02.webp' %}" alt="Living Blue Sofa" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-03.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-03.webp' %}" alt="Living Blue Sofa" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-cream-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-cream-01.webp' %}" alt="Living Cream" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-cream-armchair-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-cream-armchair-01.webp' %}" alt="Living Cream Armchair" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-grey-beams-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-grey-beams-01.webp' %}" alt="Living Grey Beams" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-navy-sofa-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-navy-sofa-01.webp' %}" alt="Living Navy Sofa" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-open-plan-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-open-plan-01.webp' %}" alt="Living Open Plan" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-open-plan-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-open-plan-02.webp' %}" alt="Living Open Plan" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-pass-through-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-pass-through-01.webp' %}" alt="Living Pass Through" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-wood-stove-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-wood-stove-01.webp' %}" alt="Living Wood Stove" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-wood-stove-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-wood-stove-02.webp' %}" alt="Living Wood Stove" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-loft-mezzanine-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-loft-mezzanine-01.webp' %}" alt="Mezzanine" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-loft-railing-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-loft-railing-01.webp' %}" alt="Railing" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-nameplate-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-nameplate-01.webp' %}" alt="Nameplate" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-nameplate-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-nameplate-02.webp' %}" alt="Nameplate" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-bathroom-geometric-tile-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-bathroom-geometric-tile-01.webp' %}" alt="Bathroom Geometric Tile" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-bathroom-shower-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-bathroom-shower-01.webp' %}" alt="Bathroom Shower" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-bathroom-vanity-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-bathroom-vanity-01.webp' %}" alt="Bathroom Vanity" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-bathroom-wide-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-bathroom-wide-01.webp' %}" alt="Bathroom Wide" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-exterior-door-closeup-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-exterior-door-closeup-01.webp' %}" alt="Exterior Door Closeup" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-exterior-front-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-exterior-front-01.webp' %}" alt="Exterior Front" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-exterior-front-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-exterior-front-02.webp' %}" alt="Exterior Front" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-exterior-mailbox-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-exterior-mailbox-01.webp' %}" alt="Exterior Mailbox" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-exterior-wide-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-exterior-wide-01.webp' %}" alt="Exterior Wide" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-garden-grasses-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-garden-grasses-01.webp' %}" alt="Garden Grasses" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-lifestyle-sofa-phone-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-lifestyle-sofa-phone-01.webp' %}" alt="Lifestyle Sofa Phone" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-twin-room-front-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-twin-room-front-01.webp' %}" alt="Twin Room Front" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="600">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-twin-room-honeycomb-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-twin-room-honeycomb-01.webp' %}" alt="Twin Room Honeycomb" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="700">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-twin-room-honeycomb-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-twin-room-honeycomb-02.webp' %}" alt="Twin Room Honeycomb" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-twin-room-wardrobe-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-twin-room-wardrobe-01.webp' %}" alt="Twin Room Wardrobe" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="900">
-                            <a href="{% static 'images/properties/saint-trojan-villa/loft-twin-room-wide-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/saint-trojan-villa/loft-twin-room-wide-01.webp' %}" alt="Twin Room Wide" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
             <section class="luxivo-room-details-sec pt-80 pb-120">
                 <div class="container">
                     <div class="room-details-wrapper">
                         <div class="row align-items-center">
                             <div class="col-md-8">
                                 <div class="room-content-area mb-30" data-aos="fade-up" data-aos-duration="800">
-                                    <h3 class="title">Belle villa neuve de bord de mer pour 6 pers</h3>
+                                    <h3 class="title">{% trans "Belle villa neuve de bord de mer pour 6 pers" %}</h3>
                                     <div class="rooms-ratings-quote d-flex align-items-center flex-wrap">
                                         <div class="ratings" style="color:var(--accent-color,#C49A5A);">
                                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                            <a href="#" style="color:var(--text-color);font-size:0.9rem;margin-left:5px;">(40+ avis)</a>
+                                            <a href="#" style="color:var(--text-color);font-size:0.9rem;margin-left:5px;">({% trans "40+ avis" %})</a>
                                         </div>
-                                        <span style="margin-left:15px;color:var(--primary-color);"><i class="fas fa-map-marker-alt"></i> Saint-Trojan-les-Bains, Oléron</span>
-                                        <span style="margin-left:15px;background:#E8F5E9;color:#2E7D32;padding:3px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;"><i class="fas fa-award"></i> Superhost · 100% réponse</span>
+                                        <span style="margin-left:15px;color:var(--primary-color);"><i class="fas fa-map-marker-alt"></i> {% trans "Saint-Trojan-les-Bains, Oléron" %}</span>
+                                        <span style="margin-left:15px;background:#E8F5E9;color:#2E7D32;padding:3px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;"><i class="fas fa-award"></i> {% trans "Superhost · 100% réponse" %}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="share-button text-md-end mb-40" data-aos="fade-up" data-aos-duration="800">
-                                    <span style="font-size:1.5rem;font-weight:700;color:var(--primary-color,#1B3A4B);">180€<span style="font-size:0.9rem;font-weight:400;color:var(--text-color);">/nuit</span></span>
+                                    <span style="font-size:1.5rem;font-weight:700;color:var(--primary-color,#1B3A4B);">180€<span style="font-size:0.9rem;font-weight:400;color:var(--text-color);">{% trans "/nuit" %}</span></span>
                                 </div>
                             </div>
                         </div>
                         <div class="rooms-meta-info mb-25">
-                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-users" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i><h5>6 voyageurs</h5></div>
-                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-bed" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i><h5>3 chambres</h5></div>
+                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-users" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i><h5>{% trans "6 voyageurs" %}</h5></div>
+                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-bed" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i><h5>{% trans "3 chambres" %}</h5></div>
                             <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-arrows-alt" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i><h5>110 m²</h5></div>
-                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-tree" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i><h5>Jardin clos</h5></div>
-                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-car" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i><h5>Parking + VE</h5></div>
-                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-paw" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i><h5>Animaux acceptés</h5></div>
+                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-tree" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i><h5>{% trans "Jardin clos" %}</h5></div>
+                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-car" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i><h5>{% trans "Parking + VE" %}</h5></div>
+                            <div class="meta-box text-center mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-paw" style="font-size:2rem;color:var(--primary-color,#1B3A4B);margin-bottom:10px;"></i><h5>{% trans "Animaux acceptés" %}</h5></div>
                         </div>
                         <div class="row">
                             <div class="col-xl-8">
                                 <div class="room-content-box" data-aos="fade-up" data-aos-duration="1000">
-                                    <h3>Description</h3>
-                                    <p>Maison neuve au style Oléronais, alliant le style insulaire charentais et contemporain, très lumineuse, avec de beaux volumes, idéalement située <strong>entre mer et forêt</strong>.</p>
-                                    <p>110 m² sur un jardin arboré et clos, avec terrasse en bois 50 m² plein sud (salon de jardin, parasol) et terrasse couverte 17 m² (table en teck). Barbecue. Vaste salon/salle à manger avec grande hauteur sous plafond, baies vitrées sur terrasses. Cuisine ouverte équipée : lave-vaisselle, réfrigérateur, four, micro-ondes, plaque à induction. Cellier avec lave-linge, sèche-linge et congélateur.</p>
-                                    <p><strong>3 chambres</strong> de 12 m² : 2 avec lit de 160, 1 avec 2 lits de 80. Salle de bain avec douche à l'italienne, WC suspendu indépendant. Draps et serviettes fournis. Prise recharge voiture électrique/hybride (supplément selon relevé de compteur). Bureau et écran HDMI pour télétravail.</p>
+                                    <h3>{% trans "Description" %}</h3>
+                                    <p>{% blocktranslate %}Maison neuve au style Oléronais, alliant le style insulaire charentais et contemporain, très lumineuse, avec de beaux volumes, idéalement située <strong>entre mer et forêt</strong>.{% endblocktranslate %}</p>
+                                    <p>{% blocktranslate %}110 m² sur un jardin arboré et clos, avec terrasse en bois 50 m² plein sud (salon de jardin, parasol) et terrasse couverte 17 m² (table en teck). Barbecue. Vaste salon/salle à manger avec grande hauteur sous plafond, baies vitrées sur terrasses. Cuisine ouverte équipée : lave-vaisselle, réfrigérateur, four, micro-ondes, plaque à induction. Cellier avec lave-linge, sèche-linge et congélateur.{% endblocktranslate %}</p>
+                                    <p>{% blocktranslate %}<strong>3 chambres</strong> de 12 m² : 2 avec lit de 160, 1 avec 2 lits de 80. Salle de bain avec douche à l'italienne, WC suspendu indépendant. Draps et serviettes fournis. Prise recharge voiture électrique/hybride (supplément selon relevé de compteur). Bureau et écran HDMI pour télétravail.{% endblocktranslate %}</p>
                                 </div>
                                 <div class="room-content-box mb-25" data-aos="fade-up" data-aos-duration="1200">
-                                    <h3>Équipements</h3>
+                                    <h3>{% trans "Équipements" %}</h3>
                                     <div class="services-list">
                                         <div class="row">
-                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-wifi" style="color:var(--accent-color);"></i> WiFi haut débit</h5></div></div>
-                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-parking" style="color:var(--accent-color);"></i> Parking gratuit</h5></div></div>
-                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-tree" style="color:var(--accent-color);"></i> Jardin clos</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-wifi" style="color:var(--accent-color);"></i> {% trans "WiFi haut débit" %}</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-parking" style="color:var(--accent-color);"></i> {% trans "Parking gratuit" %}</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-tree" style="color:var(--accent-color);"></i> {% trans "Jardin clos" %}</h5></div></div>
                                         </div>
                                     </div>
                                     <div class="services-list">
                                         <div class="row">
-                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-laptop" style="color:var(--accent-color);"></i> Espace télétravail</h5></div></div>
-                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-charging-station" style="color:var(--accent-color);"></i> Recharge VE</h5></div></div>
-                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-bicycle" style="color:var(--accent-color);"></i> Proche pistes cyclables</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-laptop" style="color:var(--accent-color);"></i> {% trans "Espace télétravail" %}</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-charging-station" style="color:var(--accent-color);"></i> {% trans "Recharge VE" %}</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-bicycle" style="color:var(--accent-color);"></i> {% trans "Proche pistes cyclables" %}</h5></div></div>
                                         </div>
                                     </div>
                                     <div class="services-list">
                                         <div class="row">
-                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-paw" style="color:var(--accent-color);"></i> Animaux acceptés</h5></div></div>
-                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-fire" style="color:var(--accent-color);"></i> Barbecue</h5></div></div>
-                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-washing-machine" style="color:var(--accent-color);"></i> Lave-linge / Sèche-linge</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-paw" style="color:var(--accent-color);"></i> {% trans "Animaux acceptés" %}</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-fire" style="color:var(--accent-color);"></i> {% trans "Barbecue" %}</h5></div></div>
+                                            <div class="col-md-4"><div class="box"><h5><i class="fas fa-washing-machine" style="color:var(--accent-color);"></i> {% trans "Lave-linge / Sèche-linge" %}</h5></div></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="room-content-box mb-25" data-aos="fade-up" data-aos-duration="1400">
-                                    <h3>Règles de la maison</h3>
+                                    <h3>{% trans "Règles de la maison" %}</h3>
                                     <ul class="check-list style-two">
-                                        <li>Arrivée entre 16:00 et 20:00</li>
-                                        <li>Départ avant 10:00</li>
-                                        <li>6 voyageurs maximum</li>
-                                        <li>Animaux acceptés</li>
-                                        <li>Recharge voiture électrique avec supplément selon relevé de compteur</li>
-                                        <li>Équipement bébé disponible sur demande</li>
+                                        <li>{% trans "Arrivée entre 16:00 et 20:00" %}</li>
+                                        <li>{% trans "Départ avant 10:00" %}</li>
+                                        <li>{% trans "6 voyageurs maximum" %}</li>
+                                        <li>{% trans "Animaux acceptés" %}</li>
+                                        <li>{% trans "Recharge voiture électrique avec supplément selon relevé de compteur" %}</li>
+                                        <li>{% trans "Équipement bébé disponible sur demande" %}</li>
                                     </ul>
                                 </div>
                                 <div class="room-content-box" data-aos="fade-up" data-aos-duration="2000">
-                                    <h3>Informations complémentaires</h3>
-                                    <p><strong>Hôte :</strong> Agnès (Superhost · 5 ans d'expérience)</p>
-                                    <p><strong>Numéro d'enregistrement :</strong> 17411000371D4</p>
-                                    <p><strong>Type de logement :</strong> Maison / Villa entière</p>
-                                    <p><strong>Note moyenne :</strong> 4,95 ★ sur 40+ avis</p>
+                                    <h3>{% trans "Informations complémentaires" %}</h3>
+                                    <p><strong>{% trans "Hôte :" %}</strong> {% trans "Agnès (Superhost · 5 ans d'expérience)" %}</p>
+                                    <p><strong>{% trans "Numéro d'enregistrement :" %}</strong> 17411000371D4</p>
+                                    <p><strong>{% trans "Type de logement :" %}</strong> {% trans "Maison / Villa entière" %}</p>
+                                    <p><strong>{% trans "Note moyenne :" %}</strong> 4,95 ★ {% blocktranslate %}sur 40+ avis{% endblocktranslate %}</p>
                                 </div>
                             </div>
                             <div class="col-xl-4">
                                 <div class="room-sidebar-area sticky-widget mt-5 mt-xl-0">
                                     <div class="room-sidebar-widget room-booking-widget mb-40" data-aos="fade-up" data-aos-duration="800">
-                                        <h4 class="widget-title">Réserver ce logement</h4>
+                                        <h4 class="widget-title">{% trans "Réserver ce logement" %}</h4>
                                         <div class="widget-content">
-                                            <p style="margin-bottom:20px;font-size:0.95rem;">Pour réserver ou pour toute demande d'information, contactez-nous directement.</p>
-                                            <div class="form-group"><a href="{% url 'pages:contact' %}" class="theme-btn style-one" style="display:block;text-align:center;">Nous contacter <i class="far fa-arrow-right"></i></a></div>
+                                            <p style="margin-bottom:20px;font-size:0.95rem;">{% blocktranslate %}Pour réserver ou pour toute demande d'information, contactez-nous directement.{% endblocktranslate %}</p>
+                                            <div class="form-group"><a href="{% url 'pages:contact' %}" class="theme-btn style-one" style="display:block;text-align:center;">{% trans "Nous contacter" %} <i class="far fa-arrow-right"></i></a></div>
                                             <div style="margin-top:15px;padding-top:15px;border-top:1px solid var(--border-color);">
-                                                <p style="font-size:0.85rem;color:var(--text-color);margin-bottom:5px;"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> Meilleur prix garanti</p>
-                                                <p style="font-size:0.85rem;color:var(--text-color);margin-bottom:5px;"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> Réservation directe</p>
-                                                <p style="font-size:0.85rem;color:var(--text-color);"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> Paiement sécurisé Stripe</p>
+                                                <p style="font-size:0.85rem;color:var(--text-color);margin-bottom:5px;"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> {% trans "Meilleur prix garanti" %}</p>
+                                                <p style="font-size:0.85rem;color:var(--text-color);margin-bottom:5px;"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> {% trans "Réservation directe" %}</p>
+                                                <p style="font-size:0.85rem;color:var(--text-color);"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> {% trans "Paiement sécurisé Stripe" %}</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="room-sidebar-widget room-support-widget mb-40" data-aos="fade-up" data-aos-duration="1000">
-                                        <h4 class="widget-title">Contact</h4>
+                                        <h4 class="widget-title">{% trans "Contact" %}</h4>
                                         <div class="widget-content">
                                             <ul>
                                                 <li><a href="tel:+33600000000">+33 (0)6 00 00 00 00</a></li>
                                                 <li><a href="mailto:contact@calm-rio.com">contact@calm-rio.com</a></li>
                                             </ul>
-                                            <h3 style="margin-top:20px;">Adresse</h3>
-                                            <p>Saint-Trojan-les-Bains, Île d'Oléron<br>Entre mer et forêt</p>
+                                            <h3 style="margin-top:20px;">{% trans "Adresse" %}</h3>
+                                            <p>{% blocktranslate %}Saint-Trojan-les-Bains, Île d'Oléron<br>Entre mer et forêt{% endblocktranslate %}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="pt-40 pb-60">
+                <div class="container">
+                    <h3 class="mb-30" data-aos="fade-up" data-aos-duration="800"><i class="fas fa-images" style="color:var(--accent-color);margin-right:10px;"></i>{% trans "Galerie photos" %}</h3>
+                    <div class="row g-3" id="gallery-villa">
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-coral-wallpaper-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-coral-wallpaper-01.webp' %}" alt="Bathroom Coral Wallpaper" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-double-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-double-02.webp' %}" alt="Bathroom Double" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-double-vanity-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-double-vanity-01.webp' %}" alt="Bathroom Double Vanity" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-fern-wallpaper-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-fern-wallpaper-01.webp' %}" alt="Bathroom Fern Wallpaper" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-glass-shower-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bathroom-glass-shower-01.webp' %}" alt="Bathroom Glass Shower" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-blue-cream-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-blue-cream-01.webp' %}" alt="Bedroom Blue Cream" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-blue-cream-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-blue-cream-02.webp' %}" alt="Bedroom Blue Cream" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-01.webp' %}" alt="Bedroom Botanical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-02.webp' %}" alt="Bedroom Botanical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-03.webp' %}" alt="Bedroom Botanical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-04.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-botanical-04.webp' %}" alt="Bedroom Botanical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-floral-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-floral-01.webp' %}" alt="Bedroom Floral" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-grey-headboard-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-grey-headboard-01.webp' %}" alt="Bedroom Grey Headboard" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-loft-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-loft-02.webp' %}" alt="Bedroom" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-terracotta-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-terracotta-01.webp' %}" alt="Bedroom Terracotta" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-terracotta-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-terracotta-02.webp' %}" alt="Bedroom Terracotta" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-white-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-white-02.webp' %}" alt="Bedroom White" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-white-bedding-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-bedroom-white-bedding-01.webp' %}" alt="Bedroom White Bedding" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-decorative-fish-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-decorative-fish-01.webp' %}" alt="Decorative Fish" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-dining-area-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-dining-area-01.webp' %}" alt="Dining Area" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-dining-pass-through-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-dining-pass-through-01.webp' %}" alt="Dining Pass Through" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-dining-wood-table-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-dining-wood-table-01.webp' %}" alt="Dining Wood Table" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-brown-shutters-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-brown-shutters-01.webp' %}" alt="Exterior Brown Shutters" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-night-patio-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-night-patio-01.webp' %}" alt="Exterior Night Patio" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-night-wide-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-night-wide-01.webp' %}" alt="Exterior Night Wide" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-stone-path-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-stone-path-01.webp' %}" alt="Exterior Stone Path" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-terracotta-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-terracotta-02.webp' %}" alt="Exterior Terracotta" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-terracotta-roof-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-terracotta-roof-01.webp' %}" alt="Exterior Terracotta Roof" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp' %}" alt="Exterior White Brown" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-02.webp' %}" alt="Exterior White Brown" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-stucco-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-stucco-01.webp' %}" alt="Exterior White Stucco" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-adirondack-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-adirondack-01.webp' %}" alt="Garden Adirondack" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-adirondack-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-adirondack-02.webp' %}" alt="Garden Adirondack" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-awning-led-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-awning-led-01.webp' %}" alt="Garden Awning Led" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-bbq-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-bbq-01.webp' %}" alt="Garden Bbq" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-canopy-night-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-canopy-night-01.webp' %}" alt="Garden Canopy Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-curtains-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-curtains-01.webp' %}" alt="Garden Curtains" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-daybed-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-daybed-02.webp' %}" alt="Garden Daybed" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-daybed-purple-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-daybed-purple-01.webp' %}" alt="Garden Daybed Purple" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-daybed-purple-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-daybed-purple-02.webp' %}" alt="Garden Daybed Purple" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-deck-night-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-deck-night-01.webp' %}" alt="Garden Deck Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-dining-night-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-dining-night-01.webp' %}" alt="Garden Dining Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-01.webp' %}" alt="Garden Pergola Curtains" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-02.webp' %}" alt="Garden Pergola Curtains" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-night-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-night-01.webp' %}" alt="Garden Pergola Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-night-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-night-02.webp' %}" alt="Garden Pergola Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-night-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-night-03.webp' %}" alt="Garden Pergola Night" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-garden-wood-deck-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-wood-deck-01.webp' %}" alt="Garden Wood Deck" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-hallway-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-hallway-01.webp' %}" alt="Hallway" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-hallway-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-hallway-02.webp' %}" alt="Hallway" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-hallway-coat-rack-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-hallway-coat-rack-01.webp' %}" alt="Hallway Coat Rack" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-babar-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-babar-01.webp' %}" alt="Kids Room Babar" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-colorful-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-colorful-01.webp' %}" alt="Kids Room Colorful" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-colorful-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-colorful-02.webp' %}" alt="Kids Room Colorful" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-teddy-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kids-room-teddy-01.webp' %}" alt="Kids Room Teddy" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-black-counter-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-black-counter-01.webp' %}" alt="Kitchen Black Counter" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-light-wood-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-light-wood-01.webp' %}" alt="Kitchen Light Wood" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-open-shelf-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-open-shelf-01.webp' %}" alt="Kitchen Open Shelf" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-pass-through-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-pass-through-01.webp' %}" alt="Kitchen Pass Through" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-cabinets-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-cabinets-01.webp' %}" alt="Kitchen Teal Cabinets" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-cabinets-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-cabinets-02.webp' %}" alt="Kitchen Teal Cabinets" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-detail-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-detail-01.webp' %}" alt="Kitchen Teal Detail" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-detail-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-kitchen-teal-detail-02.webp' %}" alt="Kitchen Teal Detail" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-beams-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-beams-01.webp' %}" alt="Living Beams" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp' %}" alt="Living Blue Sofa" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-02.webp' %}" alt="Living Blue Sofa" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-03.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-03.webp' %}" alt="Living Blue Sofa" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-cream-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-cream-01.webp' %}" alt="Living Cream" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-cream-armchair-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-cream-armchair-01.webp' %}" alt="Living Cream Armchair" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-grey-beams-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-grey-beams-01.webp' %}" alt="Living Grey Beams" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-navy-sofa-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-navy-sofa-01.webp' %}" alt="Living Navy Sofa" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-open-plan-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-open-plan-01.webp' %}" alt="Living Open Plan" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-open-plan-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-open-plan-02.webp' %}" alt="Living Open Plan" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-pass-through-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-pass-through-01.webp' %}" alt="Living Pass Through" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-wood-stove-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-wood-stove-01.webp' %}" alt="Living Wood Stove" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-living-wood-stove-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-wood-stove-02.webp' %}" alt="Living Wood Stove" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-loft-mezzanine-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-loft-mezzanine-01.webp' %}" alt="Mezzanine" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-loft-railing-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-loft-railing-01.webp' %}" alt="Railing" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-nameplate-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-nameplate-01.webp' %}" alt="Nameplate" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/latelier-nameplate-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/latelier-nameplate-02.webp' %}" alt="Nameplate" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-bathroom-geometric-tile-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-bathroom-geometric-tile-01.webp' %}" alt="Bathroom Geometric Tile" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-bathroom-shower-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-bathroom-shower-01.webp' %}" alt="Bathroom Shower" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-bathroom-vanity-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-bathroom-vanity-01.webp' %}" alt="Bathroom Vanity" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-bathroom-wide-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-bathroom-wide-01.webp' %}" alt="Bathroom Wide" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-exterior-door-closeup-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-exterior-door-closeup-01.webp' %}" alt="Exterior Door Closeup" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-exterior-front-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-exterior-front-01.webp' %}" alt="Exterior Front" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-exterior-front-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-exterior-front-02.webp' %}" alt="Exterior Front" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-exterior-mailbox-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-exterior-mailbox-01.webp' %}" alt="Exterior Mailbox" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-exterior-wide-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-exterior-wide-01.webp' %}" alt="Exterior Wide" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-garden-grasses-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-garden-grasses-01.webp' %}" alt="Garden Grasses" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-lifestyle-sofa-phone-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-lifestyle-sofa-phone-01.webp' %}" alt="Lifestyle Sofa Phone" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-twin-room-front-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-twin-room-front-01.webp' %}" alt="Twin Room Front" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-twin-room-honeycomb-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-twin-room-honeycomb-01.webp' %}" alt="Twin Room Honeycomb" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-twin-room-honeycomb-02.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-twin-room-honeycomb-02.webp' %}" alt="Twin Room Honeycomb" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-twin-room-wardrobe-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-twin-room-wardrobe-01.webp' %}" alt="Twin Room Wardrobe" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
+                            <a href="{% static 'images/properties/saint-trojan-villa/loft-twin-room-wide-01.webp' %}" class="gallery-popup">
+                                <img src="{% static 'images/properties/saint-trojan-villa/loft-twin-room-wide-01.webp' %}" alt="Twin Room Wide" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                            </a>
                         </div>
                     </div>
                 </div>

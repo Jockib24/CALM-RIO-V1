@@ -6630,15 +6630,15 @@ label {
 }
 
 .text-logo-light {
-  color: #fff;
-  background: linear-gradient(135deg, #ffffff 0%, #E8C98A 50%, #ffffff 100%);
+  color: #C49A5A;
+  background: linear-gradient(135deg, #C49A5A 0%, #E8C98A 50%, #C49A5A 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .text-logo-dark {
-  color: #1B3A4B;
+  color: #C49A5A;
   background: linear-gradient(135deg, #1B3A4B 0%, #C49A5A 50%, #1B3A4B 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;

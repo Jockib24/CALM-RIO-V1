@@ -1,0 +1,1883 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CalmRio 1.0\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "&#171; Vous ne voudrez plus jamais séjourner dans un hôtel. &#187;"
+msgstr "&#171; U wilt nooit meer in een hotel verblijven. &#187;"
+
+msgid ""
+"&ldquo;Charmante maison et emplacement paisible. Un s&eacute;jour d'une "
+"semaine o&ugrave; tout le confort est l&agrave;, on se sent tr&egrave;s bien"
+" dans leur belle propri&eacute;t&eacute; d&eacute;cor&eacute;e avec "
+"go&ucirc;t, qui dispose de deux belles terrasses avec un petit jardin "
+"privatif en herbe et cl&ocirc;tur&eacute;, id&eacute;al pour notre "
+"beagle&nbsp;!&rdquo;"
+msgstr ""
+"&ldquo;Charmant huis en rustige ligging. Een verblijf van een week waar alle"
+" comfort aanwezig is; we voelden ons heel goed in hun mooie, smaakvol "
+"ingerichte woning, met twee prachtige terrassen en een klein "
+"priv&eacute;gras tuintje, omheind, ideaal voor onze beagle&nbsp;!&rdquo;"
+
+msgid ""
+"&ldquo;Le s&eacute;jour s'est tr&egrave;s bien pass&eacute;. Le logement "
+"&eacute;tait incroyable&nbsp;: tr&egrave;s grand, tr&egrave;s propre, "
+"tr&egrave;s fonctionnel, moderne, cuisine tr&egrave;s bien "
+"&eacute;quip&eacute;e, terrasses et jardin tr&egrave;s agr&eacute;ables, "
+"proche de la mer, propri&eacute;taires tr&egrave;s gentils.&rdquo;"
+msgstr ""
+"&ldquo;Het verblijf is heel goed verlopen. De accommodatie was "
+"geweldig&nbsp;: zeer groot, zeer schoon, zeer praktisch, modern, een zeer "
+"goed uitgeruste keuken, heel aangename terrassen en tuin, dicht bij de zee, "
+"en zeer vriendelijke eigenaars.&rdquo;"
+
+msgid ""
+"&ldquo;Maison magnifique, avec un jardin paisible offrant un bel espace pour"
+" se reposer et se ressourcer. Les propri&eacute;taires sont des personnes "
+"accueillantes et chaleureuses.&rdquo;"
+msgstr ""
+"&ldquo;Prachtig huis, met een rustige tuin die veel ruimte biedt om uit te "
+"rusten en op te laden. De eigenaars zijn gastvrije en hartelijke "
+"mensen.&rdquo;"
+
+msgid ""
+"&ldquo;Nous avons pass&eacute; un excellent s&eacute;jour dans la maison "
+"d'Agn&egrave;s. Elle est situ&eacute;e dans un tr&egrave;s bel environnement"
+" et tr&egrave;s proche de la mer &agrave; pieds ou en v&eacute;lo. La maison"
+" est spacieuse, confortable et tr&egrave;s bien &eacute;quip&eacute;e. Nous "
+"reviendrons certainement.&rdquo;"
+msgstr ""
+"&ldquo;We hadden een uitstekend verblijf in het huis van Agn&egrave;s. Het "
+"ligt in een zeer mooie omgeving en heel dicht bij de zee, te voet of met de "
+"fiets. Het huis is ruim, comfortabel en zeer goed uitgerust. We komen zeker "
+"terug.&rdquo;"
+
+msgid ""
+"&ldquo;Nous avons pass&eacute; une superbe semaine au calme dans une jolie "
+"villa bien &eacute;quip&eacute;e et bien plac&eacute;e. L'accueil "
+"&eacute;tait tr&egrave;s bon et r&eacute;actif. Nous reviendrons avec "
+"plaisir.&rdquo;"
+msgstr ""
+"&ldquo;We brachten een heerlijke rustige week door in een mooie, goed "
+"uitgeruste en goed gelegen villa. De ontvangst was zeer goed en snel. We "
+"komen graag terug.&rdquo;"
+
+msgid "&mdash; Harper's Bazaar · À propos de CalmRio"
+msgstr "&mdash; Harper's Bazaar · Over CalmRio"
+
+msgid "+33 6 00 00 00 00"
+msgstr "+33 6 00 00 00 00"
+
+msgid "/nuit"
+msgstr "/night"
+
+msgid "01. Royan"
+msgstr "01. Royan"
+
+msgid "02. Saint-Trojan-les-Bains"
+msgstr "02. Saint-Trojan-les-Bains"
+
+msgid "03. Saint-Trojan-les-Bains"
+msgstr "03. Saint-Trojan-les-Bains"
+
+msgid "1 salle de bain"
+msgstr "1 bathroom"
+
+msgid "10 min des plages"
+msgstr "10 min van de stranden"
+
+msgid ""
+"110 m² sur un jardin arboré et clos, avec terrasse en bois 50 m² plein sud "
+"(salon de jardin, parasol) et terrasse couverte 17 m² (table en teck). "
+"Barbecue. Vaste salon/salle à manger avec grande hauteur sous plafond, baies"
+" vitrées sur terrasses. Cuisine ouverte équipée : lave-vaisselle, "
+"réfrigérateur, four, micro-ondes, plaque à induction. Cellier avec lave-"
+"linge, sèche-linge et congélateur."
+msgstr ""
+"110 m² aan een boomrijke, omheinde tuin, met een houten terras van 50 m² op "
+"het zuiden (tuinmeubilair, parasol) en een overdekt terras van 17 m² "
+"(teakhouten tafel). Barbecue. Grote woon-/eetkamer met hoog plafond en "
+"schuiframen naar de terrassen. Uitgeruste open keuken: vaatwasser, koelkast,"
+" oven, magnetron, inductiekookplaat. Bijkeuken met wasmachine, droger en "
+"vriezer."
+
+msgid "12 avis"
+msgstr "12 beoordelingen"
+
+msgid "15+ avis"
+msgstr "15+ beoordelingen"
+
+msgid "2 chambres"
+msgstr "2 bedrooms"
+
+msgid ""
+"2 chambres : l'une avec un grand lit de 160, télé, espace de travail (écran "
+"+ câble HDMI) ; l'autre avec 2 petits lits de 90. Salle de bain avec douche "
+"à l'italienne, buanderie (lave-linge, sèche-linge, fer et table à repasser)."
+" WC indépendant."
+msgstr ""
+"2 slaapkamers: één met een groot bed van 160, tv, werkplek (scherm + HDMI-"
+"kabel); de andere met 2 eenpersoonsbedden van 90. Badkamer met inloopdouche,"
+" wasruimte (wasmachine, droger, strijkijzer en strijkplank). Apart toilet."
+
+msgid "2 chambres · 4 personnes · 60 m² + terrasse 20 m²"
+msgstr "2 slaapkamers · 4 personen · 60 m² + terras 20 m²"
+
+msgid "3 chambres"
+msgstr "3 slaapkamers"
+
+msgid ""
+"3 chambres : 1 avec lit double 160 (RDC), 2 avec lits doubles 140 (étage). "
+"Salle de bain avec douche, WC séparé. Cuisine équipée ouverte sur le séjour "
+": gazinière, réfrigérateur/congélateur, lave-linge, micro-ondes."
+msgstr ""
+"3 slaapkamers: 1 met tweepersoonsbed 160 (begane grond), 2 met "
+"tweepersoonsbedden 140 (verdieping). Badkamer met douche, apart toilet. "
+"Uitgeruste keuken open naar de woonkamer: gasfornuis, koel-vriescombinatie, "
+"wasmachine, magnetron."
+
+msgid ""
+"3 chambres de 12 m² : 2 avec lit de 160, 1 avec 2 lits de 80. Salle de bain "
+"avec douche à l'italienne, WC suspendu indépendant. Draps et serviettes "
+"fournis. Prise recharge voiture électrique/hybride (supplément selon relevé "
+"de compteur). Bureau et écran HDMI pour télétravail."
+msgstr ""
+"3 slaapkamers van 12 m²: 2 met bed van 160, 1 met 2 bedden van 80. Badkamer "
+"met inloopdouche, apart hangtoilet. Lakens en handdoeken inbegrepen. "
+"Laadpunt voor elektrische/hybride auto (toeslag volgens meterstand). Bureau "
+"en HDMI-scherm voor telewerken."
+
+msgid "3 chambres · 6 personnes · 110 m² + jardin"
+msgstr "3 slaapkamers · 6 personen · 110 m² + tuin"
+
+msgid "3 chambres · 6 personnes · Jardin arboré"
+msgstr "3 slaapkamers · 6 personen · Boomrijke tuin"
+
+msgid "3 refuges, une seule promesse"
+msgstr "3 toevluchtsoorden, één belofte"
+
+msgid "4 voyageurs"
+msgstr "4 guests"
+
+msgid "4 voyageurs maximum"
+msgstr "Maximaal 4 reizigers"
+
+msgid "4,95 — Favoris des voyageurs"
+msgstr "4,95 — Favoriet bij reizigers"
+
+msgid "40+ avis"
+msgstr "40+ beoordelingen"
+
+msgid "6 voyageurs"
+msgstr "6 reizigers"
+
+msgid "6 voyageurs maximum"
+msgstr "Maximaal 6 reizigers"
+
+msgid "ACTIVITÉS"
+msgstr "ACTIVITEITEN"
+
+msgid "Abonné newsletter"
+msgstr "Nieuwsbriefabonnee"
+
+msgid "Abonnés newsletter"
+msgstr "Nieuwsbriefabonnees"
+
+msgid "Accueil"
+msgstr "Home"
+
+msgid "Accueil authentique"
+msgstr "Authentieke ontvangst"
+
+msgid "Accueil personnalisé"
+msgstr "Persoonlijke ontvangst"
+
+msgid "Accès plage (100m)"
+msgstr "Toegang tot strand (100m)"
+
+msgid "Actif"
+msgstr "Actief"
+
+msgid "Adresse"
+msgstr "Address"
+
+msgid "Adresse email"
+msgstr "E-mailadres"
+
+msgid "Agnès (Superhost · 5 ans d'expérience)"
+msgstr "Agnès (Superhost · 5 jaar ervaring)"
+
+msgid "Améliorer notre site et nos services (analytics anonymisés)"
+msgstr "Onze site en diensten verbeteren (geanonimiseerde analytics)"
+
+msgid "Animaux acceptés"
+msgstr "Pets Welcome"
+
+msgid "Animaux non acceptés"
+msgstr "Huisdieren niet toegestaan"
+
+msgid "Anne-Laure"
+msgstr "Anne-Laure"
+
+msgid "Appartement Royan intérieur"
+msgstr "Appartement Royan interieur"
+
+msgid "Appartement Royan vue extérieure"
+msgstr "Appartement Royan buitenaanzicht"
+
+msgid "Appartement Royan — Vue port"
+msgstr "Appartement Royan — Uitzicht op de haven"
+
+msgid "Appartement entier"
+msgstr "Entire apartment"
+
+msgid "Appartement neuf 4 pers — 100m Grande Conche — Royan"
+msgstr "Nieuw appartement 4 pers — 100m Grande Conche — Royan"
+
+msgid "Appartement neuf bord de plage"
+msgstr "Nieuw appartement aan het strand"
+
+msgid ""
+"Appartement neuf de 60 m² avec une terrasse de 20 m² alliant un style bord "
+"de plage et contemporain, très lumineux, idéalement situé à 100 m de la "
+"plage de la Grande Conche et à proximité de nombreux commerces du centre-"
+"ville."
+msgstr ""
+"Nieuw appartement van 60 m² met een terras van 20 m², met een lichte mix van"
+" strandstijl en hedendaags design, ideaal gelegen op 100 m van het strand "
+"Grande Conche en dicht bij de vele winkels in het stadscentrum."
+
+msgid ""
+"Appartement premium 4 pers à Royan, à 100m de la plage. 2 chambres, 60m², "
+"terrasse 20m². Réservez en direct."
+msgstr ""
+"Premium appartement voor 4 personen in Royan, op 100m van het strand. 2 "
+"slaapkamers, 60m², terras 20m². Boek rechtstreeks."
+
+msgid "Appartement — 100m de la Grande Conche"
+msgstr "Appartement — 100m van de Grande Conche"
+
+msgid ""
+"Appartements et maisons soigneusement aménagés, à deux pas des plages de "
+"Royan et de l'île d'Oléron. Réservez en direct et profitez d'un séjour "
+"authentique sur la côte atlantique."
+msgstr ""
+"Zorgvuldig ingerichte appartementen en huizen, op een steenworp van de "
+"stranden van Royan en Île d'Oléron. Boek rechtstreeks en geniet van een "
+"authentiek verblijf aan de Atlantische kust."
+
+msgid "Arrivée & Séjour"
+msgstr "Aankomst & Verblijf"
+
+msgid "Arrivée entre 15:00 et 19:00"
+msgstr "Aankomst tussen 15:00 en 19:00"
+
+msgid "Arrivée entre 16:00 et 20:00"
+msgstr "Aankomst tussen 16:00 en 20:00"
+
+msgid "Arrivée à partir de 16:00"
+msgstr "Aankomst vanaf 16:00"
+
+msgid "Ascenseur"
+msgstr "Elevator"
+
+msgid "Autre"
+msgstr "Other"
+
+msgid "Avis — Note moyenne 4,95★"
+msgstr "Beoordelingen — Gemiddelde score 4,95★"
+
+msgid "Balade en forêt domaniale"
+msgstr "Wandeling in het staatsbos"
+
+msgid ""
+"Balade sur le port de plaisance, restaurants les pieds dans l'eau, bacs pour"
+" traverser l'estuaire de la Gironde. Départ pour le Verdon-sur-Mer."
+msgstr ""
+"Wandeling langs de jachthaven, restaurants direct aan het water, veerboten "
+"om de monding van de Gironde over te steken. Vertrek naar Le Verdon-sur-Mer."
+
+msgid "Barbecue"
+msgstr "Barbecue"
+
+msgid "Base légale"
+msgstr "Rechtsgrond"
+
+msgid "Belle villa neuve de bord de mer pour 6 pers"
+msgstr "Mooie nieuwe villa aan zee voor 6 pers"
+
+msgid "Bord de mer"
+msgstr "Aan zee"
+
+msgid ""
+"Bureau avec écran HDMI, WiFi haut débit et vue sur l'océan — travaillez d'où"
+" vous rêvez."
+msgstr ""
+"Bureau met HDMI-scherm, snelle WiFi en uitzicht op de oceaan — werk vanaf de"
+" plek waarvan u droomt."
+
+msgid "CGV acceptées"
+msgstr "Algemene voorwaarden geaccepteerd"
+
+msgid "CONSEILS PRATIQUES"
+msgstr "PRAKTISCHE TIPS"
+
+msgid ""
+"Calm Rio accorde une grande importance à la protection de vos données "
+"personnelles. La présente politique vous informe de la manière dont nous "
+"collectons, utilisons et protégeons vos informations lorsque vous utilisez "
+"notre site web"
+msgstr ""
+"Calm Rio hecht veel belang aan de bescherming van uw persoonsgegevens. Dit "
+"beleid informeert u over hoe wij uw gegevens verzamelen, gebruiken en "
+"beschermen wanneer u onze website gebruikt"
+
+msgid ""
+"Calm Rio est né d'une passion pour la côte atlantique française — ses plages"
+" sauvages, ses forêts de pins, ses marchés d'huîtres et son art de vivre "
+"unique. Nous sélectionnons des logements de caractère où chaque détail "
+"compte, pour que vos vacances soient une vraie parenthèse."
+msgstr ""
+"Calm Rio is ontstaan uit een passie voor de Franse Atlantische kust — haar "
+"wilde stranden, dennenbossen, oestermarkten en unieke levenskunst. Wij "
+"selecteren karaktervolle accommodaties waar elk detail telt, zodat uw "
+"vakantie een echte adempauze wordt."
+
+msgid "CalmRio en chiffres"
+msgstr "CalmRio by the Numbers"
+
+msgid "CalmRio — Locations de vacances premium | Royan & Île d'Oléron"
+msgstr "CalmRio — Premium vakantiewoningen | Royan & Île d'Oléron"
+
+msgid "Ce que disent nos voyageurs"
+msgstr "Wat onze reizigers zeggen"
+
+msgid "Ce site est hébergé par GitHub Pages"
+msgstr "Deze site wordt gehost door GitHub Pages"
+
+msgid ""
+"Ce site peut contenir des liens vers des sites tiers. Calm Rio n'exerce "
+"aucun contrôle sur ces sites et décline toute responsabilité quant à leur "
+"contenu ou leurs pratiques en matière de protection des données."
+msgstr ""
+"Deze site kan links naar websites van derden bevatten. Calm Rio heeft geen "
+"controle over deze sites en wijst elke verantwoordelijkheid af voor hun "
+"inhoud of hun praktijken inzake gegevensbescherming."
+
+msgid ""
+"Ce site utilise uniquement des cookies techniques essentiels au "
+"fonctionnement du site et des cookies analytics anonymisés (via GitHub "
+"Pages). Aucun cookie publicitaire ou de traçage tiers n'est utilisé. Vous "
+"pouvez paramétrer vos préférences de cookies dans votre navigateur."
+msgstr ""
+"Deze site gebruikt alleen technische cookies die essentieel zijn voor de "
+"werking van de site en geanonimiseerde analytics-cookies (via GitHub Pages)."
+" Er worden geen advertentie- of trackingcookies van derden gebruikt. U kunt "
+"uw cookievoorkeuren instellen in uw browser."
+
+msgid ""
+"Cela dépend du logement. La Villa Saint-Trojan accepte les animaux "
+"(consultez-nous pour les conditions). L'appartement Royan et la Maison "
+"Saint-Trojan n'acceptent pas les animaux. Merci de nous contacter avant de "
+"réserver si vous voyagez avec un animal."
+msgstr ""
+"Dat hangt af van de accommodatie. De Villa Saint-Trojan accepteert "
+"huisdieren (neem contact met ons op voor de voorwaarden). Het appartement "
+"Royan en de Maison Saint-Trojan accepteren geen huisdieren. Neem contact met"
+" ons op voordat u boekt als u met een huisdier reist."
+
+msgid ""
+"Cette politique peut être mise à jour à tout moment. La date de dernière "
+"mise à jour est indiquée en haut de cette page. Nous vous encourageons à la "
+"consulter régulièrement."
+msgstr ""
+"Dit beleid kan op elk moment worden bijgewerkt. De datum van de laatste "
+"update staat bovenaan deze pagina. Wij raden u aan het regelmatig te "
+"raadplegen."
+
+msgid ""
+"Chaque hôte est sélectionné pour sa passion de l'accueil. Nous sommes "
+"disponibles avant, pendant et après votre séjour."
+msgstr ""
+"Elke gastheer of gastvrouw wordt geselecteerd vanwege zijn of haar passie "
+"voor gastvrijheid. Wij zijn beschikbaar vóór, tijdens en na uw verblijf."
+
+msgid ""
+"Chaque logement Calm Rio est unique, mais tous partagent la même exigence de"
+" qualité : literie soignée, équipements complets, décoration pensée pour le "
+"bien-être, et emplacement privilégié pour explorer la côte."
+msgstr ""
+"Elke Calm Rio-accommodatie is uniek, maar ze delen allemaal dezelfde "
+"kwaliteitsnorm: verzorgde bedden, complete voorzieningen, een inrichting "
+"gericht op welzijn en een bevoorrechte locatie om de kust te verkennen."
+
+msgid ""
+"Chaque propriété est choisie avec soin. Chaque séjour est une promesse "
+"tenue."
+msgstr ""
+"Elke woning wordt zorgvuldig gekozen. Elk verblijf is een nagekomen belofte."
+
+msgid ""
+"Chaque propriété est inspectée personnellement. Pas de mauvaise surprise."
+msgstr ""
+"Elke woning wordt persoonlijk gecontroleerd. Geen onaangename verrassingen."
+
+msgid "Cheminée"
+msgstr "Fireplace"
+
+msgid "Comment réserver un logement ?"
+msgstr "Hoe boek ik een accommodatie?"
+
+msgid "Commerces à pied"
+msgstr "Winkels op loopafstand"
+
+msgid "Conditions claires"
+msgstr "Duidelijke voorwaarden"
+
+msgid "Confiance et sérénité"
+msgstr "Vertrouwen en gemoedsrust"
+
+msgid "Confidentialité"
+msgstr "Privacy"
+
+msgid "Conformément au RGPD, vous disposez des droits suivants :"
+msgstr "Overeenkomstig de AVG beschikt u over de volgende rechten:"
+
+msgid "Conseils d'initiés"
+msgstr "Insidertips"
+
+msgid ""
+"Consultez nos conditions d'annulation lors de la réservation. Nous restons à"
+" votre écoute en cas d'imprévu."
+msgstr ""
+"Raadpleeg onze annuleringsvoorwaarden bij het boeken. Bij onvoorziene "
+"omstandigheden denken we graag met u mee."
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Contactez-nous"
+msgstr "Neem Contact Op"
+
+msgid "Contenu"
+msgstr "Inhoud"
+
+msgid "Contenu de la page (HTML autorisé)"
+msgstr "Pagina-inhoud (HTML toegestaan)"
+
+msgid "Cookies"
+msgstr "Cookies"
+
+msgid "Coup de cœur ★ 4,95"
+msgstr "Favoriet ★ 4,95"
+
+msgid "Cour privée"
+msgstr "Private Courtyard"
+
+msgid "Courses"
+msgstr "Boodschappen"
+
+msgid "Créée le"
+msgstr "Aangemaakt op"
+
+msgid "Cuisine équipée"
+msgstr "Uitgeruste keuken"
+
+msgid "Culture & Patrimoine"
+msgstr "Culture & Heritage"
+
+msgid "Cyclisme"
+msgstr "Fietsen"
+
+msgid "Céline & Thomas"
+msgstr "Céline & Thomas"
+
+msgid ""
+"De Royan à l'île d'Oléron, chaque propriété est choisie pour son "
+"emplacement, son charme et sa qualité d'accueil. Nous sommes hôtes nous-"
+"mêmes et connaissons chaque lieu sur le bout des doigts."
+msgstr ""
+"Van Royan tot Île d'Oléron wordt elke woning gekozen om haar ligging, charme"
+" en gastvrijheid. Wij zijn zelf hosts en kennen elke plek door en door."
+
+msgid ""
+"De la plage à la forêt, du télétravail au grand air — choisissez votre "
+"expérience."
+msgstr ""
+"Van strand tot bos, van telewerken tot frisse buitenlucht — kies uw "
+"ervaring."
+
+msgid "De la plage — Appartement Royan"
+msgstr "Vanaf het strand — Appartement Royan"
+
+msgid "Demande d'information"
+msgstr "Information Request"
+
+msgid "Demande de tarif"
+msgstr "Pricing Request"
+
+msgid "Dernière mise à jour : juillet 2026"
+msgstr "Laatst bijgewerkt: juli 2026"
+
+msgid ""
+"Des plages de la Grande Conche aux forêts de l'île d'Oléron, explorez les "
+"trésors de la côte atlantique."
+msgstr ""
+"Van de stranden van de Grande Conche tot de bossen van Île d'Oléron: ontdek "
+"de schatten van de Atlantische kust."
+
+msgid "Des refuges de caractère entre océan et forêt"
+msgstr "Karaktervolle toevluchtsoorden tussen oceaan en bos"
+
+msgid "Des refuges de caractèresur la côte atlantique"
+msgstr "Karaktervolle toevluchtsoorden aan de Atlantische kust"
+
+msgid "Description"
+msgstr "Beschrijving"
+
+msgid "Description SEO"
+msgstr "SEO-beschrijving"
+
+msgid "Directeur de la publication"
+msgstr "Publication Director"
+
+msgid "Données collectées"
+msgstr "Verzamelde gegevens"
+
+msgid "Données de navigation (cookies analytics)"
+msgstr "Navigatiegegevens (analytics-cookies)"
+
+msgid "Droit applicable"
+msgstr "Applicable Law"
+
+msgid "Droit d'accès, de rectification et d'effacement de vos données"
+msgstr "Recht op inzage, rectificatie en verwijdering van uw gegevens"
+
+msgid "Droit de retirer votre consentement à tout moment"
+msgstr "Recht om uw toestemming op elk moment in te trekken"
+
+msgid "Droit à la limitation et à l'opposition du traitement"
+msgstr "Recht op beperking van en bezwaar tegen de verwerking"
+
+msgid "Droit à la portabilité de vos données"
+msgstr "Recht op overdraagbaarheid van uw gegevens"
+
+msgid ""
+"Du style contemporain bord de mer de Royan à l'atmosphère oléronaise entre "
+"forêt et océan, chaque lieu est pensé pour le confort, la lumière et la "
+"proximité avec la nature."
+msgstr ""
+"Van de hedendaagse strandstijl van Royan tot de sfeer van Oléron tussen bos "
+"en oceaan: elke plek is ontworpen voor comfort, licht en nabijheid van de "
+"natuur."
+
+msgid "Durée de conservation"
+msgstr "Retention Period"
+
+msgid "Découvrez la côte autrement"
+msgstr "Ontdek de kust anders"
+
+msgid "Découvrir nos locations"
+msgstr "Ontdek Onze Accommodaties"
+
+msgid "Délai de réponse"
+msgstr "Response Time"
+
+msgid "Départ avant 10:00"
+msgstr "Vertrek vóór 10:00"
+
+msgid "Départ avant 11:00"
+msgstr "Vertrek vóór 11:00"
+
+msgid "Email"
+msgstr "Email"
+
+msgid ""
+"En cas d'arrivée tardive ou matinale, contactez-nous pour organiser un "
+"accueil adapté."
+msgstr ""
+"Neem bij late of vroege aankomst contact met ons op om een passende "
+"ontvangst te organiseren."
+
+msgid "En cas de force majeure, nous étudions chaque situation."
+msgstr "Bij overmacht bekijken wij elke situatie afzonderlijk."
+
+msgid ""
+"En réservant directement, vous bénéficiez de nos meilleurs tarifs — moins "
+"chers que sur les plateformes."
+msgstr ""
+"Door rechtstreeks te boeken profiteert u van onze beste tarieven — goedkoper"
+" dan op platforms."
+
+msgid ""
+"En réservant directement, vous bénéficiez de notre meilleur tarif, sans "
+"commission. Nous nous engageons à être moins chers que les plateformes."
+msgstr ""
+"Door rechtstreeks te boeken krijgt u ons beste tarief, zonder commissie. Wij"
+" garanderen dat we goedkoper zijn dan de platforms."
+
+msgid ""
+"En réservant directement, vous économisez les commissions des plateformes. "
+"Prix identique ou inférieur, toujours."
+msgstr ""
+"Door rechtstreeks te boeken bespaart u de commissies van platforms. Altijd "
+"dezelfde of een lagere prijs."
+
+msgid "Entre mer et forêt"
+msgstr "Tussen zee en bos"
+
+msgid ""
+"Entre océan sauvage et forêt de pins, découvrez un art de vivre où le temps "
+"ralentit."
+msgstr ""
+"Tussen wilde oceaan en dennenbos ontdekt u een levensstijl waarin de tijd "
+"vertraagt."
+
+msgid "Envoyer le message"
+msgstr "Bericht verzenden"
+
+msgid "Envoyez-nous un message"
+msgstr "Stuur ons een bericht"
+
+msgid "Espace télétravail"
+msgstr "Werkplek voor telewerken"
+
+msgid ""
+"Et si votre bureau avait vue sur l'océan ? Nos locations à Royan et Saint-"
+"Trojan-les-Bains sont équipées d'espaces de travail dédiés avec écran, câble"
+" HDMI et connexion WiFi haut débit."
+msgstr ""
+"Wat als uw bureau uitzicht had op de oceaan? Onze accommodaties in Royan en "
+"Saint-Trojan-les-Bains zijn uitgerust met speciale werkplekken met scherm, "
+"HDMI-kabel en snelle WiFi."
+
+msgid "Explorer la région"
+msgstr "De regio verkennen"
+
+msgid "Explorer le guide complet"
+msgstr "Explore the Full Guide"
+
+msgid "Explorer toutes nos locations"
+msgstr "Al onze accommodaties bekijken"
+
+msgid "Explorez"
+msgstr "Verken"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid ""
+"FAQ Calm Rio — réponses à vos questions sur la réservation, le paiement, les"
+" arrivées/départs et nos locations."
+msgstr ""
+"FAQ Calm Rio — antwoorden op uw vragen over boeken, betalen, "
+"aankomst/vertrek en onze accommodaties."
+
+msgid "Famille Martin"
+msgstr "Familie Martin"
+
+msgid "Familles & Animaux"
+msgstr "Gezinnen & Huisdieren"
+
+msgid "Finalités du traitement"
+msgstr "Doeleinden van de verwerking"
+
+msgid "Forêt"
+msgstr "Forest"
+
+msgid ""
+"Forêt de Saint-Trojan, pistes cyclables, marais salants — la côte atlantique"
+" comme terrain de jeu."
+msgstr ""
+"Het bos van Saint-Trojan, fietspaden, zoutmoerassen — de Atlantische kust "
+"als speelterrein."
+
+msgid "Forêt de la Coubre"
+msgstr "Bos van La Coubre"
+
+msgid "Galerie photos"
+msgstr "Photo Gallery"
+
+msgid "Gastronomie"
+msgstr "Gastronomy"
+
+msgid ""
+"Grande Conche, plage de Gatseau, plage de Maumusson… Baignade, farniente et "
+"couchers de soleil inoubliables."
+msgstr ""
+"Grande Conche, strand van Gatseau, strand van Maumusson… Zwemmen, ontspannen"
+" en onvergetelijke zonsondergangen."
+
+msgid ""
+"Grande pièce de vie avec salon et cuisine / salle à manger. Canapé "
+"confortable, cuisine entièrement équipée avec cave à vin de service. Toutes "
+"les fenêtres donnent sur la terrasse (partie salon + partie repas, arborée)."
+msgstr ""
+"Grote leefruimte met zithoek en keuken/eetkamer. Comfortabele bank, volledig"
+" uitgeruste keuken met wijnklimaatkast. Alle ramen kijken uit op het terras "
+"(zithoek + eetgedeelte, met bomen)."
+
+msgid "Guide"
+msgstr "Gids"
+
+msgid "Guide Local"
+msgstr "Lokale Gids"
+
+msgid "Guide local"
+msgstr "Lokale gids"
+
+msgid ""
+"Guide local Calm Rio — restaurants, plages, activités et bonnes adresses à "
+"Royan et sur l'Île d'Oléron. Conseils d'initiés pour un séjour réussi."
+msgstr ""
+"Lokale gids van Calm Rio — restaurants, stranden, activiteiten en goede "
+"adressen in Royan en op Île d'Oléron. Insidertips voor een geslaagd "
+"verblijf."
+
+msgid "Guide local — La côte de Beauté"
+msgstr "Lokale gids — La côte de Beauté"
+
+msgid "Gérer votre séjour (envoi des informations pratiques, factures)"
+msgstr "Uw verblijf beheren (praktische informatie en facturen verzenden)"
+
+msgid ""
+"Huîtres de Marennes-Oléron, poissons frais du port, pineau des Charentes, "
+"galettes charentaises… Un terroir d'exception."
+msgstr ""
+"Oesters uit Marennes-Oléron, verse vis uit de haven, pineau des Charentes, "
+"Charentese galettes… Een uitzonderlijke streek."
+
+msgid "Hébergement"
+msgstr "Hosting"
+
+msgid "Hébergements"
+msgstr "Accommodaties"
+
+msgid "Hôte :"
+msgstr "Host:"
+
+msgid "INCONTOURNABLES"
+msgstr "NIET TE MISSEN"
+
+msgid ""
+"Imaginez-vous pédaler à travers la forêt domaniale de Saint-Trojan, l'odeur "
+"des pins maritimes mêlée aux embruns de l'Atlantique. L'île d'Oléron est un "
+"paradis pour les cyclistes, avec plus de 130 km de pistes cyclables qui "
+"serpentent entre marais salants, parcs ostréicoles et plages sauvages."
+msgstr ""
+"Stel u voor dat u door het staatsbos van Saint-Trojan fietst, met de geur "
+"van zeedennen vermengd met de Atlantische zeelucht. Île d'Oléron is een "
+"paradijs voor fietsers, met meer dan 130 km fietspaden die slingeren tussen "
+"zoutmoerassen, oesterparken en wilde stranden."
+
+msgid ""
+"Immense forêt de pins entre Royan et la pointe de la Coubre. Randonnées, "
+"VTT, et la célèbre route des Douaniers en bord d'océan."
+msgstr ""
+"Enorm dennenbos tussen Royan en de pointe de la Coubre. Wandelen, "
+"mountainbiken en de beroemde route des Douaniers langs de oceaan."
+
+msgid "Informations complémentaires"
+msgstr "Additional Information"
+
+msgid ""
+"Informations de réservation (dates, nombre de voyageurs, logement concerné)"
+msgstr "Boekingsinformatie (data, aantal reizigers, betreffende accommodatie)"
+
+msgid "Inscrit le"
+msgstr "Ingeschreven op"
+
+msgid "Introduction"
+msgstr "Introductie"
+
+msgid "J'accepte la politique de confidentialité"
+msgstr "I accept the privacy policy"
+
+msgid "Jardin arboré"
+msgstr "Boomrijke tuin"
+
+msgid "Jardin clos"
+msgstr "Omheinde tuin"
+
+msgid ""
+"Jardin clos, animaux acceptés, équipement bébé — des vacances sans compromis"
+" pour toute la tribu."
+msgstr ""
+"Omheinde tuin, huisdieren toegestaan, babyuitrusting — vakantie zonder "
+"compromis voor het hele gezin."
+
+msgid "Je m'inscris"
+msgstr "Ik schrijf me in"
+
+msgid "Kayak dans les pertuis"
+msgstr "Kajakken in de zeestraten"
+
+msgid ""
+"L'ensemble du contenu de ce site (textes, photographies, illustrations, "
+"logos, marques) est la propriété exclusive de Calm Rio ou de ses "
+"partenaires. Toute reproduction, distribution, modification ou utilisation "
+"sans autorisation écrite préalable est interdite, sauf pour un usage "
+"strictement personnel."
+msgstr ""
+"Alle inhoud van deze site (teksten, foto's, illustraties, logo's, merken) is"
+" exclusief eigendom van Calm Rio of haar partners. Elke reproductie, "
+"verspreiding, wijziging of gebruik zonder voorafgaande schriftelijke "
+"toestemming is verboden, behalve voor strikt persoonlijk gebruik."
+
+msgid "L'esprit Calm Rio"
+msgstr "De geest van Calm Rio"
+
+msgid "L'expérience CalmRio"
+msgstr "De CalmRio-ervaring"
+
+msgid ""
+"L'île d'Oléron, paradis du vélo avec plus de 130 km de pistes cyclables à "
+"travers forêts, marais et villages."
+msgstr ""
+"Île d'Oléron, fietsparadijs met meer dan 130 km fietspaden door bossen, "
+"moerassen en dorpen."
+
+msgid ""
+"La Grande Plage de Saint-Trojan (baignade surveillée), la plage de Gatseau "
+"(surf et longe-côte), et la plage de la Rémigeasse (sauvage et préservée). "
+"Toutes accessibles à vélo depuis nos logements."
+msgstr ""
+"La Grande Plage de Saint-Trojan (bewaakt zwemmen), het strand van Gatseau "
+"(surfen en kustwandelen in zee) en het strand van la Rémigeasse (wild en "
+"beschermd). Allemaal per fiets bereikbaar vanaf onze accommodaties."
+
+msgid ""
+"La Grande Plage de Saint-Trojan, plage de Gatseau (surf), plage de la "
+"Rémigeasse. À vélo depuis vos locations. Eau claire, sable fin, dunes "
+"préservées."
+msgstr ""
+"La Grande Plage de Saint-Trojan, strand van Gatseau (surf), strand van la "
+"Rémigeasse. Met de fiets vanaf uw accommodatie. Helder water, fijn zand, "
+"beschermde duinen."
+
+msgid "La promesse CalmRio"
+msgstr "De belofte van CalmRio"
+
+msgid "Langues :"
+msgstr "Talen:"
+
+msgid "Lave-linge"
+msgstr "Washing Machine"
+
+msgid "Lave-linge / Sèche-linge"
+msgstr "Wasmachine / Droger"
+
+msgid ""
+"Le grand marché couvert de Royan — halles métalliques magnifiques. Produits "
+"frais, huîtres du bassin, fromages, vins de la région. Tous les matins."
+msgstr ""
+"De grote overdekte markt van Royan — prachtige metalen hallen. Verse "
+"producten, oesters uit het bekken, kazen, wijnen uit de regio. Elke ochtend."
+
+msgid ""
+"Le marché couvert de Saint-Trojan (mercredi et samedi matin) est "
+"incontournable pour les produits frais. Des supermarchés (Super U, "
+"Intermarché) sont accessibles en voiture à"
+msgstr ""
+"De overdekte markt van Saint-Trojan (woensdag- en zaterdagochtend) is "
+"onmisbaar voor verse producten. Supermarkten (Super U, Intermarché) zijn met"
+" de auto bereikbaar op"
+
+msgid ""
+"Le ménage de fin de séjour peut être inclus ou optionnel selon le logement —"
+" nous vous confirmons au moment de la réservation."
+msgstr ""
+"De eindschoonmaak kan inbegrepen of optioneel zijn, afhankelijk van de "
+"accommodatie — wij bevestigen dit bij het boeken."
+
+msgid "Le prix affiché est-il le prix total ?"
+msgstr "Is de weergegeven prijs de totale prijs?"
+
+msgid ""
+"Le traitement de vos données repose sur votre consentement (formulaire de "
+"contact) et sur l'exécution d'un contrat (gestion des réservations), "
+"conformément au Règlement Général sur la Protection des Données"
+msgstr ""
+"De verwerking van uw gegevens is gebaseerd op uw toestemming "
+"(contactformulier) en op de uitvoering van een contract (beheer van "
+"boekingen), overeenkomstig de Algemene Verordening Gegevensbescherming"
+
+msgid "Le télétravail en bord de mer"
+msgstr "Telewerken aan zee"
+
+msgid ""
+"Le vélo est le meilleur moyen de découvrir Oléron. Location de vélos à "
+"Saint-Trojan. Tout est plat !"
+msgstr ""
+"De fiets is de beste manier om Oléron te ontdekken. Fietsverhuur in Saint-"
+"Trojan. Alles is vlak!"
+
+msgid "Les animaux sont-ils acceptés ?"
+msgstr "Zijn huisdieren toegestaan?"
+
+msgid "Les arrivées sont généralement entre"
+msgstr "Aankomsten zijn meestal tussen"
+
+msgid ""
+"Les conditions d'annulation sont les suivantes : annulation gratuite jusqu'à"
+" 30 jours avant l'arrivée. Entre 30 et 14 jours"
+msgstr ""
+"De annuleringsvoorwaarden zijn als volgt: gratis annuleren tot 30 dagen voor"
+" aankomst. Tussen 30 en 14 dagen"
+
+msgid "Les données de contact non associées à une réservation sont conservées"
+msgstr ""
+"Contactgegevens die niet aan een boeking zijn gekoppeld, worden bewaard"
+
+msgid "Les départs avant"
+msgstr "Vertrek vóór"
+
+msgid ""
+"Les informations fournies sur ce site le sont à titre indicatif. Calm Rio "
+"s'efforce d'assurer l'exactitude des informations, mais ne saurait être tenu"
+" responsable des erreurs, omissions ou indisponibilités temporaires du site."
+" Les réservations sont soumises aux conditions générales de vente "
+"communiquées au moment de la réservation."
+msgstr ""
+"De informatie op deze site wordt ter indicatie verstrekt. Calm Rio streeft "
+"ernaar de juistheid van de informatie te waarborgen, maar kan niet "
+"aansprakelijk worden gesteld voor fouten, weglatingen of tijdelijke "
+"onbeschikbaarheid van de site. Boekingen zijn onderworpen aan de algemene "
+"verkoopvoorwaarden die bij de boeking worden meegedeeld."
+
+msgid "Les logements sont-ils adaptés aux enfants ?"
+msgstr "Zijn de accommodaties geschikt voor kinderen?"
+
+msgid ""
+"Les présentes mentions légales sont régies par le droit français. Tout "
+"litige relève des tribunaux compétents de La Rochelle."
+msgstr ""
+"Deze wettelijke vermeldingen vallen onder het Franse recht. Elk geschil valt"
+" onder de bevoegde rechtbanken van La Rochelle."
+
+msgid "Liens hypertextes"
+msgstr "Hyperlinks"
+
+msgid ""
+"Location vacances Royan : appartement neuf 60m², 2 chambres, terrasse 20m², "
+"à 100m de la Grande Conche. Parking, wifi, espace télétravail. Réservez "
+"directement."
+msgstr ""
+"Vakantiewoning Royan: nieuw appartement 60m², 2 slaapkamers, terras 20m², op"
+" 100m van de Grande Conche. Parking, wifi, werkplek voor telewerken. Boek "
+"rechtstreeks."
+
+msgid ""
+"Locations de vacances premium à Royan et sur l'île d'Oléron. Des refuges de "
+"caractère entre océan et forêt, pensés pour le confort des familles, des "
+"couples et des télétravailleurs."
+msgstr ""
+"Premium vakantiewoningen in Royan en op Île d'Oléron. Karaktervolle "
+"toevluchtsoorden tussen oceaan en bos, ontworpen voor het comfort van "
+"gezinnen, koppels en telewerkers."
+
+msgid "Locations premium Royan & Île d'Oléron"
+msgstr "Premium vakantiewoningen Royan & Île d'Oléron"
+
+msgid "Locations soigneusement sélectionnées"
+msgstr "Zorgvuldig geselecteerde accommodaties"
+
+msgid "Logement concerné"
+msgstr "Property"
+
+msgid ""
+"Loin de l'agitation urbaine, retrouvez le rythme des marées. Le matin, "
+"travaillez au calme dans un cadre inspirant. Le soir, explorez les pistes "
+"cyclables, dégustez des huîtres au port ostréicole ou profitez simplement du"
+" jardin."
+msgstr ""
+"Ver weg van de stedelijke drukte vindt u het ritme van de getijden terug. "
+"Werk 's ochtends in alle rust in een inspirerende omgeving. Verken 's avonds"
+" de fietspaden, proef oesters in de oesterhaven of geniet gewoon van de "
+"tuin."
+
+msgid "Lu"
+msgstr "Gelezen"
+
+msgid "Maison / Villa entière"
+msgstr "Entire House / Villa"
+
+msgid "Maison 6 pers Saint-Trojan — Cour privée"
+msgstr "Huis 6 pers Saint-Trojan — Privébinnenplaats"
+
+msgid "Maison 6 pers — Cour privée"
+msgstr "Huis 6 pers — Privébinnenplaats"
+
+msgid "Maison Saint-Trojan chambre"
+msgstr "Maison Saint-Trojan slaapkamer"
+
+msgid "Maison Saint-Trojan extérieur"
+msgstr "Maison Saint-Trojan buitenkant"
+
+msgid "Maison Saint-Trojan jardin"
+msgstr "Maison Saint-Trojan tuin"
+
+msgid "Maison Saint-Trojan — Cour privée"
+msgstr "Maison Saint-Trojan — Privébinnenplaats"
+
+msgid "Maison de village"
+msgstr "Dorpshuis"
+
+msgid "Maison de village 6 pers — cour privée | Saint-Trojan"
+msgstr "Dorpshuis 6 pers — privébinnenplaats | Saint-Trojan"
+
+msgid ""
+"Maison de village 75m² rénovée à Saint-Trojan-les-Bains pour 6 personnes. "
+"Cour privée, 3 chambres, à 10 min des plages. Proche pistes cyclables. "
+"Réservez en direct."
+msgstr ""
+"Gerenoveerd dorpshuis van 75m² in Saint-Trojan-les-Bains voor 6 personen. "
+"Privébinnenplaats, 3 slaapkamers, op 10 min van de stranden. Dicht bij "
+"fietspaden. Boek rechtstreeks."
+
+msgid "Maison de village entière"
+msgstr "Entire Village House"
+
+msgid ""
+"Maison de village entièrement rénovée, au calme, avec 3 chambres dont une au"
+" rez-de-chaussée, séjour très lumineux et agréable avec cheminée. La maison "
+"dispose d'une jolie cour privée avec salon de jardin et parasol, idéale pour"
+" les petits-déjeuners au soleil ou les repas en plein air."
+msgstr ""
+"Volledig gerenoveerd dorpshuis, rustig gelegen, met 3 slaapkamers waarvan "
+"één op de begane grond, een zeer lichte en aangename woonkamer met open "
+"haard. Het huis heeft een mooie privébinnenplaats met tuinmeubilair en "
+"parasol, ideaal voor ontbijt in de zon of maaltijden in de buitenlucht."
+
+msgid ""
+"Maison de village rénovée 75m² pour 6 pers à Saint-Trojan. Cour privée, 3 "
+"chambres, proche plages et commerces."
+msgstr ""
+"Gerenoveerd dorpshuis van 75m² voor 6 pers in Saint-Trojan. "
+"Privébinnenplaats, 3 slaapkamers, dicht bij stranden en winkels."
+
+msgid "Maison de village rénovée pour 6 pers"
+msgstr "Gerenoveerd dorpshuis voor 6 pers"
+
+msgid "Maison familiale 6 pers — Jardin & plage à vélo"
+msgstr "Familiehuis 6 pers — Tuin & strand per fiets"
+
+msgid ""
+"Maison neuve au style Oléronais, alliant le style insulaire charentais et "
+"contemporain, très lumineuse, avec de beaux volumes, idéalement située entre"
+" mer et forêt."
+msgstr ""
+"Nieuw huis in Oléron-stijl, een combinatie van Charentese eilandstijl en "
+"hedendaags comfort, zeer licht, met mooie volumes, ideaal gelegen tussen zee"
+" en bos."
+
+msgid "Marc"
+msgstr "Marc"
+
+msgid ""
+"Marché central de Royan, église Notre-Dame, Fort Boyard, Le P'tit Train de "
+"Saint-Trojan, festivals."
+msgstr ""
+"Centrale markt van Royan, kerk Notre-Dame, Fort Boyard, Le P'tit Train de "
+"Saint-Trojan, festivals."
+
+msgid ""
+"Marché couvert de Saint-Trojan (huîtres, fruits de mer). Chez Laurent "
+"(poisson grillé). Crêperie La Galettière. Les cabanes de plage de Gatseau."
+msgstr ""
+"Overdekte markt van Saint-Trojan (oesters, zeevruchten). Chez Laurent "
+"(gegrilde vis). Crêperie La Galettière. De strandhutten van Gatseau."
+
+msgid "Marché de Royan"
+msgstr "Markt van Royan"
+
+msgid ""
+"Marchés locaux : Saint-Trojan (mercredi, samedi), Royan (tous les jours). "
+"Supermarchés à"
+msgstr ""
+"Lokale markten: Saint-Trojan (woensdag, zaterdag), Royan (elke dag). "
+"Supermarkten op"
+
+msgid "Marie (3 ans d'expérience)"
+msgstr "Marie (3 jaar ervaring)"
+
+msgid "Meilleur prix"
+msgstr "Beste prijs"
+
+msgid "Meilleur prix garanti"
+msgstr "Best Price Guaranteed"
+
+msgid "Mentions légales"
+msgstr "Legal Notice"
+
+msgid ""
+"Mentions légales Calm Rio — éditeur, hébergement, propriété intellectuelle."
+msgstr ""
+"Wettelijke vermeldingen Calm Rio — uitgever, hosting, intellectuele "
+"eigendom."
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Message de contact"
+msgstr "Contactbericht"
+
+msgid "Messages de contact"
+msgstr "Contactberichten"
+
+msgid "Meta description"
+msgstr "Meta description"
+
+msgid "Meta title"
+msgstr "Meta title"
+
+msgid "Micro-entreprise"
+msgstr "Sole Proprietorship"
+
+msgid "Mise à jour le"
+msgstr "Bijgewerkt op"
+
+msgid "Modification de la politique"
+msgstr "Changes to This Policy"
+
+msgid "Moins de 14 jours"
+msgstr "Minder dan 14 dagen"
+
+msgid "NOS COUPS DE CŒUR"
+msgstr "ONZE FAVORIETEN"
+
+msgid "NOS HÉBERGEMENTS"
+msgstr "OUR PROPERTIES"
+
+msgid "NOTRE HISTOIRE"
+msgstr "ONS VERHAAL"
+
+msgid "Nature & Grand Air"
+msgstr "Natuur & Buitenlucht"
+
+msgid "Navigation"
+msgstr "Navigatie"
+
+msgid "Nom"
+msgstr "Last Name"
+
+msgid "Nom et prénom"
+msgstr "Achternaam en voornaam"
+
+msgid "Non-fumeur (possible en extérieur)"
+msgstr "Niet-roken (buiten mogelijk)"
+
+msgid "Nos Locations"
+msgstr "Onze Accommodaties"
+
+msgid "Nos bonnes adresses entre Royan et l'Île d'Oléron"
+msgstr "Onze goede adressen tussen Royan en Île d'Oléron"
+
+msgid "Nos coordonnées"
+msgstr "Our Details"
+
+msgid "Nos locations"
+msgstr "Onze accommodaties"
+
+msgid "Nos valeurs"
+msgstr "Our Values"
+
+msgid "Note moyenne :"
+msgstr "Gemiddelde score:"
+
+msgid "Notre histoire"
+msgstr "Our Story"
+
+msgid ""
+"Nous acceptons les paiements par carte bancaire (Visa, Mastercard) via "
+"Stripe, ainsi que les virements bancaires. Le paiement est sécurisé et vos "
+"données bancaires ne sont jamais stockées."
+msgstr ""
+"Wij accepteren betalingen per bankkaart (Visa, Mastercard) via Stripe, "
+"evenals bankoverschrijvingen. De betaling is beveiligd en uw bankgegevens "
+"worden nooit opgeslagen."
+
+msgid ""
+"Nous collectons les données suivantes lorsque vous utilisez notre formulaire"
+" de contact ou effectuez une réservation :"
+msgstr ""
+"Wij verzamelen de volgende gegevens wanneer u ons contactformulier gebruikt "
+"of een boeking maakt:"
+
+msgid ""
+"Nous connaissons chaque propriété sur le bout des doigts. Conseils "
+"personnalisés, flexibilité, et disponibilité avant et pendant votre séjour."
+msgstr ""
+"Wij kennen elke woning door en door. Persoonlijk advies, flexibiliteit en "
+"beschikbaarheid vóór en tijdens uw verblijf."
+
+msgid ""
+"Nous connaissons chaque restaurant, chaque plage, chaque sentier. Notre "
+"guide local vous révèle les meilleures adresses."
+msgstr ""
+"Wij kennen elk restaurant, elk strand, elk pad. Onze lokale gids onthult de "
+"beste adressen."
+
+msgid "Nous contacter"
+msgstr "Get in Touch"
+
+msgid ""
+"Nous mettons en œuvre toutes les mesures techniques et organisationnelles "
+"appropriées pour protéger vos données contre tout accès non autorisé, "
+"modification, divulgation ou destruction. Les paiements sont traités via "
+"Stripe, plateforme certifiée PCI DSS niveau"
+msgstr ""
+"Wij nemen alle passende technische en organisatorische maatregelen om uw "
+"gegevens te beschermen tegen ongeoorloofde toegang, wijziging, "
+"openbaarmaking of vernietiging. Betalingen worden verwerkt via Stripe, een "
+"platform gecertificeerd volgens PCI DSS niveau"
+
+msgid "Nous répondons sous 30 jours"
+msgstr "Wij antwoorden binnen 30 dagen"
+
+msgid "Nouvelle-Aquitaine, France"
+msgstr "Nouvelle-Aquitaine, Frankrijk"
+
+msgid "Numéro d'enregistrement :"
+msgstr "Registratienummer:"
+
+msgid "Numéro de téléphone"
+msgstr "Telefoonnummer"
+
+msgid "Océan"
+msgstr "Ocean"
+
+msgid "Office de tourisme"
+msgstr "Toeristenbureau"
+
+msgid ""
+"Office de tourisme de Saint-Trojan-les-Bains et Royan. Programmes des "
+"activités, cartes, conseils."
+msgstr ""
+"Toeristenbureau van Saint-Trojan-les-Bains en Royan. "
+"Activiteitenprogramma's, kaarten, advies."
+
+msgid "Ordre"
+msgstr "Volgorde"
+
+msgid ""
+"Oui ! Plusieurs loueurs de vélos se trouvent à Saint-Trojan-les-Bains (à 5 "
+"min à pied de la Maison et en vélo de la Villa). Nous pouvons vous "
+"recommander les meilleures adresses. L'île d'Oléron est plate et idéale pour"
+" le vélo."
+msgstr ""
+"Ja! Er zijn meerdere fietsverhuurders in Saint-Trojan-les-Bains (op 5 min "
+"lopen van de Maison en per fiets vanaf de Villa). Wij kunnen u de beste "
+"adressen aanbevelen. Île d'Oléron is vlak en ideaal om te fietsen."
+
+msgid ""
+"Oui, le prix affiché par nuit inclut le logement et les charges (eau, "
+"électricité, WiFi). Les taxes de séjour (taxe de séjour communale, environ"
+msgstr ""
+"Ja, de weergegeven prijs per nacht omvat de accommodatie en kosten (water, "
+"elektriciteit, WiFi). Toeristenbelasting (gemeentelijke toeristenbelasting, "
+"ongeveer"
+
+msgid ""
+"Oui, tous nos logements accueillent les enfants. Pour la Villa Saint-Trojan,"
+" un équipement bébé (lit, chaise haute) peut être mis à disposition sur "
+"demande. Les enfants sont comptés dans le nombre total de voyageurs."
+msgstr ""
+"Ja, al onze accommodaties verwelkomen kinderen. Voor de Villa Saint-Trojan "
+"kan babyuitrusting (bedje, kinderstoel) op aanvraag beschikbaar worden "
+"gesteld. Kinderen tellen mee in het totale aantal reizigers."
+
+msgid ""
+"Oui, tous nos logements disposent d'une connexion WiFi haut débit gratuite, "
+"adaptée au télétravail (visioconférence, streaming)."
+msgstr ""
+"Ja, al onze accommodaties beschikken over gratis snelle WiFi, geschikt voor "
+"telewerken (videoconferenties, streaming)."
+
+msgid ""
+"Oui. La Villa Saint-Trojan dispose d'un parking privé gratuit avec prise de "
+"recharge pour voiture électrique/hybride. L'appartement Royan et la Maison "
+"Saint-Trojan bénéficient d'un parking public gratuit à proximité."
+msgstr ""
+"Ja. De Villa Saint-Trojan heeft gratis privéparking met laadpunt voor "
+"elektrische/hybride auto's. Het appartement Royan en de Maison Saint-Trojan "
+"hebben gratis openbare parking in de buurt."
+
+msgid "Où faire les courses ?"
+msgstr "Waar boodschappen doen?"
+
+msgid "Où manger"
+msgstr "Waar eten"
+
+msgid "PLAGES"
+msgstr "STRANDEN"
+
+msgid "POURQUOI NOUS CHOISIR"
+msgstr "WHY CHOOSE US"
+
+msgid "Page"
+msgstr "Pagina"
+
+msgid "Pages"
+msgstr "Pagina's"
+
+msgid "Paiement sécurisé"
+msgstr "Beveiligde betaling"
+
+msgid "Paiement sécurisé Stripe"
+msgstr "Beveiligde Stripe-betaling"
+
+msgid "Parking"
+msgstr "Parking"
+
+msgid "Parking + VE"
+msgstr "Parking + EV"
+
+msgid "Parking gratuit"
+msgstr "Gratis parking"
+
+msgid "Pas de spam. Désinscription à tout moment."
+msgstr "Geen spam. Uitschrijven kan op elk moment."
+
+msgid "Personnalisée"
+msgstr "Custom"
+
+msgid "Peut-on louer des vélos ?"
+msgstr "Kunnen we fietsen huren?"
+
+msgid "Phare de Chassiron"
+msgstr "Vuurtoren van Chassiron"
+
+msgid "Piste cyclable Oléron"
+msgstr "Fietspad Oléron"
+
+msgid "Pistes cyclables"
+msgstr "Fietspaden"
+
+msgid "Plage de la Grande Conche"
+msgstr "Strand van de Grande Conche"
+
+msgid "Plage à 10 min"
+msgstr "Strand op 10 min"
+
+msgid "Plages"
+msgstr "Stranden"
+
+msgid "Plages d'Oléron"
+msgstr "Stranden van Oléron"
+
+msgid "Plus de 40 avis — Note moyenne 4,95★"
+msgstr "Meer dan 40 beoordelingen — Gemiddelde score 4,95★"
+
+msgid "Politique de confidentialité"
+msgstr "Privacy Policy"
+
+msgid ""
+"Politique de confidentialité Calm Rio — comment nous collectons, utilisons "
+"et protégeons vos données personnelles."
+msgstr ""
+"Privacybeleid Calm Rio — hoe wij uw persoonsgegevens verzamelen, gebruiken "
+"en beschermen."
+
+msgid "Politique de confidentialité GitHub"
+msgstr "Privacybeleid van GitHub"
+
+msgid "Pont de l'Île d'Oléron"
+msgstr "Brug van Île d'Oléron"
+
+msgid "Port de Royan"
+msgstr "Haven van Royan"
+
+msgid "Pour exercer vos droits, contactez-nous à :"
+msgstr "Om uw rechten uit te oefenen, neemt u contact met ons op via:"
+
+msgid ""
+"Pour réserver ou pour toute demande d'information, contactez-nous "
+"directement."
+msgstr "Neem rechtstreeks contact met ons op om te boeken of voor informatie."
+
+msgid ""
+"Pour toute question relative à cette politique ou à la protection de vos "
+"données :"
+msgstr "Voor vragen over dit beleid of de bescherming van uw gegevens:"
+
+msgid "Pourquoi réserver en direct ?"
+msgstr "Waarom rechtstreeks boeken?"
+
+msgid "Proche pistes"
+msgstr "Dicht bij paden"
+
+msgid "Proche pistes cyclables"
+msgstr "Dicht bij fietspaden"
+
+msgid "Propriété intellectuelle"
+msgstr "Intellectual Property"
+
+msgid "Prénom"
+msgstr "First Name"
+
+msgid "Publiée"
+msgstr "Gepubliceerd"
+
+msgid "Puis-je annuler ma réservation ?"
+msgstr "Kan ik mijn boeking annuleren?"
+
+msgid "Quelles plages recommandez-vous ?"
+msgstr "Welke stranden raadt u aan?"
+
+msgid "Quelles sont les heures d'arrivée et de départ ?"
+msgstr "Wat zijn de aankomst- en vertrektijden?"
+
+msgid "Quels sont les moyens de paiement acceptés ?"
+msgstr "Welke betaalmethoden worden geaccepteerd?"
+
+msgid "Questions fréquentes"
+msgstr "Veelgestelde vragen"
+
+msgid "RESTAURANTS"
+msgstr "RESTAURANTS"
+
+msgid ""
+"Recevez nos inspirations saisonnières, nos conseils de voyage et nos offres "
+"exclusives directement dans votre boîte mail."
+msgstr ""
+"Ontvang onze seizoensinspiratie, reistips en exclusieve aanbiedingen "
+"rechtstreeks in uw mailbox."
+
+msgid "Recharge VE"
+msgstr "EV-laden"
+
+msgid "Recharge voiture électrique avec supplément selon relevé de compteur"
+msgstr "Laden van elektrische auto met toeslag volgens meterstand"
+
+msgid "Respecter nos obligations légales et fiscales"
+msgstr "Onze wettelijke en fiscale verplichtingen naleven"
+
+msgid "Responsabilité"
+msgstr "Liability"
+
+msgid "Restez inspirés"
+msgstr "Stay Inspired"
+
+msgid "Reçu le"
+msgstr "Ontvangen op"
+
+msgid "Royan & ses alentours"
+msgstr "Royan & omgeving"
+
+msgid "Royan — Appartement"
+msgstr "Royan — Apartment"
+
+msgid "Royan — Appartement 100m de la Grande Conche"
+msgstr "Royan — Appartement 100m van de Grande Conche"
+
+msgid "Royan — Appartement Grande Conche"
+msgstr "Royan — Grande Conche Apartment"
+
+msgid "Royan, Nouvelle-Aquitaine"
+msgstr "Royan, Nouvelle-Aquitaine"
+
+msgid "Royan, Nouvelle-AquitaineÀ 100m de la plage de la Grande Conche"
+msgstr "Royan, Nouvelle-AquitaineOp 100m van het strand Grande Conche"
+
+msgid "Règles de la maison"
+msgstr "Huisregels"
+
+msgid "Réclamation"
+msgstr "Complaint"
+
+msgid "Répondre à vos demandes de réservation et vous contacter"
+msgstr "Uw boekingsaanvragen beantwoorden en contact met u opnemen"
+
+msgid "Réponse garantie sous 24h, souvent bien plus rapide."
+msgstr "Antwoord gegarandeerd binnen 24 uur, vaak veel sneller."
+
+msgid ""
+"Réponse sous 24h, conseils sur mesure, et quelques attentions à l'arrivée."
+msgstr ""
+"Antwoord binnen 24 uur, advies op maat en enkele attenties bij aankomst."
+
+msgid "Réservation"
+msgstr "Booking"
+
+msgid "Réservation & Paiement"
+msgstr "Boeking & Betaling"
+
+msgid "Réservation directe"
+msgstr "Direct Booking"
+
+msgid "Réserver"
+msgstr "Boeken"
+
+msgid "Réserver ce logement"
+msgstr "Book This Property"
+
+msgid ""
+"Réserver en direct avec Calm Rio, c'est la garantie du meilleur prix, d'un "
+"accueil personnalisé et de conseils d'initiés pour profiter pleinement de "
+"votre séjour."
+msgstr ""
+"Rechtstreeks boeken bij Calm Rio betekent de garantie van de beste prijs, "
+"een persoonlijke ontvangst en insidertips om volop van uw verblijf te "
+"genieten."
+
+msgid "Saint-Trojan — Maison"
+msgstr "Saint-Trojan — House"
+
+msgid "Saint-Trojan — Villa"
+msgstr "Saint-Trojan — Villa"
+
+msgid "Saint-Trojan-les-Bains, Oléron"
+msgstr "Saint-Trojan-les-Bains, Oléron"
+
+msgid "Saint-Trojan-les-Bains, Île d'Oléron"
+msgstr "Saint-Trojan-les-Bains, Île d'Oléron"
+
+msgid "Saint-Trojan-les-Bains, Île d'OléronEntre mer et forêt"
+msgstr "Saint-Trojan-les-Bains, Île d'OléronTussen zee en bos"
+
+msgid "Saint-Trojan-les-Bains, Île d'OléronVillage centre, proche commerces"
+msgstr "Saint-Trojan-les-Bains, Île d'OléronDorpscentrum, dicht bij winkels"
+
+msgid "Se déplacer"
+msgstr "Vervoer"
+
+msgid "Service personnalisé"
+msgstr "Persoonlijke service"
+
+msgid "Slug"
+msgstr "Slug"
+
+msgid "Sophie & Julien"
+msgstr "Sophie & Julien"
+
+msgid "Sous 24h en semaine"
+msgstr "Binnen 24 uur op weekdagen"
+
+msgid "Suivez-nous"
+msgstr "Follow Us"
+
+msgid "Sujet"
+msgstr "Subject"
+
+msgid "Superhost · 100% réponse"
+msgstr "Superhost · 100% reactie"
+
+msgid "Support"
+msgstr "Ondersteuning"
+
+msgid "Sur place"
+msgstr "Ter plaatse"
+
+msgid "Sécurité"
+msgstr "Security"
+
+msgid "Sélectionnez le template à utiliser pour l'affichage"
+msgstr "Selecteer het template dat voor de weergave wordt gebruikt"
+
+msgid "Template"
+msgstr "Template"
+
+msgid "Titre"
+msgstr "Titel"
+
+msgid "Titre SEO"
+msgstr "SEO-titel"
+
+msgid "Tout ce que vous devez savoir avant de réserver"
+msgstr "Alles wat u moet weten voordat u boekt"
+
+msgid ""
+"Transactions sécurisées par Stripe. Vos données bancaires sont cryptées et "
+"protégées. Conditions d'annulation transparentes."
+msgstr ""
+"Transacties beveiligd door Stripe. Uw bankgegevens zijn versleuteld en "
+"beschermd. Transparante annuleringsvoorwaarden."
+
+msgid "Transfert des données"
+msgstr "Gegevensoverdracht"
+
+msgid "Très bien noté"
+msgstr "Zeer goed beoordeeld"
+
+msgid "Type de logement :"
+msgstr "Type accommodatie:"
+
+msgid "Téléphone"
+msgstr "Phone"
+
+msgid "Télétravail"
+msgstr "Telewerken"
+
+msgid "Télétravail & Confiance"
+msgstr "Telewerken & Vertrouwen"
+
+msgid "Télévision"
+msgstr "Television"
+
+msgid "Témoignages"
+msgstr "Getuigenissen"
+
+msgid ""
+"Une note moyenne de 4,95 sur plus de 40 avis, recueillis sur Airbnb et "
+"Booking. Voici ce que nos hôtes ont partagé après leur séjour."
+msgstr ""
+"Een gemiddelde score van 4,95 op meer dan 40 beoordelingen, verzameld op "
+"Airbnb en Booking. Dit is wat onze gasten na hun verblijf deelden."
+
+msgid "Une question ? Une envie de réserver ? Écrivez-nous."
+msgstr "Een vraag? Zin om te boeken? Schrijf ons."
+
+msgid "Vacances en familleentre océan et forêt"
+msgstr "Gezinsvakantie tussen oceaan en bos"
+
+msgid "Villa 6 pers Saint-Trojan — Jardin clos & terrasses"
+msgstr "Villa 6 pers Saint-Trojan — Omheinde tuin & terrassen"
+
+msgid "Villa 6 pers — Jardin clos & terrasses"
+msgstr "Villa 6 pers — Omheinde tuin & terrassen"
+
+msgid "Villa Saint-Trojan extérieur"
+msgstr "Villa Saint-Trojan buitenkant"
+
+msgid "Villa Saint-Trojan jardin"
+msgstr "Villa Saint-Trojan tuin"
+
+msgid "Villa Saint-Trojan salon"
+msgstr "Villa Saint-Trojan woonkamer"
+
+msgid "Villa Saint-Trojan — Jardin clos"
+msgstr "Villa Saint-Trojan — Omheinde tuin"
+
+msgid ""
+"Villa neuve 110m² à Saint-Trojan-les-Bains pour 6 pers. Jardin clos, 2 "
+"terrasses, animaux acceptés. Superhost 4,95★."
+msgstr ""
+"Nieuwe villa van 110m² in Saint-Trojan-les-Bains voor 6 pers. Omheinde tuin,"
+" 2 terrassen, huisdieren toegestaan. Superhost 4,95★."
+
+msgid ""
+"Villa neuve 110m² à Saint-Trojan-les-Bains pour 6 personnes. Jardin clos, 2 "
+"terrasses, plage à vélo, télétravail, animaux acceptés. Réservez en direct."
+msgstr ""
+"Nieuwe villa van 110m² in Saint-Trojan-les-Bains voor 6 personen. Omheinde "
+"tuin, 2 terrassen, strand per fiets, telewerken, huisdieren toegestaan. Boek"
+" rechtstreeks."
+
+msgid "Villa neuve 6 pers Oléron — jardin clos & terrasses | Saint-Trojan"
+msgstr "Nieuwe villa 6 pers Oléron — omheinde tuin & terrassen | Saint-Trojan"
+
+msgid "Visite de la citadelle du Château-d'Oléron"
+msgstr "Bezoek aan de citadel van Château-d'Oléron"
+
+msgid "Vivez l'Atlantique autrement"
+msgstr "Beleef de Atlantische kust anders"
+
+msgid "Vivez l'Atlantique selon vos envies"
+msgstr "Beleef de Atlantische kust zoals u wilt"
+
+msgid "Voir ce logement"
+msgstr "Deze accommodatie bekijken"
+
+msgid "Voir les espaces de travail"
+msgstr "Werkplekken bekijken"
+
+msgid ""
+"Vos données sont conservées pendant la durée nécessaire à la gestion de "
+"votre réservation, puis archivées conformément aux obligations légales"
+msgstr ""
+"Uw gegevens worden bewaard gedurende de periode die nodig is voor het beheer"
+" van uw boeking en daarna gearchiveerd overeenkomstig de wettelijke "
+"verplichtingen"
+
+msgid ""
+"Vos données sont hébergées en France et dans l'Union Européenne. Aucun "
+"transfert hors UE n'est effectué."
+msgstr ""
+"Uw gegevens worden gehost in Frankrijk en de Europese Unie. Er vindt geen "
+"overdracht buiten de EU plaats."
+
+msgid "Vos données sont utilisées pour :"
+msgstr "Uw gegevens worden gebruikt om:"
+
+msgid "Vos droits"
+msgstr "Your Rights"
+
+msgid "Votre adresse e-mail"
+msgstr "Your email address"
+
+msgid "Votre message..."
+msgstr "Your message..."
+
+msgid "Votre nom"
+msgstr "Your last name"
+
+msgid "Votre prénom"
+msgstr "Your first name"
+
+msgid "Votre séjour en toute sérénité"
+msgstr "Uw verblijf in alle rust"
+
+msgid "Vous pouvez nous contacter via le formulaire de contact, par email à"
+msgstr ""
+"U kunt contact met ons opnemen via het contactformulier, per e-mail op"
+
+msgid "Vous pouvez également contacter la CNIL :"
+msgstr "U kunt ook contact opnemen met de CNIL:"
+
+msgid "Voyageurs — Capacité maximale"
+msgstr "Reizigers — Maximale capaciteit"
+
+msgid "Vérification de disponibilité"
+msgstr "Availability Check"
+
+msgid "Vérifié sur place"
+msgstr "Ter plaatse gecontroleerd"
+
+msgid "Week-end : sous 48h"
+msgstr "Weekend: binnen 48 uur"
+
+msgid "WiFi Haut Débit"
+msgstr "Snelle WiFi"
+
+msgid "WiFi haut débit"
+msgstr "Snelle WiFi"
+
+msgid "Y a-t-il du WiFi ?"
+msgstr "Is er WiFi?"
+
+msgid "Y a-t-il un parking ?"
+msgstr "Is er parking?"
+
+msgid "ans"
+msgstr "jaar"
+
+msgid "ans pour les données fiscales et comptables"
+msgstr "jaar voor fiscale en boekhoudkundige gegevens"
+
+msgid "aucun remboursement"
+msgstr "geen terugbetaling"
+
+msgid "en voiture"
+msgstr "met de auto"
+
+msgid "et"
+msgstr "en"
+
+msgid "et la caution sont en sus"
+msgstr "en de borg komen daar bovenop"
+
+msgid "indiqué sur la page de chaque propriété"
+msgstr "aangegeven op de pagina van elke woning"
+
+msgid "ou"
+msgstr "of"
+
+msgid ""
+"ou par téléphone. Nous vous répondons sous 24h pour confirmer la "
+"disponibilité et vous envoyer le lien de paiement sécurisé Stripe. La "
+"réservation est ferme après réception de l'acompte"
+msgstr ""
+"of telefonisch. Wij antwoorden binnen 24 uur om de beschikbaarheid te "
+"bevestigen en u de beveiligde Stripe-betaallink te sturen. De boeking is "
+"definitief na ontvangst van de aanbetaling"
+
+msgid "remboursé"
+msgstr "terugbetaald"
+
+msgid "selon le logement"
+msgstr "afhankelijk van de accommodatie"
+
+msgid "sur 40+ avis"
+msgstr "op basis van 40+ beoordelingen"
+
+msgid "votre@email.com"
+msgstr "your@email.com"
+
+msgid ""
+"À 100m de la Grande Conche ou à 5min à vélo de la plage de Gatseau — l'océan"
+" à portée de main."
+msgstr ""
+"Op 100m van de Grande Conche of 5 min fietsen van het strand van Gatseau — "
+"de oceaan binnen handbereik."
+
+msgid "À Propos"
+msgstr "Over Ons"
+
+msgid ""
+"À Royan, la Grande Conche déroule ses 2,6 km de sable fin à 100 mètres de "
+"notre appartement. Les célèbres huîtres de Marennes-Oléron et le pineau des "
+"Charentes n'attendent que vous au marché couvert."
+msgstr ""
+"In Royan strekt de Grande Conche zich met 2,6 km fijn zand uit op 100 meter "
+"van ons appartement. De beroemde oesters van Marennes-Oléron en de pineau "
+"des Charentes wachten op u in de overdekte markt."
+
+msgid "À Royan, le grand marché couvert est ouvert tous les jours."
+msgstr "In Royan is de grote overdekte markt elke dag open."
+
+msgid "À découvrir"
+msgstr "Te ontdekken"
+
+msgid "À faire absolument"
+msgstr "Absoluut doen"
+
+msgid ""
+"À la pointe nord d'Oléron. 224 marches, vue à 360° sur l'océan et le pertuis"
+" d'Antioche. Jardins remarquables au pied du phare."
+msgstr ""
+"Aan de noordpunt van Oléron. 224 treden, 360° uitzicht op de oceaan en de "
+"pertuis d'Antioche. Bijzondere tuinen aan de voet van de vuurtoren."
+
+msgid "À partir de"
+msgstr "From"
+
+msgid ""
+"À pied des commerces, à vélo de la plage et de la forêt, la localisation est"
+" idéale pour explorer l'île d'Oléron. Le marché couvert de Saint-Trojan "
+"(produits frais, huîtres, poissons) est à 5 min à pied."
+msgstr ""
+"Op loopafstand van winkels, per fiets naar strand en bos: de ligging is "
+"ideaal om Île d'Oléron te verkennen. De overdekte markt van Saint-Trojan "
+"(verse producten, oesters, vis) ligt op 5 min lopen."
+
+msgid "À propos"
+msgstr "Over ons"
+
+msgid "À propos de Calm Rio"
+msgstr "Over Calm Rio"
+
+msgid "Éditeur du site"
+msgstr "Site Publisher"
+
+msgid "Équipement bébé disponible sur demande"
+msgstr "Babyuitrusting beschikbaar op aanvraag"
+
+msgid "Équipements"
+msgstr "Voorzieningen"
+
+msgid "Île d'Oléron & Royan"
+msgstr "Île d'Oléron & Royan"
+
+msgid "— Aucun logement spécifique —"
+msgstr "— No specific property —"
+
+msgid "— Choisissez un sujet —"
+msgstr "— Choose a subject —"
+
+msgid "Show"
+msgstr "Toon"
+
+msgid "Show less"
+msgstr "Minder tonen"
+
+msgid "more photos"
+msgstr "meer foto's"
+
+msgid "All rights reserved."
+msgstr "Alle rechten voorbehouden."

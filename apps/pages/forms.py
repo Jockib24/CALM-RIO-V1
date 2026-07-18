@@ -1,86 +1,87 @@
 from django import forms
+from django.utils.translation import gettext_lazy as _
 
 
 class ContactForm(forms.Form):
     """Public contact form."""
 
     first_name = forms.CharField(
-        label="Prénom",
+        label=_("Prénom"),
         max_length=100,
         widget=forms.TextInput(
             attrs={
-                "placeholder": "Votre prénom",
+                "placeholder": _("Votre prénom"),
                 "class": "form-control",
             }
         ),
     )
     last_name = forms.CharField(
-        label="Nom",
+        label=_("Nom"),
         max_length=100,
         required=False,
         widget=forms.TextInput(
             attrs={
-                "placeholder": "Votre nom",
+                "placeholder": _("Votre nom"),
                 "class": "form-control",
             }
         ),
     )
     email = forms.EmailField(
-        label="Email",
+        label=_("Email"),
         widget=forms.EmailInput(
             attrs={
-                "placeholder": "votre@email.com",
+                "placeholder": _("votre@email.com"),
                 "class": "form-control",
             }
         ),
     )
     phone = forms.CharField(
-        label="Téléphone",
+        label=_("Téléphone"),
         max_length=20,
         required=False,
         widget=forms.TextInput(
             attrs={
-                "placeholder": "+33 6 00 00 00 00",
+                "placeholder": _("+33 6 00 00 00 00"),
                 "class": "form-control",
             }
         ),
     )
     subject = forms.ChoiceField(
-        label="Sujet",
+        label=_("Sujet"),
         choices=[
-            ("", "— Choisissez un sujet —"),
-            ("reservation", "Réservation"),
-            ("information", "Demande d'information"),
-            ("disponibilite", "Vérification de disponibilité"),
-            ("tarif", "Demande de tarif"),
-            ("reclamation", "Réclamation"),
-            ("autre", "Autre"),
+            ("", _("— Choisissez un sujet —")),
+            ("reservation", _("Réservation")),
+            ("information", _("Demande d'information")),
+            ("disponibilite", _("Vérification de disponibilité")),
+            ("tarif", _("Demande de tarif")),
+            ("reclamation", _("Réclamation")),
+            ("autre", _("Autre")),
         ],
         widget=forms.Select(attrs={"class": "form-control nice-select"}),
     )
     property_interest = forms.ChoiceField(
-        label="Logement concerné",
+        label=_("Logement concerné"),
         required=False,
         choices=[
-            ("", "— Aucun logement spécifique —"),
-            ("royan", "Royan — Appartement Grande Conche"),
-            ("villa", "Saint-Trojan — Villa"),
-            ("maison", "Saint-Trojan — Maison"),
+            ("", _("— Aucun logement spécifique —")),
+            ("royan", _("Royan — Appartement Grande Conche")),
+            ("villa", _("Saint-Trojan — Villa")),
+            ("maison", _("Saint-Trojan — Maison")),
         ],
         widget=forms.Select(attrs={"class": "form-control nice-select"}),
     )
     message = forms.CharField(
-        label="Message",
+        label=_("Message"),
         widget=forms.Textarea(
             attrs={
-                "placeholder": "Votre message...",
+                "placeholder": _("Votre message..."),
                 "class": "form-control",
                 "rows": 6,
             }
         ),
     )
     accept_terms = forms.BooleanField(
-        label="J'accepte la politique de confidentialité",
+        label=_("J'accepte la politique de confidentialité"),
         required=True,
         widget=forms.CheckboxInput(attrs={"class": "form-check-input"}),
     )
@@ -90,10 +91,10 @@ class NewsletterForm(forms.Form):
     """Simple newsletter subscription form."""
 
     email = forms.EmailField(
-        label="Email",
+        label=_("Email"),
         widget=forms.EmailInput(
             attrs={
-                "placeholder": "Votre adresse e-mail",
+                "placeholder": _("Votre adresse e-mail"),
                 "class": "form-control",
             }
         ),

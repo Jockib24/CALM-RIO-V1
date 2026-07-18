@@ -1,0 +1,1364 @@
+# CalmRio translations
+# Copyright (C) 2026 CalmRio
+# This file is distributed under the same license as the CalmRio project.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CalmRio 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "&#171; Vous ne voudrez plus jamais séjourner dans un hôtel. &#187;"
+msgstr ""
+
+msgid "&ldquo;Charmante maison et emplacement paisible. Un s&eacute;jour d'une semaine o&ugrave; tout le confort est l&agrave;, on se sent tr&egrave;s bien dans leur belle propri&eacute;t&eacute; d&eacute;cor&eacute;e avec go&ucirc;t, qui dispose de deux belles terrasses avec un petit jardin privatif en herbe et cl&ocirc;tur&eacute;, id&eacute;al pour notre beagle&nbsp;!&rdquo;"
+msgstr ""
+
+msgid "&ldquo;Le s&eacute;jour s'est tr&egrave;s bien pass&eacute;. Le logement &eacute;tait incroyable&nbsp;: tr&egrave;s grand, tr&egrave;s propre, tr&egrave;s fonctionnel, moderne, cuisine tr&egrave;s bien &eacute;quip&eacute;e, terrasses et jardin tr&egrave;s agr&eacute;ables, proche de la mer, propri&eacute;taires tr&egrave;s gentils.&rdquo;"
+msgstr ""
+
+msgid "&ldquo;Maison magnifique, avec un jardin paisible offrant un bel espace pour se reposer et se ressourcer. Les propri&eacute;taires sont des personnes accueillantes et chaleureuses.&rdquo;"
+msgstr ""
+
+msgid "&ldquo;Nous avons pass&eacute; un excellent s&eacute;jour dans la maison d'Agn&egrave;s. Elle est situ&eacute;e dans un tr&egrave;s bel environnement et tr&egrave;s proche de la mer &agrave; pieds ou en v&eacute;lo. La maison est spacieuse, confortable et tr&egrave;s bien &eacute;quip&eacute;e. Nous reviendrons certainement.&rdquo;"
+msgstr ""
+
+msgid "&ldquo;Nous avons pass&eacute; une superbe semaine au calme dans une jolie villa bien &eacute;quip&eacute;e et bien plac&eacute;e. L'accueil &eacute;tait tr&egrave;s bon et r&eacute;actif. Nous reviendrons avec plaisir.&rdquo;"
+msgstr ""
+
+msgid "&mdash; Harper's Bazaar · À propos de CalmRio"
+msgstr ""
+
+msgid "+33 6 00 00 00 00"
+msgstr ""
+
+msgid "/nuit"
+msgstr ""
+
+msgid "01. Royan"
+msgstr ""
+
+msgid "02. Saint-Trojan-les-Bains"
+msgstr ""
+
+msgid "03. Saint-Trojan-les-Bains"
+msgstr ""
+
+msgid "1 salle de bain"
+msgstr ""
+
+msgid "10 min des plages"
+msgstr ""
+
+msgid "110 m² sur un jardin arboré et clos, avec terrasse en bois 50 m² plein sud (salon de jardin, parasol) et terrasse couverte 17 m² (table en teck). Barbecue. Vaste salon/salle à manger avec grande hauteur sous plafond, baies vitrées sur terrasses. Cuisine ouverte équipée : lave-vaisselle, réfrigérateur, four, micro-ondes, plaque à induction. Cellier avec lave-linge, sèche-linge et congélateur."
+msgstr ""
+
+msgid "12 avis"
+msgstr ""
+
+msgid "15+ avis"
+msgstr ""
+
+msgid "2 chambres"
+msgstr ""
+
+msgid "2 chambres : l'une avec un grand lit de 160, télé, espace de travail (écran + câble HDMI) ; l'autre avec 2 petits lits de 90. Salle de bain avec douche à l'italienne, buanderie (lave-linge, sèche-linge, fer et table à repasser). WC indépendant."
+msgstr ""
+
+msgid "2 chambres · 4 personnes · 60 m² + terrasse 20 m²"
+msgstr ""
+
+msgid "3 chambres"
+msgstr ""
+
+msgid "3 chambres : 1 avec lit double 160 (RDC), 2 avec lits doubles 140 (étage). Salle de bain avec douche, WC séparé. Cuisine équipée ouverte sur le séjour : gazinière, réfrigérateur/congélateur, lave-linge, micro-ondes."
+msgstr ""
+
+msgid "3 chambres de 12 m² : 2 avec lit de 160, 1 avec 2 lits de 80. Salle de bain avec douche à l'italienne, WC suspendu indépendant. Draps et serviettes fournis. Prise recharge voiture électrique/hybride (supplément selon relevé de compteur). Bureau et écran HDMI pour télétravail."
+msgstr ""
+
+msgid "3 chambres · 6 personnes · 110 m² + jardin"
+msgstr ""
+
+msgid "3 chambres · 6 personnes · Jardin arboré"
+msgstr ""
+
+msgid "3 refuges, une seule promesse"
+msgstr ""
+
+msgid "4 voyageurs"
+msgstr ""
+
+msgid "4 voyageurs maximum"
+msgstr ""
+
+msgid "4,95 — Favoris des voyageurs"
+msgstr ""
+
+msgid "40+ avis"
+msgstr ""
+
+msgid "6 voyageurs"
+msgstr ""
+
+msgid "6 voyageurs maximum"
+msgstr ""
+
+msgid "ACTIVITÉS"
+msgstr ""
+
+msgid "Abonné newsletter"
+msgstr ""
+
+msgid "Abonnés newsletter"
+msgstr ""
+
+msgid "Accueil"
+msgstr ""
+
+msgid "Accueil authentique"
+msgstr ""
+
+msgid "Accueil personnalisé"
+msgstr ""
+
+msgid "Accès plage (100m)"
+msgstr ""
+
+msgid "Actif"
+msgstr ""
+
+msgid "Adresse"
+msgstr ""
+
+msgid "Adresse email"
+msgstr ""
+
+msgid "Agnès (Superhost · 5 ans d'expérience)"
+msgstr ""
+
+msgid "Améliorer notre site et nos services (analytics anonymisés)"
+msgstr ""
+
+msgid "Animaux acceptés"
+msgstr ""
+
+msgid "Animaux non acceptés"
+msgstr ""
+
+msgid "Anne-Laure"
+msgstr ""
+
+msgid "Appartement Royan intérieur"
+msgstr ""
+
+msgid "Appartement Royan vue extérieure"
+msgstr ""
+
+msgid "Appartement Royan — Vue port"
+msgstr ""
+
+msgid "Appartement entier"
+msgstr ""
+
+msgid "Appartement neuf 4 pers — 100m Grande Conche — Royan"
+msgstr ""
+
+msgid "Appartement neuf bord de plage"
+msgstr ""
+
+msgid "Appartement neuf de 60 m² avec une terrasse de 20 m² alliant un style bord de plage et contemporain, très lumineux, idéalement situé à 100 m de la plage de la Grande Conche et à proximité de nombreux commerces du centre-ville."
+msgstr ""
+
+msgid "Appartement premium 4 pers à Royan, à 100m de la plage. 2 chambres, 60m², terrasse 20m². Réservez en direct."
+msgstr ""
+
+msgid "Appartement — 100m de la Grande Conche"
+msgstr ""
+
+msgid "Appartements et maisons soigneusement aménagés, à deux pas des plages de Royan et de l'île d'Oléron. Réservez en direct et profitez d'un séjour authentique sur la côte atlantique."
+msgstr ""
+
+msgid "Arrivée & Séjour"
+msgstr ""
+
+msgid "Arrivée entre 15:00 et 19:00"
+msgstr ""
+
+msgid "Arrivée entre 16:00 et 20:00"
+msgstr ""
+
+msgid "Arrivée à partir de 16:00"
+msgstr ""
+
+msgid "Ascenseur"
+msgstr ""
+
+msgid "Autre"
+msgstr ""
+
+msgid "Avis — Note moyenne 4,95★"
+msgstr ""
+
+msgid "Balade en forêt domaniale"
+msgstr ""
+
+msgid "Balade sur le port de plaisance, restaurants les pieds dans l'eau, bacs pour traverser l'estuaire de la Gironde. Départ pour le Verdon-sur-Mer."
+msgstr ""
+
+msgid "Barbecue"
+msgstr ""
+
+msgid "Base légale"
+msgstr ""
+
+msgid "Belle villa neuve de bord de mer pour 6 pers"
+msgstr ""
+
+msgid "Bord de mer"
+msgstr ""
+
+msgid "Bureau avec écran HDMI, WiFi haut débit et vue sur l'océan — travaillez d'où vous rêvez."
+msgstr ""
+
+msgid "CGV acceptées"
+msgstr ""
+
+msgid "CONSEILS PRATIQUES"
+msgstr ""
+
+msgid "Calm Rio accorde une grande importance à la protection de vos données personnelles. La présente politique vous informe de la manière dont nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre site web"
+msgstr ""
+
+msgid "Calm Rio est né d'une passion pour la côte atlantique française — ses plages sauvages, ses forêts de pins, ses marchés d'huîtres et son art de vivre unique. Nous sélectionnons des logements de caractère où chaque détail compte, pour que vos vacances soient une vraie parenthèse."
+msgstr ""
+
+msgid "CalmRio en chiffres"
+msgstr ""
+
+msgid "CalmRio — Locations de vacances premium | Royan & Île d'Oléron"
+msgstr ""
+
+msgid "Ce que disent nos voyageurs"
+msgstr ""
+
+msgid "Ce site est hébergé par GitHub Pages"
+msgstr ""
+
+msgid "Ce site peut contenir des liens vers des sites tiers. Calm Rio n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu ou leurs pratiques en matière de protection des données."
+msgstr ""
+
+msgid "Ce site utilise uniquement des cookies techniques essentiels au fonctionnement du site et des cookies analytics anonymisés (via GitHub Pages). Aucun cookie publicitaire ou de traçage tiers n'est utilisé. Vous pouvez paramétrer vos préférences de cookies dans votre navigateur."
+msgstr ""
+
+msgid "Cela dépend du logement. La Villa Saint-Trojan accepte les animaux (consultez-nous pour les conditions). L'appartement Royan et la Maison Saint-Trojan n'acceptent pas les animaux. Merci de nous contacter avant de réserver si vous voyagez avec un animal."
+msgstr ""
+
+msgid "Cette politique peut être mise à jour à tout moment. La date de dernière mise à jour est indiquée en haut de cette page. Nous vous encourageons à la consulter régulièrement."
+msgstr ""
+
+msgid "Chaque hôte est sélectionné pour sa passion de l'accueil. Nous sommes disponibles avant, pendant et après votre séjour."
+msgstr ""
+
+msgid "Chaque logement Calm Rio est unique, mais tous partagent la même exigence de qualité : literie soignée, équipements complets, décoration pensée pour le bien-être, et emplacement privilégié pour explorer la côte."
+msgstr ""
+
+msgid "Chaque propriété est choisie avec soin. Chaque séjour est une promesse tenue."
+msgstr ""
+
+msgid "Chaque propriété est inspectée personnellement. Pas de mauvaise surprise."
+msgstr ""
+
+msgid "Cheminée"
+msgstr ""
+
+msgid "Comment réserver un logement ?"
+msgstr ""
+
+msgid "Commerces à pied"
+msgstr ""
+
+msgid "Conditions claires"
+msgstr ""
+
+msgid "Confiance et sérénité"
+msgstr ""
+
+msgid "Confidentialité"
+msgstr ""
+
+msgid "Conformément au RGPD, vous disposez des droits suivants :"
+msgstr ""
+
+msgid "Conseils d'initiés"
+msgstr ""
+
+msgid "Consultez nos conditions d'annulation lors de la réservation. Nous restons à votre écoute en cas d'imprévu."
+msgstr ""
+
+msgid "Contact"
+msgstr ""
+
+msgid "Contactez-nous"
+msgstr ""
+
+msgid "Contenu"
+msgstr ""
+
+msgid "Contenu de la page (HTML autorisé)"
+msgstr ""
+
+msgid "Cookies"
+msgstr ""
+
+msgid "Coup de cœur ★ 4,95"
+msgstr ""
+
+msgid "Cour privée"
+msgstr ""
+
+msgid "Courses"
+msgstr ""
+
+msgid "Créée le"
+msgstr ""
+
+msgid "Cuisine équipée"
+msgstr ""
+
+msgid "Culture & Patrimoine"
+msgstr ""
+
+msgid "Cyclisme"
+msgstr ""
+
+msgid "Céline & Thomas"
+msgstr ""
+
+msgid "De Royan à l'île d'Oléron, chaque propriété est choisie pour son emplacement, son charme et sa qualité d'accueil. Nous sommes hôtes nous-mêmes et connaissons chaque lieu sur le bout des doigts."
+msgstr ""
+
+msgid "De la plage à la forêt, du télétravail au grand air — choisissez votre expérience."
+msgstr ""
+
+msgid "De la plage — Appartement Royan"
+msgstr ""
+
+msgid "Demande d'information"
+msgstr ""
+
+msgid "Demande de tarif"
+msgstr ""
+
+msgid "Dernière mise à jour : juillet 2026"
+msgstr ""
+
+msgid "Des plages de la Grande Conche aux forêts de l'île d'Oléron, explorez les trésors de la côte atlantique."
+msgstr ""
+
+msgid "Des refuges de caractère entre océan et forêt"
+msgstr ""
+
+msgid "Des refuges de caractèresur la côte atlantique"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Description SEO"
+msgstr ""
+
+msgid "Directeur de la publication"
+msgstr ""
+
+msgid "Données collectées"
+msgstr ""
+
+msgid "Données de navigation (cookies analytics)"
+msgstr ""
+
+msgid "Droit applicable"
+msgstr ""
+
+msgid "Droit d'accès, de rectification et d'effacement de vos données"
+msgstr ""
+
+msgid "Droit de retirer votre consentement à tout moment"
+msgstr ""
+
+msgid "Droit à la limitation et à l'opposition du traitement"
+msgstr ""
+
+msgid "Droit à la portabilité de vos données"
+msgstr ""
+
+msgid "Du style contemporain bord de mer de Royan à l'atmosphère oléronaise entre forêt et océan, chaque lieu est pensé pour le confort, la lumière et la proximité avec la nature."
+msgstr ""
+
+msgid "Durée de conservation"
+msgstr ""
+
+msgid "Découvrez la côte autrement"
+msgstr ""
+
+msgid "Découvrir nos locations"
+msgstr ""
+
+msgid "Délai de réponse"
+msgstr ""
+
+msgid "Départ avant 10:00"
+msgstr ""
+
+msgid "Départ avant 11:00"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "En cas d'arrivée tardive ou matinale, contactez-nous pour organiser un accueil adapté."
+msgstr ""
+
+msgid "En cas de force majeure, nous étudions chaque situation."
+msgstr ""
+
+msgid "En réservant directement, vous bénéficiez de nos meilleurs tarifs — moins chers que sur les plateformes."
+msgstr ""
+
+msgid "En réservant directement, vous bénéficiez de notre meilleur tarif, sans commission. Nous nous engageons à être moins chers que les plateformes."
+msgstr ""
+
+msgid "En réservant directement, vous économisez les commissions des plateformes. Prix identique ou inférieur, toujours."
+msgstr ""
+
+msgid "Entre mer et forêt"
+msgstr ""
+
+msgid "Entre océan sauvage et forêt de pins, découvrez un art de vivre où le temps ralentit."
+msgstr ""
+
+msgid "Envoyer le message"
+msgstr ""
+
+msgid "Envoyez-nous un message"
+msgstr ""
+
+msgid "Espace télétravail"
+msgstr ""
+
+msgid "Et si votre bureau avait vue sur l'océan ? Nos locations à Royan et Saint-Trojan-les-Bains sont équipées d'espaces de travail dédiés avec écran, câble HDMI et connexion WiFi haut débit."
+msgstr ""
+
+msgid "Explorer la région"
+msgstr ""
+
+msgid "Explorer le guide complet"
+msgstr ""
+
+msgid "Explorer toutes nos locations"
+msgstr ""
+
+msgid "Explorez"
+msgstr ""
+
+msgid "FAQ"
+msgstr ""
+
+msgid "FAQ Calm Rio — réponses à vos questions sur la réservation, le paiement, les arrivées/départs et nos locations."
+msgstr ""
+
+msgid "Famille Martin"
+msgstr ""
+
+msgid "Familles & Animaux"
+msgstr ""
+
+msgid "Finalités du traitement"
+msgstr ""
+
+msgid "Forêt"
+msgstr ""
+
+msgid "Forêt de Saint-Trojan, pistes cyclables, marais salants — la côte atlantique comme terrain de jeu."
+msgstr ""
+
+msgid "Forêt de la Coubre"
+msgstr ""
+
+msgid "Galerie photos"
+msgstr ""
+
+msgid "Gastronomie"
+msgstr ""
+
+msgid "Grande Conche, plage de Gatseau, plage de Maumusson… Baignade, farniente et couchers de soleil inoubliables."
+msgstr ""
+
+msgid "Grande pièce de vie avec salon et cuisine / salle à manger. Canapé confortable, cuisine entièrement équipée avec cave à vin de service. Toutes les fenêtres donnent sur la terrasse (partie salon + partie repas, arborée)."
+msgstr ""
+
+msgid "Guide"
+msgstr ""
+
+msgid "Guide Local"
+msgstr ""
+
+msgid "Guide local"
+msgstr ""
+
+msgid "Guide local Calm Rio — restaurants, plages, activités et bonnes adresses à Royan et sur l'Île d'Oléron. Conseils d'initiés pour un séjour réussi."
+msgstr ""
+
+msgid "Guide local — La côte de Beauté"
+msgstr ""
+
+msgid "Gérer votre séjour (envoi des informations pratiques, factures)"
+msgstr ""
+
+msgid "Huîtres de Marennes-Oléron, poissons frais du port, pineau des Charentes, galettes charentaises… Un terroir d'exception."
+msgstr ""
+
+msgid "Hébergement"
+msgstr ""
+
+msgid "Hébergements"
+msgstr ""
+
+msgid "Hôte :"
+msgstr ""
+
+msgid "INCONTOURNABLES"
+msgstr ""
+
+msgid "Imaginez-vous pédaler à travers la forêt domaniale de Saint-Trojan, l'odeur des pins maritimes mêlée aux embruns de l'Atlantique. L'île d'Oléron est un paradis pour les cyclistes, avec plus de 130 km de pistes cyclables qui serpentent entre marais salants, parcs ostréicoles et plages sauvages."
+msgstr ""
+
+msgid "Immense forêt de pins entre Royan et la pointe de la Coubre. Randonnées, VTT, et la célèbre route des Douaniers en bord d'océan."
+msgstr ""
+
+msgid "Informations complémentaires"
+msgstr ""
+
+msgid "Informations de réservation (dates, nombre de voyageurs, logement concerné)"
+msgstr ""
+
+msgid "Inscrit le"
+msgstr ""
+
+msgid "Introduction"
+msgstr ""
+
+msgid "J'accepte la politique de confidentialité"
+msgstr ""
+
+msgid "Jardin arboré"
+msgstr ""
+
+msgid "Jardin clos"
+msgstr ""
+
+msgid "Jardin clos, animaux acceptés, équipement bébé — des vacances sans compromis pour toute la tribu."
+msgstr ""
+
+msgid "Je m'inscris"
+msgstr ""
+
+msgid "Kayak dans les pertuis"
+msgstr ""
+
+msgid "L'ensemble du contenu de ce site (textes, photographies, illustrations, logos, marques) est la propriété exclusive de Calm Rio ou de ses partenaires. Toute reproduction, distribution, modification ou utilisation sans autorisation écrite préalable est interdite, sauf pour un usage strictement personnel."
+msgstr ""
+
+msgid "L'esprit Calm Rio"
+msgstr ""
+
+msgid "L'expérience CalmRio"
+msgstr ""
+
+msgid "L'île d'Oléron, paradis du vélo avec plus de 130 km de pistes cyclables à travers forêts, marais et villages."
+msgstr ""
+
+msgid "La Grande Plage de Saint-Trojan (baignade surveillée), la plage de Gatseau (surf et longe-côte), et la plage de la Rémigeasse (sauvage et préservée). Toutes accessibles à vélo depuis nos logements."
+msgstr ""
+
+msgid "La Grande Plage de Saint-Trojan, plage de Gatseau (surf), plage de la Rémigeasse. À vélo depuis vos locations. Eau claire, sable fin, dunes préservées."
+msgstr ""
+
+msgid "La promesse CalmRio"
+msgstr ""
+
+msgid "Langues :"
+msgstr ""
+
+msgid "Lave-linge"
+msgstr ""
+
+msgid "Lave-linge / Sèche-linge"
+msgstr ""
+
+msgid "Le grand marché couvert de Royan — halles métalliques magnifiques. Produits frais, huîtres du bassin, fromages, vins de la région. Tous les matins."
+msgstr ""
+
+msgid "Le marché couvert de Saint-Trojan (mercredi et samedi matin) est incontournable pour les produits frais. Des supermarchés (Super U, Intermarché) sont accessibles en voiture à"
+msgstr ""
+
+msgid "Le ménage de fin de séjour peut être inclus ou optionnel selon le logement — nous vous confirmons au moment de la réservation."
+msgstr ""
+
+msgid "Le prix affiché est-il le prix total ?"
+msgstr ""
+
+msgid "Le traitement de vos données repose sur votre consentement (formulaire de contact) et sur l'exécution d'un contrat (gestion des réservations), conformément au Règlement Général sur la Protection des Données"
+msgstr ""
+
+msgid "Le télétravail en bord de mer"
+msgstr ""
+
+msgid "Le vélo est le meilleur moyen de découvrir Oléron. Location de vélos à Saint-Trojan. Tout est plat !"
+msgstr ""
+
+msgid "Les animaux sont-ils acceptés ?"
+msgstr ""
+
+msgid "Les arrivées sont généralement entre"
+msgstr ""
+
+msgid "Les conditions d'annulation sont les suivantes : annulation gratuite jusqu'à 30 jours avant l'arrivée. Entre 30 et 14 jours"
+msgstr ""
+
+msgid "Les données de contact non associées à une réservation sont conservées"
+msgstr ""
+
+msgid "Les départs avant"
+msgstr ""
+
+msgid "Les informations fournies sur ce site le sont à titre indicatif. Calm Rio s'efforce d'assurer l'exactitude des informations, mais ne saurait être tenu responsable des erreurs, omissions ou indisponibilités temporaires du site. Les réservations sont soumises aux conditions générales de vente communiquées au moment de la réservation."
+msgstr ""
+
+msgid "Les logements sont-ils adaptés aux enfants ?"
+msgstr ""
+
+msgid "Les présentes mentions légales sont régies par le droit français. Tout litige relève des tribunaux compétents de La Rochelle."
+msgstr ""
+
+msgid "Liens hypertextes"
+msgstr ""
+
+msgid "Location vacances Royan : appartement neuf 60m², 2 chambres, terrasse 20m², à 100m de la Grande Conche. Parking, wifi, espace télétravail. Réservez directement."
+msgstr ""
+
+msgid "Locations de vacances premium à Royan et sur l'île d'Oléron. Des refuges de caractère entre océan et forêt, pensés pour le confort des familles, des couples et des télétravailleurs."
+msgstr ""
+
+msgid "Locations premium Royan & Île d'Oléron"
+msgstr ""
+
+msgid "Locations soigneusement sélectionnées"
+msgstr ""
+
+msgid "Logement concerné"
+msgstr ""
+
+msgid "Loin de l'agitation urbaine, retrouvez le rythme des marées. Le matin, travaillez au calme dans un cadre inspirant. Le soir, explorez les pistes cyclables, dégustez des huîtres au port ostréicole ou profitez simplement du jardin."
+msgstr ""
+
+msgid "Lu"
+msgstr ""
+
+msgid "Maison / Villa entière"
+msgstr ""
+
+msgid "Maison 6 pers Saint-Trojan — Cour privée"
+msgstr ""
+
+msgid "Maison 6 pers — Cour privée"
+msgstr ""
+
+msgid "Maison Saint-Trojan chambre"
+msgstr ""
+
+msgid "Maison Saint-Trojan extérieur"
+msgstr ""
+
+msgid "Maison Saint-Trojan jardin"
+msgstr ""
+
+msgid "Maison Saint-Trojan — Cour privée"
+msgstr ""
+
+msgid "Maison de village"
+msgstr ""
+
+msgid "Maison de village 6 pers — cour privée | Saint-Trojan"
+msgstr ""
+
+msgid "Maison de village 75m² rénovée à Saint-Trojan-les-Bains pour 6 personnes. Cour privée, 3 chambres, à 10 min des plages. Proche pistes cyclables. Réservez en direct."
+msgstr ""
+
+msgid "Maison de village entière"
+msgstr ""
+
+msgid "Maison de village entièrement rénovée, au calme, avec 3 chambres dont une au rez-de-chaussée, séjour très lumineux et agréable avec cheminée. La maison dispose d'une jolie cour privée avec salon de jardin et parasol, idéale pour les petits-déjeuners au soleil ou les repas en plein air."
+msgstr ""
+
+msgid "Maison de village rénovée 75m² pour 6 pers à Saint-Trojan. Cour privée, 3 chambres, proche plages et commerces."
+msgstr ""
+
+msgid "Maison de village rénovée pour 6 pers"
+msgstr ""
+
+msgid "Maison familiale 6 pers — Jardin & plage à vélo"
+msgstr ""
+
+msgid "Maison neuve au style Oléronais, alliant le style insulaire charentais et contemporain, très lumineuse, avec de beaux volumes, idéalement située entre mer et forêt."
+msgstr ""
+
+msgid "Marc"
+msgstr ""
+
+msgid "Marché central de Royan, église Notre-Dame, Fort Boyard, Le P'tit Train de Saint-Trojan, festivals."
+msgstr ""
+
+msgid "Marché couvert de Saint-Trojan (huîtres, fruits de mer). Chez Laurent (poisson grillé). Crêperie La Galettière. Les cabanes de plage de Gatseau."
+msgstr ""
+
+msgid "Marché de Royan"
+msgstr ""
+
+msgid "Marchés locaux : Saint-Trojan (mercredi, samedi), Royan (tous les jours). Supermarchés à"
+msgstr ""
+
+msgid "Marie (3 ans d'expérience)"
+msgstr ""
+
+msgid "Meilleur prix"
+msgstr ""
+
+msgid "Meilleur prix garanti"
+msgstr ""
+
+msgid "Mentions légales"
+msgstr ""
+
+msgid "Mentions légales Calm Rio — éditeur, hébergement, propriété intellectuelle."
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Message de contact"
+msgstr ""
+
+msgid "Messages de contact"
+msgstr ""
+
+msgid "Meta description"
+msgstr ""
+
+msgid "Meta title"
+msgstr ""
+
+msgid "Micro-entreprise"
+msgstr ""
+
+msgid "Mise à jour le"
+msgstr ""
+
+msgid "Modification de la politique"
+msgstr ""
+
+msgid "Moins de 14 jours"
+msgstr ""
+
+msgid "NOS COUPS DE CŒUR"
+msgstr ""
+
+msgid "NOS HÉBERGEMENTS"
+msgstr ""
+
+msgid "NOTRE HISTOIRE"
+msgstr ""
+
+msgid "Nature & Grand Air"
+msgstr ""
+
+msgid "Navigation"
+msgstr ""
+
+msgid "Nom"
+msgstr ""
+
+msgid "Nom et prénom"
+msgstr ""
+
+msgid "Non-fumeur (possible en extérieur)"
+msgstr ""
+
+msgid "Nos Locations"
+msgstr ""
+
+msgid "Nos bonnes adresses entre Royan et l'Île d'Oléron"
+msgstr ""
+
+msgid "Nos coordonnées"
+msgstr ""
+
+msgid "Nos locations"
+msgstr ""
+
+msgid "Nos valeurs"
+msgstr ""
+
+msgid "Note moyenne :"
+msgstr ""
+
+msgid "Notre histoire"
+msgstr ""
+
+msgid "Nous acceptons les paiements par carte bancaire (Visa, Mastercard) via Stripe, ainsi que les virements bancaires. Le paiement est sécurisé et vos données bancaires ne sont jamais stockées."
+msgstr ""
+
+msgid "Nous collectons les données suivantes lorsque vous utilisez notre formulaire de contact ou effectuez une réservation :"
+msgstr ""
+
+msgid "Nous connaissons chaque propriété sur le bout des doigts. Conseils personnalisés, flexibilité, et disponibilité avant et pendant votre séjour."
+msgstr ""
+
+msgid "Nous connaissons chaque restaurant, chaque plage, chaque sentier. Notre guide local vous révèle les meilleures adresses."
+msgstr ""
+
+msgid "Nous contacter"
+msgstr ""
+
+msgid "Nous mettons en œuvre toutes les mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, modification, divulgation ou destruction. Les paiements sont traités via Stripe, plateforme certifiée PCI DSS niveau"
+msgstr ""
+
+msgid "Nous répondons sous 30 jours"
+msgstr ""
+
+msgid "Nouvelle-Aquitaine, France"
+msgstr ""
+
+msgid "Numéro d'enregistrement :"
+msgstr ""
+
+msgid "Numéro de téléphone"
+msgstr ""
+
+msgid "Océan"
+msgstr ""
+
+msgid "Office de tourisme"
+msgstr ""
+
+msgid "Office de tourisme de Saint-Trojan-les-Bains et Royan. Programmes des activités, cartes, conseils."
+msgstr ""
+
+msgid "Ordre"
+msgstr ""
+
+msgid "Oui ! Plusieurs loueurs de vélos se trouvent à Saint-Trojan-les-Bains (à 5 min à pied de la Maison et en vélo de la Villa). Nous pouvons vous recommander les meilleures adresses. L'île d'Oléron est plate et idéale pour le vélo."
+msgstr ""
+
+msgid "Oui, le prix affiché par nuit inclut le logement et les charges (eau, électricité, WiFi). Les taxes de séjour (taxe de séjour communale, environ"
+msgstr ""
+
+msgid "Oui, tous nos logements accueillent les enfants. Pour la Villa Saint-Trojan, un équipement bébé (lit, chaise haute) peut être mis à disposition sur demande. Les enfants sont comptés dans le nombre total de voyageurs."
+msgstr ""
+
+msgid "Oui, tous nos logements disposent d'une connexion WiFi haut débit gratuite, adaptée au télétravail (visioconférence, streaming)."
+msgstr ""
+
+msgid "Oui. La Villa Saint-Trojan dispose d'un parking privé gratuit avec prise de recharge pour voiture électrique/hybride. L'appartement Royan et la Maison Saint-Trojan bénéficient d'un parking public gratuit à proximité."
+msgstr ""
+
+msgid "Où faire les courses ?"
+msgstr ""
+
+msgid "Où manger"
+msgstr ""
+
+msgid "PLAGES"
+msgstr ""
+
+msgid "POURQUOI NOUS CHOISIR"
+msgstr ""
+
+msgid "Page"
+msgstr ""
+
+msgid "Pages"
+msgstr ""
+
+msgid "Paiement sécurisé"
+msgstr ""
+
+msgid "Paiement sécurisé Stripe"
+msgstr ""
+
+msgid "Parking"
+msgstr ""
+
+msgid "Parking + VE"
+msgstr ""
+
+msgid "Parking gratuit"
+msgstr ""
+
+msgid "Pas de spam. Désinscription à tout moment."
+msgstr ""
+
+msgid "Personnalisée"
+msgstr ""
+
+msgid "Peut-on louer des vélos ?"
+msgstr ""
+
+msgid "Phare de Chassiron"
+msgstr ""
+
+msgid "Piste cyclable Oléron"
+msgstr ""
+
+msgid "Pistes cyclables"
+msgstr ""
+
+msgid "Plage de la Grande Conche"
+msgstr ""
+
+msgid "Plage à 10 min"
+msgstr ""
+
+msgid "Plages"
+msgstr ""
+
+msgid "Plages d'Oléron"
+msgstr ""
+
+msgid "Plus de 40 avis — Note moyenne 4,95★"
+msgstr ""
+
+msgid "Politique de confidentialité"
+msgstr ""
+
+msgid "Politique de confidentialité Calm Rio — comment nous collectons, utilisons et protégeons vos données personnelles."
+msgstr ""
+
+msgid "Politique de confidentialité GitHub"
+msgstr ""
+
+msgid "Pont de l'Île d'Oléron"
+msgstr ""
+
+msgid "Port de Royan"
+msgstr ""
+
+msgid "Pour exercer vos droits, contactez-nous à :"
+msgstr ""
+
+msgid "Pour réserver ou pour toute demande d'information, contactez-nous directement."
+msgstr ""
+
+msgid "Pour toute question relative à cette politique ou à la protection de vos données :"
+msgstr ""
+
+msgid "Pourquoi réserver en direct ?"
+msgstr ""
+
+msgid "Proche pistes"
+msgstr ""
+
+msgid "Proche pistes cyclables"
+msgstr ""
+
+msgid "Propriété intellectuelle"
+msgstr ""
+
+msgid "Prénom"
+msgstr ""
+
+msgid "Publiée"
+msgstr ""
+
+msgid "Puis-je annuler ma réservation ?"
+msgstr ""
+
+msgid "Quelles plages recommandez-vous ?"
+msgstr ""
+
+msgid "Quelles sont les heures d'arrivée et de départ ?"
+msgstr ""
+
+msgid "Quels sont les moyens de paiement acceptés ?"
+msgstr ""
+
+msgid "Questions fréquentes"
+msgstr ""
+
+msgid "RESTAURANTS"
+msgstr ""
+
+msgid "Recevez nos inspirations saisonnières, nos conseils de voyage et nos offres exclusives directement dans votre boîte mail."
+msgstr ""
+
+msgid "Recharge VE"
+msgstr ""
+
+msgid "Recharge voiture électrique avec supplément selon relevé de compteur"
+msgstr ""
+
+msgid "Respecter nos obligations légales et fiscales"
+msgstr ""
+
+msgid "Responsabilité"
+msgstr ""
+
+msgid "Restez inspirés"
+msgstr ""
+
+msgid "Reçu le"
+msgstr ""
+
+msgid "Royan & ses alentours"
+msgstr ""
+
+msgid "Royan — Appartement"
+msgstr ""
+
+msgid "Royan — Appartement 100m de la Grande Conche"
+msgstr ""
+
+msgid "Royan — Appartement Grande Conche"
+msgstr ""
+
+msgid "Royan, Nouvelle-Aquitaine"
+msgstr ""
+
+msgid "Royan, Nouvelle-AquitaineÀ 100m de la plage de la Grande Conche"
+msgstr ""
+
+msgid "Règles de la maison"
+msgstr ""
+
+msgid "Réclamation"
+msgstr ""
+
+msgid "Répondre à vos demandes de réservation et vous contacter"
+msgstr ""
+
+msgid "Réponse garantie sous 24h, souvent bien plus rapide."
+msgstr ""
+
+msgid "Réponse sous 24h, conseils sur mesure, et quelques attentions à l'arrivée."
+msgstr ""
+
+msgid "Réservation"
+msgstr ""
+
+msgid "Réservation & Paiement"
+msgstr ""
+
+msgid "Réservation directe"
+msgstr ""
+
+msgid "Réserver"
+msgstr ""
+
+msgid "Réserver ce logement"
+msgstr ""
+
+msgid "Réserver en direct avec Calm Rio, c'est la garantie du meilleur prix, d'un accueil personnalisé et de conseils d'initiés pour profiter pleinement de votre séjour."
+msgstr ""
+
+msgid "Saint-Trojan — Maison"
+msgstr ""
+
+msgid "Saint-Trojan — Villa"
+msgstr ""
+
+msgid "Saint-Trojan-les-Bains, Oléron"
+msgstr ""
+
+msgid "Saint-Trojan-les-Bains, Île d'Oléron"
+msgstr ""
+
+msgid "Saint-Trojan-les-Bains, Île d'OléronEntre mer et forêt"
+msgstr ""
+
+msgid "Saint-Trojan-les-Bains, Île d'OléronVillage centre, proche commerces"
+msgstr ""
+
+msgid "Se déplacer"
+msgstr ""
+
+msgid "Service personnalisé"
+msgstr ""
+
+msgid "Slug"
+msgstr ""
+
+msgid "Sophie & Julien"
+msgstr ""
+
+msgid "Sous 24h en semaine"
+msgstr ""
+
+msgid "Suivez-nous"
+msgstr ""
+
+msgid "Sujet"
+msgstr ""
+
+msgid "Superhost · 100% réponse"
+msgstr ""
+
+msgid "Support"
+msgstr ""
+
+msgid "Sur place"
+msgstr ""
+
+msgid "Sécurité"
+msgstr ""
+
+msgid "Sélectionnez le template à utiliser pour l'affichage"
+msgstr ""
+
+msgid "Template"
+msgstr ""
+
+msgid "Titre"
+msgstr ""
+
+msgid "Titre SEO"
+msgstr ""
+
+msgid "Tout ce que vous devez savoir avant de réserver"
+msgstr ""
+
+msgid "Transactions sécurisées par Stripe. Vos données bancaires sont cryptées et protégées. Conditions d'annulation transparentes."
+msgstr ""
+
+msgid "Transfert des données"
+msgstr ""
+
+msgid "Très bien noté"
+msgstr ""
+
+msgid "Type de logement :"
+msgstr ""
+
+msgid "Téléphone"
+msgstr ""
+
+msgid "Télétravail"
+msgstr ""
+
+msgid "Télétravail & Confiance"
+msgstr ""
+
+msgid "Télévision"
+msgstr ""
+
+msgid "Témoignages"
+msgstr ""
+
+msgid "Une note moyenne de 4,95 sur plus de 40 avis, recueillis sur Airbnb et Booking. Voici ce que nos hôtes ont partagé après leur séjour."
+msgstr ""
+
+msgid "Une question ? Une envie de réserver ? Écrivez-nous."
+msgstr ""
+
+msgid "Vacances en familleentre océan et forêt"
+msgstr ""
+
+msgid "Villa 6 pers Saint-Trojan — Jardin clos & terrasses"
+msgstr ""
+
+msgid "Villa 6 pers — Jardin clos & terrasses"
+msgstr ""
+
+msgid "Villa Saint-Trojan extérieur"
+msgstr ""
+
+msgid "Villa Saint-Trojan jardin"
+msgstr ""
+
+msgid "Villa Saint-Trojan salon"
+msgstr ""
+
+msgid "Villa Saint-Trojan — Jardin clos"
+msgstr ""
+
+msgid "Villa neuve 110m² à Saint-Trojan-les-Bains pour 6 pers. Jardin clos, 2 terrasses, animaux acceptés. Superhost 4,95★."
+msgstr ""
+
+msgid "Villa neuve 110m² à Saint-Trojan-les-Bains pour 6 personnes. Jardin clos, 2 terrasses, plage à vélo, télétravail, animaux acceptés. Réservez en direct."
+msgstr ""
+
+msgid "Villa neuve 6 pers Oléron — jardin clos & terrasses | Saint-Trojan"
+msgstr ""
+
+msgid "Visite de la citadelle du Château-d'Oléron"
+msgstr ""
+
+msgid "Vivez l'Atlantique autrement"
+msgstr ""
+
+msgid "Vivez l'Atlantique selon vos envies"
+msgstr ""
+
+msgid "Voir ce logement"
+msgstr ""
+
+msgid "Voir les espaces de travail"
+msgstr ""
+
+msgid "Vos données sont conservées pendant la durée nécessaire à la gestion de votre réservation, puis archivées conformément aux obligations légales"
+msgstr ""
+
+msgid "Vos données sont hébergées en France et dans l'Union Européenne. Aucun transfert hors UE n'est effectué."
+msgstr ""
+
+msgid "Vos données sont utilisées pour :"
+msgstr ""
+
+msgid "Vos droits"
+msgstr ""
+
+msgid "Votre adresse e-mail"
+msgstr ""
+
+msgid "Votre message..."
+msgstr ""
+
+msgid "Votre nom"
+msgstr ""
+
+msgid "Votre prénom"
+msgstr ""
+
+msgid "Votre séjour en toute sérénité"
+msgstr ""
+
+msgid "Vous pouvez nous contacter via le formulaire de contact, par email à"
+msgstr ""
+
+msgid "Vous pouvez également contacter la CNIL :"
+msgstr ""
+
+msgid "Voyageurs — Capacité maximale"
+msgstr ""
+
+msgid "Vérification de disponibilité"
+msgstr ""
+
+msgid "Vérifié sur place"
+msgstr ""
+
+msgid "Week-end : sous 48h"
+msgstr ""
+
+msgid "WiFi Haut Débit"
+msgstr ""
+
+msgid "WiFi haut débit"
+msgstr ""
+
+msgid "Y a-t-il du WiFi ?"
+msgstr ""
+
+msgid "Y a-t-il un parking ?"
+msgstr ""
+
+msgid "ans"
+msgstr ""
+
+msgid "ans pour les données fiscales et comptables"
+msgstr ""
+
+msgid "aucun remboursement"
+msgstr ""
+
+msgid "en voiture"
+msgstr ""
+
+msgid "et"
+msgstr ""
+
+msgid "et la caution sont en sus"
+msgstr ""
+
+msgid "indiqué sur la page de chaque propriété"
+msgstr ""
+
+msgid "ou"
+msgstr ""
+
+msgid "ou par téléphone. Nous vous répondons sous 24h pour confirmer la disponibilité et vous envoyer le lien de paiement sécurisé Stripe. La réservation est ferme après réception de l'acompte"
+msgstr ""
+
+msgid "remboursé"
+msgstr ""
+
+msgid "selon le logement"
+msgstr ""
+
+msgid "sur 40+ avis"
+msgstr ""
+
+msgid "votre@email.com"
+msgstr ""
+
+msgid "À 100m de la Grande Conche ou à 5min à vélo de la plage de Gatseau — l'océan à portée de main."
+msgstr ""
+
+msgid "À Propos"
+msgstr ""
+
+msgid "À Royan, la Grande Conche déroule ses 2,6 km de sable fin à 100 mètres de notre appartement. Les célèbres huîtres de Marennes-Oléron et le pineau des Charentes n'attendent que vous au marché couvert."
+msgstr ""
+
+msgid "À Royan, le grand marché couvert est ouvert tous les jours."
+msgstr ""
+
+msgid "À découvrir"
+msgstr ""
+
+msgid "À faire absolument"
+msgstr ""
+
+msgid "À la pointe nord d'Oléron. 224 marches, vue à 360° sur l'océan et le pertuis d'Antioche. Jardins remarquables au pied du phare."
+msgstr ""
+
+msgid "À partir de"
+msgstr ""
+
+msgid "À pied des commerces, à vélo de la plage et de la forêt, la localisation est idéale pour explorer l'île d'Oléron. Le marché couvert de Saint-Trojan (produits frais, huîtres, poissons) est à 5 min à pied."
+msgstr ""
+
+msgid "À propos"
+msgstr ""
+
+msgid "À propos de Calm Rio"
+msgstr ""
+
+msgid "Éditeur du site"
+msgstr ""
+
+msgid "Équipement bébé disponible sur demande"
+msgstr ""
+
+msgid "Équipements"
+msgstr ""
+
+msgid "Île d'Oléron & Royan"
+msgstr ""
+
+msgid "— Aucun logement spécifique —"
+msgstr ""
+
+msgid "— Choisissez un sujet —"
+msgstr ""
+

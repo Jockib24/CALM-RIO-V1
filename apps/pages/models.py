@@ -1,34 +1,35 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class ContactMessage(models.Model):
     """Contact form submission."""
 
     SUBJECT_CHOICES = [
-        ("reservation", "Réservation"),
-        ("information", "Demande d'information"),
-        ("disponibilite", "Vérification de disponibilité"),
-        ("tarif", "Demande de tarif"),
-        ("reclamation", "Réclamation"),
-        ("autre", "Autre"),
+        ("reservation", _("Réservation")),
+        ("information", _("Demande d'information")),
+        ("disponibilite", _("Vérification de disponibilité")),
+        ("tarif", _("Demande de tarif")),
+        ("reclamation", _("Réclamation")),
+        ("autre", _("Autre")),
     ]
 
-    first_name = models.CharField("Prénom", max_length=100)
-    last_name = models.CharField("Nom", max_length=100, blank=True)
-    email = models.EmailField("Email")
-    phone = models.CharField("Téléphone", max_length=20, blank=True)
-    subject = models.CharField("Sujet", max_length=50, choices=SUBJECT_CHOICES)
+    first_name = models.CharField(_("Prénom"), max_length=100)
+    last_name = models.CharField(_("Nom"), max_length=100, blank=True)
+    email = models.EmailField(_("Email"))
+    phone = models.CharField(_("Téléphone"), max_length=20, blank=True)
+    subject = models.CharField(_("Sujet"), max_length=50, choices=SUBJECT_CHOICES)
     property_interest = models.CharField(
-        "Logement concerné", max_length=50, blank=True
+        _("Logement concerné"), max_length=50, blank=True
     )
-    message = models.TextField("Message")
-    terms_accepted = models.BooleanField("CGV acceptées", default=False)
-    is_read = models.BooleanField("Lu", default=False)
-    created_at = models.DateTimeField("Reçu le", auto_now_add=True)
+    message = models.TextField(_("Message"))
+    terms_accepted = models.BooleanField(_("CGV acceptées"), default=False)
+    is_read = models.BooleanField(_("Lu"), default=False)
+    created_at = models.DateTimeField(_("Reçu le"), auto_now_add=True)
 
     class Meta:
-        verbose_name = "Message de contact"
-        verbose_name_plural = "Messages de contact"
+        verbose_name = _("Message de contact")
+        verbose_name_plural = _("Messages de contact")
         ordering = ["-created_at"]
 
     def __str__(self):
@@ -38,13 +39,13 @@ class ContactMessage(models.Model):
 class NewsletterSubscription(models.Model):
     """Newsletter email subscription."""
 
-    email = models.EmailField("Email", unique=True)
-    is_active = models.BooleanField("Actif", default=True)
-    created_at = models.DateTimeField("Inscrit le", auto_now_add=True)
+    email = models.EmailField(_("Email"), unique=True)
+    is_active = models.BooleanField(_("Actif"), default=True)
+    created_at = models.DateTimeField(_("Inscrit le"), auto_now_add=True)
 
     class Meta:
-        verbose_name = "Abonné newsletter"
-        verbose_name_plural = "Abonnés newsletter"
+        verbose_name = _("Abonné newsletter")
+        verbose_name_plural = _("Abonnés newsletter")
         ordering = ["-created_at"]
 
     def __str__(self):
@@ -55,46 +56,46 @@ class Page(models.Model):
     """Editable static page (About, Legal, Privacy, FAQ, Local Guide)."""
 
     TEMPLATE_CHOICES = [
-        ("about", "À propos"),
-        ("contact", "Contact"),
-        ("faq", "FAQ"),
-        ("local_guide", "Guide local"),
-        ("legal", "Mentions légales"),
-        ("privacy", "Politique de confidentialité"),
-        ("custom", "Personnalisée"),
+        ("about", _("À propos")),
+        ("contact", _("Contact")),
+        ("faq", _("FAQ")),
+        ("local_guide", _("Guide local")),
+        ("legal", _("Mentions légales")),
+        ("privacy", _("Politique de confidentialité")),
+        ("custom", _("Personnalisée")),
     ]
 
-    title = models.CharField("Titre", max_length=200)
-    slug = models.SlugField("Slug", max_length=200, unique=True)
+    title = models.CharField(_("Titre"), max_length=200)
+    slug = models.SlugField(_("Slug"), max_length=200, unique=True)
     template = models.CharField(
-        "Template",
+        _("Template"),
         max_length=50,
         choices=TEMPLATE_CHOICES,
         default="custom",
-        help_text="Sélectionnez le template à utiliser pour l'affichage",
+        help_text=_("Sélectionnez le template à utiliser pour l'affichage"),
     )
     content = models.TextField(
-        "Contenu",
+        _("Contenu"),
         blank=True,
-        help_text="Contenu de la page (HTML autorisé)",
+        help_text=_("Contenu de la page (HTML autorisé)"),
     )
     meta_title = models.CharField(
-        "Meta title", max_length=70, blank=True, help_text="Titre SEO"
+        _("Meta title"), max_length=70, blank=True, help_text=_("Titre SEO")
     )
     meta_description = models.CharField(
-        "Meta description",
+        _("Meta description"),
         max_length=160,
         blank=True,
-        help_text="Description SEO",
+        help_text=_("Description SEO"),
     )
-    is_published = models.BooleanField("Publiée", default=True)
-    order = models.PositiveIntegerField("Ordre", default=0)
-    created_at = models.DateTimeField("Créée le", auto_now_add=True)
-    updated_at = models.DateTimeField("Mise à jour le", auto_now=True)
+    is_published = models.BooleanField(_("Publiée"), default=True)
+    order = models.PositiveIntegerField(_("Ordre"), default=0)
+    created_at = models.DateTimeField(_("Créée le"), auto_now_add=True)
+    updated_at = models.DateTimeField(_("Mise à jour le"), auto_now=True)
 
     class Meta:
-        verbose_name = "Page"
-        verbose_name_plural = "Pages"
+        verbose_name = _("Page")
+        verbose_name_plural = _("Pages")
         ordering = ["order", "title"]
 
     def __str__(self):
