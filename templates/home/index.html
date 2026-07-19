@@ -2,10 +2,25 @@
 {% load static %}
 {% load i18n %}
 {% load responsive_images %}
-{% load responsive_images %}
 
 {% block title %}{% blocktranslate %}CalmRio — Locations de vacances premium | Royan & Île d'Oléron{% endblocktranslate %}{% endblock %}
 
+{% block extra_head %}
+<style>
+    /* Hero Slider Styles */
+    .hero-slider { border-radius:30px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3); }
+    .hero-slider .hero-slide img { width:100%; height:550px; object-fit:cover; display:block; }
+    .hero-slider .slick-dots { bottom:20px; }
+    .hero-slider .slick-dots li button:before { color:#fff; opacity:0.5; font-size:10px; }
+    .hero-slider .slick-dots li.slick-active button:before { color:var(--accent-color,#C49A5A); opacity:1; }
+    @media (max-width:1650px) {
+        .hero-slider .hero-slide img { height:450px; }
+    }
+    @media (max-width:767.98px) {
+        .hero-slider .hero-slide img { height:280px; }
+    }
+</style>
+{% endblock %}
 {% block content %}
 {% if home_schema_ld %}
 <script type="application/ld+json">
@@ -41,7 +56,23 @@
                             </div>
                             <div class="col-xl-6 d-none d-xl-block">
                                 <div class="hero-image-wrapper" style="padding:10px 0;">
-                                    {% hero_image "images/properties/royan-appartement/face-exterior-yellow-01.webp" alt="CalmRio — Appartement Royan" css_class="hero-img" %}
+                                    <div class="hero-slider" id="heroSlider">
+                                        <div class="hero-slide">
+                                            <img src="{% static 'images/properties/royan-appartement/face-exterior-yellow-01.webp' %}" alt="CalmRio — Appartement Royan" class="hero-img" loading="eager">
+                                        </div>
+                                        <div class="hero-slide">
+                                            <img src="{% static 'images/properties/royan-appartement/face-beach-view-01.webp' %}" alt="CalmRio — Plage de la Grande Conche" class="hero-img" loading="lazy">
+                                        </div>
+                                        <div class="hero-slide">
+                                            <img src="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-01.webp' %}" alt="CalmRio — Maison Saint-Trojan" class="hero-img" loading="lazy">
+                                        </div>
+                                        <div class="hero-slide">
+                                            <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp' %}" alt="CalmRio — Villa Lazure" class="hero-img" loading="lazy">
+                                        </div>
+                                        <div class="hero-slide">
+                                            <img src="{% static 'images/properties/royan-appartement/face-harbor-ferris-wheel-01.webp' %}" alt="CalmRio — Port de Royan" class="hero-img" loading="lazy">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -172,8 +203,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-7">
                                     <div class="room-image">
-                                        {% gallery_image "images/properties/royan-appartement/face-living-blue-white-01.webp" alt="Appartement Royan Grande Conche" css_class="room-img" %}
-                                        {% gallery_image "images/properties/royan-appartement/face-exterior-yellow-01.webp" alt="Appartement Royan extérieur" css_class="room-img" %}
+                                        <picture><source type="image/webp" srcset="{% static 'images/properties/royan-appartement/face-living-blue-white-01.webp' %}"><img src="{% static 'images/properties/royan-appartement/face-living-blue-white-01.webp' %}" alt="Appartement Royan Grande Conche" class="room-img" loading="lazy"></picture>
+                                        <picture><source type="image/webp" srcset="{% static 'images/properties/royan-appartement/face-exterior-yellow-01.webp' %}"><img src="{% static 'images/properties/royan-appartement/face-exterior-yellow-01.webp' %}" alt="Appartement Royan extérieur" class="room-img" loading="lazy"></picture>
                                     </div>
                                 </div>
                                 <div class="col-lg-5">
@@ -219,8 +250,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-7">
                                     <div class="room-image">
-                                        {% gallery_image "images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp" alt="Villa Lazure Saint-Trojan intérieur" css_class="room-img" %}
-                                        {% gallery_image "images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp" alt="Villa Lazure Saint-Trojan extérieur" css_class="room-img" %}
+                                        <picture><source type="image/webp" srcset="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp' %}"><img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp' %}" alt="Villa Lazure extérieur" class="room-img" loading="lazy"></picture>
+                                        <picture><source type="image/webp" srcset="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp' %}"><img src="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp' %}" alt="Villa Lazure intérieur" class="room-img" loading="lazy"></picture>
                                     </div>
                                 </div>
                                 <div class="col-lg-5">
@@ -266,8 +297,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-7">
                                     <div class="room-image">
-                                        {% gallery_image "images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-01.webp" alt="Maison familiale Saint-Trojan chambre" css_class="room-img" %}
-                                        {% gallery_image "images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-01.webp" alt="Maison familiale Saint-Trojan extérieur" css_class="room-img" %}
+                                        <picture><source type="image/webp" srcset="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-01.webp' %}"><img src="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-01.webp' %}" alt="Maison Saint-Trojan extérieur" class="room-img" loading="lazy"></picture>
+                                        <picture><source type="image/webp" srcset="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-01.webp' %}"><img src="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-01.webp' %}" alt="Maison Saint-Trojan chambre" class="room-img" loading="lazy"></picture>
                                     </div>
                                 </div>
                                 <div class="col-lg-5">
@@ -587,4 +618,19 @@
                     </div>
                 </div>
             </section><!--======  End Newsletter Section  ======-->
+<script>
+    $(document).ready(function() {
+        $('#heroSlider').slick({
+            autoplay: true,
+            autoplaySpeed: 5000,
+            speed: 1000,
+            dots: true,
+            arrows: false,
+            fade: true,
+            infinite: true,
+            pauseOnHover: false,
+            pauseOnFocus: false
+        });
+    });
+</script>
 {% endblock %}

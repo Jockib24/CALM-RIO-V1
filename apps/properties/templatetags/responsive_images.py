@@ -1,5 +1,6 @@
 from django import template
 from django.templatetags.static import static
+from django.utils.safestring import mark_safe
 
 register = template.Library()
 
@@ -23,11 +24,10 @@ def responsive_image(
     # Build WebP source
     webp_url = static(path)
 
-    # Determine fallback extension
-    if path.endswith(".webp"):
-        fallback_path = path[:-5] + ".jpg"
-    elif path.endswith(".avif"):
-        fallback_path = path[:-5] + ".jpg"
+    # Determine fallback URL
+    # WebP/AVIF has universal browser support since 2020+, so we use it directly
+    if path.endswith(".webp") or path.endswith(".avif"):
+        fallback_path = path  # Use same file — modern browsers all support it
     else:
         fallback_path = path
 
@@ -48,7 +48,7 @@ def responsive_image(
     <img src="{fallback_url}" alt="{alt}" class="{css_class}" {load_attr} decoding="async">
 </picture>
 '''
-    return html
+    return mark_safe(html)
 
 
 @register.simple_tag

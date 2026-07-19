@@ -1,88 +1,206 @@
-<div class="availability-calendar" style="margin-top:40px;padding:30px;background:#fff;border-radius:16px;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
-    <h4 style="margin-bottom:8px;font-size:1.2rem;">
-        <i class="fas fa-calendar-alt" style="color:var(--primary-color,#1B3A4B);margin-right:8px;"></i>
-        Disponibilités
-    </h4>
-    <p style="font-size:0.85rem;color:#666;margin-bottom:20px;">
-        Calendrier indicatif — <span style="color:#dc2626;">●</span> Indisponible
-        <span style="margin-left:15px;color:#16a34a;">●</span> Disponible
-    </p>
-
-    <div class="calendar-grid" style="display:flex;flex-wrap:wrap;gap:24px;" id="calGrid">
-        <!-- Months rendered by JS -->
+{% load i18n %}
+<div class="availability-calendar" id="availabilityCalendar">
+    <div class="cal-header">
+        <div class="cal-header-left">
+            <h4><i class="fas fa-calendar-alt"></i> {% trans "Disponibilités" %}</h4>
+            <p>{% trans "Consultez les dates disponibles pour votre séjour" %}</p>
+        </div>
+        <div class="cal-legend">
+            <span class="cal-legend-item"><span class="cal-dot available"></span> {% trans "Disponible" %}</span>
+            <span class="cal-legend-item"><span class="cal-dot booked"></span> {% trans "Réservé" %}</span>
+            <span class="cal-legend-item"><span class="cal-dot past"></span> {% trans "Passé" %}</span>
+        </div>
     </div>
 
-    <div id="calLoading" style="text-align:center;padding:20px;color:#999;">
-        <i class="fas fa-spinner fa-spin"></i> Chargement…
+    <div class="cal-grid" id="calGrid"></div>
+
+    <div id="calLoading" class="cal-loading">
+        <i class="fas fa-spinner fa-spin"></i> {% trans "Chargement…" %}
     </div>
 </div>
 
 <style>
+/* ── Calendar Container ── */
+.availability-calendar {
+    margin-top: 50px;
+    padding: 0;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* ── Header ── */
+.cal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 28px 32px 20px;
+    background: linear-gradient(135deg, var(--primary-color, #1B3A4B) 0%, #234b5e 100%);
+    color: #fff;
+}
+.cal-header h4 {
+    margin: 0 0 4px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+.cal-header h4 i {
+    margin-right: 10px;
+    opacity: 0.85;
+}
+.cal-header p {
+    margin: 0;
+    font-size: 0.88rem;
+    opacity: 0.75;
+}
+
+/* ── Legend ── */
+.cal-legend {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+.cal-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+.cal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.cal-dot.available { background: #22c55e; }
+.cal-dot.booked    { background: #ef4444; }
+.cal-dot.past      { background: #d1d5db; }
+
+/* ── Grid ── */
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    padding: 8px;
+}
+@media (max-width: 992px) {
+    .cal-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 576px) {
+    .cal-grid { grid-template-columns: 1fr; }
+    .cal-header { padding: 20px 18px 16px; flex-direction: column; align-items: flex-start; }
+}
+
+/* ── Month Card ── */
 .cal-month {
-    flex:1 1 280px;
-    min-width:260px;
-    border:1px solid #e5e7eb;
-    border-radius:12px;
-    overflow:hidden;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
-.cal-month h5 {
-    background:var(--primary-color,#1B3A4B);
-    color:#fff;
-    text-align:center;
-    padding:10px;
-    margin:0;
-    font-size:0.95rem;
-    letter-spacing:0.5px;
+.cal-month:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+    transform: translateY(-2px);
 }
+
+/* ── Month Title ── */
+.cal-month-title {
+    text-align: center;
+    padding: 14px 10px 10px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--primary-color, #1B3A4B);
+    letter-spacing: 0.3px;
+    text-transform: capitalize;
+    background: #fafbfc;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* ── Day Headers ── */
 .cal-month table {
-    width:100%;
-    border-collapse:collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 .cal-month th {
-    padding:6px 0;
-    font-size:0.75rem;
-    color:#6b7280;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    border-bottom:1px solid #e5e7eb;
-    background:#f9fafb;
+    padding: 8px 0 5px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    background: transparent;
+    border: none;
 }
+
+/* ── Day Cells ── */
 .cal-month td {
-    text-align:center;
-    padding:6px 0;
-    font-size:0.85rem;
-    border-bottom:1px solid #f3f4f6;
+    text-align: center;
+    padding: 0;
+    font-size: 0.82rem;
+    font-weight: 500;
+    border: none;
+    position: relative;
+    vertical-align: middle;
 }
-.cal-month td.booked {
-    color:#dc2626;
-    font-weight:600;
-    position:relative;
+.cal-month td .day-inner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    transition: all 0.15s ease;
 }
-.cal-month td.booked::after {
-    content:'';
-    position:absolute;
-    bottom:2px;
-    left:50%;
-    transform:translateX(-50%);
-    width:5px;height:5px;
-    border-radius:50%;
-    background:#dc2626;
+
+/* ── States ── */
+.cal-month td.available .day-inner {
+    color: #16a34a;
+    background: rgba(34,197,94,0.06);
 }
-.cal-month td.available {
-    color:#16a34a;
+.cal-month td.available .day-inner:hover {
+    background: rgba(34,197,94,0.14);
 }
-.cal-month td.today {
-    font-weight:700;
-    background:#dbeafe;
-    border-radius:50%;
+.cal-month td.booked .day-inner {
+    color: #fff;
+    background: #ef4444;
+    font-weight: 700;
 }
-.cal-month td.past {
-    color:#d1d5db;
+.cal-month td.booked .day-inner:hover {
+    background: #dc2626;
+    transform: scale(1.08);
 }
-.cal-month td.weekday-header {
-    font-weight:600;
-    color:#374151;
-    background:transparent;
+.cal-month td.past .day-inner {
+    color: #d1d5db;
+    background: transparent;
+}
+.cal-month td.today .day-inner {
+    color: var(--primary-color, #1B3A4B);
+    background: var(--primary-color, #1B3A4B);
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 2px 8px rgba(27,58,75,0.25);
+}
+.cal-month td.empty {
+    background: transparent;
+}
+
+/* ── Loading ── */
+.cal-loading {
+    text-align: center;
+    padding: 30px;
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+.cal-loading i {
+    margin-right: 8px;
 }
 </style>
 
@@ -98,7 +216,6 @@
         for (var i = 0; i < bookedRanges.length; i++) {
             var start = new Date(bookedRanges[i].start);
             var end = new Date(bookedRanges[i].end);
-            // end date is checkout, so < end (not <=)
             if (ts >= start.getTime() && ts < end.getTime()) {
                 return true;
             }
@@ -114,28 +231,24 @@
 
         var firstDay = new Date(year, month, 1);
         var lastDay = new Date(year, month + 1, 0);
-        var startDow = firstDay.getDay(); // 0=Sun
-        // Convert to Monday=0: Sun=6, Mon=0, Tue=1...
+        var startDow = firstDay.getDay();
         startDow = (startDow === 0) ? 6 : startDow - 1;
 
-        // Adjust: if startDow is 0 (Monday) then first row starts on Monday
-        // French calendar: Lundi first
+        var totalDays = lastDay.getDate();
+
         var html = '<div class="cal-month">';
-        html += '<h5>' + monthNames[month] + ' ' + year + '</h5>';
+        html += '<div class="cal-month-title">' + monthNames[month] + ' ' + year + '</div>';
         html += '<table><thead><tr>';
         for (var d = 0; d < 7; d++) {
             html += '<th>' + dayNames[d] + '</th>';
         }
         html += '</tr></thead><tbody><tr>';
 
-        var day = 1;
-        var totalDays = lastDay.getDate();
-
-        // Empty cells before first day
         for (var i = 0; i < startDow; i++) {
-            html += '<td></td>';
+            html += '<td class="empty"></td>';
         }
 
+        var day = 1;
         while (day <= totalDays) {
             var dateObj = new Date(year, month, day);
             var classes = '';
@@ -144,21 +257,27 @@
                 classes = 'past';
             } else if (dateObj.getTime() === today.getTime()) {
                 classes = 'today';
+            } else if (isBooked(day, month, year)) {
+                classes = 'booked';
+            } else {
+                classes = 'available';
             }
 
-            if (isBooked(day, month, year) && classes !== 'past') {
-                classes = classes ? classes + ' booked' : 'booked';
-            } else if (classes !== 'past' && classes !== 'today') {
-                classes = classes ? classes + ' available' : 'available';
-            }
-
-            html += '<td class="' + classes + '">' + day + '</td>';
+            html += '<td class="' + classes + '"><span class="day-inner">' + day + '</span></td>';
 
             var dow = (startDow + day) % 7;
-            if (dow === 6) { // Saturday, end of week
+            if (dow === 6 && day < totalDays) {
                 html += '</tr><tr>';
             }
             day++;
+        }
+
+        // Fill remaining cells in last row
+        var lastDow = (startDow + totalDays) % 7;
+        if (lastDow !== 0) {
+            for (var r = lastDow; r < 7; r++) {
+                html += '<td class="empty"></td>';
+            }
         }
 
         html += '</tr></tbody></table></div>';
@@ -170,7 +289,6 @@
     var currentYear = now.getFullYear();
 
     var html = '';
-    // Show current month + next 5 months (6 months total)
     for (var m = 0; m < 6; m++) {
         var month = (currentMonth + m) % 12;
         var year = currentYear + Math.floor((currentMonth + m) / 12);
