@@ -32,8 +32,8 @@
         {% if not msg.is_read %}<span class="badge-status badge-unread">Nouveau</span>{% endif %}
       </div>
       <div class="msg-preview" style="margin-top:2px;">
-        <strong>{{ msg.name }}</strong> — {{ msg.created_at|date:"d/m/Y H:i" }}
-        {% if msg.message %}<span style="margin-left:8px;color:#94a3b8;">{{ msg.message|truncatechars:80 }}</span>{% endif %}
+        <strong>{{ msg.first_name }} {{ msg.last_name }}</strong> — {{ msg.created_at|date:"d/m/Y H:i" }}
+        {% if msg.message|truncatechars:80 %}<span style="margin-left:8px;color:#94a3b8;">{{ msg.message|truncatechars:80 }}</span>{% endif %}
       </div>
     </div>
     <div style="display:flex;align-items:center;gap:8px;">

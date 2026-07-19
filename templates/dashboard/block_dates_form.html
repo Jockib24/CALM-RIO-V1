@@ -3,17 +3,49 @@
 {% block content %}
 {% with section='calendar' %}
 
-<h2 style="font-size:1.5rem;font-weight:600;margin-bottom:24px;">Bloquer des dates</h2>
+<div style="margin-bottom:24px;">
+  <a href="{% url 'dashboard:booking_calendar' %}" style="color:var(--db-text-light);text-decoration:none;font-size:0.9rem;">
+    <i class="fas fa-arrow-left"></i> Retour au calendrier
+  </a>
+</div>
 
 <form method="post" class="db-form">
   {% csrf_token %}
-  <p class="help-text">Utilisez ce formulaire pour bloquer des dates pour la maintenance ou un usage personnel.</p>
-  
-  {{ form.as_p }}
-  
-  <div style="margin-top:24px;">
-    <button type="submit" class="btn btn-accent">Bloquer les dates</button>
-    <a href="{% url 'dashboard:booking_calendar' %}" class="btn btn-outline">Retour au calendrier</a>
+  <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:24px;">Bloquer des dates</h2>
+
+  <p class="help-text" style="margin-bottom:24px;">
+    Utilisez ce formulaire pour bloquer des dates sur une propriété (maintenance, travaux, usage personnel, etc.).
+    Les dates bloquées apparaîtront dans le calendrier et ne seront plus disponibles à la réservation.
+  </p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 20px;">
+    <div>
+      <label for="id_unit">Propriété</label>
+      <select name="unit" id="id_unit" required>
+        {% for prop in form.unit.field.queryset %}
+        <option value="{{ prop.pk }}">{{ prop.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div></div>
+    <div>
+      <label for="id_start_date">Date de début</label>
+      <input type="date" name="start_date" id="id_start_date" required>
+    </div>
+    <div>
+      <label for="id_end_date">Date de fin</label>
+      <input type="date" name="end_date" id="id_end_date" required>
+    </div>
+  </div>
+
+  <div>
+    <label for="id_reason">Motif (optionnel)</label>
+    <input type="text" name="reason" id="id_reason" placeholder="ex: Maintenance, travaux, usage personnel...">
+  </div>
+
+  <div style="display:flex;gap:10px;margin-top:24px;">
+    <button type="submit" class="btn-submit"><i class="fas fa-ban"></i> Bloquer les dates</button>
+    <a href="{% url 'dashboard:booking_calendar' %}" class="btn btn-outline">Annuler</a>
   </div>
 </form>
 

@@ -375,6 +375,59 @@
     .btn-danger:hover { background: #dc2626; }
     .btn-success { background: var(--db-success); color: #fff; }
     .btn-success:hover { background: #059669; }
+    .btn-filter {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+      text-decoration: none;
+      line-height: 1.4;
+      background: var(--db-primary);
+      color: #fff;
+    }
+    .btn-filter:hover { background: #122a36; }
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+      background: var(--db-accent);
+      color: #fff;
+    }
+    .btn-submit:hover { background: #b08840; }
+
+    /* ── Table variations ── */
+    .db-table { background: var(--db-surface); border-radius: var(--db-radius); box-shadow: var(--db-shadow); }
+    .badge-status {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+    .badge-status.badge-pending { background: #fef3c7; color: #92400e; }
+    .badge-status.badge-confirmed { background: #d1fae5; color: #065f46; }
+    .badge-status.badge-cancelled { background: #fee2e2; color: #991b1b; }
+    .badge-status.badge-completed { background: #dbeafe; color: #1e40af; }
+    .badge-status.badge-unread { background: #fef3c7; color: #92400e; }
+    .badge-status.badge-draft { background: #f1f5f9; color: #475569; }
+    .badge-status.badge-published { background: #d1fae5; color: #065f46; }
+    .badge-status.badge-hidden { background: #fef3c7; color: #92400e; }
+    .badge-status.badge-active { background: #d1fae5; color: #065f46; }
+    .badge-status.badge-inactive { background: #fee2e2; color: #991b1b; }
 
     /* ── Forms ── */
     .db-form {

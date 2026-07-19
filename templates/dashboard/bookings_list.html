@@ -1,4 +1,5 @@
 {% extends "dashboard/base.html" %}
+{% load dashboard_tags %}
 {% block content %}
 {% with section='bookings' %}
 
@@ -14,12 +15,12 @@
   {% for val, label in status_choices %}
   <a href="?status={{ val }}" style="text-decoration:none;color:inherit;">
     <div class="stat-card" style="padding:12px 20px;{% if current_status == val %}border:2px solid var(--db-primary);{% endif %}">
-      <div style="font-size:1.25rem;font-weight:700;">{{ status_counts|dictsort:val }}</div>
+      <div style="font-size:1.25rem;font-weight:700;">{{ status_counts|get_item:val|default:"0" }}</div>
       <div style="font-size:0.75rem;color:var(--db-text-light);">{{ label }}</div>
     </div>
   </a>
   {% endfor %}
-  <a href="." style="text-decoration:none;color:inherit;">
+  <a href="{% url 'dashboard:bookings' %}" style="text-decoration:none;color:inherit;">
     <div class="stat-card" style="padding:12px 20px;{% if not current_status %}border:2px solid var(--db-primary);{% endif %}">
       <div style="font-size:1.25rem;font-weight:700;">{{ bookings.paginator.count }}</div>
       <div style="font-size:0.75rem;color:var(--db-text-light);">Toutes</div>

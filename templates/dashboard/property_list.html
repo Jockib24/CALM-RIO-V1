@@ -72,7 +72,7 @@
             <a href="{% url 'dashboard:property_edit' p.pk %}" class="btn btn-outline btn-sm" title="Modifier">
               <i class="fas fa-edit"></i>
             </a>
-            <form method="post" action="{% url 'dashboard:property_delete' p.pk %}" onsubmit="return confirm('Supprimer « {{ p.name }} » ? Cette action est irréversible.')" style="display:inline;">
+            <form method="post" action="{% url 'dashboard:property_delete' p.pk %}" onsubmit="return confirm('Supprimer « {{ p.name|escapejs }} » ? Cette action est irréversible.')" style="display:inline;">
               {% csrf_token %}
               <button type="submit" class="btn btn-danger btn-sm" title="Supprimer">
                 <i class="fas fa-trash"></i>

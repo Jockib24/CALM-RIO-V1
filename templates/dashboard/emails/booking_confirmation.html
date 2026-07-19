@@ -17,13 +17,13 @@
   </tr>
   <tr style="background:#f8fafc;">
     <td style="padding:8px 12px;color:#64748b;font-weight:600;white-space:nowrap;vertical-align:top;">Arrivée</td>
-    <td style="padding:8px 12px;"><strong>{{ booking.check_in|date:"l d F Y" }}</strong><br>
+    <td style="padding:8px 12px;"><strong>{{ booking.check_in|date:"d/m/Y" }}</strong><br>
       <span style="font-size:0.8rem;color:#64748b;">À partir de {{ booking.unit.check_in_time|default:"16h00" }}</span>
     </td>
   </tr>
   <tr>
     <td style="padding:8px 12px;color:#64748b;font-weight:600;white-space:nowrap;vertical-align:top;">Départ</td>
-    <td style="padding:8px 12px;"><strong>{{ booking.check_out|date:"l d F Y" }}</strong><br>
+    <td style="padding:8px 12px;"><strong>{{ booking.check_out|date:"d/m/Y" }}</strong><br>
       <span style="font-size:0.8rem;color:#64748b;">Avant {{ booking.unit.check_out_time|default:"10h00" }}</span>
     </td>
   </tr>

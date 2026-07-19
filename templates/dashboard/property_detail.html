@@ -16,7 +16,7 @@
     <a href="{% url 'dashboard:property_edit' prop.pk %}" class="btn btn-accent btn-sm">
       <i class="fas fa-edit"></i> Modifier
     </a>
-    <form method="post" action="{% url 'dashboard:property_delete' prop.pk %}" onsubmit="return confirm('Supprimer « {{ prop.name }} » ?')" style="display:inline;">
+    <form method="post" action="{% url 'dashboard:property_delete' prop.pk %}" onsubmit="return confirm('Supprimer « {{ prop.name|escapejs }} » ?')" style="display:inline;">
       {% csrf_token %}
       <button type="submit" class="btn btn-danger btn-sm">
         <i class="fas fa-trash"></i> Supprimer

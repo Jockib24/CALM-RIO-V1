@@ -40,7 +40,7 @@
   </div>
 
   {% for code, label in languages %}
-  {% with trans=object.translations|default:"{}" %}
+  {% with trans=object.translations|default:None %}
   <div class="lang-panel {% if forloop.first %}active{% endif %}" id="lang-{{ code }}">
     <div style="margin-bottom:16px;">
       <label for="trans_{{ code }}">{{ label }}</label>

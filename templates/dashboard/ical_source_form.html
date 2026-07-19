@@ -43,10 +43,10 @@
   </div>
 
   <div style="margin-bottom:24px;">
-    <label>
-      <input type="checkbox" name="is_active" id="id_is_active" {% if form.is_active.value or not form.is_active.value == False %}checked{% endif %}>
-      Actif
+    <label style="display:flex;align-items:center;gap:8px;font-weight:500;cursor:pointer;">
+      {{ form.is_active }} Actif
     </label>
+    <div class="help-text">Décochez pour désactiver temporairement la synchronisation</div>
   </div>
 
   <button type="submit" class="btn-submit">

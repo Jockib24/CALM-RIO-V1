@@ -40,7 +40,7 @@
       </div>
       <div>
         <div style="font-size:0.8rem;color:var(--db-text-light);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Revenu mensuel</div>
-        <div style="font-size:1.75rem;font-weight:700;margin-top:4px;">{{ month_revenue }} €</div>
+        <div style="font-size:1.75rem;font-weight:700;margin-top:4px;">{{ month_revenue|floatformat:2 }} €</div>
         <div style="font-size:0.85rem;color:var(--db-text-light);">toutes propriétés</div>
       </div>
       <div>
@@ -111,7 +111,7 @@
       <a href="{% url 'dashboard:message_detail' msg.pk %}" class="msg-list-item {% if not msg.is_read %}unread{% endif %}">
         <div>
           <div class="msg-subject">{{ msg.subject }}</div>
-          <div class="msg-preview">{{ msg.name }} — {{ msg.created_at|date:"d/m/Y H:i" }}</div>
+          <div class="msg-preview">{{ msg.first_name }} {{ msg.last_name }} — {{ msg.created_at|date:"d/m/Y H:i" }}</div>
         </div>
         <i class="fas fa-chevron-right" style="color:var(--db-text-light);font-size:0.8rem;"></i>
       </a>
