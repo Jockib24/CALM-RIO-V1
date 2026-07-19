@@ -132,7 +132,14 @@ class Property(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("properties:detail", kwargs={"slug": self.slug})
+        # Map known slugs to static view URL names (DB-backed detail view not yet active)
+        static_urls = {
+            "royan-appartement": "properties:royan_appartement",
+            "saint-trojan-villa": "properties:saint_trojan_villa",
+            "saint-trojan-maison": "properties:saint_trojan_maison",
+        }
+        url_name = static_urls.get(self.slug, "properties:royan_appartement")
+        return reverse(url_name)
 
     def save(self, *args, **kwargs):
         if not self.slug:

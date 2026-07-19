@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 venv/
+scripts/venv/
+wslvenv/
 *.egg-info/
 dist/
 build/
@@ -27,3 +29,6 @@ Thumbs.db
 # Environment
 .env
 .env.local
+
+# MemPalace
+entities.json

@@ -20,6 +20,12 @@ urlpatterns = [
         views.SaintTrojanMaisonView.as_view(),
         name="saint_trojan_maison",
     ),
+    # Public booking request
+    path(
+        "reserver/",
+        views.BookingRequestView.as_view(),
+        name="booking_request",
+    ),
     # Database-backed views (enable once DB is populated via admin)
     # path("", views.PropertyListView.as_view(), name="list"),
     # path("<slug:slug>/", views.PropertyDetailView.as_view(), name="detail"),

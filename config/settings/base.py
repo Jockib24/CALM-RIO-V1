@@ -79,6 +79,15 @@ DATABASES = {
     }
 }
 
+# Caching — database-backed (no external service required)
+# For Redis in production, switch to django_redis.cache.RedisCache
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.db.DatabaseCache",
+        "LOCATION": "django_cache",
+    }
+}
+
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {

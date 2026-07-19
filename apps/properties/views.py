@@ -1,12 +1,19 @@
 import json
+import logging
 from datetime import date, timedelta
 
-from django.shortcuts import get_object_or_404
+from django.conf import settings
+from django.contrib import messages
+from django.core.mail import send_mail
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse
 from django.utils import timezone
-from django.views.generic import ListView, DetailView, TemplateView
+from django.views.generic import ListView, DetailView, TemplateView, FormView
 
+from .forms import BookingRequestForm
 from .models import Property, Booking, BlockedPeriod
+
+logger = logging.getLogger(__name__)
 
 
 class PropertyListView(ListView):
@@ -136,6 +143,7 @@ class RoyanAppartementView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context.update(_get_property_context("royan-appartement"))
+        context["today"] = date.today()
         return context
 
 
@@ -145,6 +153,7 @@ class SaintTrojanVillaView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context.update(_get_property_context("saint-trojan-villa"))
+        context["today"] = date.today()
         return context
 
 
@@ -154,4 +163,81 @@ class SaintTrojanMaisonView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context.update(_get_property_context("saint-trojan-maison"))
+        context["today"] = date.today()
         return context
+
+
+class BookingRequestView(FormView):
+    """Handle public booking requests from property pages."""
+
+    form_class = BookingRequestForm
+    http_method_names = ["post"]
+
+    def form_valid(self, form):
+        slug = form.cleaned_data["property_slug"]
+        prop = get_object_or_404(Property, slug=slug, status="published")
+
+        # Calculate total price (approximate: base_price * nights)
+        nights = (form.cleaned_data["check_out"] - form.cleaned_data["check_in"]).days
+        total_price = prop.base_price * nights
+        if prop.cleaning_fee:
+            total_price += prop.cleaning_fee
+
+        booking = Booking.objects.create(
+            first_name=form.cleaned_data["first_name"],
+            last_name=form.cleaned_data.get("last_name", ""),
+            email=form.cleaned_data["email"],
+            phone=form.cleaned_data.get("phone", ""),
+            unit=prop,
+            check_in=form.cleaned_data["check_in"],
+            check_out=form.cleaned_data["check_out"],
+            guests=form.cleaned_data["guests"],
+            total_price=total_price,
+            status="pending",
+            source="direct",
+            notes=form.cleaned_data.get("message", ""),
+        )
+
+        # Email notification to admin
+        try:
+            send_mail(
+                subject=f"CalmRio — Nouvelle demande de réservation: {prop.name}",
+                message=(
+                    f"De: {booking.first_name} {booking.last_name}\n"
+                    f"Email: {booking.email}\n"
+                    f"Téléphone: {booking.phone}\n"
+                    f"Logement: {prop.name}\n"
+                    f"Arrivée: {booking.check_in}\n"
+                    f"Départ: {booking.check_out}\n"
+                    f"Voyageurs: {booking.guests}\n"
+                    f"Total estimé: {total_price}€\n\n"
+                    f"Message:\n{booking.notes}"
+                ),
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[settings.CONTACT_EMAIL],
+                fail_silently=True,
+            )
+        except Exception as e:
+            logger.warning("Failed to send booking notification email: %s", e)
+
+        messages.success(
+            self.request,
+            "Merci pour votre demande de réservation ! Nous vous répondrons "
+            "dans les plus brefs délais pour confirmer votre séjour.",
+        )
+        return redirect(prop.get_absolute_url())
+
+    def form_invalid(self, form):
+        # Extract the slug from the form to redirect back
+        slug = form.data.get("property_slug", "")
+        prop = get_object_or_404(Property, slug=slug, status="published")
+
+        for error in form.non_field_errors():
+            messages.error(self.request, error)
+        for field, errors in form.errors.items():
+            if field == "__all__":
+                continue
+            for error in errors:
+                messages.error(self.request, f"{form.fields[field].label}: {error}")
+
+        return redirect(prop.get_absolute_url())

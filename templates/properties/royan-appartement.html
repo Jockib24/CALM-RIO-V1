@@ -5,6 +5,13 @@
 
 {% block extra_head %}
     {% include "properties/_schema.html" %}
+    <style>
+        .booking-form-widget .form-group { margin-bottom:15px; }
+        .booking-form-widget label { font-size:0.85rem; font-weight:600; color:var(--heading-color); margin-bottom:4px; display:block; }
+        .booking-form-widget .form-control { font-size:0.9rem; border-radius:8px; border:1px solid var(--border-color); padding:10px 14px; }
+        .booking-form-widget .form-control:focus { border-color:var(--primary-color); box-shadow:0 0 0 2px rgba(27,58,75,0.1); }
+        .booking-form-widget .theme-btn { width:100%; padding:14px; font-size:1rem; border-radius:10px; }
+    </style>
 {% endblock %}
 
 {% block hreflang %}
@@ -149,17 +156,55 @@
                             </div>
                             <div class="col-xl-4">
                                 <div class="room-sidebar-area sticky-widget mt-5 mt-xl-0">
-                                    <div class="room-sidebar-widget room-booking-widget mb-40" data-aos="fade-up" data-aos-duration="800">
-                                        <h4 class="widget-title">{% trans "Réserver ce logement" %}</h4>
+                                    <div class="room-sidebar-widget room-booking-widget mb-40 booking-form-widget" data-aos="fade-up" data-aos-duration="800">
+                                        <h4 class="widget-title">{% trans "Demande de réservation" %}</h4>
                                         <div class="widget-content">
-                                            <p style="margin-bottom:20px;font-size:0.95rem;">{% blocktranslate %}Pour réserver ou pour toute demande d'information, contactez-nous directement.{% endblocktranslate %}</p>
-                                            <div class="form-group">
-                                                <a href="{% url 'pages:contact' %}" class="theme-btn style-one" style="display:block;text-align:center;">{% trans "Nous contacter" %} <i class="far fa-arrow-right"></i></a>
+                                            {% if messages %}
+                                            {% for message in messages %}
+                                            <div class="alert alert-{% if message.tags == 'success' %}success{% elif message.tags == 'error' %}danger{% else %}info{% endif %} alert-dismissible fade show" role="alert" style="font-size:0.85rem;padding:10px 14px;border-radius:8px;">
+                                                {{ message }}
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="font-size:0.7rem;"></button>
                                             </div>
+                                            {% endfor %}
+                                            {% endif %}
+                                            <form method="post" action="{% url 'properties:booking_request' %}">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="property_slug" value="royan-appartement">
+                                                <div class="form-group">
+                                                    <label for="id_check_in">{% trans "Arrivée" %}</label>
+                                                    <input type="date" name="check_in" id="id_check_in" class="form-control" required min="{{ today|date:'Y-m-d' }}">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="id_check_out">{% trans "Départ" %}</label>
+                                                    <input type="date" name="check_out" id="id_check_out" class="form-control" required min="{{ today|date:'Y-m-d' }}">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="id_guests">{% trans "Voyageurs" %}</label>
+                                                    <input type="number" name="guests" id="id_guests" class="form-control" value="2" min="1" max="20">
+                                                </div>
+                                                <hr style="margin:15px 0;opacity:0.3;">
+                                                <div class="form-group">
+                                                    <label for="id_first_name">{% trans "Prénom" %}</label>
+                                                    <input type="text" name="first_name" id="id_first_name" class="form-control" placeholder="{% trans 'Votre prénom' %}" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="id_email">{% trans "Email" %}</label>
+                                                    <input type="email" name="email" id="id_email" class="form-control" placeholder="votre@email.com" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="id_phone">{% trans "Téléphone" %}</label>
+                                                    <input type="text" name="phone" id="id_phone" class="form-control" placeholder="+33 6 00 00 00 00">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="id_message">{% trans "Message (optionnel)" %}</label>
+                                                    <textarea name="message" id="id_message" class="form-control" rows="2" placeholder="{% trans 'Questions ou demandes particulières...' %}"></textarea>
+                                                </div>
+                                                <button type="submit" class="theme-btn style-one">{% trans "Envoyer ma demande" %} <i class="far fa-arrow-right"></i></button>
+                                            </form>
                                             <div style="margin-top:15px;padding-top:15px;border-top:1px solid var(--border-color);">
                                                 <p style="font-size:0.85rem;color:var(--text-color);margin-bottom:5px;"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> {% trans "Meilleur prix garanti" %}</p>
                                                 <p style="font-size:0.85rem;color:var(--text-color);margin-bottom:5px;"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> {% trans "Réservation directe" %}</p>
-                                                <p style="font-size:0.85rem;color:var(--text-color);"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> {% trans "Paiement sécurisé Stripe" %}</p>
+                                                <p style="font-size:0.85rem;color:var(--text-color);"><i class="fas fa-check-circle" style="color:var(--accent-color);"></i> {% trans "Paiement sécurisé" %}</p>
                                             </div>
                                         </div>
                                     </div>
