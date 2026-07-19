@@ -2,6 +2,10 @@
 {% load static %}
 {% load i18n %}
 
+{% block extra_head %}
+    {% include "properties/_schema.html" %}
+{% endblock %}
+
 {% block title %}{% trans "Appartement neuf 4 pers — 100m Grande Conche — Royan" %} | CalmRio{% endblock %}
 {% block meta_description %}{% blocktranslate %}Location vacances Royan : appartement neuf 60m², 2 chambres, terrasse 20m², à 100m de la Grande Conche. Parking, wifi, espace télétravail. Réservez directement.{% endblocktranslate %}{% endblock %}
 {% block og_title %}{% trans "Royan — Appartement 100m de la Grande Conche" %} | CalmRio{% endblock %}
@@ -358,4 +362,6 @@
                     </div>
                 </div>
             </section>
+
+            {% include "properties/_calendar.html" %}
 {% endblock %}

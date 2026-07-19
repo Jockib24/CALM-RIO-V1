@@ -2,6 +2,10 @@
 {% load static %}
 {% load i18n %}
 
+{% block extra_head %}
+    {% include "properties/_schema.html" %}
+{% endblock %}
+
 {% block title %}{% trans "Villa neuve 6 pers Oléron — jardin clos & terrasses | Saint-Trojan" %} | CalmRio{% endblock %}
 {% block meta_description %}{% blocktranslate %}Villa neuve 110m² à Saint-Trojan-les-Bains pour 6 personnes. Jardin clos, 2 terrasses, plage à vélo, télétravail, animaux acceptés. Réservez en direct.{% endblocktranslate %}{% endblock %}
 {% block og_title %}{% trans "Villa 6 pers Saint-Trojan — Jardin clos & terrasses" %} | CalmRio{% endblock %}
@@ -639,4 +643,6 @@
                     </div>
                 </div>
             </section>
+
+            {% include "properties/_calendar.html" %}
 {% endblock %}

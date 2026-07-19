@@ -5,6 +5,11 @@
 {% block title %}{% blocktranslate %}CalmRio — Locations de vacances premium | Royan & Île d'Oléron{% endblocktranslate %}{% endblock %}
 
 {% block content %}
+{% if home_schema_ld %}
+<script type="application/ld+json">
+{{ home_schema_ld|safe }}
+</script>
+{% endif %}
             <!--======  Start Hero Section  ======-->
             <section class="luxivo-hero">
                 <div class="luxivo-hero_three p-r z-1" style="background:var(--primary-color,#1B3A4B);">

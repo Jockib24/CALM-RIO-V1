@@ -2,6 +2,10 @@
 {% load static %}
 {% load i18n %}
 
+{% block extra_head %}
+    {% include "properties/_schema.html" %}
+{% endblock %}
+
 {% block title %}{% trans "Maison de village 6 pers — cour privée | Saint-Trojan" %} | CalmRio{% endblock %}
 {% block meta_description %}{% blocktranslate %}Maison de village 75m² rénovée à Saint-Trojan-les-Bains pour 6 personnes. Cour privée, 3 chambres, à 10 min des plages. Proche pistes cyclables. Réservez en direct.{% endblocktranslate %}{% endblock %}
 {% block og_title %}{% trans "Maison 6 pers Saint-Trojan — Cour privée" %} | CalmRio{% endblock %}
@@ -507,4 +511,6 @@
                     </div>
                 </div>
             </section>
+
+            {% include "properties/_calendar.html" %}
 {% endblock %}

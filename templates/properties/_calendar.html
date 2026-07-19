@@ -1,0 +1,183 @@
+<div class="availability-calendar" style="margin-top:40px;padding:30px;background:#fff;border-radius:16px;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+    <h4 style="margin-bottom:8px;font-size:1.2rem;">
+        <i class="fas fa-calendar-alt" style="color:var(--primary-color,#1B3A4B);margin-right:8px;"></i>
+        Disponibilités
+    </h4>
+    <p style="font-size:0.85rem;color:#666;margin-bottom:20px;">
+        Calendrier indicatif — <span style="color:#dc2626;">●</span> Indisponible
+        <span style="margin-left:15px;color:#16a34a;">●</span> Disponible
+    </p>
+
+    <div class="calendar-grid" style="display:flex;flex-wrap:wrap;gap:24px;" id="calGrid">
+        <!-- Months rendered by JS -->
+    </div>
+
+    <div id="calLoading" style="text-align:center;padding:20px;color:#999;">
+        <i class="fas fa-spinner fa-spin"></i> Chargement…
+    </div>
+</div>
+
+<style>
+.cal-month {
+    flex:1 1 280px;
+    min-width:260px;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    overflow:hidden;
+}
+.cal-month h5 {
+    background:var(--primary-color,#1B3A4B);
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    margin:0;
+    font-size:0.95rem;
+    letter-spacing:0.5px;
+}
+.cal-month table {
+    width:100%;
+    border-collapse:collapse;
+}
+.cal-month th {
+    padding:6px 0;
+    font-size:0.75rem;
+    color:#6b7280;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    border-bottom:1px solid #e5e7eb;
+    background:#f9fafb;
+}
+.cal-month td {
+    text-align:center;
+    padding:6px 0;
+    font-size:0.85rem;
+    border-bottom:1px solid #f3f4f6;
+}
+.cal-month td.booked {
+    color:#dc2626;
+    font-weight:600;
+    position:relative;
+}
+.cal-month td.booked::after {
+    content:'';
+    position:absolute;
+    bottom:2px;
+    left:50%;
+    transform:translateX(-50%);
+    width:5px;height:5px;
+    border-radius:50%;
+    background:#dc2626;
+}
+.cal-month td.available {
+    color:#16a34a;
+}
+.cal-month td.today {
+    font-weight:700;
+    background:#dbeafe;
+    border-radius:50%;
+}
+.cal-month td.past {
+    color:#d1d5db;
+}
+.cal-month td.weekday-header {
+    font-weight:600;
+    color:#374151;
+    background:transparent;
+}
+</style>
+
+<script>
+(function() {
+    var bookedRanges = {{ booked_dates_json|safe }};
+    var calGrid = document.getElementById('calGrid');
+    var calLoading = document.getElementById('calLoading');
+
+    function isBooked(day, month, year) {
+        var d = new Date(year, month, day);
+        var ts = d.getTime();
+        for (var i = 0; i < bookedRanges.length; i++) {
+            var start = new Date(bookedRanges[i].start);
+            var end = new Date(bookedRanges[i].end);
+            // end date is checkout, so < end (not <=)
+            if (ts >= start.getTime() && ts < end.getTime()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function renderMonth(month, year) {
+        var monthNames = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+        var dayNames = ['Lu','Ma','Me','Je','Ve','Sa','Di'];
+        var today = new Date();
+        today.setHours(0,0,0,0);
+
+        var firstDay = new Date(year, month, 1);
+        var lastDay = new Date(year, month + 1, 0);
+        var startDow = firstDay.getDay(); // 0=Sun
+        // Convert to Monday=0: Sun=6, Mon=0, Tue=1...
+        startDow = (startDow === 0) ? 6 : startDow - 1;
+
+        // Adjust: if startDow is 0 (Monday) then first row starts on Monday
+        // French calendar: Lundi first
+        var html = '<div class="cal-month">';
+        html += '<h5>' + monthNames[month] + ' ' + year + '</h5>';
+        html += '<table><thead><tr>';
+        for (var d = 0; d < 7; d++) {
+            html += '<th>' + dayNames[d] + '</th>';
+        }
+        html += '</tr></thead><tbody><tr>';
+
+        var day = 1;
+        var totalDays = lastDay.getDate();
+
+        // Empty cells before first day
+        for (var i = 0; i < startDow; i++) {
+            html += '<td></td>';
+        }
+
+        while (day <= totalDays) {
+            var dateObj = new Date(year, month, day);
+            var classes = '';
+
+            if (dateObj < today) {
+                classes = 'past';
+            } else if (dateObj.getTime() === today.getTime()) {
+                classes = 'today';
+            }
+
+            if (isBooked(day, month, year) && classes !== 'past') {
+                classes = classes ? classes + ' booked' : 'booked';
+            } else if (classes !== 'past' && classes !== 'today') {
+                classes = classes ? classes + ' available' : 'available';
+            }
+
+            html += '<td class="' + classes + '">' + day + '</td>';
+
+            var dow = (startDow + day) % 7;
+            if (dow === 6) { // Saturday, end of week
+                html += '</tr><tr>';
+            }
+            day++;
+        }
+
+        html += '</tr></tbody></table></div>';
+        return html;
+    }
+
+    var now = new Date();
+    var currentMonth = now.getMonth();
+    var currentYear = now.getFullYear();
+
+    var html = '';
+    // Show current month + next 5 months (6 months total)
+    for (var m = 0; m < 6; m++) {
+        var month = (currentMonth + m) % 12;
+        var year = currentYear + Math.floor((currentMonth + m) / 12);
+        html += renderMonth(month, year);
+    }
+
+    calGrid.innerHTML = html;
+    if (calLoading) calLoading.style.display = 'none';
+})();
+</script>
