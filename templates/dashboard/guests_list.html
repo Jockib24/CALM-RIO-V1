@@ -1,9 +1,9 @@
 {% extends "dashboard/base.html" %}
-{% block page_title %}Répertoire des invités{% endblock %}
+{% block page_title %}Répertoire des voyageurs{% endblock %}
 {% block content %}
 {% with section='guests' %}
 
-<h2 style="font-size:1.5rem;font-weight:600;margin-bottom:24px;">Répertoire des invités</h2>
+<h2 style="font-size:1.5rem;font-weight:600;margin-bottom:24px;">Répertoire des voyageurs</h2>
 
 <div class="filter-bar">
   <form method="get" style="display:flex;gap:10px;">
@@ -32,14 +32,14 @@
         <td>{{ guest.first_name }} {{ guest.last_name }}</td>
         <td>{{ guest.email }}</td>
         <td>{{ guest.phone|default:"-" }}</td>
-        <td>{{ guest.booking_count }}</td>
-        <td>{{ guest.total_spent }} €</td>
-        <td>{{ guest.last_booking_date|date:"d/m/Y"|default:"-" }}</td>
-        <td><a href="{% url 'dashboard:guest_detail' guest.pk %}" class="btn btn-sm btn-outline">Détails</a></td>
+        <td>{{ guest.total_bookings }}</td>
+        <td>{{ guest.total_spent|floatformat:0 }} €</td>
+        <td>{{ guest.last_booking|date:"d/m/Y"|default:"-" }}</td>
+        <td><a href="{% url 'dashboard:guest_detail' guest.email %}" class="btn btn-sm btn-outline">Détails</a></td>
       </tr>
       {% empty %}
       <tr>
-        <td colspan="7" class="empty-state">Aucun invité trouvé.</td>
+        <td colspan="7" style="text-align:center;padding:32px;color:var(--db-text-muted);">Aucun voyageur trouvé.</td>
       </tr>
       {% endfor %}
     </tbody>

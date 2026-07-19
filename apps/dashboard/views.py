@@ -129,6 +129,26 @@ class DashboardHomeView(DashboardLoginRequiredMixin, TemplateView):
             status__in=["confirmed", "completed"],
         ).aggregate(total=Sum("total_price"))["total"] or Decimal("0")
 
+        # Occupancy rate for current month (booked nights / total available nights)
+        _, days_in_month = monthrange(today.year, today.month)
+        month_end = today.replace(day=days_in_month)
+        total_props = Property.objects.filter(status="published").count()
+        if total_props > 0:
+            total_nights = days_in_month * total_props
+            booked_nights = 0
+            month_bookings = Booking.objects.filter(
+                check_in__lt=month_end,
+                check_out__gt=month_start,
+                status__in=["confirmed", "completed"],
+            )
+            for b in month_bookings:
+                start = max(b.check_in, month_start)
+                end = min(b.check_out, month_end)
+                booked_nights += (end - start).days
+            ctx["occupancy_rate"] = round(booked_nights / total_nights * 100)
+        else:
+            ctx["occupancy_rate"] = 0
+
         return ctx
 
 

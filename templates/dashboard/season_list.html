@@ -27,15 +27,18 @@
         <td>{{ season.unit.name }}</td>
         <td>{{ season.start_date|date:"d/m/Y" }}</td>
         <td>{{ season.end_date|date:"d/m/Y" }}</td>
-        <td>{{ season.nightly_price }} €</td>
+        <td>{% if season.nightly_price %}{{ season.nightly_price }} €{% else %}Prix de base{% endif %}</td>
         <td>
           <a href="{% url 'dashboard:season_edit' season.pk %}" class="btn btn-sm btn-outline">Modifier</a>
-          <a href="{% url 'dashboard:season_delete' season.pk %}" class="btn btn-sm btn-danger">Supprimer</a>
+          <form method="post" action="{% url 'dashboard:season_delete' season.pk %}" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Supprimer cette saison ?')">Supprimer</button>
+          </form>
         </td>
       </tr>
       {% empty %}
       <tr>
-        <td colspan="6" class="empty-state">Aucune saison configurée.</td>
+        <td colspan="6" style="text-align:center;padding:32px;color:var(--db-text-muted);">Aucune saison configurée.</td>
       </tr>
       {% endfor %}
     </tbody>
