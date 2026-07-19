@@ -12,9 +12,7 @@
             <div class="col-lg-8">
                 <div class="page-content text-center" style="padding:120px 0 60px;">
                     <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);">{% trans "Mentions légales" %}</h1>
-                    <ul style="list-style:none;padding:0;display:flex;justify-content:center;gap:10px;color:rgba(255,255,255,0.7);font-size:0.9rem;margin-top:15px;">
-                        <li><a href="{% url 'home:index' %}" style="color:var(--accent-color,#C49A5A);">{% trans "Accueil" %}</a></li><li>/</li><li>{% trans "Mentions légales" %}</li>
-                    </ul>
+                    {% include "components/breadcrumbs.html" %}
                 </div>
             </div>
         </div>

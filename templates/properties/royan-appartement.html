@@ -32,11 +32,7 @@
                             <div class="page-content text-center" style="padding:140px 0 70px;">
                                 <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);">{% trans "Appartement — 100m de la Grande Conche" %}</h1>
                                 <p style="color:rgba(255,255,255,0.85);font-size:1.1rem;margin:15px 0 10px;">{% trans "Royan, Nouvelle-Aquitaine" %}</p>
-                                <ul style="list-style:none;padding:0;display:flex;justify-content:center;gap:10px;color:rgba(255,255,255,0.7);font-size:0.9rem;">
-                                    <li><a href="{% url 'home:index' %}" style="color:var(--accent-color,#C49A5A);">{% trans "Accueil" %}</a></li>
-                                    <li>/</li>
-                                    <li>{% trans "Royan — Appartement" %}</li>
-                                </ul>
+                                {% include "components/breadcrumbs.html" %}
                             </div>
                         </div>
                     </div>
@@ -232,182 +228,182 @@
                     <div class="row g-3" id="gallery-royan">
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
                             <a href="{% static 'images/properties/royan-appartement/face-bathroom-glass-shower-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bathroom-glass-shower-01.webp' %}" alt="Bathroom Glass Shower" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bathroom-glass-shower-01.webp' %}" alt="Bathroom Glass Shower" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
                             <a href="{% static 'images/properties/royan-appartement/face-bathroom-stone-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bathroom-stone-01.webp' %}" alt="Bathroom Stone" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bathroom-stone-01.webp' %}" alt="Bathroom Stone" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
                             <a href="{% static 'images/properties/royan-appartement/face-bathroom-stone-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bathroom-stone-02.webp' %}" alt="Bathroom Stone" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bathroom-stone-02.webp' %}" alt="Bathroom Stone" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
                             <a href="{% static 'images/properties/royan-appartement/face-beach-buoys-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-beach-buoys-01.webp' %}" alt="Beach Buoys" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-beach-buoys-01.webp' %}" alt="Beach Buoys" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
                             <a href="{% static 'images/properties/royan-appartement/face-beach-people-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-beach-people-01.webp' %}" alt="Beach People" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-beach-people-01.webp' %}" alt="Beach People" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
                             <a href="{% static 'images/properties/royan-appartement/face-beach-view-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-beach-view-01.webp' %}" alt="Beach View" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-beach-view-01.webp' %}" alt="Beach View" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
                             <a href="{% static 'images/properties/royan-appartement/face-bedroom-anchor-pillow-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-anchor-pillow-01.webp' %}" alt="Bedroom Anchor Pillow" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-anchor-pillow-01.webp' %}" alt="Bedroom Anchor Pillow" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
                             <a href="{% static 'images/properties/royan-appartement/face-bedroom-blue-striped-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-blue-striped-01.webp' %}" alt="Bedroom Blue Striped" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-blue-striped-01.webp' %}" alt="Bedroom Blue Striped" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
                             <a href="{% static 'images/properties/royan-appartement/face-bedroom-blue-white-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-blue-white-01.webp' %}" alt="Bedroom Blue White" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-blue-white-01.webp' %}" alt="Bedroom Blue White" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
                             <a href="{% static 'images/properties/royan-appartement/face-bedroom-blue-white-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-blue-white-02.webp' %}" alt="Bedroom Blue White" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-blue-white-02.webp' %}" alt="Bedroom Blue White" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
                             <a href="{% static 'images/properties/royan-appartement/face-bedroom-blue-white-03.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-blue-white-03.webp' %}" alt="Bedroom Blue White" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-blue-white-03.webp' %}" alt="Bedroom Blue White" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
                             <a href="{% static 'images/properties/royan-appartement/face-bedroom-lighthouse-art-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-lighthouse-art-01.webp' %}" alt="Bedroom Lighthouse Art" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-lighthouse-art-01.webp' %}" alt="Bedroom Lighthouse Art" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
                             <a href="{% static 'images/properties/royan-appartement/face-bedroom-nautical-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-nautical-01.webp' %}" alt="Bedroom Nautical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-nautical-01.webp' %}" alt="Bedroom Nautical" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
                             <a href="{% static 'images/properties/royan-appartement/face-bedroom-nautical-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-nautical-02.webp' %}" alt="Bedroom Nautical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-nautical-02.webp' %}" alt="Bedroom Nautical" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
                             <a href="{% static 'images/properties/royan-appartement/face-bedroom-nautical-03.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-nautical-03.webp' %}" alt="Bedroom Nautical" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-nautical-03.webp' %}" alt="Bedroom Nautical" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
                             <a href="{% static 'images/properties/royan-appartement/face-bedroom-twin-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-twin-01.webp' %}" alt="Bedroom Twin" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-twin-01.webp' %}" alt="Bedroom Twin" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
                             <a href="{% static 'images/properties/royan-appartement/face-bedroom-white-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-white-01.webp' %}" alt="Bedroom White" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-bedroom-white-01.webp' %}" alt="Bedroom White" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
                             <a href="{% static 'images/properties/royan-appartement/face-exterior-blue-shutters-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-exterior-blue-shutters-01.webp' %}" alt="Exterior Blue Shutters" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-exterior-blue-shutters-01.webp' %}" alt="Exterior Blue Shutters" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
                             <a href="{% static 'images/properties/royan-appartement/face-exterior-garden-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-exterior-garden-01.webp' %}" alt="Exterior Garden" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-exterior-garden-01.webp' %}" alt="Exterior Garden" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
                             <a href="{% static 'images/properties/royan-appartement/face-exterior-red-roof-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-exterior-red-roof-01.webp' %}" alt="Exterior Red Roof" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-exterior-red-roof-01.webp' %}" alt="Exterior Red Roof" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
                             <a href="{% static 'images/properties/royan-appartement/face-exterior-yellow-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-exterior-yellow-01.webp' %}" alt="Exterior Yellow" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-exterior-yellow-01.webp' %}" alt="Exterior Yellow" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
                             <a href="{% static 'images/properties/royan-appartement/face-exterior-yellow-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-exterior-yellow-02.webp' %}" alt="Exterior Yellow" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-exterior-yellow-02.webp' %}" alt="Exterior Yellow" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
                             <a href="{% static 'images/properties/royan-appartement/face-garden-deckchairs-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-garden-deckchairs-01.webp' %}" alt="Garden Deckchairs" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-garden-deckchairs-01.webp' %}" alt="Garden Deckchairs" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
                             <a href="{% static 'images/properties/royan-appartement/face-garden-palm-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-garden-palm-01.webp' %}" alt="Garden Palm" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-garden-palm-01.webp' %}" alt="Garden Palm" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
                             <a href="{% static 'images/properties/royan-appartement/face-garden-palm-02.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-garden-palm-02.webp' %}" alt="Garden Palm" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-garden-palm-02.webp' %}" alt="Garden Palm" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
                             <a href="{% static 'images/properties/royan-appartement/face-garden-path-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-garden-path-01.webp' %}" alt="Garden Path" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-garden-path-01.webp' %}" alt="Garden Path" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
                             <a href="{% static 'images/properties/royan-appartement/face-harbor-ferris-wheel-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-harbor-ferris-wheel-01.webp' %}" alt="Harbor Ferris Wheel" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-harbor-ferris-wheel-01.webp' %}" alt="Harbor Ferris Wheel" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
                             <a href="{% static 'images/properties/royan-appartement/face-ice-cream-cart-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-ice-cream-cart-01.webp' %}" alt="Ice Cream Cart" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-ice-cream-cart-01.webp' %}" alt="Ice Cream Cart" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
                             <a href="{% static 'images/properties/royan-appartement/face-living-accents-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-living-accents-01.webp' %}" alt="Living Accents" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-living-accents-01.webp' %}" alt="Living Accents" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
                             <a href="{% static 'images/properties/royan-appartement/face-living-blue-white-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-living-blue-white-01.webp' %}" alt="Living Blue White" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-living-blue-white-01.webp' %}" alt="Living Blue White" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
                             <a href="{% static 'images/properties/royan-appartement/face-living-fireplace-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-living-fireplace-01.webp' %}" alt="Living Fireplace" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-living-fireplace-01.webp' %}" alt="Living Fireplace" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
                             <a href="{% static 'images/properties/royan-appartement/face-living-french-doors-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-living-french-doors-01.webp' %}" alt="Living French Doors" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-living-french-doors-01.webp' %}" alt="Living French Doors" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="600">
                             <a href="{% static 'images/properties/royan-appartement/face-living-white-brick-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-living-white-brick-01.webp' %}" alt="Living White Brick" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-living-white-brick-01.webp' %}" alt="Living White Brick" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="700">
                             <a href="{% static 'images/properties/royan-appartement/face-sign-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-sign-01.webp' %}" alt="Sign" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-sign-01.webp' %}" alt="Sign" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="800">
                             <a href="{% static 'images/properties/royan-appartement/face-street-sea-view-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-street-sea-view-01.webp' %}" alt="Street Sea View" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-street-sea-view-01.webp' %}" alt="Street Sea View" style="border-radius:8px;">
                             </a>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 property-gallery-item" data-aos="fade-up" data-aos-duration="900">
                             <a href="{% static 'images/properties/royan-appartement/face-vacances-pillow-01.webp' %}" class="gallery-popup">
-                                <img src="{% static 'images/properties/royan-appartement/face-vacances-pillow-01.webp' %}" alt="Vacances Pillow" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+                                <img src="{% static 'images/properties/royan-appartement/face-vacances-pillow-01.webp' %}" alt="Vacances Pillow" style="border-radius:8px;">
                             </a>
                         </div>
                     </div>

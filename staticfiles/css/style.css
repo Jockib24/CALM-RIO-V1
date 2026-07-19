@@ -3262,6 +3262,9 @@ label {
 .luxivo-service-item.style-one:hover .service-content .icon {
   background-color: var(--primary-color);
 }
+.luxivo-service-item.style-one:hover .service-content .icon i {
+  color: #fff;
+}
 .luxivo-service-item.style-one:hover .service-content .icon img {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
@@ -3298,6 +3301,16 @@ label {
   margin-right: 15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+.luxivo-service-item.style-one .service-content .icon {
+  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.luxivo-service-item.style-one .service-content .icon i {
+  color: var(--primary-color);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 .luxivo-service-item.style-one .service-content .icon img {
   -webkit-transition: -webkit-filter 0.3s ease;
@@ -4367,7 +4380,12 @@ label {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 30px;
+  gap: 24px;
+}
+@media (max-width: 767.98px) {
+  .luxivo-room-item.style-three .room-image {
+    gap: 12px;
+  }
 }
 @media screen and (max-width: 1199.98px) {
   .luxivo-room-item.style-three .room-image {
@@ -4379,19 +4397,42 @@ label {
     gap: 15px;
   }
 }
-.luxivo-room-item.style-three .room-image img {
+.luxivo-room-item.style-three .room-image picture {
   border-radius: 30px;
+  overflow: hidden;
+  height: 420px;
+  display: block;
+  position: relative;
 }
-.luxivo-room-item.style-three .room-image img:nth-child(1) {
+@media (max-width: 1650px) {
+  .luxivo-room-item.style-three .room-image picture {
+    height: 360px;
+  }
+}
+@media (max-width: 767.98px) {
+  .luxivo-room-item.style-three .room-image picture {
+    height: 240px;
+  }
+}
+.luxivo-room-item.style-three .room-image picture:nth-child(1) {
   width: 40%;
 }
-.luxivo-room-item.style-three .room-image img:nth-child(2) {
+.luxivo-room-item.style-three .room-image picture:nth-child(2) {
   width: 60%;
 }
 @media (max-width: 1650px) {
-  .luxivo-room-item.style-three .room-image img:nth-child(2) {
+  .luxivo-room-item.style-three .room-image picture:nth-child(2) {
     width: 55%;
   }
+}
+.luxivo-room-item.style-three .room-image picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.luxivo-room-item.style-three .room-image picture:hover img {
+  transform: scale(1.08);
 }
 .luxivo-room-item.style-three .room-content {
   padding-left: 25px;
@@ -6630,15 +6671,15 @@ label {
 }
 
 .text-logo-light {
-  color: #fff;
-  background: linear-gradient(135deg, #ffffff 0%, #E8C98A 50%, #ffffff 100%);
+  color: #C49A5A;
+  background: linear-gradient(135deg, #C49A5A 0%, #E8C98A 50%, #C49A5A 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .text-logo-dark {
-  color: #1B3A4B;
+  color: #C49A5A;
   background: linear-gradient(135deg, #1B3A4B 0%, #C49A5A 50%, #1B3A4B 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -6652,4 +6693,123 @@ label {
 @media (max-width: 767.98px) {
   .text-logo { font-size: 1.4rem; }
   .brand-logo .text-logo { font-size: 1.5rem; }
+}
+
+/* ═══════════════════════════════════════════
+   MEGA MENU — Enhanced dropdown for "Nos Locations"
+   ═══════════════════════════════════════════ */
+.header-navigation .main-menu ul > li.mega-menu {
+  position: relative;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu {
+  width: 480px;
+  padding: 16px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  left: -50%;
+  border-radius: 12px;
+}
+@media (max-width: 1399.98px) {
+  .header-navigation .main-menu ul > li.mega-menu > .sub-menu {
+    left: -80px;
+  }
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 24px;
+  line-height: 1.4;
+  border-radius: 8px;
+  margin: 2px 6px;
+  transition: all 0.2s ease;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a:hover {
+  background: rgba(27, 58, 75, 0.06);
+  margin-left: 6px;
+  padding-left: 30px;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a .mm-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(27, 58, 75, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--primary-color, #1B3A4B);
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a:hover .mm-icon {
+  background: var(--primary-color, #1B3A4B);
+  color: #fff;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a .mm-content {
+  display: flex;
+  flex-direction: column;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a .mm-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--heading-color);
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a .mm-desc {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 400;
+  margin-top: 1px;
+}
+
+/* ═══════════════════════════════════════════
+   LANGUAGE SWITCHER — Enhanced dropdown
+   ═══════════════════════════════════════════ */
+.luxivo-language-dropdown .dropdown {
+  min-width: 160px;
+  padding: 8px 6px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+.luxivo-language-dropdown .dropdown li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.luxivo-language-dropdown .dropdown li a:hover {
+  background: rgba(27, 58, 75, 0.06);
+  padding-left: 20px;
+}
+
+/* ═══════════════════════════════════════════
+   HERO — Compact with flex centering
+   ═══════════════════════════════════════════ */
+.luxivo-hero .luxivo-hero_three {
+  padding: 40px 0 !important;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1650px) {
+  .luxivo-hero .luxivo-hero_three {
+    padding: 30px 0 !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  .luxivo-hero .luxivo-hero_three {
+    padding: 20px 0 !important;
+    min-height: auto;
+    display: block;
+  }
 }

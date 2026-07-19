@@ -102,6 +102,36 @@
             .gallery-toggle-btn i { transition:transform 0.3s ease; }
             .gallery-toggle-btn.expanded i { transform:rotate(180deg); }
             /* Property card images on homepage — uses original template CSS (.room-image flex gap) */
+            /* Breadcrumb navigation */
+            .calmrio-breadcrumb {
+                list-style: none;
+                padding: 0;
+                margin: 15px 0 0;
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                color: rgba(255,255,255,0.7);
+                font-size: 0.9rem;
+                flex-wrap: wrap;
+            }
+            .calmrio-breadcrumb .breadcrumb-item {}
+            .calmrio-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+                content: "/";
+                margin-right: 8px;
+                color: rgba(255,255,255,0.4);
+            }
+            .calmrio-breadcrumb .breadcrumb-item a {
+                color: var(--accent-color, #C49A5A);
+                text-decoration: none;
+                transition: opacity 0.2s ease;
+            }
+            .calmrio-breadcrumb .breadcrumb-item a:hover {
+                opacity: 0.8;
+                text-decoration: underline;
+            }
+            .calmrio-breadcrumb .breadcrumb-item.active {
+                color: rgba(255,255,255,0.7);
+            }
         </style>
     {% if structured_data_json %}
     <script type="application/ld+json">
