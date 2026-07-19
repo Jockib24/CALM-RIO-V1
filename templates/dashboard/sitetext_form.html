@@ -1,0 +1,61 @@
+{% extends "dashboard/base.html" %}
+{% load static dashboard_tags %}
+{% block page_title %}{{ title }}{% endblock %}
+{% block content %}
+
+<div style="margin-bottom:24px;">
+  <a href="{% url 'dashboard:sitetext_list' %}" style="color:var(--db-text-light);text-decoration:none;font-size:0.9rem;">
+    <i class="fas fa-arrow-left"></i> Retour aux textes du site
+  </a>
+</div>
+
+<form method="post" class="db-form">
+  {% csrf_token %}
+
+  <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:24px;">{{ title }}</h2>
+
+  <div style="margin-bottom:20px;">
+    <label for="{{ form.key.id_for_label }}">Clé</label>
+    {{ form.key }}
+    <div class="help-text">Identifiant unique, ex: 'hero_title', 'about_intro'</div>
+  </div>
+
+  <div style="margin-bottom:20px;">
+    <label for="{{ form.label.id_for_label }}">Libellé</label>
+    {{ form.label }}
+    <div class="help-text">Description lisible de ce champ</div>
+  </div>
+
+  <hr style="border:none;border-top:1px solid var(--db-border);margin:24px 0;">
+
+  <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;">Traductions</h3>
+
+  <!-- Language tabs -->
+  <div class="lang-tabs">
+    {% for code, label in languages %}
+    <button type="button" class="lang-tab {% if forloop.first %}active{% endif %}" data-lang="{{ code }}">
+      {{ label }}
+    </button>
+    {% endfor %}
+  </div>
+
+  {% for code, label in languages %}
+  {% with trans=object.translations|default:"{}" %}
+  <div class="lang-panel {% if forloop.first %}active{% endif %}" id="lang-{{ code }}">
+    <div style="margin-bottom:16px;">
+      <label for="trans_{{ code }}">{{ label }}</label>
+      <textarea name="trans_{{ code }}" id="trans_{{ code }}" rows="4" placeholder="Contenu en {{ label }}">{% if trans|get_item:code %}{{ trans|get_item:code }}{% endif %}</textarea>
+    </div>
+  </div>
+  {% endwith %}
+  {% endfor %}
+
+  <div style="display:flex;gap:10px;margin-top:32px;">
+    <button type="submit" class="btn btn-accent">
+      <i class="fas fa-save"></i> Enregistrer
+    </button>
+    <a href="{% url 'dashboard:sitetext_list' %}" class="btn btn-outline">Annuler</a>
+  </div>
+</form>
+
+{% endblock %}

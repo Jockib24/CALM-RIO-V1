@@ -167,11 +167,35 @@
                             <nav class="main-menu">
                                 <ul>
                                     <li class="menu-item{% block nav_home_active %}{% endblock %}"><a href="{% url 'home:index' %}">{% trans "Accueil" %}</a></li>
-                                    <li class="menu-item has-children"><a href="#">{% trans "Nos Locations" %}</a>
+                                    <li class="menu-item has-children mega-menu"><a href="#">{% trans "Nos Locations" %}</a>
                                         <ul class="sub-menu">
-                                            <li><a href="{% url 'properties:royan_appartement' %}">{% trans "Royan — Appartement" %}</a></li>
-                                            <li><a href="{% url 'properties:saint_trojan_villa' %}">{% trans "Saint-Trojan — Villa" %}</a></li>
-                                            <li><a href="{% url 'properties:saint_trojan_maison' %}">{% trans "Saint-Trojan — Maison" %}</a></li>
+                                            <li>
+                                                <a href="{% url 'properties:royan_appartement' %}">
+                                                    <span class="mm-icon"><i class="fas fa-building"></i></span>
+                                                    <span class="mm-content">
+                                                        <span class="mm-title">{% trans "Royan — Appartement" %}</span>
+                                                        <span class="mm-desc">{% trans "Vue mer, 100m de la plage" %}</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'properties:saint_trojan_villa' %}">
+                                                    <span class="mm-icon"><i class="fas fa-home"></i></span>
+                                                    <span class="mm-content">
+                                                        <span class="mm-title">{% trans "Saint-Trojan — Villa" %}</span>
+                                                        <span class="mm-desc">{% trans "Jardin clos, 6 pers, terrasses" %}</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'properties:saint_trojan_maison' %}">
+                                                    <span class="mm-icon"><i class="fas fa-tree"></i></span>
+                                                    <span class="mm-content">
+                                                        <span class="mm-title">{% trans "Saint-Trojan — Maison" %}</span>
+                                                        <span class="mm-desc">{% trans "Familiale, jardin arboré" %}</span>
+                                                    </span>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="menu-item"><a href="{% url 'pages:local_guide' %}">{% trans "Guide Local" %}</a></li>

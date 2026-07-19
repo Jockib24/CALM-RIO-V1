@@ -4367,7 +4367,12 @@ label {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 30px;
+  gap: 24px;
+}
+@media (max-width: 767.98px) {
+  .luxivo-room-item.style-three .room-image {
+    gap: 12px;
+  }
 }
 @media screen and (max-width: 1199.98px) {
   .luxivo-room-item.style-three .room-image {
@@ -4381,6 +4386,18 @@ label {
 }
 .luxivo-room-item.style-three .room-image img {
   border-radius: 30px;
+  height: 420px;
+  object-fit: cover;
+}
+@media (max-width: 1650px) {
+  .luxivo-room-item.style-three .room-image img {
+    height: 360px;
+  }
+}
+@media (max-width: 767.98px) {
+  .luxivo-room-item.style-three .room-image img {
+    height: 240px;
+  }
 }
 .luxivo-room-item.style-three .room-image img:nth-child(1) {
   width: 40%;
@@ -6652,4 +6669,123 @@ label {
 @media (max-width: 767.98px) {
   .text-logo { font-size: 1.4rem; }
   .brand-logo .text-logo { font-size: 1.5rem; }
+}
+
+/* ═══════════════════════════════════════════
+   MEGA MENU — Enhanced dropdown for "Nos Locations"
+   ═══════════════════════════════════════════ */
+.header-navigation .main-menu ul > li.mega-menu {
+  position: relative;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu {
+  width: 480px;
+  padding: 16px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  left: -50%;
+  border-radius: 12px;
+}
+@media (max-width: 1399.98px) {
+  .header-navigation .main-menu ul > li.mega-menu > .sub-menu {
+    left: -80px;
+  }
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 24px;
+  line-height: 1.4;
+  border-radius: 8px;
+  margin: 2px 6px;
+  transition: all 0.2s ease;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a:hover {
+  background: rgba(27, 58, 75, 0.06);
+  margin-left: 6px;
+  padding-left: 30px;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a .mm-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(27, 58, 75, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--primary-color, #1B3A4B);
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a:hover .mm-icon {
+  background: var(--primary-color, #1B3A4B);
+  color: #fff;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a .mm-content {
+  display: flex;
+  flex-direction: column;
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a .mm-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--heading-color);
+}
+.header-navigation .main-menu ul > li.mega-menu > .sub-menu li a .mm-desc {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 400;
+  margin-top: 1px;
+}
+
+/* ═══════════════════════════════════════════
+   LANGUAGE SWITCHER — Enhanced dropdown
+   ═══════════════════════════════════════════ */
+.luxivo-language-dropdown .dropdown {
+  min-width: 160px;
+  padding: 8px 6px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+.luxivo-language-dropdown .dropdown li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.luxivo-language-dropdown .dropdown li a:hover {
+  background: rgba(27, 58, 75, 0.06);
+  padding-left: 20px;
+}
+
+/* ═══════════════════════════════════════════
+   HERO — Compact with flex centering
+   ═══════════════════════════════════════════ */
+.luxivo-hero .luxivo-hero_three {
+  padding: 40px 0 !important;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1650px) {
+  .luxivo-hero .luxivo-hero_three {
+    padding: 30px 0 !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  .luxivo-hero .luxivo-hero_three {
+    padding: 20px 0 !important;
+    min-height: auto;
+    display: block;
+  }
 }

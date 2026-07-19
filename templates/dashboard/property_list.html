@@ -1,0 +1,120 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% block page_title %}Propriétés{% endblock %}
+{% block content %}
+
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
+  <h2 style="font-size:1.5rem;font-weight:600;">Propriétés</h2>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;">
+    <a href="{% url 'dashboard:property_stats' %}" class="btn btn-outline btn-sm">
+      <i class="fas fa-chart-bar"></i> Statistiques
+    </a>
+    <a href="{% url 'dashboard:property_create' %}" class="btn btn-accent btn-sm">
+      <i class="fas fa-plus"></i> Nouvelle propriété
+    </a>
+  </div>
+</div>
+
+<!-- Filter bar -->
+<div class="filter-bar">
+  <form method="get" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+    <select name="status" onchange="this.form.submit()">
+      <option value="">Tous les statuts</option>
+      {% for val, label in status_choices %}
+      <option value="{{ val }}" {% if current_status == val %}selected{% endif %}>{{ label }}</option>
+      {% endfor %}
+    </select>
+    {% if current_status %}
+    <a href="{% url 'dashboard:property_list' %}" class="btn btn-outline btn-sm">
+      <i class="fas fa-times"></i> Effacer filtre
+    </a>
+    {% endif %}
+  </form>
+</div>
+
+<!-- Table -->
+<div class="db-table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th style="width:40px;">#</th>
+        <th>Nom</th>
+        <th>Statut</th>
+        <th>Ville</th>
+        <th>Prix / nuit</th>
+        <th>Images</th>
+        <th style="width:160px;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in properties %}
+      <tr>
+        <td style="color:var(--db-text-light);">{{ p.order }}</td>
+        <td>
+          <strong>{{ p.name }}</strong>
+          {% if p.featured %}<span class="badge badge-published" style="margin-left:6px;">En avant</span>{% endif %}
+        </td>
+        <td><span class="badge badge-{{ p.status }}">{{ p.get_status_display }}</span></td>
+        <td>{{ p.city }}</td>
+        <td><strong>{{ p.base_price }} {{ p.currency }}</strong></td>
+        <td>
+          {% with img_count=p.images.count %}
+          <span style="color:var(--db-text-light);font-size:0.8rem;">
+            <i class="fas fa-image"></i> {{ img_count }}
+          </span>
+          {% endwith %}
+        </td>
+        <td>
+          <div style="display:flex;gap:4px;">
+            <a href="{% url 'dashboard:property_detail' p.pk %}" class="btn btn-outline btn-sm" title="Voir">
+              <i class="fas fa-eye"></i>
+            </a>
+            <a href="{% url 'dashboard:property_edit' p.pk %}" class="btn btn-outline btn-sm" title="Modifier">
+              <i class="fas fa-edit"></i>
+            </a>
+            <form method="post" action="{% url 'dashboard:property_delete' p.pk %}" onsubmit="return confirm('Supprimer « {{ p.name }} » ? Cette action est irréversible.')" style="display:inline;">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-danger btn-sm" title="Supprimer">
+                <i class="fas fa-trash"></i>
+              </button>
+            </form>
+          </div>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="7">
+          <div class="empty-state">
+            <i class="fas fa-building"></i>
+            <p>Aucune propriété pour le moment.</p>
+            <a href="{% url 'dashboard:property_create' %}" class="btn btn-accent" style="margin-top:12px;">
+              <i class="fas fa-plus"></i> Créer une propriété
+            </a>
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Pagination -->
+{% if page_obj.paginator.num_pages > 1 %}
+<div class="pagination">
+  {% if page_obj.has_previous %}
+  <a href="?page={{ page_obj.previous_page_number }}{% if current_status %}&status={{ current_status }}{% endif %}">« Précédent</a>
+  {% endif %}
+  {% for num in page_obj.paginator.page_range %}
+  {% if num == page_obj.number %}
+  <span class="current">{{ num }}</span>
+  {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+  <a href="?page={{ num }}{% if current_status %}&status={{ current_status }}{% endif %}">{{ num }}</a>
+  {% endif %}
+  {% endfor %}
+  {% if page_obj.has_next %}
+  <a href="?page={{ page_obj.next_page_number }}{% if current_status %}&status={{ current_status }}{% endif %}">Suivant »</a>
+  {% endif %}
+</div>
+{% endif %}
+
+{% endblock %}

@@ -1,5 +1,58 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.core.cache import cache
+
+
+class SiteText(models.Model):
+    """A site-wide translatable text snippet (hero title, section intro, etc.)."""
+
+    key = models.SlugField(
+        _("Clé"),
+        max_length=100,
+        unique=True,
+        help_text="Identifiant unique (ex: 'hero_title', 'about_intro')",
+    )
+    label = models.CharField(
+        _("Libellé"),
+        max_length=200,
+        help_text="Description lisible de ce champ dans l'admin",
+    )
+    translations = models.JSONField(
+        _("Traductions"),
+        default=dict,
+        blank=True,
+        help_text="Contenu multilingue — {'fr': 'Bonjour', 'en': 'Hello'}",
+    )
+    updated_at = models.DateTimeField(_("Mis à jour le"), auto_now=True)
+
+    class Meta:
+        verbose_name = _("Texte du site")
+        verbose_name_plural = _("Textes du site")
+        ordering = ["key"]
+
+    def __str__(self):
+        return self.label or self.key
+
+    def get_text(self, lang="fr"):
+        """Get the text for a given language, fallback to first available."""
+        if isinstance(self.translations, dict):
+            val = self.translations.get(lang)
+            if val:
+                return val
+            # fallback to any available translation
+            for v in self.translations.values():
+                if v:
+                    return v
+        return ""
+
+    def save(self, *args, **kwargs):
+        # Invalidate cache on save
+        cache.delete(f"sitetext_{self.key}")
+        super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        cache.delete(f"sitetext_{self.key}")
+        super().delete(*args, **kwargs)
 
 
 class ContactMessage(models.Model):

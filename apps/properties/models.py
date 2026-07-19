@@ -70,6 +70,14 @@ class Property(models.Model):
         "Surface", max_length=100, blank=True, help_text="ex: '60 m² + 20 m²'"
     )
 
+    # Translations (multi-language content)
+    translations = models.JSONField(
+        "Traductions",
+        default=dict,
+        blank=True,
+        help_text="Contenu multilingue — {'fr': {'name': '...', 'subtitle': '...'}, 'en': {'name': '...'}}",
+    )
+
     # Pricing
     base_price = models.DecimalField(
         "Prix de base / nuit", max_digits=8, decimal_places=2, default=0

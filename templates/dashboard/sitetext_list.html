@@ -1,0 +1,102 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% block page_title %}Textes du site{% endblock %}
+{% block content %}
+
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
+  <h2 style="font-size:1.5rem;font-weight:600;">Textes du site</h2>
+</div>
+
+<p style="color:var(--db-text-light);font-size:0.9rem;margin-bottom:20px;">
+  Gérez les textes affichés sur le site (titres de sections, introductions, etc.). 
+  Chaque texte peut être traduit dans plusieurs langues.
+</p>
+
+<div class="db-table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Clé</th>
+        <th>Libellé</th>
+        <th>FR</th>
+        <th>EN</th>
+        <th>DE</th>
+        <th>NL</th>
+        <th style="width:80px;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for t in texts %}
+      <tr>
+        <td><code style="font-size:0.8rem;background:var(--db-bg);padding:2px 6px;border-radius:4px;">{{ t.key }}</code></td>
+        <td><strong>{{ t.label }}</strong></td>
+        {% with trans=t.translations|default:"{}" %}
+        <td>
+          {% if trans.fr %}
+          <span class="lang-badge has-translation"><i class="fas fa-check"></i></span>
+          {% else %}
+          <span class="lang-badge missing-translation"><i class="fas fa-times"></i></span>
+          {% endif %}
+        </td>
+        <td>
+          {% if trans.en %}
+          <span class="lang-badge has-translation"><i class="fas fa-check"></i></span>
+          {% else %}
+          <span class="lang-badge missing-translation"><i class="fas fa-times"></i></span>
+          {% endif %}
+        </td>
+        <td>
+          {% if trans.de %}
+          <span class="lang-badge has-translation"><i class="fas fa-check"></i></span>
+          {% else %}
+          <span class="lang-badge missing-translation"><i class="fas fa-times"></i></span>
+          {% endif %}
+        </td>
+        <td>
+          {% if trans.nl %}
+          <span class="lang-badge has-translation"><i class="fas fa-check"></i></span>
+          {% else %}
+          <span class="lang-badge missing-translation"><i class="fas fa-times"></i></span>
+          {% endif %}
+        </td>
+        {% endwith %}
+        <td>
+          <a href="{% url 'dashboard:sitetext_edit' t.pk %}" class="btn btn-outline btn-sm">
+            <i class="fas fa-edit"></i>
+          </a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="7">
+          <div class="empty-state">
+            <i class="fas fa-file-alt"></i>
+            <p>Aucun texte configuré.</p>
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Pagination -->
+{% if page_obj.paginator.num_pages > 1 %}
+<div class="pagination">
+  {% if page_obj.has_previous %}
+  <a href="?page={{ page_obj.previous_page_number }}">« Précédent</a>
+  {% endif %}
+  {% for num in page_obj.paginator.page_range %}
+  {% if num == page_obj.number %}
+  <span class="current">{{ num }}</span>
+  {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+  <a href="?page={{ num }}">{{ num }}</a>
+  {% endif %}
+  {% endfor %}
+  {% if page_obj.has_next %}
+  <a href="?page={{ page_obj.next_page_number }}">Suivant »</a>
+  {% endif %}
+</div>
+{% endif %}
+
+{% endblock %}
