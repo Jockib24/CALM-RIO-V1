@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
+{% load responsive_images %}
 
 {% block extra_head %}
     {% include "properties/_schema.html" %}
+{% endblock %}
+
+{% block hreflang %}
+    <link rel="alternate" hreflang="x-default" href="https://calm-rio.com{{ request.path }}">
+    <link rel="alternate" hreflang="fr" href="https://calm-rio.com{{ request.path }}">
 {% endblock %}
 
 {% block title %}{% trans "Villa neuve 6 pers Oléron — jardin clos & terrasses | Saint-Trojan" %} | CalmRio{% endblock %}
@@ -32,11 +38,11 @@
                 <div class="container">
                     <div class="row g-3">
                         <div class="col-md-8" data-aos="fade-up" data-aos-duration="800">
-                            <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp' %}" alt="{% trans 'Villa Saint-Trojan extérieur' %}" style="width:100%;border-radius:12px;height:100%;object-fit:cover;min-height:350px;">
+                            {% gallery_image "images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp" alt="Villa Saint-Trojan extérieur" css_class="room-img" %}
                         </div>
                         <div class="col-md-4" data-aos="fade-up" data-aos-duration="800">
-                            <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp' %}" alt="{% trans 'Villa Saint-Trojan salon' %}" style="width:100%;border-radius:12px;margin-bottom:12px;height:calc(50% - 6px);object-fit:cover;">
-                            <img src="{% static 'images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-01.webp' %}" alt="{% trans 'Villa Saint-Trojan jardin' %}" style="width:100%;border-radius:12px;height:calc(50% - 6px);object-fit:cover;">
+                            {% gallery_image "images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp" alt="Villa Saint-Trojan salon" css_class="room-img" %}
+                            {% gallery_image "images/properties/saint-trojan-villa/latelier-garden-pergola-curtains-01.webp" alt="Villa Saint-Trojan jardin" css_class="room-img" %}
                         </div>
                     </div>
                 </div>

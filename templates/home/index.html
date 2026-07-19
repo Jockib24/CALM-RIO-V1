@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
+{% load responsive_images %}
+{% load responsive_images %}
 
 {% block title %}{% blocktranslate %}CalmRio — Locations de vacances premium | Royan & Île d'Oléron{% endblocktranslate %}{% endblock %}
 
@@ -47,7 +49,7 @@
                             </div>
                             <div class="col-xl-6 d-none d-xl-block">
                                 <div class="hero-image-wrapper" style="padding:10px 0;">
-                                    <img src="{% static 'images/properties/royan-appartement/face-exterior-yellow-01.webp' %}" alt="CalmRio — Appartement Royan" style="width:100%;border-radius:12px;max-height:400px;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+                                    {% hero_image "images/properties/royan-appartement/face-exterior-yellow-01.webp" alt="CalmRio — Appartement Royan" css_class="hero-img" %}
                                 </div>
                             </div>
                         </div>
@@ -178,8 +180,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-7">
                                     <div class="room-image">
-                                        <img src="{% static 'images/properties/royan-appartement/face-living-blue-white-01.webp' %}" data-aos="fade-up" data-aos-duration="800" alt="Appartement Royan Grande Conche" onerror="this.style.display='none'">
-                                        <img src="{% static 'images/properties/royan-appartement/face-exterior-yellow-01.webp' %}" data-aos="fade-up" data-aos-duration="1000" alt="Appartement Royan extérieur" onerror="this.style.display='none'">
+                                        {% gallery_image "images/properties/royan-appartement/face-living-blue-white-01.webp" alt="Appartement Royan Grande Conche" css_class="room-img" %}
+                                        {% gallery_image "images/properties/royan-appartement/face-exterior-yellow-01.webp" alt="Appartement Royan extérieur" css_class="room-img" %}
                                     </div>
                                 </div>
                                 <div class="col-lg-5">
@@ -225,8 +227,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-7">
                                     <div class="room-image">
-                                        <img src="{% static 'images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp' %}" data-aos="fade-up" data-aos-duration="800" alt="Villa Lazure Saint-Trojan intérieur" onerror="this.style.display='none'">
-                                        <img src="{% static 'images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp' %}" data-aos="fade-up" data-aos-duration="1000" alt="Villa Lazure Saint-Trojan extérieur" onerror="this.style.display='none'">
+                                        {% gallery_image "images/properties/saint-trojan-villa/latelier-living-blue-sofa-01.webp" alt="Villa Lazure Saint-Trojan intérieur" css_class="room-img" %}
+                                        {% gallery_image "images/properties/saint-trojan-villa/latelier-exterior-white-brown-01.webp" alt="Villa Lazure Saint-Trojan extérieur" css_class="room-img" %}
                                     </div>
                                 </div>
                                 <div class="col-lg-5">
@@ -272,8 +274,8 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-7">
                                     <div class="room-image">
-                                        <img src="{% static 'images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-01.webp' %}" data-aos="fade-up" data-aos-duration="800" alt="Maison familiale Saint-Trojan chambre" onerror="this.style.display='none'">
-                                        <img src="{% static 'images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-01.webp' %}" data-aos="fade-up" data-aos-duration="1000" alt="Maison familiale Saint-Trojan extérieur" onerror="this.style.display='none'">
+                                        {% gallery_image "images/properties/saint-trojan-maison/cottage-grey-wallpaper-bedroom-01.webp" alt="Maison familiale Saint-Trojan chambre" css_class="room-img" %}
+                                        {% gallery_image "images/properties/saint-trojan-maison/cottage-blue-shutters-exterior-01.webp" alt="Maison familiale Saint-Trojan extérieur" css_class="room-img" %}
                                     </div>
                                 </div>
                                 <div class="col-lg-5">

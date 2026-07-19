@@ -20,6 +20,15 @@
         <meta name="twitter:title" content="{% block twitter_title %}CalmRio — Locations de vacances premium | Royan & Île d'Oléron{% endblock %}">
         <meta name="twitter:description" content="{% block twitter_description %}Appartements et maisons soigneusement aménagés à deux pas des plages de Royan et de l'île d'Oléron.{% endblock %}">
         <meta name="twitter:image" content="{% block twitter_image %}{% static 'images/properties/royan-appartement/face-beach-view-01.webp' %}{% endblock %}">
+        <!--====== hreflang tags for multi-language SEO ======-->
+        {% block hreflang %}
+        {% get_current_language as CURRENT_LANG %}
+        {% get_available_languages as AVAILABLE_LANGUAGES %}
+        <link rel="alternate" hreflang="x-default" href="https://calm-rio.com{{ request.path }}">
+        {% for lang_code, lang_name in AVAILABLE_LANGUAGES %}
+        <link rel="alternate" hreflang="{{ lang_code }}" href="https://calm-rio.com{% if lang_code != 'fr' %}/{{ lang_code }}{% endif %}{{ request.path }}">
+        {% endfor %}
+        {% endblock %}
         <!--====== Title ======-->
         <title>{% block title %}CalmRio — Locations de vacances premium | Royan & Île d'Oléron{% endblock %}</title>
         <!--====== Favicon Icon ======-->

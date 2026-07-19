@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
+{% load responsive_images %}
 
 {% block extra_head %}
     {% include "properties/_schema.html" %}
+{% endblock %}
+
+{% block hreflang %}
+    <link rel="alternate" hreflang="x-default" href="https://calm-rio.com{{ request.path }}">
+    <link rel="alternate" hreflang="fr" href="https://calm-rio.com{{ request.path }}">
 {% endblock %}
 
 {% block title %}{% trans "Appartement neuf 4 pers — 100m Grande Conche — Royan" %} | CalmRio{% endblock %}
@@ -33,11 +39,11 @@
                 <div class="container">
                     <div class="row g-3">
                         <div class="col-md-8" data-aos="fade-up" data-aos-duration="800">
-                            <img src="{% static 'images/properties/royan-appartement/face-exterior-yellow-01.webp' %}" alt="{% trans 'Appartement Royan vue extérieure' %}" style="width:100%;border-radius:12px;height:100%;object-fit:cover;min-height:350px;">
+                            {% gallery_image "images/properties/royan-appartement/face-exterior-yellow-01.webp" alt="Appartement Royan vue extérieure" css_class="w-100 rounded" %}
                         </div>
                         <div class="col-md-4" data-aos="fade-up" data-aos-duration="800">
-                            <img src="{% static 'images/properties/royan-appartement/face-living-blue-white-01.webp' %}" alt="{% trans 'Appartement Royan intérieur' %}" style="width:100%;border-radius:12px;margin-bottom:12px;height:calc(50% - 6px);object-fit:cover;">
-                            <img src="{% static 'images/properties/royan-appartement/face-beach-view-01.webp' %}" alt="{% trans 'Plage de la Grande Conche' %}" style="width:100%;border-radius:12px;height:calc(50% - 6px);object-fit:cover;">
+                            {% gallery_image "images/properties/royan-appartement/face-living-blue-white-01.webp" alt="Appartement Royan intérieur" css_class="w-100 rounded mb-2" %}
+                            {% gallery_image "images/properties/royan-appartement/face-beach-view-01.webp" alt="Plage de la Grande Conche" css_class="w-100 rounded" %}
                         </div>
                     </div>
                 </div>
