@@ -10,3 +10,5 @@ python-decouple>=3.8
 # Utilities
 django-allauth>=0.60  # Authentication (optional)
 Pillow>=10.0          # Image handling
+requests>=2.31        # HTTP client (iCal sync)
+icalendar>=5.0        # iCal parsing

@@ -560,14 +560,34 @@ class ICalSourceDeleteView(DashboardLoginRequiredMixin, View):
 class ICalSyncView(DashboardLoginRequiredMixin, View):
     """Trigger sync for a single iCal source."""
 
+    def get(self, request, *args, **kwargs):
+        """Redirect GET requests to the stats page with a notice."""
+        messages.info(request, "Utilisez le bouton « Sync » pour lancer la synchronisation.")
+        return HttpResponseRedirect(reverse_lazy("dashboard:property_stats"))
+
     def post(self, request, *args, **kwargs):
         from django.core.management import call_command
         from io import StringIO
 
         source_id = kwargs.get("pk")
-        out = StringIO()
-        call_command("sync_ical", source=source_id, clear=True, stdout=out)
-        messages.success(request, out.getvalue())
+        source = get_object_or_404(ICalSource, pk=source_id)
+
+        try:
+            out = StringIO()
+            call_command("sync_ical", source=source_id, clear=True, stdout=out)
+            result = out.getvalue()
+            messages.success(request, f"Sync terminé pour {source.name} : {result}")
+        except ImportError as e:
+            logger.error("Missing dependency for iCal sync: %s", e)
+            messages.error(
+                request,
+                "Erreur de dépendance. Contactez l'administrateur "
+                "(requests et icalendar requis).",
+            )
+        except Exception as e:
+            logger.error("iCal sync failed for source %s: %s", source_id, e)
+            messages.error(request, f"Échec de la synchronisation iCal : {e}")
+
         return HttpResponseRedirect(reverse_lazy("dashboard:property_stats"))
 
 
