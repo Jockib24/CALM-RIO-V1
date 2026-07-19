@@ -3262,6 +3262,9 @@ label {
 .luxivo-service-item.style-one:hover .service-content .icon {
   background-color: var(--primary-color);
 }
+.luxivo-service-item.style-one:hover .service-content .icon i {
+  color: #fff;
+}
 .luxivo-service-item.style-one:hover .service-content .icon img {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
@@ -3298,6 +3301,16 @@ label {
   margin-right: 15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+.luxivo-service-item.style-one .service-content .icon {
+  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.luxivo-service-item.style-one .service-content .icon i {
+  color: var(--primary-color);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 .luxivo-service-item.style-one .service-content .icon img {
   -webkit-transition: -webkit-filter 0.3s ease;
