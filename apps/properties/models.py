@@ -259,6 +259,34 @@ class ICalSource(models.Model):
         return f"{self.name} — {self.unit.name}"
 
 
+class Season(models.Model):
+    """A pricing season with custom nightly rate."""
+
+    unit = models.ForeignKey(
+        Property,
+        on_delete=models.CASCADE,
+        related_name="seasons",
+        verbose_name="Propriété",
+    )
+    name = models.CharField("Nom", max_length=100, help_text="ex: Haute saison, Pont de mai...")
+    start_date = models.DateField("Date de début")
+    end_date = models.DateField("Date de fin")
+    nightly_price = models.DecimalField(
+        "Prix par nuit (€)", max_digits=8, decimal_places=2,
+        help_text="Laissez vide pour utiliser le prix de base",
+        blank=True, null=True,
+    )
+    order = models.PositiveIntegerField("Ordre", default=0)
+
+    class Meta:
+        verbose_name = "Saison / période"
+        verbose_name_plural = "Saisons / périodes"
+        ordering = ["start_date"]
+
+    def __str__(self):
+        return f"{self.name} — {self.unit.name} ({self.start_date} → {self.end_date})"
+
+
 class BlockedPeriod(models.Model):
     """A date range during which a property is blocked (from iCal sync)."""
 

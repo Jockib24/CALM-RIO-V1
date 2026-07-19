@@ -124,6 +124,32 @@ urlpatterns = [
         views.ICalSyncView.as_view(),
         name="ical_sync",
     ),
+    # Guests
+    path("guests/", views.GuestDirectoryView.as_view(), name="guests_list"),
+    path(
+        "guests/<path:email>/",
+        views.GuestDetailView.as_view(),
+        name="guest_detail",
+    ),
+    # Seasons
+    path("seasons/", views.SeasonListView.as_view(), name="season_list"),
+    path("seasons/new/", views.SeasonCreateView.as_view(), name="season_create"),
+    path(
+        "seasons/<int:pk>/edit/",
+        views.SeasonUpdateView.as_view(),
+        name="season_edit",
+    ),
+    path(
+        "seasons/<int:pk>/delete/",
+        views.SeasonDeleteView.as_view(),
+        name="season_delete",
+    ),
+    # Quick block dates
+    path(
+        "block-dates/",
+        views.QuickBlockCreateView.as_view(),
+        name="block_dates",
+    ),
     # SiteTexts
     path("textes/", views.SiteTextListView.as_view(), name="sitetext_list"),
     path(

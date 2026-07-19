@@ -1,6 +1,14 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import Amenity, BlockedPeriod, Booking, ICalSource, Property, PropertyImage
+from .models import (
+    Amenity,
+    BlockedPeriod,
+    Booking,
+    ICalSource,
+    Property,
+    PropertyImage,
+    Season,
+)
 
 
 class PropertyImageInline(admin.TabularInline):
@@ -174,6 +182,12 @@ class ICalSourceAdmin(admin.ModelAdmin):
     list_display = ["name", "unit", "is_active", "last_synced", "created_at"]
     list_filter = ["is_active", "unit"]
     search_fields = ["name", "unit__name"]
+
+
+@admin.register(Season)
+class SeasonAdmin(admin.ModelAdmin):
+    list_display = ["name", "unit", "start_date", "end_date", "nightly_price"]
+    list_filter = ["unit"]
 
 
 @admin.register(BlockedPeriod)

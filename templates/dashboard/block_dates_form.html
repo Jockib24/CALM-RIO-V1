@@ -1,0 +1,21 @@
+{% extends "dashboard/base.html" %}
+{% block page_title %}Bloquer des dates{% endblock %}
+{% block content %}
+{% with section='calendar' %}
+
+<h2 style="font-size:1.5rem;font-weight:600;margin-bottom:24px;">Bloquer des dates</h2>
+
+<form method="post" class="db-form">
+  {% csrf_token %}
+  <p class="help-text">Utilisez ce formulaire pour bloquer des dates pour la maintenance ou un usage personnel.</p>
+  
+  {{ form.as_p }}
+  
+  <div style="margin-top:24px;">
+    <button type="submit" class="btn btn-accent">Bloquer les dates</button>
+    <a href="{% url 'dashboard:booking_calendar' %}" class="btn btn-outline">Retour au calendrier</a>
+  </div>
+</form>
+
+{% endwith %}
+{% endblock %}

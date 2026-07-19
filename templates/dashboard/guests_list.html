@@ -1,0 +1,62 @@
+{% extends "dashboard/base.html" %}
+{% block page_title %}Répertoire des invités{% endblock %}
+{% block content %}
+{% with section='guests' %}
+
+<h2 style="font-size:1.5rem;font-weight:600;margin-bottom:24px;">Répertoire des invités</h2>
+
+<div class="filter-bar">
+  <form method="get" style="display:flex;gap:10px;">
+    <input type="text" name="email" placeholder="Rechercher par email..." value="{{ request.GET.email }}">
+    <button type="submit" class="btn btn-primary">Rechercher</button>
+    <a href="{% url 'dashboard:guests_list' %}" class="btn btn-outline">Réinitialiser</a>
+  </form>
+</div>
+
+<div class="db-table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Téléphone</th>
+        <th>Réservations</th>
+        <th>Total dépensé</th>
+        <th>Dernière réservation</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for guest in guests %}
+      <tr>
+        <td>{{ guest.first_name }} {{ guest.last_name }}</td>
+        <td>{{ guest.email }}</td>
+        <td>{{ guest.phone|default:"-" }}</td>
+        <td>{{ guest.booking_count }}</td>
+        <td>{{ guest.total_spent }} €</td>
+        <td>{{ guest.last_booking_date|date:"d/m/Y"|default:"-" }}</td>
+        <td><a href="{% url 'dashboard:guest_detail' guest.pk %}" class="btn btn-sm btn-outline">Détails</a></td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="7" class="empty-state">Aucun invité trouvé.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% if is_paginated %}
+<div class="pagination">
+  {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}{% if request.GET.email %}&email={{ request.GET.email }}{% endif %}">&laquo;</a>
+  {% endif %}
+  <span class="current">{{ page_obj.number }}</span>
+  {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}{% if request.GET.email %}&email={{ request.GET.email }}{% endif %}">&raquo;</a>
+  {% endif %}
+</div>
+{% endif %}
+
+{% endwith %}
+{% endblock %}

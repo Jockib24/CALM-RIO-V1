@@ -1,6 +1,8 @@
 import csv
+import json
 import logging
 from datetime import date, timedelta
+from calendar import monthrange
 from decimal import Decimal
 
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -30,6 +32,7 @@ from apps.properties.models import (
     ICalSource,
     Property,
     PropertyImage,
+    Season,
 )
 
 logger = logging.getLogger(__name__)
@@ -75,6 +78,45 @@ class DashboardHomeView(DashboardLoginRequiredMixin, TemplateView):
             .select_related("unit")
             .order_by("check_in")[:5]
         )
+
+        # Chart data: monthly revenue + booking count for past 12 months
+        months = []
+        revenue_data = []
+        booking_count_data = []
+        for i in range(11, -1, -1):
+            m = today.month - i
+            y = today.year
+            while m < 1:
+                m += 12
+                y -= 1
+            while m > 12:
+                m -= 12
+                y += 1
+            month_start_d = date(y, m, 1)
+            _, last_day = monthrange(y, m)
+            month_end = date(y, m, last_day)
+            months.append(f"{y}-{m:02d}")
+            month_rev = Booking.objects.filter(
+                check_in__lte=month_end,
+                check_out__gte=month_start_d,
+                status__in=["confirmed", "completed"],
+            ).aggregate(total=Sum("total_price"))["total"] or 0
+            revenue_data.append(float(month_rev))
+            month_count = Booking.objects.filter(
+                check_in__lte=month_end,
+                check_out__gte=month_start_d,
+                status__in=["confirmed", "completed"],
+            ).count()
+            booking_count_data.append(month_count)
+        ctx["chart_labels"] = json.dumps(months)
+        ctx["chart_revenue"] = json.dumps(revenue_data)
+        ctx["chart_bookings"] = json.dumps(booking_count_data)
+
+        # iCal sync status
+        ical_sources = ICalSource.objects.filter(is_active=True).select_related("unit")
+        ctx["ical_sources"] = ical_sources
+        ctx["ical_ok"] = ical_sources.filter(last_synced__isnull=False).count()
+        ctx["ical_total"] = ical_sources.count()
 
         # Quick stats for the current month
         month_start = today.replace(day=1)
@@ -302,8 +344,20 @@ class BookingUpdateView(DashboardLoginRequiredMixin, UpdateView):
         return ctx
 
     def form_valid(self, form):
-        messages.success(self.request, "Réservation mise à jour.")
-        return super().form_valid(form)
+        # Detect status change to "confirmed" and send email
+        old_status = self.get_object().status
+        new_status = form.instance.status
+        response = super().form_valid(form)
+        if new_status == "confirmed" and old_status != "confirmed":
+            from .emails import send_booking_confirmation
+            sent = send_booking_confirmation(form.instance)
+            if sent:
+                messages.success(self.request, "Email de confirmation envoyé au voyageur.")
+            else:
+                messages.warning(self.request, "Impossible d'envoyer l'email de confirmation.")
+        else:
+            messages.success(self.request, "Réservation mise à jour.")
+        return response
 
 
 class BookingStatusUpdateView(DashboardLoginRequiredMixin, View):
@@ -311,10 +365,19 @@ class BookingStatusUpdateView(DashboardLoginRequiredMixin, View):
 
     def post(self, request, *args, **kwargs):
         booking = get_object_or_404(Booking, pk=kwargs["pk"])
+        old_status = booking.status
         new_status = request.POST.get("status")
         if new_status and new_status in dict(Booking.STATUS_CHOICES):
             booking.status = new_status
             booking.save(update_fields=["status"])
+            # Send confirmation email if newly confirmed
+            if new_status == "confirmed" and old_status != "confirmed":
+                from .emails import send_booking_confirmation
+                sent = send_booking_confirmation(booking)
+                if sent:
+                    messages.success(request, "Email de confirmation envoyé au voyageur.")
+                else:
+                    messages.warning(request, "Impossible d'envoyer l'email de confirmation.")
             messages.success(
                 request,
                 f"Réservation #{booking.pk} : statut mis à jour « {booking.get_status_display()} ».",
@@ -789,3 +852,165 @@ class SiteTextUpdateView(DashboardLoginRequiredMixin, UpdateView):
 
     def get_success_url(self):
         return reverse_lazy("dashboard:sitetext_list")
+
+
+# ─── Guests ─────────────────────────────────────────────────────────
+
+
+class GuestDirectoryView(DashboardLoginRequiredMixin, ListView):
+    template_name = "dashboard/guests_list.html"
+    paginate_by = 20
+    context_object_name = "guests"
+
+    def get_queryset(self):
+        from django.db.models import Count, Sum, Max, Q, OuterRef, Subquery
+        
+        # Subquery to get the latest booking for each email
+        latest = Booking.objects.filter(email=OuterRef('email')).order_by('-created_at')
+        
+        qs = (
+            Booking.objects.values("email")
+            .annotate(
+                first_name=Subquery(latest.values("first_name")[:1]),
+                last_name=Subquery(latest.values("last_name")[:1]),
+                phone=Subquery(latest.values("phone")[:1]),
+                total_bookings=Count("id"),
+                total_spent=Sum("total_price", filter=Q(status__in=["confirmed", "completed"])),
+                last_booking=Max("created_at"),
+            )
+            .order_by("-last_booking")
+        )
+        return qs
+
+
+class GuestDetailView(DashboardLoginRequiredMixin, TemplateView):
+    template_name = "dashboard/guest_detail.html"
+
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        email = kwargs.get("email")
+        bookings = Booking.objects.filter(email=email).select_related("unit").order_by("-check_in")
+        from django.db.models import Count, Sum, Q
+        stats = bookings.aggregate(
+            total_bookings=Count("id"),
+            total_spent=Sum("total_price", filter=Q(status__in=["confirmed", "completed"])),
+            confirmed=Count("id", filter=Q(status="confirmed")),
+            completed=Count("id", filter=Q(status="completed")),
+            cancelled=Count("id", filter=Q(status="cancelled")),
+        )
+        first = bookings.first()
+        ctx["guest"] = {
+            "email": email,
+            "first_name": first.first_name if first else "",
+            "last_name": first.last_name if first else "",
+            "phone": first.phone if first else "",
+        }
+        ctx["stats"] = stats
+        ctx["bookings"] = bookings
+        return ctx
+
+
+# ─── Seasons ────────────────────────────────────────────────────────
+
+
+class SeasonListView(DashboardLoginRequiredMixin, ListView):
+    model = Season
+    template_name = "dashboard/season_list.html"
+    context_object_name = "seasons"
+    
+    def get_queryset(self):
+        return Season.objects.all().select_related("unit").order_by("start_date")
+    
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx["section"] = "properties"
+        return ctx
+
+
+class SeasonCreateView(DashboardLoginRequiredMixin, CreateView):
+    model = Season
+    template_name = "dashboard/season_form.html"
+    fields = ["unit", "name", "start_date", "end_date", "nightly_price", "order"]
+    success_url = reverse_lazy("dashboard:season_list")
+    
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx["title"] = "Nouvelle saison / période"
+        ctx["section"] = "properties"
+        return ctx
+    
+    def form_valid(self, form):
+        messages.success(self.request, "Saison créée.")
+        return super().form_valid(form)
+
+
+class SeasonUpdateView(DashboardLoginRequiredMixin, UpdateView):
+    model = Season
+    template_name = "dashboard/season_form.html"
+    fields = ["unit", "name", "start_date", "end_date", "nightly_price", "order"]
+    success_url = reverse_lazy("dashboard:season_list")
+    
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx["title"] = f"Modifier — {self.object.name}"
+        ctx["section"] = "properties"
+        return ctx
+    
+    def form_valid(self, form):
+        messages.success(self.request, "Saison mise à jour.")
+        return super().form_valid(form)
+
+
+class SeasonDeleteView(DashboardLoginRequiredMixin, View):
+    def post(self, request, *args, **kwargs):
+        season = get_object_or_404(Season, pk=kwargs["pk"])
+        season.delete()
+        messages.success(request, "Saison supprimée.")
+        return HttpResponseRedirect(reverse_lazy("dashboard:season_list"))
+
+
+# ─── Quick Block ────────────────────────────────────────────────────
+
+
+class QuickBlockForm(forms.Form):
+    unit = forms.ModelChoiceField(queryset=Property.objects.filter(status="published"), label="Propriété")
+    start_date = forms.DateField(label="Date de début", widget=forms.DateInput(attrs={"type": "date"}))
+    end_date = forms.DateField(label="Date de fin", widget=forms.DateInput(attrs={"type": "date"}))
+    reason = forms.CharField(label="Motif", max_length=255, required=False, widget=forms.TextInput(attrs={"placeholder": "ex: Maintenance, travaux, usage personnel..."}))
+
+
+class QuickBlockCreateView(DashboardLoginRequiredMixin, FormView):
+    form_class = QuickBlockForm
+    template_name = "dashboard/block_dates_form.html"
+    success_url = reverse_lazy("dashboard:booking_calendar")
+    
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx["section"] = "calendar"
+        ctx["title"] = "Bloquer des dates"
+        return ctx
+    
+    def form_valid(self, form):
+        from apps.properties.models import ICalSource, BlockedPeriod
+        unit = form.cleaned_data["unit"]
+        start = form.cleaned_data["start_date"]
+        end = form.cleaned_data["end_date"]
+        reason = form.cleaned_data["reason"] or "Bloqué (dashboard)"
+        
+        # Create a placeholder ICalSource if none exists for internal blocks
+        ical_source, _ = ICalSource.objects.get_or_create(
+            unit=unit,
+            name="Blocages manuels",
+            defaults={"url": "manual", "is_active": True},
+        )
+        
+        BlockedPeriod.objects.create(
+            source=ical_source,
+            unit=unit,
+            start_date=start,
+            end_date=end,
+            summary=reason,
+            external_id=f"manual_{unit.pk}_{start}_{end}",
+        )
+        messages.success(self.request, f"Dates bloquées pour {unit.name} du {start} au {end}.")
+        return super().form_valid(form)

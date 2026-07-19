@@ -1,0 +1,46 @@
+{% extends "dashboard/base.html" %}
+{% block page_title %}Saisons de prix{% endblock %}
+{% block content %}
+{% with section='properties' %}
+
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+  <h2 style="font-size:1.5rem;font-weight:600;">Saisons de prix</h2>
+  <a href="{% url 'dashboard:season_create' %}" class="btn btn-accent"><i class="fas fa-plus"></i> Ajouter une saison</a>
+</div>
+
+<div class="db-table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Propriété</th>
+        <th>Début</th>
+        <th>Fin</th>
+        <th>Prix par nuit</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for season in seasons %}
+      <tr>
+        <td>{{ season.name }}</td>
+        <td>{{ season.unit.name }}</td>
+        <td>{{ season.start_date|date:"d/m/Y" }}</td>
+        <td>{{ season.end_date|date:"d/m/Y" }}</td>
+        <td>{{ season.nightly_price }} €</td>
+        <td>
+          <a href="{% url 'dashboard:season_edit' season.pk %}" class="btn btn-sm btn-outline">Modifier</a>
+          <a href="{% url 'dashboard:season_delete' season.pk %}" class="btn btn-sm btn-danger">Supprimer</a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="6" class="empty-state">Aucune saison configurée.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endwith %}
+{% endblock %}

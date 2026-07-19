@@ -1,0 +1,64 @@
+{% extends "dashboard/emails/base_email.html" %}
+{% block email_content %}
+<h2>✅ Réservation confirmée</h2>
+
+<p>Bonjour <strong>{{ booking.first_name }} {{ booking.last_name }}</strong>,</p>
+
+<p>Nous avons le plaisir de vous confirmer votre réservation à <strong>{{ booking.unit.name }}</strong>. Voici un récapitulatif :</p>
+
+<hr>
+
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
+  <tr>
+    <td style="padding:8px 12px;color:#64748b;font-weight:600;white-space:nowrap;vertical-align:top;">Propriété</td>
+    <td style="padding:8px 12px;"><strong>{{ booking.unit.name }}</strong><br>
+      {% if booking.unit.city %}{{ booking.unit.city }}{% endif %}
+    </td>
+  </tr>
+  <tr style="background:#f8fafc;">
+    <td style="padding:8px 12px;color:#64748b;font-weight:600;white-space:nowrap;vertical-align:top;">Arrivée</td>
+    <td style="padding:8px 12px;"><strong>{{ booking.check_in|date:"l d F Y" }}</strong><br>
+      <span style="font-size:0.8rem;color:#64748b;">À partir de {{ booking.unit.check_in_time|default:"16h00" }}</span>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:8px 12px;color:#64748b;font-weight:600;white-space:nowrap;vertical-align:top;">Départ</td>
+    <td style="padding:8px 12px;"><strong>{{ booking.check_out|date:"l d F Y" }}</strong><br>
+      <span style="font-size:0.8rem;color:#64748b;">Avant {{ booking.unit.check_out_time|default:"10h00" }}</span>
+    </td>
+  </tr>
+  <tr style="background:#f8fafc;">
+    <td style="padding:8px 12px;color:#64748b;font-weight:600;white-space:nowrap;vertical-align:top;">Voyageurs</td>
+    <td style="padding:8px 12px;">{{ booking.guests }} personne{% if booking.guests > 1 %}s{% endif %}</td>
+  </tr>
+  <tr>
+    <td style="padding:8px 12px;color:#64748b;font-weight:600;white-space:nowrap;vertical-align:top;">Total</td>
+    <td style="padding:8px 12px;"><strong style="font-size:1.1rem;color:#0b1e2a;">{{ booking.total_price }} €</strong></td>
+  </tr>
+</table>
+
+<hr>
+
+<p style="font-size:0.85rem;color:#64748b;">
+  <strong>📍 Adresse :</strong> {{ booking.unit.address|default:booking.unit.city }}, {{ booking.unit.city }}<br>
+  {% if booking.unit.house_rules %}
+  <strong>📋 Règles de la maison :</strong> {{ booking.unit.house_rules|truncatechars:200 }}<br>
+  {% endif %}
+  {% if booking.notes %}
+  <strong>📝 Note de votre réservation :</strong> {{ booking.notes }}
+  {% endif %}
+</p>
+
+<p>
+  Si vous avez la moindre question, n'hésitez pas à nous répondre à cet email ou à consulter votre espace personnel.
+</p>
+
+<p style="margin-top:24px;text-align:center;">
+  <a href="https://www.calm-rio.com" class="btn">Voir le site CalmRio</a>
+</p>
+
+<p style="font-size:0.8rem;color:#94a3b8;margin-top:32px;">
+  À très bientôt,<br>
+  <strong>L'équipe CalmRio</strong>
+</p>
+{% endblock %}
