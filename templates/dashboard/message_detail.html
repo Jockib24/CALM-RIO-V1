@@ -1,6 +1,5 @@
 {% extends "dashboard/base.html" %}
 {% block content %}
-{% with section='messages' %}
 
 <div style="margin-bottom:24px;">
   <a href="{% url 'dashboard:messages' %}" style="color:var(--db-text-light);text-decoration:none;font-size:0.9rem;">
@@ -50,5 +49,4 @@
   </div>
 </div>
 
-{% endwith %}
 {% endblock %}

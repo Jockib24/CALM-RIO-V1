@@ -1,7 +1,6 @@
 {% extends "dashboard/base.html" %}
 {% block page_title %}Tableau de bord{% endblock %}
 {% block content %}
-{% with section='home' %}
 
 <h2 style="font-size:1.5rem;font-weight:600;margin-bottom:24px;">Tableau de bord</h2>
 
@@ -27,6 +26,14 @@
     <div class="stat-number">{{ total_properties }}</div>
     <div class="stat-label">Propriétés publiées</div>
   </div>
+</div>
+
+<!-- Quick Actions -->
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;">
+  <a href="{% url 'dashboard:booking_create' %}" class="btn btn-accent"><i class="fas fa-plus"></i> Nouvelle réservation</a>
+  <a href="{% url 'dashboard:messages' %}" class="btn btn-outline"><i class="fas fa-envelope"></i> Messages</a>
+  <a href="{% url 'dashboard:booking_calendar' %}" class="btn btn-outline"><i class="fas fa-calendar-alt"></i> Calendrier</a>
+  <a href="{% url 'dashboard:property_list' %}" class="btn btn-outline"><i class="fas fa-building"></i> Propriétés</a>
 </div>
 
 <!-- Month Stats + iCal Sync Status -->
@@ -143,7 +150,6 @@
   </div>
 </div>
 
-{% endwith %}
 {% endblock %}
 
 {% block extra_scripts %}

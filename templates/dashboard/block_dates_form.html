@@ -1,7 +1,6 @@
 {% extends "dashboard/base.html" %}
 {% block page_title %}Bloquer des dates{% endblock %}
 {% block content %}
-{% with section='calendar' %}
 
 <div style="margin-bottom:24px;">
   <a href="{% url 'dashboard:booking_calendar' %}" style="color:var(--db-text-light);text-decoration:none;font-size:0.9rem;">
@@ -49,5 +48,4 @@
   </div>
 </form>
 
-{% endwith %}
 {% endblock %}

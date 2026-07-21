@@ -1,7 +1,6 @@
 {% extends "dashboard/base.html" %}
 {% block page_title %}{{ title }}{% endblock %}
 {% block content %}
-{% with section='properties' %}
 
 <div style="margin-bottom:24px;">
   <a href="{% url 'dashboard:season_list' %}" style="color:var(--db-text-light);text-decoration:none;font-size:0.9rem;">
@@ -50,5 +49,4 @@
   </div>
 </form>
 
-{% endwith %}
 {% endblock %}

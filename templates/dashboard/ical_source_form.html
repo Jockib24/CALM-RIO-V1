@@ -1,6 +1,5 @@
 {% extends "dashboard/base.html" %}
 {% block content %}
-{% with section='properties' %}
 
 <div style="margin-bottom:24px;">
   <a href="{% url 'dashboard:property_stats' %}" style="color:var(--db-text-light);text-decoration:none;font-size:0.9rem;">
@@ -54,5 +53,4 @@
   </button>
 </form>
 
-{% endwith %}
 {% endblock %}

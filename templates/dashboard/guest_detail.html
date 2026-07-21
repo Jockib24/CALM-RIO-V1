@@ -1,7 +1,6 @@
 {% extends "dashboard/base.html" %}
 {% block page_title %}Détails du voyageur{% endblock %}
 {% block content %}
-{% with section='guests' %}
 
 <h2 style="font-size:1.5rem;font-weight:600;margin-bottom:24px;">Détails du voyageur</h2>
 
@@ -66,5 +65,4 @@
   <a href="{% url 'dashboard:guests_list' %}" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Retour au répertoire</a>
 </div>
 
-{% endwith %}
 {% endblock %}

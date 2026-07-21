@@ -736,6 +736,9 @@
       <a href="{% url 'dashboard:bookings' %}" {% if section == 'bookings' %}class="active"{% endif %}>
         <i class="fas fa-calendar-check"></i><span>Réservations</span>
       </a>
+      <a href="{% url 'dashboard:booking_create' %}" {% if section == 'bookings' %}class="active"{% endif %} style="padding-left:52px;font-size:0.8rem;color:rgba(255,255,255,0.4);">
+        <i class="fas fa-plus" style="width:16px;font-size:0.7rem;"></i><span>Nouvelle réservation</span>
+      </a>
       <a href="{% url 'dashboard:booking_calendar' %}" {% if section == 'calendar' %}class="active"{% endif %}>
         <i class="fas fa-calendar-alt"></i><span>Calendrier</span>
       </a>
@@ -757,6 +760,15 @@
     <nav>
       <a href="{% url 'dashboard:property_list' %}" {% if section == 'properties' %}class="active"{% endif %}>
         <i class="fas fa-building"></i><span>Propriétés</span>
+      </a>
+      <a href="{% url 'dashboard:property_stats' %}" {% if section == 'properties' %}class="active"{% endif %} style="padding-left:52px;font-size:0.8rem;color:rgba(255,255,255,0.4);">
+        <i class="fas fa-chart-bar" style="width:16px;font-size:0.7rem;"></i><span>Statistiques</span>
+      </a>
+      <a href="{% url 'dashboard:property_create' %}" {% if section == 'properties' %}class="active"{% endif %} style="padding-left:52px;font-size:0.8rem;color:rgba(255,255,255,0.4);">
+        <i class="fas fa-plus" style="width:16px;font-size:0.7rem;"></i><span>Ajouter</span>
+      </a>
+      <a href="{% url 'dashboard:ical_add' %}" {% if section == 'properties' %}class="active"{% endif %} style="padding-left:52px;font-size:0.8rem;color:rgba(255,255,255,0.4);">
+        <i class="fas fa-sync-alt" style="width:16px;font-size:0.7rem;"></i><span>iCal</span>
       </a>
       <a href="{% url 'dashboard:season_list' %}" {% if section == 'seasons' %}class="active"{% endif %}>
         <i class="fas fa-tags"></i><span>Prix & saisons</span>

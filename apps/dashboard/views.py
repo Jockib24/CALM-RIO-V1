@@ -55,6 +55,7 @@ class DashboardHomeView(DashboardLoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
+        ctx["section"] = "home"
         today = date.today()
 
         # Stats cards
@@ -177,6 +178,7 @@ class MessageListView(DashboardLoginRequiredMixin, ListView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
+        ctx["section"] = "messages"
         ctx["subject_choices"] = ContactMessage.SUBJECT_CHOICES
         ctx["current_status"] = self.request.GET.get("status", "")
         ctx["current_subject"] = self.request.GET.get("subject", "")
@@ -190,6 +192,11 @@ class MessageDetailView(DashboardLoginRequiredMixin, DetailView):
     model = ContactMessage
     template_name = "dashboard/message_detail.html"
     context_object_name = "msg"
+
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx["section"] = "messages"
+        return ctx
 
     def get_object(self, queryset=None):
         obj = super().get_object(queryset)
@@ -234,6 +241,7 @@ class NewsletterListView(DashboardLoginRequiredMixin, ListView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
+        ctx["section"] = "newsletter"
         ctx["current_status"] = self.request.GET.get("status", "")
         ctx["active_count"] = NewsletterSubscription.objects.filter(
             is_active=True
@@ -295,6 +303,7 @@ class BookingListView(DashboardLoginRequiredMixin, ListView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
+        ctx["section"] = "bookings"
         ctx["status_choices"] = Booking.STATUS_CHOICES
         ctx["current_status"] = self.request.GET.get("status", "")
         ctx["status_counts"] = {
@@ -328,6 +337,7 @@ class BookingCreateView(DashboardLoginRequiredMixin, CreateView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
+        ctx["section"] = "bookings"
         ctx["title"] = "Nouvelle réservation"
         return ctx
 
@@ -360,6 +370,7 @@ class BookingUpdateView(DashboardLoginRequiredMixin, UpdateView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
+        ctx["section"] = "bookings"
         ctx["title"] = "Modifier la réservation"
         return ctx
 
@@ -487,6 +498,7 @@ class PropertyStatsView(DashboardLoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
+        ctx["section"] = "properties"
         properties = Property.objects.filter(status="published").annotate(
             total_bookings=Count("bookings"),
             confirmed_bookings=Count(
@@ -902,6 +914,11 @@ class GuestDirectoryView(DashboardLoginRequiredMixin, ListView):
     paginate_by = 20
     context_object_name = "guests"
 
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx["section"] = "guests"
+        return ctx
+
     def get_queryset(self):
         from django.db.models import Count, Sum, Max, Q, OuterRef, Subquery
         
@@ -928,6 +945,7 @@ class GuestDetailView(DashboardLoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
+        ctx["section"] = "guests"
         email = kwargs.get("email")
         bookings = Booking.objects.filter(email=email).select_related("unit").order_by("-check_in")
         from django.db.models import Count, Sum, Q
@@ -963,7 +981,7 @@ class SeasonListView(DashboardLoginRequiredMixin, ListView):
     
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
-        ctx["section"] = "properties"
+        ctx["section"] = "seasons"
         return ctx
 
 
@@ -976,7 +994,7 @@ class SeasonCreateView(DashboardLoginRequiredMixin, CreateView):
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
         ctx["title"] = "Nouvelle saison / période"
-        ctx["section"] = "properties"
+        ctx["section"] = "seasons"
         return ctx
     
     def form_valid(self, form):
@@ -993,7 +1011,7 @@ class SeasonUpdateView(DashboardLoginRequiredMixin, UpdateView):
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
         ctx["title"] = f"Modifier — {self.object.name}"
-        ctx["section"] = "properties"
+        ctx["section"] = "seasons"
         return ctx
     
     def form_valid(self, form):

@@ -246,8 +246,19 @@
                             <div class="theme-nav-button mt-20 d-block d-md-none">
                                 <a href="{% url 'home:index' %}#nos-locations" class="theme-btn style-one">{% trans "Réserver" %}<i class="far fa-arrow-right"></i></a>
                             </div>
+                            <!--=== Mobile Language Switcher ===-->
+                            <div class="theme-menu-lang d-block d-xl-none">
+                                <h5>{% trans "Langue" %}</h5>
+                                <ul class="mobile-lang-list">
+                                    {% for lang in language_switcher %}
+                                    <li{% if lang.current %} class="current"{% endif %}>
+                                        <a href="{{ lang.url }}">{{ lang.flag }} {{ lang.name }}</a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
                             <!--===  Menu Bottom ===-->
-                            <div class="theme-menu-bottom mt-50 d-block d-xl-none">
+                            <div class="theme-menu-bottom mt-30 d-block d-xl-none">
                                 <h5>{% trans "Suivez-nous" %}</h5>
                                 <ul class="social-link">
                                     <li><a href="https://www.instagram.com/calm.rio/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
