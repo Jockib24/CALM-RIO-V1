@@ -1,8 +1,16 @@
 # Django
 Django>=4.2,<5.0
 
+# Production WSGI server
+gunicorn>=21.2
+
 # Database
-psycopg2-binary>=2.9  # PostgreSQL (optional - SQLite default)
+psycopg2-binary>=2.9  # PostgreSQL
+PyMySQL>=1.1           # MySQL/MariaDB (pure Python, no C compilation needed)
+dj-database-url>=2.1   # DATABASE_URL parsing
+
+# Static files (self-served, no Nginx needed)
+whitenoise>=6.6
 
 # Environment
 python-decouple>=3.8

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "4eabc66183767153e404b39d1b839b1c37f2d82d86f0a0d7e880a579d8d62336"
+    },
+    "javascript-ecosystem": {
+      "source": "saschb2b/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/javascript-ecosystem/SKILL.md",
+      "computedHash": "ee0a21b897b3ae320746a32fca33cdcad6d2a15bd3f1c895e20ac2e7e2708c96"
+    },
+    "rest-api-django": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "rest-api-django/SKILL.md",
+      "computedHash": "4e3ec03bbe446194761cf6d7c738ff981d09e1fcda00e038176069700a1f645f"
+    },
+    "scss-best-practices": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "scss-best-practices/SKILL.md",
+      "computedHash": "16ac9e8bf135304254a358776c5fac043799c1c3ac40221da1338ee972506de5"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "computedHash": "f3bc47f890f42a44db1007ab390709ec368e4b8c089baee6b0007182236ac474"
+    }
+  }
+}

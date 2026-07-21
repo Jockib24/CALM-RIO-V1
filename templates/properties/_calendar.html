@@ -1,447 +1,594 @@
 {% load i18n %}
 {% load static %}
 
-<div class="cr-calendar" id="availabilityCalendar">
-    <div class="cr-cal__header">
-        <div class="cr-cal__header-info">
-            <div class="cr-cal__header-icon">
-                <i class="fas fa-calendar-alt"></i>
+<div class="cr-sidebar-cal" id="availabilityCalendar">
+    <div class="cr-scal__header">
+        <div class="cr-scal__header-top">
+            <div class="cr-scal__header-info">
+                <i class="fas fa-calendar-alt cr-scal__icon"></i>
+                <h4 class="cr-scal__title">{% trans "Calendrier" %}</h4>
             </div>
-            <div>
-                <h4 class="cr-cal__title">{% trans "Disponibilités" %}</h4>
-                <p class="cr-cal__subtitle">{% trans "Calendrier mis à jour en temps réel" %}</p>
-            </div>
+            <button type="button" class="cr-scal__toggle" id="calToggle" aria-label="{% trans "Afficher/Masquer le calendrier" %}">
+                <i class="fas fa-chevron-up"></i>
+            </button>
         </div>
-        <div class="cr-cal__legend">
-            <span class="cr-cal__legend-item">
-                <span class="cr-cal__dot cr-cal__dot--available"></span>
-                {% trans "Libre" %}
-            </span>
-            <span class="cr-cal__legend-item">
-                <span class="cr-cal__dot cr-cal__dot--booked"></span>
-                {% trans "Réservé" %}
-            </span>
-            <span class="cr-cal__legend-item">
-                <span class="cr-cal__dot cr-cal__dot--past"></span>
-                {% trans "Passé" %}
-            </span>
+        <div class="cr-scal__legend">
+            <span class="cr-scal__legend-item"><span class="cr-scal__dot cr-scal__dot--avail"></span>{% trans "Libre" %}</span>
+            <span class="cr-scal__legend-item"><span class="cr-scal__dot cr-scal__dot--booked"></span>{% trans "Réservé" %}</span>
+            <span class="cr-scal__legend-item"><span class="cr-scal__dot cr-scal__dot--selected"></span>{% trans "Sélection" %}</span>
         </div>
     </div>
 
-    <div class="cr-cal__grid" id="calGrid">
-        <div class="cr-cal__loading" id="calLoading">
-            <div class="cr-cal__loading-spinner"></div>
-            <span>{% trans "Chargement du calendrier…" %}</span>
+    <div class="cr-scal__body" id="calBody">
+        <div class="cr-scal__nav" id="calNav">
+            <button type="button" class="cr-scal__nav-btn" id="calPrev" aria-label="{% trans "Mois précédent" %}">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <span class="cr-scal__nav-title" id="calMonthTitle">{% trans "Chargement…" %}</span>
+            <button type="button" class="cr-scal__nav-btn" id="calNext" aria-label="{% trans "Mois suivant" %}">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="cr-scal__grid" id="calGrid"></div>
+        <div class="cr-scal__info" id="calInfo">
+            <span id="calSelectedText">{% trans "Cliquez sur une date disponible" %}</span>
         </div>
     </div>
 </div>
 
 <style>
-/* ═══════════════════════════════════════════
-   CalmRio Availability Calendar — Redesigned
-   ═══════════════════════════════════════════ */
-
-/* ── Root Variables (scope to calendar) ── */
-.cr-calendar {
+/* ════════════════════════════════════════════
+   CalmRio Sidebar Calendar — Compact + Interactive
+   ════════════════════════════════════════════ */
+.cr-sidebar-cal {
     --cr-navy: #1B3A4B;
     --cr-navy-light: #234b5e;
     --cr-gold: #C49A5A;
     --cr-gold-light: rgba(196, 154, 90, 0.12);
-    --cr-gold-medium: rgba(196, 154, 90, 0.25);
+    --cr-gold-med: rgba(196, 154, 90, 0.25);
     --cr-cream: #F6F3EE;
     --cr-text: #4a5568;
     --cr-text-light: #9ca3af;
     --cr-border: #e8e4de;
     --cr-white: #ffffff;
-    --cr-shadow: 0 8px 36px rgba(27, 58, 75, 0.08);
-    --cr-radius: 18px;
-    --cr-radius-sm: 10px;
-}
-
-/* ── Container ── */
-.cr-calendar {
-    margin-top: 60px;
+    --cr-radius: 12px;
+    --cr-radius-sm: 6px;
     background: var(--cr-white);
     border-radius: var(--cr-radius);
-    box-shadow: var(--cr-shadow);
-    overflow: hidden;
     border: 1px solid var(--cr-border);
+    overflow: hidden;
+    font-size: 0.82rem;
 }
 
 /* ── Header ── */
-.cr-cal__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
-    padding: 30px 36px 24px;
+.cr-scal__header {
     background: var(--cr-navy);
     color: var(--cr-white);
-    position: relative;
-    overflow: hidden;
+    padding: 14px 16px 10px;
 }
-.cr-cal__header::after {
-    content: '';
-    position: absolute;
-    top: -60%;
-    right: -10%;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
-    pointer-events: none;
-}
-.cr-cal__header-info {
+.cr-scal__header-top {
     display: flex;
     align-items: center;
-    gap: 16px;
-    position: relative;
-    z-index: 1;
+    justify-content: space-between;
 }
-.cr-cal__header-icon {
-    width: 48px;
-    height: 48px;
+.cr-scal__header-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cr-scal__icon {
+    font-size: 1rem;
+    color: var(--cr-gold);
+}
+.cr-scal__title {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.2px;
+}
+.cr-scal__toggle {
     background: rgba(255,255,255,0.1);
-    border-radius: 12px;
+    border: none;
+    color: var(--cr-white);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
-    color: var(--cr-gold);
-    flex-shrink: 0;
+    font-size: 0.75rem;
+    transition: background 0.2s ease;
 }
-.cr-cal__title {
-    margin: 0 0 2px;
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-    font-family: 'Playfair Display', serif;
-}
-.cr-cal__subtitle {
-    margin: 0;
-    font-size: 0.82rem;
-    opacity: 0.7;
-    font-weight: 400;
+.cr-scal__toggle:hover {
+    background: rgba(255,255,255,0.2);
 }
 
 /* ── Legend ── */
-.cr-cal__legend {
+.cr-scal__legend {
     display: flex;
-    gap: 20px;
+    gap: 14px;
+    margin-top: 8px;
     flex-wrap: wrap;
-    position: relative;
-    z-index: 1;
 }
-.cr-cal__legend-item {
+.cr-scal__legend-item {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.8rem;
+    gap: 5px;
+    font-size: 0.68rem;
     font-weight: 500;
-    opacity: 0.85;
-    letter-spacing: 0.2px;
+    opacity: 0.8;
 }
-.cr-cal__dot {
-    width: 9px;
-    height: 9px;
+.cr-scal__dot {
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     flex-shrink: 0;
 }
-.cr-cal__dot--available { background: var(--cr-gold); }
-.cr-cal__dot--booked    { background: var(--cr-white); opacity: 0.9; }
-.cr-cal__dot--past      { background: rgba(255,255,255,0.3); }
+.cr-scal__dot--avail   { background: var(--cr-gold); }
+.cr-scal__dot--booked  { background: rgba(255,255,255,0.85); }
+.cr-scal__dot--selected { background: #22c55e; }
 
-/* ── Grid ── */
-.cr-cal__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    padding: 10px;
-    background: #faf9f7;
-}
-@media (max-width: 992px) {
-    .cr-cal__grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 576px) {
-    .cr-cal__grid { grid-template-columns: 1fr; padding: 6px; }
-    .cr-cal__header { padding: 22px 20px 18px; flex-direction: column; align-items: flex-start; }
-}
-
-/* ── Month Card ── */
-.cr-cal__month {
-    background: var(--cr-white);
-    border-radius: 14px;
+/* ── Body (collapsible) ── */
+.cr-scal__body {
+    padding: 8px 10px 10px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    max-height: 400px;
     overflow: hidden;
-    margin: 6px;
-    border: 1px solid var(--cr-border);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    opacity: 0;
-    transform: translateY(12px);
-    animation: crCalFadeIn 0.5s ease forwards;
 }
-.cr-cal__month:hover {
-    box-shadow: 0 8px 28px rgba(27,58,75,0.08);
-    transform: translateY(-3px);
+.cr-scal__body.cr-scal--collapsed {
+    max-height: 0;
+    padding: 0 10px;
 }
 
-/* Staggered animation for months */
-.cr-cal__month:nth-child(1) { animation-delay: 0.0s; }
-.cr-cal__month:nth-child(2) { animation-delay: 0.08s; }
-.cr-cal__month:nth-child(3) { animation-delay: 0.16s; }
-.cr-cal__month:nth-child(4) { animation-delay: 0.24s; }
-.cr-cal__month:nth-child(5) { animation-delay: 0.32s; }
-.cr-cal__month:nth-child(6) { animation-delay: 0.40s; }
-
-@keyframes crCalFadeIn {
-    to { opacity: 1; transform: translateY(0); }
+/* ── Navigation ── */
+.cr-scal__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
 }
-
-/* ── Month Title ── */
-.cr-cal__month-title {
-    text-align: center;
-    padding: 16px 10px 12px;
-    background: var(--cr-cream);
-    border-bottom: 1px solid var(--cr-border);
-}
-.cr-cal__month-title span {
-    font-size: 0.92rem;
+.cr-scal__nav-title {
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--cr-navy);
-    letter-spacing: 0.2px;
     font-family: 'Playfair Display', serif;
 }
-
-/* ── Day Grid (CSS Grid replacing HTML table) ── */
-.cr-cal__days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    padding: 6px 8px 10px;
-    gap: 2px;
+.cr-scal__nav-btn {
+    background: var(--cr-cream);
+    border: 1px solid var(--cr-border);
+    color: var(--cr-navy);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    transition: all 0.2s ease;
+}
+.cr-scal__nav-btn:hover {
+    background: var(--cr-navy);
+    color: var(--cr-white);
+    border-color: var(--cr-navy);
 }
 
-/* ── Day Header Labels ── */
-.cr-cal__day-label {
+/* ── Day Grid ── */
+.cr-scal__grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
     text-align: center;
-    padding: 10px 0 6px;
-    font-size: 0.65rem;
+}
+
+/* Day header labels */
+.cr-scal__dow {
+    padding: 4px 0;
+    font-size: 0.6rem;
     font-weight: 700;
     color: var(--cr-text-light);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
-/* ── Day Cell ── */
-.cr-cal__day {
+/* Day cell */
+.cr-scal__day {
     aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.82rem;
+    font-size: 0.75rem;
     font-weight: 500;
     color: var(--cr-text);
     border-radius: var(--cr-radius-sm);
     cursor: default;
-    transition: all 0.15s ease;
+    transition: all 0.12s ease;
     position: relative;
 }
 
-/* ── States ── */
-.cr-cal__day--available {
+/* States */
+.cr-scal__day--avail {
     color: var(--cr-navy);
     background: var(--cr-gold-light);
     cursor: pointer;
 }
-.cr-cal__day--available:hover {
-    background: var(--cr-gold-medium);
-    transform: scale(1.08);
+.cr-scal__day--avail:hover {
+    background: var(--cr-gold-med);
+    transform: scale(1.1);
+    z-index: 2;
 }
 
-.cr-cal__day--booked {
+.cr-scal__day--booked {
     color: var(--cr-white);
     background: var(--cr-navy);
     font-weight: 600;
-}
-.cr-cal__day--booked:hover {
-    background: var(--cr-navy-light);
+    font-size: 0.7rem;
+    cursor: not-allowed;
 }
 
-.cr-cal__day--past {
+.cr-scal__day--past {
     color: #d1d5db;
     background: transparent;
 }
 
-.cr-cal__day--today {
+.cr-scal__day--today {
     color: var(--cr-white);
     background: var(--cr-gold);
     font-weight: 700;
-    box-shadow: 0 3px 10px rgba(196, 154, 90, 0.35);
-}
-.cr-cal__day--today:hover {
-    background: #b8894a;
-    transform: scale(1.08);
+    box-shadow: 0 2px 6px rgba(196,154,90,0.35);
 }
 
-.cr-cal__day--empty {
+.cr-scal__day--empty {
     background: transparent;
-    cursor: default;
 }
 
-/* ── Loading ── */
-.cr-cal__loading {
-    grid-column: 1 / -1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
-    gap: 16px;
-    color: var(--cr-text-light);
-    font-size: 0.9rem;
-}
-.cr-cal__loading-spinner {
-    width: 36px;
-    height: 36px;
-    border: 3px solid var(--cr-border);
-    border-top-color: var(--cr-gold);
-    border-radius: 50%;
-    animation: crCalSpin 0.7s linear infinite;
-}
-@keyframes crCalSpin {
-    to { transform: rotate(360deg); }
-}
-
-/* ── Check-in / Check-out markers ── */
-.cr-cal__day--check-in,
-.cr-cal__day--check-out {
-    position: relative;
-}
-.cr-cal__day--check-in::after,
-.cr-cal__day--check-out::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    bottom: 3px;
-}
-.cr-cal__day--check-in::after {
+/* Selected date (check-in or check-out) */
+.cr-scal__day--selected {
+    color: var(--cr-white);
     background: #22c55e;
-    right: 3px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(34,197,94,0.35);
+    cursor: pointer;
 }
-.cr-cal__day--check-out::after {
-    background: #ef4444;
-    left: 3px;
+.cr-scal__day--selected:hover {
+    background: #16a34a;
+    transform: scale(1.1);
 }
 
-/* Responsive day sizing */
+/* In-range (between check-in and check-out) */
+.cr-scal__day--in-range {
+    background: rgba(34,197,94,0.15);
+    color: var(--cr-navy);
+}
+
+/* Check-in specific marker */
+.cr-scal__day--check-in {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+/* Check-out specific marker */
+.cr-scal__day--check-out {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+/* ── Info bar ── */
+.cr-scal__info {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--cr-border);
+    font-size: 0.72rem;
+    color: var(--cr-text-light);
+    text-align: center;
+    min-height: 24px;
+}
+.cr-scal__info .cr-scal__info-highlight {
+    color: var(--cr-navy);
+    font-weight: 600;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+    .cr-scal__day { font-size: 0.72rem; }
+    .cr-scal__dow { font-size: 0.58rem; }
+}
 @media (max-width: 576px) {
-    .cr-cal__day { font-size: 0.78rem; }
-    .cr-cal__day-label { font-size: 0.6rem; }
-}
-
-/* Print-friendly */
-@media print {
-    .cr-calendar { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
-    .cr-cal__header { background: #1B3A4B !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .cr-cal__day--booked, .cr-cal__day--today { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .cr-scal__day { font-size: 0.8rem; }
 }
 </style>
 
 <script>
 (function() {
+    'use strict';
+
+    // ── Data from server ──
     var bookedRanges = {{ booked_dates_json|safe }};
-    var calGrid = document.getElementById('calGrid');
-    var calLoading = document.getElementById('calLoading');
+    var checkInInput = document.getElementById('id_check_in');
+    var checkOutInput = document.getElementById('id_check_out');
+
+    // ── State ──
+    var now = new Date();
+    now.setHours(0,0,0,0);
+    var currentMonth = now.getMonth();
+    var currentYear = now.getFullYear();
+    var selectedCheckIn = null;  // Date object
+    var selectedCheckOut = null; // Date object
+    var MIN_NIGHTS = 2; // minimum stay
+
+    // ── DOM refs ──
+    var gridEl = document.getElementById('calGrid');
+    var monthTitleEl = document.getElementById('calMonthTitle');
+    var prevBtn = document.getElementById('calPrev');
+    var nextBtn = document.getElementById('calNext');
+    var infoText = document.getElementById('calSelectedText');
+    var toggleBtn = document.getElementById('calToggle');
+    var calBody = document.getElementById('calBody');
+
+    // ── Helpers ──
+    var monthNames = [
+        'Janvier','Février','Mars','Avril','Mai','Juin',
+        'Juillet','Août','Septembre','Octobre','Novembre','Décembre'
+    ];
+    var dayLabels = ['Lu','Ma','Me','Je','Ve','Sa','Di'];
 
     function isBooked(day, month, year) {
         var d = new Date(year, month, day);
+        d.setHours(0,0,0,0);
         var ts = d.getTime();
         for (var i = 0; i < bookedRanges.length; i++) {
             var start = new Date(bookedRanges[i].start);
             var end = new Date(bookedRanges[i].end);
-            if (ts >= start.getTime() && ts < end.getTime()) {
-                return true;
-            }
+            if (ts >= start.getTime() && ts < end.getTime()) return true;
         }
         return false;
     }
 
-    function renderMonth(month, year) {
-        var monthNames = [
-            'Janvier','Février','Mars','Avril','Mai','Juin',
-            'Juillet','Août','Septembre','Octobre','Novembre','Décembre'
-        ];
-        var dayLabels = ['Lu','Ma','Me','Je','Ve','Sa','Di'];
-        var today = new Date();
-        today.setHours(0,0,0,0);
+    function dateEqual(a, b) {
+        return a && b && a.getFullYear() === b.getFullYear() &&
+               a.getMonth() === b.getMonth() &&
+               a.getDate() === b.getDate();
+    }
 
-        var firstDay = new Date(year, month, 1);
-        var lastDay = new Date(year, month + 1, 0);
+    function isInRange(day, month, year) {
+        if (!selectedCheckIn || !selectedCheckOut) return false;
+        var d = new Date(year, month, day);
+        d.setHours(0,0,0,0);
+        return d > selectedCheckIn && d < selectedCheckOut;
+    }
+
+    function formatDateInput(d) {
+        var y = d.getFullYear();
+        var m = String(d.getMonth() + 1).padStart(2, '0');
+        var day = String(d.getDate()).padStart(2, '0');
+        return y + '-' + m + '-' + day;
+    }
+
+    function nightsBetween(a, b) {
+        return Math.round((b - a) / (1000 * 60 * 60 * 24));
+    }
+
+    function updateInfo() {
+        if (selectedCheckIn && selectedCheckOut) {
+            var n = nightsBetween(selectedCheckIn, selectedCheckOut);
+            infoText.innerHTML = '<span class="cr-scal__info-highlight">' +
+                formatDateInput(selectedCheckIn) + '</span> → <span class="cr-scal__info-highlight">' +
+                formatDateInput(selectedCheckOut) + '</span> — ' + n + ' {% trans "nuits" %}';
+        } else if (selectedCheckIn) {
+            infoText.innerHTML = '{% trans "Arrivée" %}: <span class="cr-scal__info-highlight">' +
+                formatDateInput(selectedCheckIn) + '</span> — {% trans "Choisissez le départ" %}';
+        } else {
+            infoText.innerHTML = '{% trans "Cliquez sur une date disponible" %}';
+        }
+    }
+
+    // ── Render month ──
+    function render() {
+        var firstDay = new Date(currentYear, currentMonth, 1);
+        var lastDay = new Date(currentYear, currentMonth + 1, 0);
         var startDow = firstDay.getDay();
         startDow = (startDow === 0) ? 6 : startDow - 1; // Monday=0
         var totalDays = lastDay.getDate();
 
-        var html = '<div class="cr-cal__month">';
-        html += '<div class="cr-cal__month-title"><span>' + monthNames[month] + ' ' + year + '</span></div>';
+        monthTitleEl.textContent = monthNames[currentMonth] + ' ' + currentYear;
 
-        // Day labels row
-        html += '<div class="cr-cal__days">';
+        var html = '';
+
+        // Day-of-week labels
         for (var d = 0; d < 7; d++) {
-            html += '<div class="cr-cal__day-label">' + dayLabels[d] + '</div>';
+            html += '<div class="cr-scal__dow">' + dayLabels[d] + '</div>';
         }
 
-        // Empty cells before first day
+        // Empty leading cells
         for (var i = 0; i < startDow; i++) {
-            html += '<div class="cr-cal__day cr-cal__day--empty"></div>';
+            html += '<div class="cr-scal__day cr-scal__day--empty"></div>';
         }
 
         // Day cells
-        var day = 1;
-        while (day <= totalDays) {
-            var dateObj = new Date(year, month, day);
+        for (var day = 1; day <= totalDays; day++) {
+            var dateObj = new Date(currentYear, currentMonth, day);
             dateObj.setHours(0,0,0,0);
-            var classNames = 'cr-cal__day';
 
-            if (dateObj < today) {
-                classNames += ' cr-cal__day--past';
-            } else if (dateObj.getTime() === today.getTime()) {
-                classNames += ' cr-cal__day--today';
-            } else if (isBooked(day, month, year)) {
-                classNames += ' cr-cal__day--booked';
+            var classes = 'cr-scal__day';
+
+            if (dateObj < now) {
+                classes += ' cr-scal__day--past';
+            } else if (dateEqual(dateObj, selectedCheckIn) || dateEqual(dateObj, selectedCheckOut)) {
+                classes += ' cr-scal__day--selected';
+                if (dateEqual(dateObj, selectedCheckIn) && !dateEqual(dateObj, selectedCheckOut)) {
+                    classes += ' cr-scal__day--check-in';
+                } else if (dateEqual(dateObj, selectedCheckOut) && !dateEqual(dateObj, selectedCheckIn)) {
+                    classes += ' cr-scal__day--check-out';
+                }
+            } else if (isInRange(day, currentMonth, currentYear)) {
+                classes += ' cr-scal__day--in-range';
+            } else if (isBooked(day, currentMonth, currentYear)) {
+                classes += ' cr-scal__day--booked';
+            } else if (dateObj.getTime() === now.getTime()) {
+                classes += ' cr-scal__day--today';
             } else {
-                classNames += ' cr-cal__day--available';
+                classes += ' cr-scal__day--avail';
             }
 
-            html += '<div class="' + classNames + '">' + day + '</div>';
-            day++;
+            html += '<div class="' + classes + '" data-day="' + day + '" data-month="' + currentMonth + '" data-year="' + currentYear + '">' + day + '</div>';
         }
 
-        // Fill remaining cells
-        var totalCells = startDow + totalDays;
-        var remainder = totalCells % 7;
-        if (remainder > 0) {
-            for (var r = 0; r < (7 - remainder); r++) {
-                html += '<div class="cr-cal__day cr-cal__day--empty"></div>';
+        gridEl.innerHTML = html;
+    }
+
+    // ── Click handler (delegated) ──
+    gridEl.addEventListener('click', function(e) {
+        var cell = e.target.closest('.cr-scal__day--avail, .cr-scal__day--selected');
+        if (!cell) return;
+
+        var day = parseInt(cell.getAttribute('data-day'), 10);
+        var month = parseInt(cell.getAttribute('data-month'), 10);
+        var year = parseInt(cell.getAttribute('data-year'), 10);
+        var clickedDate = new Date(year, month, day);
+        clickedDate.setHours(0,0,0,0);
+
+        // If clicking the same check-in, deselect
+        if (selectedCheckIn && dateEqual(clickedDate, selectedCheckIn) && !selectedCheckOut) {
+            selectedCheckIn = null;
+            updateFormFields();
+            render();
+            updateInfo();
+            return;
+        }
+
+        // If both are set, restart selection
+        if (selectedCheckIn && selectedCheckOut) {
+            selectedCheckIn = clickedDate;
+            selectedCheckOut = null;
+            updateFormFields();
+            render();
+            updateInfo();
+            return;
+        }
+
+        // No check-in yet
+        if (!selectedCheckIn) {
+            selectedCheckIn = clickedDate;
+            render();
+            updateInfo();
+            // Auto-set check_out to next day if available
+            var nextDay = new Date(clickedDate);
+            nextDay.setDate(nextDay.getDate() + 1);
+            if (!isBooked(nextDay.getDate(), nextDay.getMonth(), nextDay.getFullYear()) && nextDay >= now) {
+                selectedCheckOut = nextDay;
+                // Check if check_out is booked
+                if (isBooked(selectedCheckOut.getDate(), selectedCheckOut.getMonth(), selectedCheckOut.getFullYear())) {
+                    selectedCheckOut = null;
+                }
             }
+            if (selectedCheckOut) {
+                // Check that all days between are free
+                var valid = true;
+                var d = new Date(selectedCheckIn);
+                d.setDate(d.getDate() + 1);
+                while (d <= selectedCheckOut) {
+                    if (isBooked(d.getDate(), d.getMonth(), d.getFullYear())) {
+                        valid = false;
+                        break;
+                    }
+                    d.setDate(d.getDate() + 1);
+                }
+                if (!valid) selectedCheckOut = null;
+            }
+            updateFormFields();
+            render();
+            updateInfo();
+            return;
         }
 
-        html += '</div></div>'; // close .cr-cal__days + .cr-cal__month
-        return html;
+        // Have check-in, need check-out
+        if (selectedCheckIn && !selectedCheckOut) {
+            // Must be after check-in
+            if (clickedDate <= selectedCheckIn) {
+                // If clicking before check-in, swap
+                selectedCheckIn = clickedDate;
+                selectedCheckOut = null;
+                updateFormFields();
+                render();
+                updateInfo();
+                return;
+            }
+
+            // Check all days between are free
+            var valid = true;
+            var d = new Date(selectedCheckIn);
+            d.setDate(d.getDate() + 1);
+            while (d <= clickedDate) {
+                if (isBooked(d.getDate(), d.getMonth(), d.getFullYear())) {
+                    valid = false;
+                    break;
+                }
+                d.setDate(d.getDate() + 1);
+            }
+
+            if (valid) {
+                selectedCheckOut = clickedDate;
+                updateFormFields();
+                render();
+                updateInfo();
+            }
+            return;
+        }
+    });
+
+    // ── Update form inputs ──
+    function updateFormFields() {
+        if (checkInInput) {
+            checkInInput.value = selectedCheckIn ? formatDateInput(selectedCheckIn) : '';
+        }
+        if (checkOutInput) {
+            checkOutInput.value = selectedCheckOut ? formatDateInput(selectedCheckOut) : '';
+        }
     }
 
-    // Render 6 months starting from current
-    var now = new Date();
-    var currentMonth = now.getMonth();
-    var currentYear = now.getFullYear();
+    // ── Month navigation ──
+    prevBtn.addEventListener('click', function() {
+        currentMonth--;
+        if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+        render();
+    });
 
-    var html = '';
-    for (var m = 0; m < 6; m++) {
-        var month = (currentMonth + m) % 12;
-        var year = currentYear + Math.floor((currentMonth + m) / 12);
-        html += renderMonth(month, year);
+    nextBtn.addEventListener('click', function() {
+        currentMonth++;
+        if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+        render();
+    });
+
+    // ── Toggle collapse ──
+    toggleBtn.addEventListener('click', function() {
+        calBody.classList.toggle('cr-scal--collapsed');
+        var icon = toggleBtn.querySelector('i');
+        if (calBody.classList.contains('cr-scal--collapsed')) {
+            icon.className = 'fas fa-chevron-down';
+        } else {
+            icon.className = 'fas fa-chevron-up';
+        }
+    });
+
+    // ── Init form fields from URL or defaults ──
+    // Pre-fill from existing values if present
+    if (checkInInput && checkInInput.value) {
+        var parts = checkInInput.value.split('-');
+        if (parts.length === 3) {
+            selectedCheckIn = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+        }
+    }
+    if (checkOutInput && checkOutInput.value) {
+        var parts = checkOutInput.value.split('-');
+        if (parts.length === 3) {
+            selectedCheckOut = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+        }
     }
 
-    calGrid.innerHTML = html;
-    if (calLoading) calLoading.style.display = 'none';
+    // ── Initial render ──
+    render();
+    updateInfo();
 })();
 </script>
